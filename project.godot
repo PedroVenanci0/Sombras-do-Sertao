@@ -10,23 +10,32 @@ config_version=5
 
 [application]
 
-config/name="Button Z"
+config/name="Sombras Do Sertão"
 config/features=PackedStringArray("4.2", "GL Compatibility")
+boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/image="res://assets/UI/Labiras_Logo.png"
+boot_splash/fullsize=false
 config/icon="res://icon.svg"
 
 [autoload]
 
 Global="*res://scripts/Global.gd"
 
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="viewport"
+
 [file_customization]
 
 folder_colors={
 "res://SFX/": "blue",
-"res://assets/": "gray",
+"res://assets/": "blue",
 "res://fonts/": "orange",
 "res://images/": "yellow",
-"res://scenes/": "green",
-"res://scripts/": "teal",
+"res://scenes/": "red",
+"res://scripts/": "green",
 "res://shaders/": "purple",
 "res://sounds/": "pink"
 }
@@ -39,7 +48,14 @@ THE_BUTTON={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="Environment"
+2d_physics/layer_2="Enemies"
+2d_physics/layer_3="Player"
+
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
