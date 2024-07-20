@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+@onready var light_occluder_2d = $Animations/LightOccluder2D
 
 const SPEED = 100
 const JUMP_VELOCITY = -400.0
