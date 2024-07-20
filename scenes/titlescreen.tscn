@@ -1,0 +1,102 @@
+[gd_scene load_steps=4 format=3 uid="uid://dg2efy3xmcg58"]
+
+[ext_resource type="Texture2D" uid="uid://b3cwjhhjmifv2" path="res://assets/Menus/A_cursed_men_cangaceiro.jpg" id="1_8rcj2"]
+[ext_resource type="Theme" uid="uid://c2qfsxntflbef" path="res://assets/Menus/Fonts/terrorTherme.tres" id="2_k0g3k"]
+[ext_resource type="Texture2D" uid="uid://cd6qvdhqjpslf" path="res://assets/Menus/itensCangaço.png" id="2_odcw7"]
+
+[node name="Titlescreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="Sprite2D" parent="."]
+modulate = Color(1, 0.317647, 0.321569, 1)
+self_modulate = Color(0.670588, 0.670588, 0.670588, 1)
+position = Vector2(641, 362)
+scale = Vector2(1.25586, 1.25)
+texture = ExtResource("1_8rcj2")
+region_enabled = true
+region_rect = Rect2(0, 86.5995, 1024, 579.183)
+
+[node name="Pexeira" type="Sprite2D" parent="Background"]
+position = Vector2(-252.417, -180)
+rotation = -0.785398
+scale = Vector2(0.25, 0.251)
+texture = ExtResource("2_odcw7")
+region_enabled = true
+region_rect = Rect2(68.7438, 74.1412, 339.077, 46.7692)
+
+[node name="ChapéuCangaceiro" type="Sprite2D" parent="Background"]
+position = Vector2(22.6936, -192.8)
+scale = Vector2(0.329882, 0.349091)
+texture = ExtResource("2_odcw7")
+region_enabled = true
+region_rect = Rect2(121.359, 128.705, 210.462, 165.641)
+
+[node name="Espingarda" type="Sprite2D" parent="Background"]
+position = Vector2(251.62, -171.2)
+rotation = 0.785398
+scale = Vector2(0.3, 0.301)
+texture = ExtResource("2_odcw7")
+region_enabled = true
+region_rect = Rect2(96.0258, 298.244, 276.718, 85.7436)
+
+[node name="GameName" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -329.5
+offset_top = -254.0
+offset_right = 329.5
+offset_bottom = -178.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_k0g3k")
+theme_override_font_sizes/normal_font_size = 70
+bbcode_enabled = true
+text = "SOMBRAS DO SERTÃO"
+fit_content = true
+scroll_active = false
+
+[node name="Label" type="Label" parent="GameName"]
+layout_mode = 0
+offset_left = 589.0
+offset_top = -19.0
+offset_right = 610.0
+offset_bottom = 32.0
+theme = ExtResource("2_k0g3k")
+theme_override_font_sizes/font_size = 32
+text = "~"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 59.0
+offset_top = -22.5
+offset_right = 178.0
+offset_bottom = 22.5
+grow_vertical = 2
+
+[node name="StartButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_k0g3k")
+theme_override_font_sizes/font_size = 41
+text = "START"
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="ExitButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_k0g3k")
+theme_override_font_sizes/font_size = 44
+text = "EXIT"
