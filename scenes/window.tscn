@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://dc80tgsf7vpmj"]
+
+[ext_resource type="Texture2D" uid="uid://cmttq6w25ilhf" path="res://assets/house/imagem_2024-07-20_112618208-1.png (1).png" id="1_gmst5"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_btpo1"]
+blend_mode = 1
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_06pgd"]
+polygon = PackedVector2Array(-1, -193, 85, -27, 91, 192, 70, 179, 71, -20, 0, -153, -68, -13, -86, -35)
+
+[node name="Window" type="Sprite2D"]
+position = Vector2(326, 200)
+texture = ExtResource("1_gmst5")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+material = SubResource("CanvasItemMaterial_btpo1")
+occluder = SubResource("OccluderPolygon2D_06pgd")
