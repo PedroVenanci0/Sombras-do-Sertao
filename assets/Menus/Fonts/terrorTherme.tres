@@ -1,6 +1,12 @@
-[gd_resource type="Theme" load_steps=4 format=3 uid="uid://c2qfsxntflbef"]
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://c2qfsxntflbef"]
 
 [ext_resource type="FontFile" uid="uid://cpqvfcd338utb" path="res://assets/Menus/Fonts/film_horor/Film Horor.otf" id="1_l1yil"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_elcho"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5u1in"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qbvmo"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vjvcm"]
 
@@ -11,6 +17,9 @@ Button/colors/font_color = Color(0, 0, 0, 1)
 Button/colors/font_outline_color = Color(1, 0, 0, 1)
 Button/constants/outline_size = 6
 Button/fonts/font = ExtResource("1_l1yil")
+Button/styles/disabled = SubResource("StyleBoxEmpty_elcho")
+Button/styles/focus = SubResource("StyleBoxEmpty_5u1in")
+Button/styles/hover = SubResource("StyleBoxEmpty_qbvmo")
 Button/styles/normal = SubResource("StyleBoxEmpty_vjvcm")
 Button/styles/pressed = SubResource("StyleBoxEmpty_imfrn")
 Label/colors/font_color = Color(0, 0, 0, 1)
