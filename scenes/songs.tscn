@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dakcs31tddfws"]
+
+[ext_resource type="Script" path="res://scripts/Songs.gd" id="1_4mqup"]
+[ext_resource type="AudioStream" uid="uid://d104xlgnfxkk2" path="res://assets/songs/impact/06 - Impact.mp3" id="2_jatyg"]
+
+[node name="Songs" type="Node"]
+script = ExtResource("1_4mqup")
+
+[node name="BackMusic" type="AudioStreamPlayer2D" parent="."]
+
+[node name="ImpactSFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_jatyg")
+bus = &"SFX"
+
+[connection signal="finished" from="BackMusic" to="." method="backMusicFinished"]
+[connection signal="finished" from="ImpactSFX" to="." method="backMusicFinished"]

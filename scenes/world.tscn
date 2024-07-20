@@ -1,3 +1,7 @@
-[gd_scene format=3 uid="uid://7shxu5g8xor0"]
+[gd_scene load_steps=2 format=3 uid="uid://7shxu5g8xor0"]
+
+[ext_resource type="PackedScene" uid="uid://duxy814uemjbn" path="res://scenes/FadeOutLayer.tscn" id="1_jjwmr"]
 
 [node name="World" type="Node2D"]
+
+[node name="FadeOutLayer" parent="." instance=ExtResource("1_jjwmr")]

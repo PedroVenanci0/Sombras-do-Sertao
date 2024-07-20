@@ -21,6 +21,7 @@ config/icon="res://assets/UI/hat.png"
 [autoload]
 
 Global="*res://scripts/Global.gd"
+Songs="*res://scenes/songs.tscn"
 
 [display]
 
