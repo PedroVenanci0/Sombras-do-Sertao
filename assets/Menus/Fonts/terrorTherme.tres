@@ -1,0 +1,22 @@
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://c2qfsxntflbef"]
+
+[ext_resource type="FontFile" uid="uid://cpqvfcd338utb" path="res://assets/Menus/Fonts/film_horor/Film Horor.otf" id="1_l1yil"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vjvcm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_imfrn"]
+
+[resource]
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_outline_color = Color(1, 0, 0, 1)
+Button/constants/outline_size = 6
+Button/fonts/font = ExtResource("1_l1yil")
+Button/styles/normal = SubResource("StyleBoxEmpty_vjvcm")
+Button/styles/pressed = SubResource("StyleBoxEmpty_imfrn")
+Label/colors/font_color = Color(0, 0, 0, 1)
+Label/colors/font_outline_color = Color(1, 0, 0, 1)
+Label/constants/outline_size = 6
+RichTextLabel/colors/default_color = Color(0, 0, 0, 1)
+RichTextLabel/colors/font_outline_color = Color(0.942709, 4.47616e-06, 1.73271e-06, 1)
+RichTextLabel/constants/outline_size = 6
+RichTextLabel/fonts/normal_font = ExtResource("1_l1yil")
