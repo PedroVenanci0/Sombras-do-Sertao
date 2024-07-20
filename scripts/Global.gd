@@ -1,4 +1,4 @@
 extends Node
 
-func fadeTransition:
-	pass
+#func fadeTransition:
+	#pass

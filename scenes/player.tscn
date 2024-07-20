@@ -1,5 +1,6 @@
-[gd_scene load_steps=34 format=3 uid="uid://ub6dovylitej"]
+[gd_scene load_steps=35 format=3 uid="uid://ub6dovylitej"]
 
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_n5omt"]
 [ext_resource type="Texture2D" uid="uid://c83y00n5e3dpx" path="res://assets/Player/moves.png" id="1_wgwfj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_chluh"]
@@ -235,12 +236,12 @@ size = Vector2(8, 20)
 
 [node name="Player" type="CharacterBody2D"]
 position = Vector2(-1, 0)
+script = ExtResource("1_n5omt")
 
 [node name="Animations" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_i5o4a")
 animation = &"walk"
-autoplay = "roll"
-frame_progress = 0.574005
+autoplay = "walk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 0)
