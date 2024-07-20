@@ -1,9 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://7shxu5g8xor0"]
+[gd_scene load_steps=6 format=3 uid="uid://7shxu5g8xor0"]
 
 [ext_resource type="Texture2D" uid="uid://bsawtbacqmrfb" path="res://icon.svg" id="1_wjcj4"]
 [ext_resource type="PackedScene" uid="uid://ub6dovylitej" path="res://scenes/player.tscn" id="1_wto1c"]
 [ext_resource type="PackedScene" uid="uid://dc80tgsf7vpmj" path="res://scenes/window.tscn" id="3_2541u"]
-[ext_resource type="Texture2D" uid="uid://dripaua6wcm0y" path="res://assets/Luz/Luz ambiente/download.jpeg" id="4_dtl8i"]
 [ext_resource type="Texture2D" uid="uid://be0tfjgstwsor" path="res://assets/Luz/Luz ambiente/4433d48964593f4c0326f095d731e65a.jpg" id="4_iumbb"]
 
 [sub_resource type="Environment" id="Environment_arept"]
@@ -18,18 +17,6 @@ volumetric_fog_density = 0.9868
 position = Vector2(654.5, 372)
 scale = Vector2(10.1484, 5.71875)
 texture = ExtResource("1_wjcj4")
-
-[node name="Player" parent="." instance=ExtResource("1_wto1c")]
-position = Vector2(446, 241)
-
-[node name="PointLight2D" type="PointLight2D" parent="Player"]
-position = Vector2(1, 0)
-energy = 0.5
-texture = ExtResource("4_dtl8i")
-texture_scale = 0.6
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-zoom = Vector2(3, 3)
 
 [node name="Window" parent="." instance=ExtResource("3_2541u")]
 position = Vector2(496, 198)
@@ -63,3 +50,6 @@ color = Color(0.057093, 4.05802e-05, 0.207953, 1)
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 process_mode = 3
 environment = SubResource("Environment_arept")
+
+[node name="Player" parent="." instance=ExtResource("1_wto1c")]
+position = Vector2(400, 229)
