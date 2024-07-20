@@ -1,48 +1,10 @@
-[gd_scene load_steps=40 format=3 uid="uid://ub6dovylitej"]
+[gd_scene load_steps=35 format=3 uid="uid://ub6dovylitej"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_n5omt"]
 [ext_resource type="Texture2D" uid="uid://c83y00n5e3dpx" path="res://assets/Player/moves.png" id="1_wgwfj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_abkfc"]
 size = Vector2(8, 20)
-
-[sub_resource type="Animation" id="Animation_4ijkn"]
-resource_name = "walk"
-length = 0.5
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Moves:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.06, 0.12, 0.18, 0.24, 0.3, 0.36, 0.42),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 4, 5, 6, 7]
-}
-
-[sub_resource type="Animation" id="Animation_vnke4"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Moves:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_4hafo"]
-_data = {
-"RESET": SubResource("Animation_vnke4"),
-"walk": SubResource("Animation_4ijkn")
-}
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_chluh"]
 atlas = ExtResource("1_wgwfj")
@@ -272,42 +234,13 @@ animations = [{
 "speed": 15.0
 }]
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_taiet"]
-blend_mode = 1
-
-[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_n38dn"]
-polygon = PackedVector2Array(-8, 10, -3, 6, -3, 0, 2, -12, 5, -3, 6, 0, 3, 0, 3, 1, 2, 1, 2, 3, 5, 3, 15, 3, 15, 4, 6, 4, 7, 4, 7, 5, 6, 5, 6, 9, 8, 9, 8, 10, 4, 10, 4, 5, 1, 5, 1, 6, -6, 10)
-
 [node name="Player" type="CharacterBody2D"]
-position = Vector2(-1, 0)
 script = ExtResource("1_n5omt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(1, 0)
 shape = SubResource("RectangleShape2D_abkfc")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_4hafo")
-}
-autoplay = "walk"
-
-[node name="Moves" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(0, -11)
-texture = ExtResource("1_wgwfj")
-hframes = 8
-vframes = 6
-region_enabled = true
-region_rect = Rect2(0, 0, 240.275, 175)
 
 [node name="Animations" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_i5o4a")
 animation = &"walk"
 autoplay = "walk"
-
-[node name="LightOccluder2D" type="LightOccluder2D" parent="Animations"]
-texture_filter = 1
-material = SubResource("CanvasItemMaterial_taiet")
-occluder = SubResource("OccluderPolygon2D_n38dn")
