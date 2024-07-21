@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @onready var light_occluder_2d = $Animations/LightOccluder2D
 
-const SPEED = 100
+var SPEED = 50
 const JUMP_VELOCITY = -400.0
 
 var Destination = Vector2()
@@ -33,6 +33,8 @@ func _physics_process(delta):
 		distance = Vector2(Destination - position)
 		velocity.x = distance.normalized().x * SPEED
 		velocity.y = distance.normalized().x * 0
+		
+		print(SPEED)
 		move_and_slide()
 		
 	if (Destination.x > position.x):

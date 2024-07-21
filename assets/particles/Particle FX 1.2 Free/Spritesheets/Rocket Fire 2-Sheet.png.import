@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c0v3jt1w28gff"
-path="res://.godot/imported/New Piskel-1.png.png-67be20451fd2ca860e65386f898ed918.ctex"
+uid="uid://dwaw0fvkuay03"
+path="res://.godot/imported/Rocket Fire 2-Sheet.png-2d365d42aff8b5e9afa3f859a22f03be.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/house/New Piskel-1.png.png"
-dest_files=["res://.godot/imported/New Piskel-1.png.png-67be20451fd2ca860e65386f898ed918.ctex"]
+source_file="res://assets/particles/Particle FX 1.2 Free/Spritesheets/Rocket Fire 2-Sheet.png"
+dest_files=["res://.godot/imported/Rocket Fire 2-Sheet.png-2d365d42aff8b5e9afa3f859a22f03be.ctex"]
 
 [params]
 
