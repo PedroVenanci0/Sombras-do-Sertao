@@ -1,10 +1,27 @@
-[gd_scene load_steps=42 format=3 uid="uid://ub6dovylitej"]
+[gd_scene load_steps=47 format=3 uid="uid://ub6dovylitej"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_n5omt"]
 [ext_resource type="Texture2D" uid="uid://c83y00n5e3dpx" path="res://assets/Player/moves.png" id="1_wgwfj"]
+[ext_resource type="Texture2D" uid="uid://cuvxrmkw4lwus" path="res://assets/Player/idle.png" id="2_bhay5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_abkfc"]
 size = Vector2(8, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bfvv4"]
+atlas = ExtResource("2_bhay5")
+region = Rect2(0, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ik6d"]
+atlas = ExtResource("2_bhay5")
+region = Rect2(0, 50, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_55oln"]
+atlas = ExtResource("2_bhay5")
+region = Rect2(0, 100, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1dmwb"]
+atlas = ExtResource("2_bhay5")
+region = Rect2(0, 150, 50, 50)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xm1lg"]
 atlas = ExtResource("1_wgwfj")
@@ -128,6 +145,23 @@ region = Rect2(210, 0, 30, 30)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_i5o4a"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bfvv4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ik6d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_55oln")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1dmwb")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 4.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_xm1lg")
@@ -471,6 +505,7 @@ shape = SubResource("RectangleShape2D_abkfc")
 [node name="Animations" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_i5o4a")
 animation = &"walk"
+autoplay = "idle"
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
 texture_filter = 1
@@ -482,4 +517,3 @@ occluder = SubResource("OccluderPolygon2D_g8s3i")
 libraries = {
 "": SubResource("AnimationLibrary_yl115")
 }
-autoplay = "walk"
