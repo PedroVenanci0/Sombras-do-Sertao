@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://7shxu5g8xor0"]
+[gd_scene load_steps=7 format=3 uid="uid://7shxu5g8xor0"]
 
 [ext_resource type="Texture2D" uid="uid://bsawtbacqmrfb" path="res://icon.svg" id="1_wjcj4"]
 [ext_resource type="PackedScene" uid="uid://ub6dovylitej" path="res://scenes/player.tscn" id="1_wto1c"]
 [ext_resource type="PackedScene" uid="uid://dc80tgsf7vpmj" path="res://scenes/window.tscn" id="3_2541u"]
+[ext_resource type="Texture2D" uid="uid://dripaua6wcm0y" path="res://assets/Luz/Luz ambiente/download.jpeg" id="4_dtl8i"]
 [ext_resource type="Texture2D" uid="uid://be0tfjgstwsor" path="res://assets/Luz/Luz ambiente/4433d48964593f4c0326f095d731e65a.jpg" id="4_iumbb"]
 
 [sub_resource type="Environment" id="Environment_arept"]
@@ -55,5 +56,17 @@ color = Color(0.057093, 4.05802e-05, 0.207953, 1)
 process_mode = 3
 environment = SubResource("Environment_arept")
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(452, 239)
+zoom = Vector2(4.635, 4.635)
+
 [node name="Player" parent="." instance=ExtResource("1_wto1c")]
-position = Vector2(456, 240)
+
+position = Vector2(452, 239)
+
+[node name="PointLight2D2" type="PointLight2D" parent="Player"]
+position = Vector2(2, 0)
+energy = 0.45
+texture = ExtResource("4_dtl8i")
+texture_scale = 0.36
+

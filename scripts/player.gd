@@ -39,8 +39,10 @@ func _physics_process(delta):
 		
 	if (Destination.x > position.x):
 		get_node("Animations").flip_h = false
+		get_node("LightOccluder2D").scale.x = 1
 	if (Destination.x < position.x):
 		get_node("Animations").flip_h = true
+		get_node("LightOccluder2D").scale.x = -1
 		
 func _input(event):
 	if Input.is_action_just_pressed("Click_Button"):
