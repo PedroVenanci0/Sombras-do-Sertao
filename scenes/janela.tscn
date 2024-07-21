@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://q1o5n0ipas2e"]
+
+[ext_resource type="Texture2D" uid="uid://dtjyps3no4ixs" path="res://assets/house/janela.png" id="1_mfg5p"]
+[ext_resource type="Texture2D" uid="uid://dripaua6wcm0y" path="res://assets/Luz/Luz ambiente/download.jpeg" id="2_7klek"]
+
+[node name="Janela" type="Sprite2D"]
+position = Vector2(526, 312)
+texture = ExtResource("1_mfg5p")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(46, 56)
+scale = Vector2(0.168889, 0.146667)
+color = Color(0.811639, 0.302657, 0, 1)
+energy = 0.6
+texture = ExtResource("2_7klek")
