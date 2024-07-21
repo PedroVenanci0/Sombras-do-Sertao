@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://ub6dovylitej"]
+[gd_scene load_steps=40 format=3 uid="uid://ub6dovylitej"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_n5omt"]
 [ext_resource type="Texture2D" uid="uid://c83y00n5e3dpx" path="res://assets/Player/moves.png" id="1_wgwfj"]
@@ -229,10 +229,67 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_0cnbd")
 }],
-"loop": true,
+"loop": false,
 "name": &"walk",
 "speed": 15.0
 }]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_tg1ee"]
+blend_mode = 1
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_g8s3i"]
+polygon = PackedVector2Array(-2, 0, 2, 4, 1, -2)
+
+[sub_resource type="Animation" id="Animation_octag"]
+resource_name = "walk"
+length = 0.46449
+loop_mode = 1
+step = 0.0663548
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Animations:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0663548, 0.13271, 0.199064, 0.265419, 0.331774, 0.398129, 0.464484),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 7, 2]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LightOccluder2D:occluder:polygon")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.0663548, 0.13271, 0.199064, 0.265419, 0.331774, 0.398129, 0.464484),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [PackedVector2Array(-8, 11, -8, 10, -7, 10, -7, 9, -6, 9, -6, 8, -5, 8, -5, 7, -3, 7, -3, 6, -2, 6, -2, 3, -4, 3, -4, 1, -3, 1, -3, 0, -2, 0, -2, -1, -1, -1, -1, -3, 0, -3, 0, -5, 1, -5, 1, -6, -1, -6, -1, -7, 0, -7, 0, -8, -1, -8, -1, -11, 0, -11, 0, -12, 4, -12, 4, -11, 5, -11, 5, -10, 6, -10, 6, -9, 5, -9, 5, -7, 5, -5, 4, -5, 4, -2, 5, -2, 5, -3, 7, -3, 7, -1, 6, -1, 6, 0, 3, 0, 3, 1, 2, 1, 2, 3, 5, 3, 5, 4, 6, 4, 6, 9, 8, 9, 8, 10, 4, 10, 4, 5, 1, 5, 1, 6, 0, 6, 0, 7, -1, 7, -1, 8, -2, 8, -2, 9, -4, 9, -4, 10, -6, 10, -6, 11), PackedVector2Array(-5, 12, -4, 12, -4, 10, -1, 10, -1, 9, 0, 9, 0, 8, 1, 8, 1, 6, 2, 6, 2, 5, 4, 5, 4, 6, 5, 6, 5, 11, 9, 11, 9, 10, 7, 10, 7, 5, 6, 5, 6, 4, 5, 4, 5, 3, 2, 3, 2, 1, 3, 1, 3, 0, 6, 0, 6, -1, 7, -1, 7, -3, 5, -3, 5, -2, 4, -2, 4, -5, 5, -5, 5, -9, 6, -9, 6, -10, 5, -10, 5, -11, 4, -11, 4, -12, 0, -12, 0, -11, -1, -11, -1, -9, 0, -9, 0, -8, -1, -8, -1, -7, 1, -7, 1, -5, 0, -5, 0, -3, -1, -3, -1, -1, -2, -1, -2, 0, -4, 0, -4, 2, -3, 2, -3, 3, -1, 3, -1, 6, -1, 7, -2, 7, -2, 8, -5, 8), PackedVector2Array(-3, 9, -3, 11, -4, 11, -4, 7, -1, 7, -1, 2, -3, 2, -3, 1, -4, 1, -4, -1, -3, -1, -3, -2, -1, -2, -1, -4, 0, -4, 0, -5, 1, -5, 1, -7, 0, -7, 0, -8, 1, -8, 1, -9, 0, -9, 0, -11, 1, -11, 1, -12, 4, -12, 4, -11, 5, -11, 5, -10, 6, -10, 6, -9, 5, -9, 5, -5, 4, -5, 4, -2, 6, -2, 6, 0, 4, 0, 4, 1, 2, 1, 2, 4, 3, 4, 3, 5, 4, 5, 4, 7, 5, 7, 5, 10, 7, 10, 7, 11, 6, 11, 6, 12, 5, 12, 5, 13, 4, 13, 4, 11, 3, 11, 3, 8, 2, 8, 2, 7, 1, 7, 1, 9), PackedVector2Array(-2, 11, -2, 7, 0, 7, 0, 6, -1, 6, -1, 2, -3, 2, -3, 1, -4, 1, -4, -2, -1, -2, -1, -3, 0, -3, 0, -5, 1, -5, 1, -8, -1, -8, -1, -9, 0, -9, 0, -10, -1, -10, -1, -12, 0, -12, 0, -13, 4, -13, 4, -12, 5, -12, 5, -11, 6, -11, 6, -10, 7, -10, 7, -9, 5, -9, 5, -5, 4, -5, 4, -2, 3, -2, 3, -1, 6, -1, 6, 1, 2, 1, 2, 5, 3, 5, 3, 7, 4, 7, 4, 10, 5, 10, 5, 13, 7, 13, 7, 14, 3, 14, 3, 11, 2, 11, 2, 9, -1, 9, -1, 11), PackedVector2Array(0, 11, -1, 11, -1, 3, -5, 3, -5, 0, -2, 0, -2, -1, -1, -1, -1, -2, 0, -2, 0, -4, 1, -4, 1, -5, -2, -5, -2, -6, -1, -6, -1, -8, -2, -8, -2, -11, 0, -11, 0, -12, 3, -12, 3, -11, 5, -11, 5, -10, 6, -10, 6, -9, 7, -9, 7, -8, 5, -8, 5, -4, 4, -4, 4, 0, 3, 0, 3, 1, 4, 1, 4, 3, 2, 3, 2, 5, 3, 5, 3, 6, 4, 6, 4, 9, 2, 9, 2, 13, 4, 13, 4, 14, 0, 14), PackedVector2Array(-2, 14, -2, 8, -1, 8, -1, 5, -2, 5, -2, 4, -4, 4, -4, 3, -5, 3, -5, 1, -3, 1, -3, 0, -1, 0, -1, -2, 0, -2, 0, -4, 1, -4, 1, -5, -1, -5, -1, -6, 0, -6, 0, -8, -1, -8, -1, -11, 0, -11, 0, -12, 5, -12, 5, -10, 6, -10, 6, -9, 7, -9, 7, -8, 5, -8, 5, -3, 4, -3, 4, -1, 5, -1, 5, 1, 4, 1, 4, 2, 3, 2, 3, 4, 4, 4, 4, 8, 3, 8, 3, 10, 2, 10, 2, 11, 0, 11, 0, 13, 2, 13, 2, 14), PackedVector2Array(-7, 12, -7, 11, -6, 11, -6, 10, -5, 10, -5, 9, -4, 9, -4, 8, -3, 8, -3, 6, -2, 6, -2, 5, -3, 5, -3, 4, -4, 4, -4, 2, -3, 2, -3, 0, -2, 0, -2, -2, -1, -2, -1, -3, 0, -3, 0, -4, 1, -4, 1, -6, -1, -6, -1, -7, 0, -7, 0, -8, -1, -8, -1, -10, 0, -10, 0, -11, 5, -11, 5, -10, 6, -10, 6, -9, 7, -9, 7, -8, 5, -8, 5, -4, 4, -4, 4, -1, 5, -1, 5, -2, 7, -2, 7, 0, 6, 0, 6, 1, 3, 1, 3, 2, 2, 2, 2, 4, 5, 4, 5, 5, 6, 5, 6, 9, 5, 9, 5, 11, 6, 11, 6, 12, 4, 12, 4, 11, 3, 11, 3, 10, 2, 10, 2, 9, 3, 9, 3, 8, 4, 8, 4, 6, 1, 6, 1, 7, 0, 7, 0, 8, -1, 8, -1, 9, -2, 9, -2, 10, -3, 10, -3, 11, -4, 11, -4, 13, -3, 13, -3, 14, -5, 14, -5, 13, -6, 13, -6, 12), PackedVector2Array(-3, 11, -4, 11, -4, 7, -1, 7, -1, 2, -3, 2, -3, 1, -4, 1, -4, -1, -3, -1, -3, -2, -1, -2, -1, -4, 0, -4, 0, -5, 1, -5, 1, -7, 0, -7, 0, -8, 1, -8, 1, -9, 0, -9, 0, -11, 1, -11, 1, -12, 4, -12, 4, -11, 5, -11, 5, -10, 6, -10, 6, -9, 5, -9, 5, -5, 4, -5, 4, -2, 6, -2, 6, 0, 4, 0, 4, 1, 2, 1, 2, 4, 3, 4, 3, 5, 4, 5, 4, 7, 5, 7, 5, 10, 7, 10, 7, 11, 6, 11, 6, 12, 5, 12, 5, 13, 4, 13, 4, 11, 3, 11, 3, 8, 2, 8, 2, 7, 1, 7, 1, 9, -3, 9)]
+}
+
+[sub_resource type="Animation" id="Animation_imgc3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LightOccluder2D:occluder:polygon")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [PackedVector2Array(-2, 0, 2, 4, 1, -2)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yl115"]
+_data = {
+"RESET": SubResource("Animation_imgc3"),
+"walk": SubResource("Animation_octag")
+}
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_n5omt")
@@ -243,4 +300,15 @@ shape = SubResource("RectangleShape2D_abkfc")
 [node name="Animations" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_i5o4a")
 animation = &"walk"
+frame = 3
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+texture_filter = 1
+material = SubResource("CanvasItemMaterial_tg1ee")
+occluder = SubResource("OccluderPolygon2D_g8s3i")
+
+[node name="ShadowManager" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_yl115")
+}
 autoplay = "walk"
