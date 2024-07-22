@@ -57,12 +57,13 @@ process_mode = 3
 environment = SubResource("Environment_arept")
 
 [node name="Player" parent="." instance=ExtResource("1_wto1c")]
-position = Vector2(452, 239)
+position = Vector2(456, 228)
 
 [node name="Camera2D2" type="Camera2D" parent="Player"]
 zoom = Vector2(4.635, 4.635)
 
 [node name="PointLight2D2" type="PointLight2D" parent="Player"]
+visible = false
 position = Vector2(2, 0)
 energy = 0.45
 texture = ExtResource("4_dtl8i")
