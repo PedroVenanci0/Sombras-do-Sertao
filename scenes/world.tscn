@@ -24,7 +24,7 @@ scale = Vector2(10.1484, 5.71875)
 texture = ExtResource("1_wjcj4")
 
 [node name="Window" parent="." instance=ExtResource("3_2541u")]
-position = Vector2(496, 198)
+position = Vector2(754, 221)
 scale = Vector2(0.165, 0.165)
 
 [node name="Node2D" type="Node2D" parent="."]
@@ -33,21 +33,22 @@ rotation = 0.738526
 
 [node name="TextureLight" type="PointLight2D" parent="Node2D"]
 texture_filter = 1
-position = Vector2(0.162109, -244.92)
+position = Vector2(-13.6062, -404.132)
 scale = Vector2(0.234645, 1.05983)
-energy = 0.3
+energy = 1.33
 texture = ExtResource("4_iumbb")
+texture_scale = 1.95
 
 [node name="Shadow" type="PointLight2D" parent="Node2D"]
 texture_filter = 1
-position = Vector2(2.72237, -239.137)
+position = Vector2(13.9287, -372.402)
 scale = Vector2(1, 1.89032)
-energy = 0.4
+energy = 0.45
 shadow_enabled = true
 shadow_filter = 1
 shadow_filter_smooth = 2.0
 texture = ExtResource("4_iumbb")
-texture_scale = 0.5
+texture_scale = 1.29
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0.057093, 4.05802e-05, 0.207953, 1)
