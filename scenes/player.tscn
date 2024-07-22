@@ -499,7 +499,6 @@ _data = {
 script = ExtResource("1_n5omt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 shape = SubResource("RectangleShape2D_abkfc")
 
 [node name="Animations" type="AnimatedSprite2D" parent="."]
@@ -517,3 +516,7 @@ occluder = SubResource("OccluderPolygon2D_g8s3i")
 libraries = {
 "": SubResource("AnimationLibrary_yl115")
 }
+autoplay = "walk"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(3, 3)

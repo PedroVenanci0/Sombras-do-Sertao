@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://cb14wnb8i0tqn"]
 
-[ext_resource type="Texture2D" uid="uid://dirqy5df8yt0u" path="res://assets/house/forno.png" id="1_6jnqg"]
+[ext_resource type="Texture2D" path="res://assets/house/forno.png" id="1_6jnqg"]
 [ext_resource type="Texture2D" uid="uid://cv8v1laj085kp" path="res://assets/particles/fogueira/Fogo_1.png" id="2_dnj6l"]
 [ext_resource type="Texture2D" uid="uid://o8dcech6wllr" path="res://assets/particles/fogueira/Fogo_2.png" id="3_ry02t"]
 [ext_resource type="Texture2D" uid="uid://chugb1aavavdi" path="res://assets/particles/fogueira/Fogo_3.png" id="4_eree8"]

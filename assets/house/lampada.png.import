@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dirqy5df8yt0u"
-path="res://.godot/imported/forno.png-1a691e461bd6ccd3f112dab67fe4aad8.ctex"
+uid="uid://ba6pmuswgm6d2"
+path="res://.godot/imported/lampada.png-5ab0a5be367593b29905aeb72abeff3b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/house/forno.png"
-dest_files=["res://.godot/imported/forno.png-1a691e461bd6ccd3f112dab67fe4aad8.ctex"]
+source_file="res://assets/house/lampada.png"
+dest_files=["res://.godot/imported/lampada.png-5ab0a5be367593b29905aeb72abeff3b.ctex"]
 
 [params]
 
