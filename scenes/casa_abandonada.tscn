@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://5w67ml2ebeeo"]
+[gd_scene load_steps=25 format=3 uid="uid://5w67ml2ebeeo"]
 
 [ext_resource type="Texture2D" uid="uid://qy28di24w8go" path="res://assets/house/Parede.png" id="1_1kkgk"]
+[ext_resource type="Script" path="res://scripts/casa_abandonada.gd" id="1_j423i"]
 [ext_resource type="Texture2D" uid="uid://c88wjs5hcbdll" path="res://assets/house/Parede-com janela.png" id="2_of24i"]
 [ext_resource type="Texture2D" uid="uid://si4wfcp6nso" path="res://assets/house/quadro_nordestino-1.png.png" id="3_ynxyk"]
 [ext_resource type="Texture2D" uid="uid://cmb1tutdb80e7" path="res://assets/house/pote de barro.png" id="4_q0kpr"]
@@ -8,101 +9,231 @@
 [ext_resource type="Texture2D" uid="uid://80w7ufelexa1" path="res://assets/house/forno-1.png.png" id="6_c4g5g"]
 [ext_resource type="Texture2D" uid="uid://oojxksimsh7x" path="res://assets/house/mesa-1.png.png" id="6_wkam8"]
 [ext_resource type="Texture2D" uid="uid://be0tfjgstwsor" path="res://assets/Luz/Luz ambiente/4433d48964593f4c0326f095d731e65a.jpg" id="7_7822j"]
+[ext_resource type="PackedScene" uid="uid://ub6dovylitej" path="res://scenes/player.tscn" id="9_hhqie"]
+[ext_resource type="Texture2D" uid="uid://dripaua6wcm0y" path="res://assets/Luz/Luz ambiente/download.jpeg" id="9_nh0yn"]
+[ext_resource type="Texture2D" uid="uid://cq3skyt8m686k" path="res://assets/monster/samuel-furr-swinging-torso-export (1).png" id="11_syiq2"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_vk55w"]
 blend_mode = 1
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_wqqrl"]
-polygon = PackedVector2Array(807, 4, 808, 499, 2402, 501, 2404, 4)
+polygon = PackedVector2Array(17, 5, 15, 498, 2402, 501, 2404, 4)
 
-[node name="Node2D" type="Node2D"]
-position = Vector2(47, 90)
+[sub_resource type="AtlasTexture" id="AtlasTexture_t5krr"]
+atlas = ExtResource("11_syiq2")
+region = Rect2(0, 0, 512, 1024)
 
-[node name="Parede2" type="Sprite2D" parent="."]
+[sub_resource type="AtlasTexture" id="AtlasTexture_vx4p3"]
+atlas = ExtResource("11_syiq2")
+region = Rect2(512, 0, 512, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ambdd"]
+atlas = ExtResource("11_syiq2")
+region = Rect2(1024, 0, 512, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a4dsc"]
+atlas = ExtResource("11_syiq2")
+region = Rect2(1536, 0, 512, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dggow"]
+atlas = ExtResource("11_syiq2")
+region = Rect2(0, 1024, 512, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mn40y"]
+atlas = ExtResource("11_syiq2")
+region = Rect2(512, 1024, 512, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8piw0"]
+atlas = ExtResource("11_syiq2")
+region = Rect2(1024, 1024, 512, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f8xyk"]
+atlas = ExtResource("11_syiq2")
+region = Rect2(1536, 1024, 512, 1024)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6icy0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t5krr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vx4p3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ambdd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a4dsc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dggow")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mn40y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8piw0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f8xyk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6x3j0"]
+size = Vector2(61, 371)
+
+[node name="Casa_Abandonada" type="Node2D"]
+script = ExtResource("1_j423i")
+
+[node name="Construções" type="Node2D" parent="."]
+
+[node name="Parede2" type="Sprite2D" parent="Construções"]
 modulate = Color(0.10748, 0.10748, 0.10748, 1)
 position = Vector2(57, 256)
 texture = ExtResource("1_1kkgk")
 
-[node name="Parede-comJanela" type="Sprite2D" parent="."]
+[node name="Parede3" type="Sprite2D" parent="Construções"]
+modulate = Color(0.10748, 0.10748, 0.10748, 1)
+position = Vector2(-737, 255)
+texture = ExtResource("1_1kkgk")
+
+[node name="Parede-comJanela" type="Sprite2D" parent="Construções"]
 modulate = Color(0.10748, 0.10748, 0.10748, 1)
 position = Vector2(856, 257)
 texture = ExtResource("2_of24i")
 
-[node name="QuadroNordestino-1_png" type="Sprite2D" parent="."]
+[node name="Objetos" type="Node2D" parent="."]
+
+[node name="QuadroNordestino-1_png" type="Sprite2D" parent="Objetos"]
 modulate = Color(0.10748, 0.10748, 0.10748, 1)
 position = Vector2(643, 196)
 scale = Vector2(0.105, 0.105)
 texture = ExtResource("3_ynxyk")
 
-[node name="QuadroNordestino-1_png2" type="Sprite2D" parent="."]
+[node name="QuadroNordestino-1_png2" type="Sprite2D" parent="Objetos"]
 modulate = Color(0.10748, 0.10748, 0.10748, 1)
 position = Vector2(-161, 202)
 scale = Vector2(0.105, 0.105)
 texture = ExtResource("3_ynxyk")
 
-[node name="PoteDeBarro" type="Sprite2D" parent="."]
+[node name="PoteDeBarro" type="Sprite2D" parent="Objetos"]
 modulate = Color(0.10748, 0.10748, 0.10748, 1)
 position = Vector2(692.23, 377.55)
 scale = Vector2(0.455, 0.455)
 texture = ExtResource("4_q0kpr")
 
-[node name="PoteDeBarro2" type="Sprite2D" parent="."]
+[node name="PoteDeBarro2" type="Sprite2D" parent="Objetos"]
 modulate = Color(0.10748, 0.10748, 0.10748, 1)
 position = Vector2(771.23, 383.55)
 scale = Vector2(0.71, 0.71)
 texture = ExtResource("4_q0kpr")
 
-[node name="PoteDeBarro3" type="Sprite2D" parent="."]
+[node name="PoteDeBarro3" type="Sprite2D" parent="Objetos"]
 modulate = Color(0.10748, 0.10748, 0.10748, 1)
 position = Vector2(850, 384)
 scale = Vector2(0.71, 0.71)
 texture = ExtResource("4_q0kpr")
 
-[node name="PoteDeBarro4" type="Sprite2D" parent="."]
+[node name="PoteDeBarro4" type="Sprite2D" parent="Objetos"]
 modulate = Color(0.10748, 0.10748, 0.10748, 1)
 position = Vector2(841, 378)
 scale = Vector2(0.418898, 0.437927)
 texture = ExtResource("4_q0kpr")
 
-[node name="Garrafa" type="Sprite2D" parent="."]
-modulate = Color(0.10748, 0.10748, 0.10748, 1)
+[node name="Garrafa" type="Sprite2D" parent="Objetos"]
+modulate = Color(0.233925, 0.233925, 0.233925, 1)
 position = Vector2(387, 240)
 texture = ExtResource("5_6oeve")
 
-[node name="Forno-1_png" type="Sprite2D" parent="."]
+[node name="Forno-1_png" type="Sprite2D" parent="Objetos"]
 modulate = Color(0.10748, 0.10748, 0.10748, 1)
 position = Vector2(45, 242)
 texture = ExtResource("6_c4g5g")
 
-[node name="Mesa-1_png" type="Sprite2D" parent="."]
+[node name="Mesa-1_png" type="Sprite2D" parent="Objetos"]
 modulate = Color(0.10748, 0.10748, 0.10748, 1)
 position = Vector2(346, 315)
 scale = Vector2(0.728889, 0.488889)
 texture = ExtResource("6_wkam8")
 
-[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+[node name="Light" type="Node2D" parent="."]
+
+[node name="Luz_Lunar" type="PointLight2D" parent="Light"]
+position = Vector2(935.964, 262.824)
+rotation = 0.800657
+scale = Vector2(0.563967, 1.67632)
+energy = 0.9
+shadow_enabled = true
+shadow_filter = 1
+shadow_filter_smooth = 3.0
+texture = ExtResource("9_nh0yn")
+
+[node name="Collisao_Sombras" type="LightOccluder2D" parent="Light"]
 texture_filter = 1
 material = SubResource("CanvasItemMaterial_vk55w")
 position = Vector2(-1148, 4)
 occluder = SubResource("OccluderPolygon2D_wqqrl")
 
-[node name="PointLight2D" type="PointLight2D" parent="."]
+[node name="luz_Lampada_01" type="PointLight2D" parent="Light"]
 position = Vector2(389, 266)
 color = Color(0.78373, 0.539526, 0, 1)
 energy = 9.08
 texture = ExtResource("7_7822j")
 
-[node name="PointLight2D2" type="PointLight2D" parent="."]
-position = Vector2(-99, 264)
+[node name="luz_Lampada_02" type="PointLight2D" parent="Light"]
+position = Vector2(-800, 253)
 color = Color(0.78373, 0.539526, 0, 1)
 energy = 9.08
 texture = ExtResource("7_7822j")
 
-[node name="Node2D" type="Node2D" parent="."]
+[node name="luz_Lampada_03" type="PointLight2D" parent="Light"]
+position = Vector2(-177, 259)
+color = Color(0.78373, 0.539526, 0, 1)
+energy = 9.08
+texture = ExtResource("7_7822j")
 
-[node name="PointLight2D3" type="PointLight2D" parent="."]
+[node name="PointLight2D3" type="PointLight2D" parent="Light"]
 position = Vector2(821, 408)
 rotation = 0.675746
 scale = Vector2(1.62156, 1.27088)
 energy = 5.47
 texture = ExtResource("7_7822j")
+
+[node name="Player" parent="." instance=ExtResource("9_hhqie")]
+modulate = Color(0.0687983, 0.0687983, 0.0687983, 1)
+position = Vector2(852, 288)
+scale = Vector2(6, 6)
+
+[node name="Camera2D2" type="Camera2D" parent="Player"]
+position = Vector2(-2.16667, -5.16667)
+zoom = Vector2(1.54, 1.54)
+
+[node name="PointLight2D" type="PointLight2D" parent="Player"]
+position = Vector2(-0.166666, -0.833334)
+scale = Vector2(0.698148, 1.31204)
+energy = 3.0
+texture = ExtResource("9_nh0yn")
+texture_scale = 0.1
+
+[node name="Monster" type="Node2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Monster"]
+modulate = Color(0.0728426, 0.0728426, 0.0728426, 1)
+position = Vector2(-795, 150)
+scale = Vector2(0.314453, 0.283691)
+sprite_frames = SubResource("SpriteFrames_6icy0")
+autoplay = "default"
+frame_progress = 0.628872
+
+[node name="Area2D" type="Area2D" parent="Monster"]
+position = Vector2(-109, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Monster/Area2D"]
+position = Vector2(-275, 191)
+shape = SubResource("RectangleShape2D_6x3j0")
+
+[connection signal="body_entered" from="Monster/Area2D" to="." method="_on_area_2d_body_entered"]

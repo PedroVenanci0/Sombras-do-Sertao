@@ -4,7 +4,7 @@ class_name Player
 
 @onready var light_occluder_2d = $Animations/LightOccluder2D
 
-var SPEED = 100
+var SPEED = 300
 const JUMP_VELOCITY = -400.0
 
 var Destination = Vector2()
@@ -35,8 +35,7 @@ func _physics_process(delta):
 		distance = Vector2(Destination - position)
 		velocity.x = distance.normalized().x * SPEED
 		velocity.y = distance.normalized().x * 0
-		
-		
+	
 		move_and_slide()
 		
 	if (Destination.x > position.x):
@@ -46,6 +45,8 @@ func _physics_process(delta):
 		get_node("Animations").flip_h = true
 		get_node("LightOccluder2D").scale.x = -1
 		
+	print(get_global_mouse_position())
+	
 func _input(event):
 	if Input.is_action_just_pressed("Click_Button"):
 		Destination = get_global_mouse_position()
