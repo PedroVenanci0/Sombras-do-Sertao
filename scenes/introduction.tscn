@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://d25ifulwnlbr0"]
+
+[ext_resource type="PackedScene" uid="uid://dg2efy3xmcg58" path="res://scenes/titlescreen.tscn" id="1_pa7iu"]
+
+[node name="Introduction" type="Node2D"]
+
+[node name="Titlescreen" parent="." instance=ExtResource("1_pa7iu")]
+offset_top = -586.0
+offset_bottom = -586.0
