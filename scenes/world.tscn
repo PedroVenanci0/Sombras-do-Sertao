@@ -14,17 +14,13 @@ volumetric_fog_density = 0.9868
 
 [node name="World" type="Node2D"]
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(456, 240)
-zoom = Vector2(3, 3)
-
 [node name="Icon" type="Sprite2D" parent="."]
 position = Vector2(654.5, 372)
 scale = Vector2(10.1484, 5.71875)
 texture = ExtResource("1_wjcj4")
 
 [node name="Window" parent="." instance=ExtResource("3_2541u")]
-position = Vector2(754, 221)
+position = Vector2(550, 156)
 scale = Vector2(0.165, 0.165)
 
 [node name="Node2D" type="Node2D" parent="."]
@@ -33,15 +29,15 @@ rotation = 0.738526
 
 [node name="TextureLight" type="PointLight2D" parent="Node2D"]
 texture_filter = 1
-position = Vector2(-13.6062, -404.132)
+position = Vector2(14.5559, 36.7848)
 scale = Vector2(0.234645, 1.05983)
-energy = 1.33
+energy = 0.88
 texture = ExtResource("4_iumbb")
-texture_scale = 1.95
+texture_scale = 2.55
 
 [node name="Shadow" type="PointLight2D" parent="Node2D"]
 texture_filter = 1
-position = Vector2(13.9287, -372.402)
+position = Vector2(19.6984, -299.219)
 scale = Vector2(1, 1.89032)
 energy = 0.45
 shadow_enabled = true
@@ -59,9 +55,10 @@ environment = SubResource("Environment_arept")
 
 [node name="Player" parent="." instance=ExtResource("1_wto1c")]
 position = Vector2(456, 228)
+scale = Vector2(2, 2)
 
 [node name="Camera2D2" type="Camera2D" parent="Player"]
-zoom = Vector2(4.635, 4.635)
+zoom = Vector2(2, 2)
 
 [node name="PointLight2D2" type="PointLight2D" parent="Player"]
 visible = false
