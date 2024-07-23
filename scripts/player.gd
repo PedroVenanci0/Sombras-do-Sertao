@@ -4,13 +4,14 @@ class_name Player
 
 @onready var light_occluder_2d = $Animations/LightOccluder2D
 
-var SPEED = 300
+var SPEED = 150
 const JUMP_VELOCITY = -400.0
 
 var Destination = Vector2()
 var distance = Vector2()
 var Velocity = Vector2()
 var SnapPosition = Vector2()
+var onTitle = false
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 #var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -45,8 +46,6 @@ func _physics_process(delta):
 		get_node("Animations").flip_h = true
 		get_node("LightOccluder2D").scale.x = -1
 		
-	#print(get_global_mouse_position())
-	
 func _input(event):
-	if Input.is_action_just_pressed("Click_Button"):
+	if Input.is_action_just_pressed("Click_Button") and not onTitle:
 		Destination = get_global_mouse_position()

@@ -278,7 +278,7 @@ texture_scale = 1.05
 
 [node name="Player" parent="." instance=ExtResource("9_hhqie")]
 modulate = Color(0.0687983, 0.0687983, 0.0687983, 1)
-position = Vector2(862, 303)
+position = Vector2(881, 296)
 
 [node name="Camera2D2" type="Camera2D" parent="Player"]
 position = Vector2(-2.16667, -5.16667)

@@ -1,9 +1,22 @@
-[gd_scene load_steps=2 format=3 uid="uid://d25ifulwnlbr0"]
+[gd_scene load_steps=3 format=3 uid="uid://d25ifulwnlbr0"]
 
 [ext_resource type="PackedScene" uid="uid://dg2efy3xmcg58" path="res://scenes/titlescreen.tscn" id="1_pa7iu"]
+[ext_resource type="Script" path="res://scripts/introduction.gd" id="1_suydn"]
 
 [node name="Introduction" type="Node2D"]
+z_index = 10
+script = ExtResource("1_suydn")
 
 [node name="Titlescreen" parent="." instance=ExtResource("1_pa7iu")]
-offset_top = -586.0
-offset_bottom = -586.0
+offset_left = -6.0
+offset_top = -677.0
+offset_right = -6.0
+offset_bottom = -677.0
+
+[node name="GameName" parent="Titlescreen" index="8"]
+offset_left = -188.0
+offset_top = 174.0
+offset_right = 141.0
+offset_bottom = 211.0
+
+[editable path="Titlescreen"]
