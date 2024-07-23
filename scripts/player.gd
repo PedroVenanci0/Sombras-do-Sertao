@@ -36,7 +36,6 @@ func _physics_process(delta):
 		distance = Vector2(Destination - position)
 		velocity.x = distance.normalized().x * SPEED
 		velocity.y = distance.normalized().x * 0
-	
 		move_and_slide()
 		
 	if (Destination.x > position.x):
@@ -47,5 +46,5 @@ func _physics_process(delta):
 		get_node("LightOccluder2D").scale.x = -1
 		
 func _input(event):
-	if Input.is_action_just_pressed("Click_Button") and not onTitle:
+	if Input.is_action_just_pressed("Click_Button") and not onTitle and Global.moviement_click:
 		Destination = get_global_mouse_position()

@@ -13,7 +13,7 @@ offset_top = -677.0
 offset_right = -6.0
 offset_bottom = -677.0
 
-[node name="GameName" parent="Titlescreen" index="8"]
+[node name="GameName" parent="Titlescreen" index="9"]
 offset_left = -188.0
 offset_top = 174.0
 offset_right = 141.0
