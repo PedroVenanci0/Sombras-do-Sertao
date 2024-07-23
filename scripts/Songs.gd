@@ -5,6 +5,8 @@ var musicNum : int = 1 ## Índice referente a cada musica da playlist
 
 ## Banco de dados das musicas(Playlist)
 var musicDatabase : Dictionary = {
+	1: preload("res://assets/songs/caçadoes de lenda1.mp3"),
+	2: preload("res://assets/songs/caçadoes de lenda2.mp3")
 }
 
 ## Inicia a musica de fundo com o indice inicial
@@ -18,7 +20,14 @@ func playMusic() -> void:
 	musicPlayer.stream = musicDatabase.get(musicNum)
 	musicPlayer.play()
 
-func backMusicFinished() -> void:
+
+	
+func impactPlay() -> void:
+	$ImpactSFX.play()
+
+
+func backMusicFinished():
+	print("musica acabou")
 	## Verifica se há proxima musica e itera o índice, caso não volta ao indice inicial
 	if musicNum >= musicDatabase.size():
 		musicNum = 1
@@ -29,6 +38,3 @@ func backMusicFinished() -> void:
 	musicPlayer.stream = musicDatabase.get(musicNum)
 	playMusic()
 	print(musicNum >= musicDatabase.size())
-	
-func impactPlay() -> void:
-	$ImpactSFX.play()

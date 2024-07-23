@@ -1,8 +1,10 @@
-[gd_scene load_steps=47 format=3 uid="uid://ub6dovylitej"]
+[gd_scene load_steps=50 format=3 uid="uid://ub6dovylitej"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_n5omt"]
 [ext_resource type="Texture2D" uid="uid://c83y00n5e3dpx" path="res://assets/Player/moves.png" id="1_wgwfj"]
 [ext_resource type="Texture2D" uid="uid://cuvxrmkw4lwus" path="res://assets/Player/idle.png" id="2_bhay5"]
+[ext_resource type="Texture2D" uid="uid://d0sesroso4ax" path="res://assets/Player/idlemap.png" id="4_dbktt"]
+[ext_resource type="Texture2D" uid="uid://dripaua6wcm0y" path="res://assets/Luz/Luz ambiente/download.jpeg" id="5_1ui3b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_abkfc"]
 size = Vector2(8, 20)
@@ -494,6 +496,10 @@ _data = {
 "walk": SubResource("Animation_octag")
 }
 
+[sub_resource type="CanvasTexture" id="CanvasTexture_xpy6v"]
+diffuse_texture = ExtResource("2_bhay5")
+normal_texture = ExtResource("4_dbktt")
+
 [node name="Player" type="CharacterBody2D"]
 scale = Vector2(6, 6)
 script = ExtResource("1_n5omt")
@@ -503,8 +509,7 @@ shape = SubResource("RectangleShape2D_abkfc")
 
 [node name="Animations" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_i5o4a")
-animation = &"walk"
-frame = 4
+animation = &"idle"
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
 texture_filter = 1
@@ -517,3 +522,15 @@ libraries = {
 "": SubResource("AnimationLibrary_yl115")
 }
 autoplay = "walk"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-59.3333, 22.5)
+texture = SubResource("CanvasTexture_xpy6v")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+visible = false
+position = Vector2(-43, -76)
+energy = 0.8
+shadow_enabled = true
+texture = ExtResource("5_1ui3b")

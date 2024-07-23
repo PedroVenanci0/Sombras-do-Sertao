@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://5w67ml2ebeeo"]
+[gd_scene load_steps=29 format=3 uid="uid://5w67ml2ebeeo"]
 
 [ext_resource type="Script" path="res://scripts/casa_abandonada.gd" id="1_0jpda"]
 [ext_resource type="Texture2D" uid="uid://qy28di24w8go" path="res://assets/house/Parede.png" id="1_1kkgk"]
@@ -10,12 +10,17 @@
 [ext_resource type="Texture2D" uid="uid://oojxksimsh7x" path="res://assets/house/mesa-1.png.png" id="6_wkam8"]
 [ext_resource type="Texture2D" uid="uid://be0tfjgstwsor" path="res://assets/Luz/Luz ambiente/4433d48964593f4c0326f095d731e65a.jpg" id="7_7822j"]
 [ext_resource type="PackedScene" uid="uid://fucxrmmbu670" path="res://scenes/Area_de_detecção.tscn" id="7_pfkn0"]
+[ext_resource type="Texture2D" uid="uid://banflfah6bj43" path="res://assets/house/garrafamap.png" id="8_qq1xi"]
 [ext_resource type="PackedScene" uid="uid://ub6dovylitej" path="res://scenes/player.tscn" id="9_hhqie"]
 [ext_resource type="Texture2D" uid="uid://dripaua6wcm0y" path="res://assets/Luz/Luz ambiente/download.jpeg" id="9_nh0yn"]
 [ext_resource type="PackedScene" uid="uid://cmkqp8sri8ujf" path="res://scenes/dialog_screen.tscn" id="10_68laa"]
 [ext_resource type="Texture2D" uid="uid://cq3skyt8m686k" path="res://assets/monster/samuel-furr-swinging-torso-export (1).png" id="11_syiq2"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_t60pr"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_s70sn"]
+diffuse_texture = ExtResource("5_6oeve")
+normal_texture = ExtResource("8_qq1xi")
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_vk55w"]
 blend_mode = 1
@@ -167,9 +172,9 @@ scale = Vector2(0.418898, 0.437927)
 texture = ExtResource("4_q0kpr")
 
 [node name="Garrafa" type="Sprite2D" parent="Objetos"]
-modulate = Color(0.299547, 0.299547, 0.299547, 1)
-position = Vector2(395, 240)
-texture = ExtResource("5_6oeve")
+modulate = Color(0.544974, 0.544974, 0.544974, 1)
+position = Vector2(393, 241)
+texture = SubResource("CanvasTexture_s70sn")
 
 [node name="detecçãoGarraf" parent="Objetos/Garrafa" instance=ExtResource("7_pfkn0")]
 
@@ -248,7 +253,7 @@ position = Vector2(-1148, 4)
 occluder = SubResource("OccluderPolygon2D_wqqrl")
 
 [node name="luz_Lampada_01" type="PointLight2D" parent="Light"]
-position = Vector2(362, 262)
+position = Vector2(355, 262)
 color = Color(0.784314, 0.541176, 0, 1)
 energy = 9.08
 texture = ExtResource("7_7822j")
@@ -266,10 +271,7 @@ energy = 9.08
 texture = ExtResource("7_7822j")
 
 [node name="PointLight2D3" type="PointLight2D" parent="Light"]
-
 position = Vector2(821, 409)
-
-
 rotation = 0.675746
 scale = Vector2(1.62156, 1.27088)
 energy = 5.47
@@ -278,13 +280,13 @@ texture_scale = 1.05
 
 [node name="Player" parent="." instance=ExtResource("9_hhqie")]
 modulate = Color(0.0687983, 0.0687983, 0.0687983, 1)
-position = Vector2(881, 296)
+position = Vector2(1245, 620)
 
 [node name="Camera2D2" type="Camera2D" parent="Player"]
 position = Vector2(-2.16667, -5.16667)
 zoom = Vector2(1.54, 1.54)
 
-[node name="PointLight2D" type="PointLight2D" parent="Player"]
+[node name="PointLight2D2" type="PointLight2D" parent="Player"]
 position = Vector2(-0.166666, -0.833334)
 scale = Vector2(0.698148, 1.31204)
 energy = 3.0
