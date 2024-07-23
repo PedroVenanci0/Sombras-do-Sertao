@@ -45,7 +45,7 @@ func _physics_process(delta):
 		get_node("Animations").flip_h = true
 		get_node("LightOccluder2D").scale.x = -1
 		
-	print(get_global_mouse_position())
+	#print(get_global_mouse_position())
 	
 func _input(event):
 	if Input.is_action_just_pressed("Click_Button"):

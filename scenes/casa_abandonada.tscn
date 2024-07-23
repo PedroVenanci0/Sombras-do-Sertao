@@ -1,7 +1,7 @@
-[gd_scene load_steps=25 format=3 uid="uid://5w67ml2ebeeo"]
+[gd_scene load_steps=27 format=3 uid="uid://5w67ml2ebeeo"]
 
+[ext_resource type="Script" path="res://scripts/casa_abandonada.gd" id="1_0jpda"]
 [ext_resource type="Texture2D" uid="uid://qy28di24w8go" path="res://assets/house/Parede.png" id="1_1kkgk"]
-[ext_resource type="Script" path="res://scripts/casa_abandonada.gd" id="1_j423i"]
 [ext_resource type="Texture2D" uid="uid://c88wjs5hcbdll" path="res://assets/house/Parede-com janela.png" id="2_of24i"]
 [ext_resource type="Texture2D" uid="uid://si4wfcp6nso" path="res://assets/house/quadro_nordestino-1.png.png" id="3_ynxyk"]
 [ext_resource type="Texture2D" uid="uid://cmb1tutdb80e7" path="res://assets/house/pote de barro.png" id="4_q0kpr"]
@@ -9,9 +9,13 @@
 [ext_resource type="Texture2D" uid="uid://80w7ufelexa1" path="res://assets/house/forno-1.png.png" id="6_c4g5g"]
 [ext_resource type="Texture2D" uid="uid://oojxksimsh7x" path="res://assets/house/mesa-1.png.png" id="6_wkam8"]
 [ext_resource type="Texture2D" uid="uid://be0tfjgstwsor" path="res://assets/Luz/Luz ambiente/4433d48964593f4c0326f095d731e65a.jpg" id="7_7822j"]
+[ext_resource type="PackedScene" uid="uid://fucxrmmbu670" path="res://scenes/Area_de_detecção.tscn" id="7_pfkn0"]
 [ext_resource type="PackedScene" uid="uid://ub6dovylitej" path="res://scenes/player.tscn" id="9_hhqie"]
 [ext_resource type="Texture2D" uid="uid://dripaua6wcm0y" path="res://assets/Luz/Luz ambiente/download.jpeg" id="9_nh0yn"]
+[ext_resource type="PackedScene" uid="uid://cmkqp8sri8ujf" path="res://scenes/dialog_screen.tscn" id="10_68laa"]
 [ext_resource type="Texture2D" uid="uid://cq3skyt8m686k" path="res://assets/monster/samuel-furr-swinging-torso-export (1).png" id="11_syiq2"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_t60pr"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_vk55w"]
 blend_mode = 1
@@ -83,82 +87,146 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6x3j0"]
-size = Vector2(61, 371)
-
 [node name="Casa_Abandonada" type="Node2D"]
-script = ExtResource("1_j423i")
+position = Vector2(25, -5)
+script = ExtResource("1_0jpda")
 
 [node name="Construções" type="Node2D" parent="."]
 
 [node name="Parede2" type="Sprite2D" parent="Construções"]
-modulate = Color(0.10748, 0.10748, 0.10748, 1)
+modulate = Color(0.144063, 0.144063, 0.144063, 1)
 position = Vector2(57, 256)
 texture = ExtResource("1_1kkgk")
 
 [node name="Parede3" type="Sprite2D" parent="Construções"]
-modulate = Color(0.10748, 0.10748, 0.10748, 1)
+modulate = Color(0.144063, 0.144063, 0.144063, 1)
 position = Vector2(-737, 255)
 texture = ExtResource("1_1kkgk")
 
 [node name="Parede-comJanela" type="Sprite2D" parent="Construções"]
-modulate = Color(0.10748, 0.10748, 0.10748, 1)
+modulate = Color(0.144063, 0.144063, 0.144063, 1)
 position = Vector2(856, 257)
 texture = ExtResource("2_of24i")
 
 [node name="Objetos" type="Node2D" parent="."]
 
-[node name="QuadroNordestino-1_png" type="Sprite2D" parent="Objetos"]
-modulate = Color(0.10748, 0.10748, 0.10748, 1)
+[node name="Quadro2" type="Sprite2D" parent="Objetos"]
+modulate = Color(0.111197, 0.111197, 0.111197, 1)
 position = Vector2(643, 196)
 scale = Vector2(0.105, 0.105)
 texture = ExtResource("3_ynxyk")
 
-[node name="QuadroNordestino-1_png2" type="Sprite2D" parent="Objetos"]
-modulate = Color(0.10748, 0.10748, 0.10748, 1)
+[node name="Quadro" type="Sprite2D" parent="Objetos"]
+modulate = Color(0.111197, 0.111197, 0.111197, 1)
+material = SubResource("ShaderMaterial_t60pr")
 position = Vector2(-161, 202)
 scale = Vector2(0.105, 0.105)
 texture = ExtResource("3_ynxyk")
 
+[node name="detecção" parent="Objetos/Quadro" instance=ExtResource("7_pfkn0")]
+
+[node name="TextureRect" parent="Objetos/Quadro/detecção" index="0"]
+offset_left = -448.0
+offset_top = -171.0
+offset_right = 438.0
+offset_bottom = 400.0
+
+[node name="Label" parent="Objetos/Quadro/detecção" index="1"]
+offset_left = -1200.0
+offset_top = -1038.1
+offset_right = 2029.0
+offset_bottom = -38.0952
+scale = Vector2(0.42, 0.42)
+theme_override_font_sizes/font_size = 1000
+
+[node name="Timer" parent="Objetos/Quadro/detecção" index="2"]
+wait_time = 0.1
+
 [node name="PoteDeBarro" type="Sprite2D" parent="Objetos"]
-modulate = Color(0.10748, 0.10748, 0.10748, 1)
+modulate = Color(0.111197, 0.111197, 0.111197, 1)
 position = Vector2(692.23, 377.55)
 scale = Vector2(0.455, 0.455)
 texture = ExtResource("4_q0kpr")
 
 [node name="PoteDeBarro2" type="Sprite2D" parent="Objetos"]
-modulate = Color(0.10748, 0.10748, 0.10748, 1)
+modulate = Color(0.111197, 0.111197, 0.111197, 1)
 position = Vector2(771.23, 383.55)
 scale = Vector2(0.71, 0.71)
 texture = ExtResource("4_q0kpr")
 
 [node name="PoteDeBarro3" type="Sprite2D" parent="Objetos"]
-modulate = Color(0.10748, 0.10748, 0.10748, 1)
+modulate = Color(0.111197, 0.111197, 0.111197, 1)
 position = Vector2(850, 384)
 scale = Vector2(0.71, 0.71)
 texture = ExtResource("4_q0kpr")
 
 [node name="PoteDeBarro4" type="Sprite2D" parent="Objetos"]
-modulate = Color(0.10748, 0.10748, 0.10748, 1)
+modulate = Color(0.111197, 0.111197, 0.111197, 1)
 position = Vector2(841, 378)
 scale = Vector2(0.418898, 0.437927)
 texture = ExtResource("4_q0kpr")
 
 [node name="Garrafa" type="Sprite2D" parent="Objetos"]
-modulate = Color(0.233925, 0.233925, 0.233925, 1)
-position = Vector2(387, 240)
+modulate = Color(0.299547, 0.299547, 0.299547, 1)
+position = Vector2(395, 240)
 texture = ExtResource("5_6oeve")
 
+[node name="detecçãoGarraf" parent="Objetos/Garrafa" instance=ExtResource("7_pfkn0")]
+
+[node name="TextureRect" parent="Objetos/Garrafa/detecçãoGarraf" index="0"]
+offset_left = -82.0
+offset_top = -29.0
+offset_right = -9.0
+offset_bottom = 23.0
+
+[node name="Label" parent="Objetos/Garrafa/detecçãoGarraf" index="1"]
+offset_left = -160.0
+offset_top = -99.0
+offset_right = -97.0
+offset_bottom = -73.0
+scale = Vector2(0.245, 0.245)
+theme_override_font_sizes/font_size = 100
+
+[node name="Timer" parent="Objetos/Garrafa/detecçãoGarraf" index="2"]
+wait_time = 0.1
+
 [node name="Forno-1_png" type="Sprite2D" parent="Objetos"]
-modulate = Color(0.10748, 0.10748, 0.10748, 1)
+modulate = Color(0.111197, 0.111197, 0.111197, 1)
 position = Vector2(45, 242)
 texture = ExtResource("6_c4g5g")
 
 [node name="Mesa-1_png" type="Sprite2D" parent="Objetos"]
-modulate = Color(0.10748, 0.10748, 0.10748, 1)
+modulate = Color(0.111197, 0.111197, 0.111197, 1)
 position = Vector2(346, 315)
 scale = Vector2(0.728889, 0.488889)
 texture = ExtResource("6_wkam8")
+
+[node name="Lua" type="Node2D" parent="Objetos"]
+
+[node name="DialogScreen" parent="Objetos/Lua" instance=ExtResource("10_68laa")]
+offset_left = 591.0
+offset_top = 71.0
+offset_right = 911.0
+offset_bottom = 151.0
+
+[node name="detecção" parent="Objetos/Lua" instance=ExtResource("7_pfkn0")]
+z_index = 1
+
+[node name="TextureRect" parent="Objetos/Lua/detecção" index="0"]
+offset_left = 917.0
+offset_top = 145.0
+offset_right = 1029.0
+offset_bottom = 243.0
+
+[node name="Label" parent="Objetos/Lua/detecção" index="1"]
+offset_left = 673.0
+offset_top = 90.0
+offset_right = 713.0
+offset_bottom = 113.0
+scale = Vector2(1.18, 1.18)
+
+[node name="Timer" parent="Objetos/Lua/detecção" index="2"]
+wait_time = 0.1
 
 [node name="Light" type="Node2D" parent="."]
 
@@ -179,8 +247,8 @@ position = Vector2(-1148, 4)
 occluder = SubResource("OccluderPolygon2D_wqqrl")
 
 [node name="luz_Lampada_01" type="PointLight2D" parent="Light"]
-position = Vector2(389, 266)
-color = Color(0.78373, 0.539526, 0, 1)
+position = Vector2(362, 262)
+color = Color(0.784314, 0.541176, 0, 1)
 energy = 9.08
 texture = ExtResource("7_7822j")
 
@@ -197,7 +265,7 @@ energy = 9.08
 texture = ExtResource("7_7822j")
 
 [node name="PointLight2D3" type="PointLight2D" parent="Light"]
-position = Vector2(821, 408)
+position = Vector2(821, 409)
 rotation = 0.675746
 scale = Vector2(1.62156, 1.27088)
 energy = 5.47
@@ -229,11 +297,10 @@ sprite_frames = SubResource("SpriteFrames_6icy0")
 autoplay = "default"
 frame_progress = 0.628872
 
-[node name="Area2D" type="Area2D" parent="Monster"]
-position = Vector2(-109, 0)
+[node name="BannerMensagem" type="Sprite2D" parent="."]
+position = Vector2(1012, 438)
+scale = Vector2(1.81111, 0.611111)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Monster/Area2D"]
-position = Vector2(-275, 191)
-shape = SubResource("RectangleShape2D_6x3j0")
-
-[connection signal="body_entered" from="Monster/Area2D" to="." method="_on_area_2d_body_entered"]
+[editable path="Objetos/Quadro/detecção"]
+[editable path="Objetos/Garrafa/detecçãoGarraf"]
+[editable path="Objetos/Lua/detecção"]

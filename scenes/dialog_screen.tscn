@@ -1,0 +1,91 @@
+[gd_scene load_steps=5 format=3 uid="uid://cmkqp8sri8ujf"]
+
+[ext_resource type="Texture2D" uid="uid://divt68m3jiyrb" path="res://assets/cangaceiro_face/Foto de cangaceiro.jpg" id="1_ktqwx"]
+[ext_resource type="FontFile" uid="uid://btva2fapcwfpp" path="res://assets/fontes/xilosa_.ttf" id="2_hf7yt"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_dv72i"]
+font = ExtResource("2_hf7yt")
+shadow_color = Color(0, 0, 0, 0.6)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_vre65"]
+polygon = PackedVector2Array(0, 0, 0, 80, 0, 80, 320, 80, 321, 0)
+
+[node name="DialogScreen" type="Control"]
+custom_minimum_size = Vector2(320, 80)
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -327.0
+offset_top = -185.0
+offset_right = 203.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+modulate = Color(0.125911, 0.125911, 0.125911, 1)
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 321.0
+offset_bottom = 81.0
+color = Color(0.555463, 0.226736, 6.257e-07, 1)
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.122252, 0.122252, 0.122252, 1)
+
+[node name="HContainer" type="HBoxContainer" parent="Background"]
+custom_minimum_size = Vector2(312, 72)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -156.0
+offset_top = -36.0
+offset_right = 156.0
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Border" type="ColorRect" parent="Background/HContainer"]
+custom_minimum_size = Vector2(72, 0)
+layout_mode = 2
+color = Color(0.978709, 0.475741, 1.15514e-06, 1)
+
+[node name="FaceSet" type="TextureRect" parent="Background/HContainer/Border"]
+custom_minimum_size = Vector2(70, 72)
+layout_mode = 0
+offset_left = -14.0
+offset_top = 1.0
+offset_right = 58.0
+offset_bottom = 73.0
+scale = Vector2(1.38, 0.965)
+texture = ExtResource("1_ktqwx")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="VContainer" type="VBoxContainer" parent="Background/HContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Name" type="Label" parent="Background/HContainer/VContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "José"
+label_settings = SubResource("LabelSettings_dv72i")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_vre65")
