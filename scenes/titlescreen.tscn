@@ -1,24 +1,22 @@
-[gd_scene load_steps=6 format=3 uid="uid://dg2efy3xmcg58"]
+[gd_scene load_steps=7 format=3 uid="uid://dg2efy3xmcg58"]
 
 [ext_resource type="Script" path="res://scripts/titlescreen.gd" id="1_6mo47"]
 [ext_resource type="Texture2D" uid="uid://b3cwjhhjmifv2" path="res://assets/Menus/A_cursed_men_cangaceiro.jpg" id="1_8rcj2"]
 [ext_resource type="Theme" uid="uid://c2qfsxntflbef" path="res://assets/Menus/Fonts/terrorTherme.tres" id="2_k0g3k"]
 [ext_resource type="Texture2D" uid="uid://cd6qvdhqjpslf" path="res://assets/Menus/itensCangaço.png" id="2_odcw7"]
 [ext_resource type="PackedScene" uid="uid://duxy814uemjbn" path="res://scenes/FadeOutLayer.tscn" id="4_3bt83"]
+[ext_resource type="Script" path="res://scripts/TransitionCam.gd" id="6_wl2kg"]
 
 [node name="Titlescreen" type="Control"]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 0
 script = ExtResource("1_6mo47")
 
 [node name="Background" type="Sprite2D" parent="."]
+visible = false
 modulate = Color(1, 0.317647, 0.321569, 1)
 self_modulate = Color(0.670588, 0.670588, 0.670588, 1)
-position = Vector2(641, 362)
+position = Vector2(-1, 223)
 scale = Vector2(1.25586, 1.25)
 texture = ExtResource("1_8rcj2")
 region_enabled = true
@@ -55,9 +53,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -329.5
-offset_top = -254.0
+offset_top = -54.0
 offset_right = 329.5
-offset_bottom = -178.0
+offset_bottom = 22.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_k0g3k")
@@ -82,10 +80,10 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 1032.0
-offset_top = -34.0
-offset_right = 1151.0
-offset_bottom = 70.0
+offset_left = 405.0
+offset_top = 235.0
+offset_right = 524.0
+offset_bottom = 339.0
 grow_vertical = 2
 
 [node name="StartButton" type="Button" parent="Buttons"]
@@ -108,7 +106,8 @@ text = "EXIT"
 visible = false
 
 [node name="TransitionCam" type="Camera2D" parent="."]
-position = Vector2(642, 362)
+position = Vector2(0, 220)
+script = ExtResource("6_wl2kg")
 
 [connection signal="pressed" from="Buttons/StartButton" to="." method="startPressed"]
 [connection signal="pressed" from="Buttons/ExitButton" to="." method="exitPressed"]

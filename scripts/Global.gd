@@ -13,4 +13,4 @@ func fadeTransition(sceneCalled):
 	
 	## Atribuição da proxima cena e adição do fade ao fluxo atual
 	_fade.nextScene = scenesDatabae.get(sceneCalled)
-	add_child(_fade)
+	get_parent().add_child(_fade)

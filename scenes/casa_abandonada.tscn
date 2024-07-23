@@ -231,14 +231,15 @@ wait_time = 0.1
 [node name="Light" type="Node2D" parent="."]
 
 [node name="Luz_Lunar" type="PointLight2D" parent="Light"]
-position = Vector2(935.964, 262.824)
+position = Vector2(995.226, 224.726)
 rotation = 0.800657
-scale = Vector2(0.563967, 1.67632)
-energy = 0.9
+scale = Vector2(1.76817, 3.08388)
+energy = 9.93
 shadow_enabled = true
 shadow_filter = 1
 shadow_filter_smooth = 3.0
 texture = ExtResource("9_nh0yn")
+texture_scale = 1.05
 
 [node name="Collisao_Sombras" type="LightOccluder2D" parent="Light"]
 texture_filter = 1
@@ -265,16 +266,19 @@ energy = 9.08
 texture = ExtResource("7_7822j")
 
 [node name="PointLight2D3" type="PointLight2D" parent="Light"]
+
 position = Vector2(821, 409)
+
+
 rotation = 0.675746
 scale = Vector2(1.62156, 1.27088)
 energy = 5.47
 texture = ExtResource("7_7822j")
+texture_scale = 1.05
 
 [node name="Player" parent="." instance=ExtResource("9_hhqie")]
 modulate = Color(0.0687983, 0.0687983, 0.0687983, 1)
-position = Vector2(852, 288)
-scale = Vector2(6, 6)
+position = Vector2(862, 303)
 
 [node name="Camera2D2" type="Camera2D" parent="Player"]
 position = Vector2(-2.16667, -5.16667)
