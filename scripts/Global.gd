@@ -1,5 +1,8 @@
 extends Node
 
+
+var moviement_click: bool = true
+
 ## Database de cenas em preload
 var scenesDatabae : Dictionary = {
 	"titlescreen" : preload("res://scenes/titlescreen.tscn"),
