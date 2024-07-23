@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://5w67ml2ebeeo"]
+[gd_scene load_steps=27 format=3 uid="uid://5w67ml2ebeeo"]
 
 [ext_resource type="Script" path="res://scripts/casa_abandonada.gd" id="1_0jpda"]
 [ext_resource type="Texture2D" uid="uid://qy28di24w8go" path="res://assets/house/Parede.png" id="1_1kkgk"]
@@ -14,15 +14,26 @@
 [ext_resource type="Texture2D" uid="uid://dripaua6wcm0y" path="res://assets/Luz/Luz ambiente/download.jpeg" id="9_nh0yn"]
 [ext_resource type="Script" path="res://scripts/Camera_CasaAbandonada.gd" id="13_f3w6m"]
 [ext_resource type="PackedScene" uid="uid://bf7atnfi168ga" path="res://scenes/monster.tscn" id="14_m3kq1"]
+[ext_resource type="Texture2D" uid="uid://dqslbn2tacxt3" path="res://assets/house/BrCultureJamAssets/Espelho_3x.png" id="15_phbf7"]
+[ext_resource type="Texture2D" uid="uid://bps6jnrbjtred" path="res://assets/house/BrCultureJamAssets/Caipirinha_1x.png" id="16_j4gtq"]
+[ext_resource type="Texture2D" uid="uid://c8j01g7caufxi" path="res://assets/house/BrCultureJamAssets/Galinha_1x.png" id="17_vuixg"]
+[ext_resource type="Texture2D" uid="uid://cjd1s0nkwg4u0" path="res://assets/house/image-1.png.png" id="18_l064a"]
+[ext_resource type="Texture2D" uid="uid://1o772ydgs81i" path="res://assets/house/Pitu.png" id="19_ikojr"]
+[ext_resource type="Texture2D" uid="uid://x5ul5bpn1kps" path="res://assets/image-1.png.png" id="20_c1cqr"]
+[ext_resource type="Texture2D" uid="uid://c4a8ru5ahdyjh" path="res://assets/house/parede_porta.png" id="21_4dusk"]
+[ext_resource type="Texture2D" uid="uid://d2uqycboumv4f" path="res://assets/house/porta.png" id="22_4k3qd"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_vk55w"]
 blend_mode = 1
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_wqqrl"]
-polygon = PackedVector2Array(17, 5, 15, 498, 2402, 501, 2404, 4)
+polygon = PackedVector2Array(17, 5, 15, 498, 2776, 503, 2774, 0)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4fxg"]
 size = Vector2(82, 365.5)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_xsj6f"]
+polygon = PackedVector2Array(-95.1099, -185.668, -91.0627, 164.169, 60.708, 187.622, 66.7788, -207.166)
 
 [node name="Casa_Abandonada" type="Node2D"]
 position = Vector2(25, -5)
@@ -44,6 +55,13 @@ texture = ExtResource("1_1kkgk")
 modulate = Color(0.144063, 0.144063, 0.144063, 1)
 position = Vector2(856, 257)
 texture = ExtResource("2_of24i")
+
+[node name="ParedePorta" type="Sprite2D" parent="Construções"]
+modulate = Color(0.145098, 0.145098, 0.145098, 1)
+z_index = -1
+position = Vector2(1090, 259)
+scale = Vector2(0.88, 1.008)
+texture = ExtResource("21_4dusk")
 
 [node name="Objetos" type="Node2D" parent="."]
 
@@ -79,33 +97,9 @@ theme_override_font_sizes/font_size = 100
 [node name="Timer" parent="Objetos/Quadro/detecção" index="2"]
 wait_time = 0.1
 
-[node name="PoteDeBarro" type="Sprite2D" parent="Objetos"]
-modulate = Color(0.111197, 0.111197, 0.111197, 1)
-position = Vector2(692.23, 377.55)
-scale = Vector2(0.455, 0.455)
-texture = ExtResource("4_q0kpr")
-
-[node name="PoteDeBarro2" type="Sprite2D" parent="Objetos"]
-modulate = Color(0.111197, 0.111197, 0.111197, 1)
-position = Vector2(771.23, 383.55)
-scale = Vector2(0.71, 0.71)
-texture = ExtResource("4_q0kpr")
-
-[node name="PoteDeBarro3" type="Sprite2D" parent="Objetos"]
-modulate = Color(0.111197, 0.111197, 0.111197, 1)
-position = Vector2(850, 384)
-scale = Vector2(0.71, 0.71)
-texture = ExtResource("4_q0kpr")
-
-[node name="PoteDeBarro4" type="Sprite2D" parent="Objetos"]
-modulate = Color(0.111197, 0.111197, 0.111197, 1)
-position = Vector2(841, 378)
-scale = Vector2(0.418898, 0.437927)
-texture = ExtResource("4_q0kpr")
-
 [node name="Garrafa" type="Sprite2D" parent="Objetos"]
 modulate = Color(0.299547, 0.299547, 0.299547, 1)
-position = Vector2(395, 240)
+position = Vector2(345, 278)
 texture = ExtResource("5_6oeve")
 
 [node name="detecçãoGarraf" parent="Objetos/Garrafa" instance=ExtResource("7_pfkn0")]
@@ -126,17 +120,6 @@ theme_override_font_sizes/font_size = 100
 
 [node name="Timer" parent="Objetos/Garrafa/detecçãoGarraf" index="2"]
 wait_time = 0.1
-
-[node name="Forno-1_png" type="Sprite2D" parent="Objetos"]
-modulate = Color(0.111197, 0.111197, 0.111197, 1)
-position = Vector2(19, 234)
-texture = ExtResource("6_c4g5g")
-
-[node name="Mesa-1_png" type="Sprite2D" parent="Objetos"]
-modulate = Color(0.111197, 0.111197, 0.111197, 1)
-position = Vector2(346, 315)
-scale = Vector2(0.728889, 0.488889)
-texture = ExtResource("6_wkam8")
 
 [node name="Lua" type="Node2D" parent="Objetos"]
 
@@ -160,12 +143,149 @@ theme_override_font_sizes/font_size = 100
 [node name="Timer" parent="Objetos/Lua/detecção" index="2"]
 wait_time = 0.1
 
+[node name="Espelho" type="Sprite2D" parent="Objetos"]
+self_modulate = Color(0.0923971, 0.0923971, 0.0923971, 1)
+position = Vector2(444, 246)
+scale = Vector2(0.340278, 0.304688)
+texture = ExtResource("15_phbf7")
+
+[node name="detecção" parent="Objetos/Espelho" instance=ExtResource("7_pfkn0")]
+
+[node name="TextureRect" parent="Objetos/Espelho/detecção" index="0"]
+offset_left = -47.0
+offset_top = -66.0
+offset_right = 47.0
+offset_bottom = 69.0
+
+[node name="Label" parent="Objetos/Espelho/detecção" index="1"]
+offset_left = -258.612
+offset_top = 469.333
+offset_right = -51.6121
+offset_bottom = 569.333
+scale = Vector2(0.69, 0.69)
+theme_override_font_sizes/font_size = 100
+
+[node name="Timer" parent="Objetos/Espelho/detecção" index="2"]
+wait_time = 0.1
+
+[node name="Pitu" type="Sprite2D" parent="Objetos"]
+self_modulate = Color(0.18359, 0.18359, 0.18359, 1)
+position = Vector2(-280, 285)
+scale = Vector2(0.0563725, 0.0549242)
+texture = ExtResource("19_ikojr")
+
+[node name="detecção" parent="Objetos/Pitu" instance=ExtResource("7_pfkn0")]
+
+[node name="TextureRect" parent="Objetos/Pitu/detecção" index="0"]
+offset_left = -373.0
+offset_top = -255.0
+offset_right = -71.0
+offset_bottom = 237.0
+
+[node name="Label" parent="Objetos/Pitu/detecção" index="1"]
+offset_left = -1277.22
+offset_top = 1984.55
+offset_right = -1237.22
+offset_bottom = 2007.55
+scale = Vector2(2.96, 2.96)
+theme_override_font_sizes/font_size = 100
+
+[node name="Timer" parent="Objetos/Pitu/detecção" index="2"]
+wait_time = 0.1
+
+[node name="Caipirinha1x" type="Sprite2D" parent="Objetos/Pitu"]
+modulate = Color(0.165656, 0.165656, 0.165656, 1)
+position = Vector2(-283.826, 72.8276)
+scale = Vector2(5.2663, 5.68966)
+texture = ExtResource("16_j4gtq")
+
+[node name="PoteDeBarro" type="Sprite2D" parent="Objetos"]
+modulate = Color(0.111197, 0.111197, 0.111197, 1)
+position = Vector2(-61, 379)
+scale = Vector2(0.350136, 0.352988)
+texture = ExtResource("4_q0kpr")
+
+[node name="PoteDeBarro2" type="Sprite2D" parent="Objetos"]
+modulate = Color(0.111197, 0.111197, 0.111197, 1)
+position = Vector2(-7.62939e-06, 382)
+scale = Vector2(0.523962, 0.531707)
+texture = ExtResource("4_q0kpr")
+
+[node name="PoteDeBarro3" type="Sprite2D" parent="Objetos"]
+modulate = Color(0.111197, 0.111197, 0.111197, 1)
+position = Vector2(29, 382)
+scale = Vector2(0.503562, 0.523293)
+texture = ExtResource("4_q0kpr")
+
+[node name="PoteDeBarro4" type="Sprite2D" parent="Objetos"]
+modulate = Color(0.111197, 0.111197, 0.111197, 1)
+position = Vector2(40, 377)
+scale = Vector2(0.326063, 0.338476)
+texture = ExtResource("4_q0kpr")
+
+[node name="Forno-1_png" type="Sprite2D" parent="Objetos"]
+modulate = Color(0.111197, 0.111197, 0.111197, 1)
+position = Vector2(-517, 243)
+texture = ExtResource("6_c4g5g")
+
+[node name="Mesa-1_png" type="Sprite2D" parent="Objetos"]
+modulate = Color(0.111197, 0.111197, 0.111197, 1)
+position = Vector2(346, 334)
+scale = Vector2(0.728889, 0.328889)
+texture = ExtResource("6_wkam8")
+
+[node name="Mesa-1_png2" type="Sprite2D" parent="Objetos"]
+modulate = Color(0.111197, 0.111197, 0.111197, 1)
+z_index = 1
+position = Vector2(-281, 333)
+scale = Vector2(0.44, 0.328889)
+texture = ExtResource("6_wkam8")
+
+[node name="Galinha1x" type="Sprite2D" parent="Objetos"]
+modulate = Color(0.0646965, 0.0646965, 0.0646965, 1)
+position = Vector2(378, 288)
+scale = Vector2(0.539063, 0.46875)
+texture = ExtResource("17_vuixg")
+
+[node name="Armario" type="Sprite2D" parent="Objetos"]
+modulate = Color(0.885708, 0.565782, 0.0564325, 1)
+position = Vector2(90, 260.938)
+scale = Vector2(0.656035, 0.598192)
+texture = ExtResource("18_l064a")
+
+[node name="Filtro_de_barro" type="Sprite2D" parent="Objetos"]
+self_modulate = Color(0.111197, 0.111197, 0.111197, 1)
+position = Vector2(-245, 283)
+scale = Vector2(0.392241, 0.37)
+texture = ExtResource("20_c1cqr")
+
+[node name="detecção" parent="Objetos/Filtro_de_barro" instance=ExtResource("7_pfkn0")]
+
+[node name="TextureRect" parent="Objetos/Filtro_de_barro/detecção" index="0"]
+offset_left = -31.0
+offset_top = -122.0
+offset_right = 51.0
+
+[node name="Label" parent="Objetos/Filtro_de_barro/detecção" index="1"]
+offset_left = -290.637
+offset_top = 275.676
+offset_right = 32.3627
+offset_bottom = 375.676
+scale = Vector2(0.625, 0.625)
+theme_override_font_sizes/font_size = 100
+text = "
+"
+
+[node name="Timer" parent="Objetos/Filtro_de_barro/detecção" index="2"]
+wait_time = 0.1
+
 [node name="Light" type="Node2D" parent="."]
 
 [node name="Luz_Lunar" type="PointLight2D" parent="Light"]
 position = Vector2(993.795, 226.114)
 rotation = 0.800657
 scale = Vector2(1.76817, 3.067)
+color = Color(0.901961, 0, 0, 1)
 energy = 0.79
 shadow_enabled = true
 shadow_filter = 1
@@ -173,10 +293,23 @@ shadow_filter_smooth = 3.0
 texture = ExtResource("9_nh0yn")
 texture_scale = 1.05
 
+[node name="Luz_porta" type="PointLight2D" parent="Light"]
+z_index = -2
+position = Vector2(1380, 200)
+rotation = -0.727394
+scale = Vector2(0.556824, 0.744416)
+color = Color(0.498039, 0, 0, 1)
+energy = 2.52
+shadow_enabled = true
+shadow_filter = 1
+shadow_filter_smooth = 3.0
+texture = ExtResource("7_7822j")
+texture_scale = 1.95
+
 [node name="Collisao_Sombras" type="LightOccluder2D" parent="Light"]
 texture_filter = 1
 material = SubResource("CanvasItemMaterial_vk55w")
-position = Vector2(-1148, 4)
+position = Vector2(-1333, 7)
 occluder = SubResource("OccluderPolygon2D_wqqrl")
 
 [node name="luz_Lampada_01" type="PointLight2D" parent="Light"]
@@ -188,9 +321,10 @@ texture = ExtResource("7_7822j")
 
 [node name="luz_Lampada_02" type="PointLight2D" parent="Light"]
 unique_name_in_owner = true
-position = Vector2(-991, 253)
+position = Vector2(-988, 142)
 color = Color(0.78373, 0.539526, 0, 1)
-energy = 9.08
+energy = 9.1
+shadow_enabled = true
 texture = ExtResource("7_7822j")
 
 [node name="luz_Lampada_03" type="PointLight2D" parent="Light"]
@@ -204,32 +338,14 @@ texture = ExtResource("7_7822j")
 position = Vector2(815.231, 416.196)
 rotation = 0.675746
 scale = Vector2(1.62156, 1.23657)
+color = Color(0.77844, 0.162554, 0, 1)
 energy = 5.47
 texture = ExtResource("7_7822j")
 texture_scale = 1.05
 
-[node name="Player" parent="." instance=ExtResource("9_hhqie")]
-unique_name_in_owner = true
-modulate = Color(0.0687983, 0.0687983, 0.0687983, 1)
-position = Vector2(1142, 298)
-
-[node name="PointLight2D" type="PointLight2D" parent="Player"]
-position = Vector2(-0.166666, -0.833334)
-scale = Vector2(0.698148, 1.31204)
-energy = 3.0
-texture = ExtResource("9_nh0yn")
-texture_scale = 0.1
-
-[node name="Camera2D2" type="Camera2D" parent="Player"]
-unique_name_in_owner = true
-position = Vector2(-2.16666, -5.16667)
-zoom = Vector2(1.54, 1.54)
-limit_left = -1109
-script = ExtResource("13_f3w6m")
-
 [node name="Monster" parent="." instance=ExtResource("14_m3kq1")]
 unique_name_in_owner = true
-modulate = Color(0.151276, 0.151276, 0.151276, 1)
+modulate = Color(0.136826, 0.136826, 0.136826, 1)
 position = Vector2(-996, 136)
 
 [node name="detecção2" parent="Monster" instance=ExtResource("7_pfkn0")]
@@ -246,21 +362,62 @@ offset_top = 259.0
 offset_right = 285.0
 offset_bottom = 359.0
 scale = Vector2(0.23, 0.23)
+theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_font_sizes/font_size = 100
 
 [node name="Timer" parent="Monster/detecção2" index="2"]
 wait_time = 0.02
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="PicanhaDoLulinha" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PicanhaDoLulinha"]
 position = Vector2(-710, 191)
 shape = SubResource("RectangleShape2D_g4fxg")
 
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[node name="Player" parent="." instance=ExtResource("9_hhqie")]
+unique_name_in_owner = true
+modulate = Color(0.0687983, 0.0687983, 0.0687983, 1)
+position = Vector2(556, 301)
+
+[node name="PointLight2D" type="PointLight2D" parent="Player"]
+position = Vector2(-0.166666, -0.833334)
+scale = Vector2(0.698148, 1.31204)
+energy = 3.0
+texture = ExtResource("9_nh0yn")
+texture_scale = 0.1
+
+[node name="Camera2D2" type="Camera2D" parent="Player"]
+unique_name_in_owner = true
+position = Vector2(-2.16666, -5.16667)
+zoom = Vector2(1.54, 1.54)
+limit_left = -1109
+script = ExtResource("13_f3w6m")
+
+[node name="Porta" type="Sprite2D" parent="."]
+modulate = Color(0.145098, 0.145098, 0.145098, 1)
+z_index = -1
+position = Vector2(1335, 274)
+scale = Vector2(0.494167, 0.511667)
+texture = ExtResource("22_4k3qd")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Porta"]
+occluder = SubResource("OccluderPolygon2D_xsj6f")
+
+[node name="ColorRect" type="ColorRect" parent="Porta"]
+z_index = -10
+offset_left = 66.7788
+offset_top = -218.893
+offset_right = 106.779
+offset_bottom = -13.8925
+color = Color(0.112467, 0.00586382, 0.00584435, 1)
+
+[connection signal="body_entered" from="PicanhaDoLulinha" to="." method="_on_area_2d_body_entered"]
 
 [editable path="Objetos/Quadro/detecção"]
 [editable path="Objetos/Garrafa/detecçãoGarraf"]
 [editable path="Objetos/Lua/detecção"]
+[editable path="Objetos/Espelho/detecção"]
+[editable path="Objetos/Pitu/detecção"]
+[editable path="Objetos/Filtro_de_barro/detecção"]
 [editable path="Monster"]
 [editable path="Monster/detecção2"]

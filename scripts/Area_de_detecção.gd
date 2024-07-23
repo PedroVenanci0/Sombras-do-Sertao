@@ -27,6 +27,9 @@ var msgShow: Array = [
 	"& Já esse Quadro poderia ser melhor, mas pelo menos,\nrepresenta a seca do velho nordeste. &",
 	"& Picanha do lula?? Faz o L!!. &",
 	"& DIABO!!! FI DO CABRUNCO\nRAI DE PERTO DE MIM!!! &",
+	"& Éguaa!!! mas eu tõ Emperiquitado\nde bunito nesse espei fi &",
+	"& Armaria, Cana arretada da peste!! Toma até outa dose. &",
+	"& Você pensa que cachaça é água. Cachaça não é água não. Cachaça vem do alambique. E água vem do ribeirão. Sempre preferi o alambique."
 ]
 
 func _ready():
@@ -62,6 +65,19 @@ func _process(delta):
 				_msg = msgShow[4]
 				show_message(_msg)
 				player.onTitle = false
+			"Espelho":
+				_msg = msgShow[5]
+				show_message(_msg)
+				texture_rect.queue_free()
+			"Pitu":
+				_msg = msgShow[6]
+				show_message(_msg)
+				texture_rect.queue_free()
+			"Filtro_de_barro":
+				_msg = msgShow[7]
+				show_message(_msg)
+				texture_rect.queue_free()
+				
 	
 				
 func _on_texture_rect_mouse_entered():
