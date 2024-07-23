@@ -33,6 +33,7 @@ window/stretch/mode="viewport"
 
 folder_colors={
 "res://SFX/": "blue",
+"res://Shader/": "pink",
 "res://assets/": "blue",
 "res://fonts/": "orange",
 "res://images/": "yellow",
