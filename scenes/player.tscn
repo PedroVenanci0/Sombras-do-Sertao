@@ -158,9 +158,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_1dmwb")
 }],
-"loop": false,
+"loop": true,
 "name": &"idle",
-"speed": 4.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -263,7 +263,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_0cnbd")
 }],
-"loop": false,
+"loop": true,
 "name": &"walk",
 "speed": 15.0
 }]
