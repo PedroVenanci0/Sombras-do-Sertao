@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cber6ss5pdnjq"
+path="res://.godot/imported/caçadoes de lenda1.mp3-e068e21af2a33b45bcfecf8ee692e4b6.mp3str"
+
+[deps]
+
+source_file="res://assets/songs/caçadoes de lenda1.mp3"
+dest_files=["res://.godot/imported/caçadoes de lenda1.mp3-e068e21af2a33b45bcfecf8ee692e4b6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

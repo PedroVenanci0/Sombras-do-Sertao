@@ -29,7 +29,7 @@ rotation = 0.738526
 
 [node name="TextureLight" type="PointLight2D" parent="Node2D"]
 texture_filter = 1
-position = Vector2(14.5559, 36.7848)
+position = Vector2(16.9808, 136.002)
 scale = Vector2(0.234645, 1.05983)
 energy = 0.88
 texture = ExtResource("4_iumbb")
@@ -37,7 +37,7 @@ texture_scale = 2.55
 
 [node name="Shadow" type="PointLight2D" parent="Node2D"]
 texture_filter = 1
-position = Vector2(19.6984, -299.219)
+position = Vector2(15.0072, -274.663)
 scale = Vector2(1, 1.89032)
 energy = 0.45
 shadow_enabled = true
@@ -47,14 +47,15 @@ texture = ExtResource("4_iumbb")
 texture_scale = 1.29
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color(0.057093, 4.05802e-05, 0.207953, 1)
+position = Vector2(23, 25)
+color = Color(0.32292, 0.0800662, 0.445928, 1)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 process_mode = 3
 environment = SubResource("Environment_arept")
 
 [node name="Player" parent="." instance=ExtResource("1_wto1c")]
-position = Vector2(456, 228)
+position = Vector2(550, 321)
 scale = Vector2(2, 2)
 
 [node name="Camera2D2" type="Camera2D" parent="Player"]
