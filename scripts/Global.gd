@@ -1,6 +1,6 @@
 extends Node
 
-
+var dialogfinishe: bool = true
 var moviement_click: bool = true
 
 ## Database de cenas em preload
