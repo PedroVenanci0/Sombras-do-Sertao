@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dcu46akhr4o75"]
+
+[ext_resource type="Script" path="res://scripts/random_world.gd" id="1_tmael"]
+
+[node name="RandomWorld" type="Node2D" node_paths=PackedStringArray("camera")]
+script = ExtResource("1_tmael")
+camera = NodePath("Camera2D")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(649, 364)
