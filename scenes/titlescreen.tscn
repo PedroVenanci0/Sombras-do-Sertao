@@ -120,9 +120,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -248.0
+offset_left = -240.0
 offset_top = -193.0
-offset_right = 177.42
+offset_right = 185.42
 offset_bottom = 67.785
 grow_horizontal = 2
 grow_vertical = 2
@@ -282,6 +282,17 @@ offset_right = 1493.0
 offset_bottom = 134.0
 scale = Vector2(0.47, 1)
 color = Color(0, 0, 0, 1)
+
+[node name="Clique" type="Label" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 4.0
+offset_top = -46.0
+offset_right = 240.0
+offset_bottom = 29.0
+theme = ExtResource("2_k0g3k")
+text = " & Use o botão esquerdo 
+do mouse para se mover &"
 
 [connection signal="pressed" from="GameName/Buttons/StartButton" to="." method="startPressed"]
 [connection signal="pressed" from="GameName/Buttons/ExitButton" to="." method="exitPressed"]

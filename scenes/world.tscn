@@ -55,7 +55,7 @@ process_mode = 3
 environment = SubResource("Environment_arept")
 
 [node name="Player" parent="." instance=ExtResource("1_wto1c")]
-position = Vector2(550, 321)
+position = Vector2(574, 329)
 scale = Vector2(2, 2)
 
 [node name="Camera2D2" type="Camera2D" parent="Player"]

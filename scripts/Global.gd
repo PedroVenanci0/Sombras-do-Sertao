@@ -6,7 +6,8 @@ var moviement_click: bool = true
 ## Database de cenas em preload
 var scenesDatabae : Dictionary = {
 	"titlescreen" : preload("res://scenes/titlescreen.tscn"),
-	"World" : preload("res://scenes/world.tscn")
+	"world" : preload("res://scenes/world.tscn"),
+	"casa" : preload("res://scenes/casa_abandonada.tscn")
 }
 
 func fadeTransition(sceneCalled):

@@ -382,6 +382,7 @@ position = Vector2(-710, 191)
 shape = SubResource("RectangleShape2D_g4fxg")
 
 [node name="Player" parent="." instance=ExtResource("9_hhqie")]
+
 unique_name_in_owner = true
 modulate = Color(0.0687983, 0.0687983, 0.0687983, 1)
 
