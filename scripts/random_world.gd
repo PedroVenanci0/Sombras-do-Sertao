@@ -1,7 +1,7 @@
 extends Node2D
 
-const SPEED: float = 1000.0
-const TILEMAP_WIDTH: float = 900.0  # Substitua pelo tamanho correto do seu tilemap
+const SPEED: float = 200.0
+const TILEMAP_WIDTH: float = 950.0 # Tamanho do tilemap
 
 @export var camera: Camera2D
 var tilemap_instances: Array[Node2D] = []
@@ -10,7 +10,9 @@ var dictionary: Dictionary
 func _ready() -> void:
 	dictionary = {
 		"1": preload("res://scenes/map_1.tscn"),
-		"2": preload("res://scenes/map_2.tscn")
+		"2": preload("res://scenes/map_2.tscn"),
+		"3" : preload("res://scenes/map_3.tscn"),
+		"4" : preload("res://scenes/map_4.tscn")
 	}
 	_add_random_tilemap()
 
