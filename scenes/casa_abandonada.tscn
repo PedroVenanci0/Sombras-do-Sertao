@@ -529,6 +529,7 @@ theme_override_font_sizes/font_size = 100
 wait_time = 0.02
 
 [node name="PicanhaDoLulinha" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PicanhaDoLulinha"]
 position = Vector2(-710, 191)
