@@ -22,6 +22,7 @@ extends Node2D
 var _msg: String = ""
 
 var msgShow: Array = [
+	
 	"& Catapimbas, deixaram o café esfriar. &",
 	"& Lua bonita da peste desse meu sertão!!!\nDeus estava inspirada quando desenhou essa\nbelezura. &",
 	"& Já esse Quadro poderia ser melhor, mas pelo menos,\nrepresenta a seca do velho nordeste. &",
