@@ -1,10 +1,37 @@
-[gd_scene load_steps=2 format=3 uid="uid://dcu46akhr4o75"]
+[gd_scene load_steps=4 format=3 uid="uid://dcu46akhr4o75"]
 
 [ext_resource type="Script" path="res://scripts/random_world.gd" id="1_tmael"]
+[ext_resource type="Texture2D" uid="uid://v4qclsebsdrc" path="res://assets/Ambiente/spr_tree_free.png" id="2_wm8vj"]
+[ext_resource type="Script" path="res://scripts/ShadowTree.gd" id="3_0wgon"]
 
 [node name="RandomWorld" type="Node2D" node_paths=PackedStringArray("camera")]
+scale = Vector2(2, 2)
 script = ExtResource("1_tmael")
-camera = NodePath("Camera2D")
+camera = NodePath("")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(649, 364)
+position = Vector2(319.5, -185.5)
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="ParallaxBackground"]
+offset_top = -728.0
+offset_right = 1284.0
+offset_bottom = -3.0
+color = Color(0.301105, 3.51956e-07, 9.62615e-08, 1)
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(2.99997, -182.5)
+scale = Vector2(1.23121, 1.456)
+texture = ExtResource("2_wm8vj")
+region_enabled = true
+region_rect = Rect2(34.7278, 581.273, 519.092, 250.819)
+script = ExtResource("3_0wgon")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(595.5, -182.5)
+scale = Vector2(1.23121, 1.456)
+texture = ExtResource("2_wm8vj")
+region_enabled = true
+region_rect = Rect2(34.7278, 581.273, 519.092, 250.819)
+script = ExtResource("3_0wgon")
