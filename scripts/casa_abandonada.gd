@@ -1,13 +1,14 @@
 extends Node2D
 
-@onready var garrafa = $Objetos/Garrafa
+@onready var luz_lampada_03 = $Light/luz_Lampada_03
+@onready var luz_lampada_02 = $Light/luz_Lampada_02
+@onready var area_2d = $Area2D
 
 func _ready():
-	
-	var material = get_node("res://Shader/outline.gdshader")
-
-	if material is ShaderMaterial:
-		material.set_shader_parameter("verific", true)
+	pass
 
 func _process(delta):
+	pass
+
+func _on_area_2d_body_entered(body):
 	pass
