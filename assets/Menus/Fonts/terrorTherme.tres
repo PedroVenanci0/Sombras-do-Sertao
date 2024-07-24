@@ -1,6 +1,7 @@
-[gd_resource type="Theme" load_steps=7 format=3 uid="uid://c2qfsxntflbef"]
+[gd_resource type="Theme" load_steps=8 format=3 uid="uid://c2qfsxntflbef"]
 
 [ext_resource type="FontFile" uid="uid://cpqvfcd338utb" path="res://assets/Menus/Fonts/film_horor/Film Horor.otf" id="1_l1yil"]
+[ext_resource type="FontFile" uid="uid://btva2fapcwfpp" path="res://assets/fontes/xilosa_.ttf" id="2_1r6b1"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_elcho"]
 
@@ -25,6 +26,7 @@ Button/styles/pressed = SubResource("StyleBoxEmpty_imfrn")
 Label/colors/font_color = Color(0, 0, 0, 1)
 Label/colors/font_outline_color = Color(1, 0, 0, 1)
 Label/constants/outline_size = 6
+Label/fonts/font = ExtResource("2_1r6b1")
 RichTextLabel/colors/default_color = Color(0, 0, 0, 1)
 RichTextLabel/colors/font_outline_color = Color(0.942709, 4.47616e-06, 1.73271e-06, 1)
 RichTextLabel/constants/outline_size = 6
