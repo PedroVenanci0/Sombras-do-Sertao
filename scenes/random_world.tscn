@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://dcu46akhr4o75"]
+[gd_scene load_steps=4 format=3 uid="uid://dcu46akhr4o75"]
 
 [ext_resource type="Script" path="res://scripts/random_world.gd" id="1_tmael"]
+[ext_resource type="Script" path="res://scripts/cameraGame.gd" id="2_cgkh4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vpvq3"]
 size = Vector2(84, 389.5)
@@ -17,6 +18,7 @@ color = Color(0.352572, 4.42201e-07, 1.44392e-07, 1)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(319.5, -185.5)
+script = ExtResource("2_cgkh4")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.0
