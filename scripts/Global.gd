@@ -3,7 +3,8 @@ extends Node
 var dialogfinishe: bool = true
 var moviement_click: bool = true
 var speed = 250.0
-var TileMapWitdh = 950.0
+var TileMapWitdh = 950
+var cameraShake : bool = false
 ## Database de cenas em preload
 var scenesDatabae : Dictionary = {
 	"titlescreen" : preload("res://scenes/titlescreen.tscn"),
