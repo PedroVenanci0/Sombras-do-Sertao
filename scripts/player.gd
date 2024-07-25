@@ -23,7 +23,7 @@ func _ready():
 	Destination = position
 
 func _physics_process(delta):
-	
+	print(Destination.x)
 	# Add the gravity.
 	#if not is_on_floor():
 		#velocity.y += gravity * delta
@@ -44,6 +44,11 @@ func _physics_process(delta):
 	if (Destination.x < position.x):
 		get_node("Animations").flip_h = true
 		get_node("LightOccluder2D").scale.x = -1
+		
+	if ceil(position.x) <= ceil(Destination.x + 3):
+		$AnimationManager.play("idle")
+	else:
+		$AnimationManager.play("walk")
 		
 func _input(event):
 	if Input.is_action_just_pressed("Click_Button") and not onTitle and Global.moviement_click:

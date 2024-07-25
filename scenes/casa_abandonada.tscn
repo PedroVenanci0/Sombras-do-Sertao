@@ -1,12 +1,11 @@
-
 [gd_scene load_steps=36 format=3 uid="uid://5w67ml2ebeeo"]
-
 
 [ext_resource type="Script" path="res://scripts/casa_abandonada.gd" id="1_0jpda"]
 [ext_resource type="Texture2D" uid="uid://qy28di24w8go" path="res://assets/house/Parede.png" id="1_1kkgk"]
 [ext_resource type="Texture2D" uid="uid://c88wjs5hcbdll" path="res://assets/house/Parede-com janela.png" id="2_of24i"]
 [ext_resource type="Texture2D" uid="uid://si4wfcp6nso" path="res://assets/house/quadro_nordestino-1.png.png" id="3_ynxyk"]
 [ext_resource type="Texture2D" uid="uid://cmb1tutdb80e7" path="res://assets/house/pote de barro.png" id="4_q0kpr"]
+[ext_resource type="Texture2D" uid="uid://elimib5l120e" path="res://assets/house/GARRAFA.png" id="5_6oeve"]
 [ext_resource type="Texture2D" uid="uid://80w7ufelexa1" path="res://assets/house/forno-1.png.png" id="6_c4g5g"]
 [ext_resource type="Texture2D" uid="uid://oojxksimsh7x" path="res://assets/house/mesa-1.png.png" id="6_wkam8"]
 [ext_resource type="Texture2D" uid="uid://be0tfjgstwsor" path="res://assets/Luz/Luz ambiente/4433d48964593f4c0326f095d731e65a.jpg" id="7_7822j"]
@@ -26,6 +25,58 @@
 [ext_resource type="Texture2D" uid="uid://cd6qvdhqjpslf" path="res://assets/Menus/itensCangaço.png" id="22_chsc6"]
 [ext_resource type="Texture2D" uid="uid://b5lg3dqqbn1um" path="res://assets/Luz/ponro de luz/imagem_2024-07-24_170634171-removebg-preview (2).png" id="24_mxt5e"]
 
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_xsj6f"]
+polygon = PackedVector2Array(-95.1099, -185.668, -91.0627, 164.169, 60.708, 187.622, 66.7788, -207.166)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0f7gc"]
+atlas = ExtResource("24_mxt5e")
+region = Rect2(0, 0, 170, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7hbtt"]
+atlas = ExtResource("24_mxt5e")
+region = Rect2(170, 0, 170, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ttrsc"]
+atlas = ExtResource("24_mxt5e")
+region = Rect2(0, 150, 170, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kpe6t"]
+atlas = ExtResource("24_mxt5e")
+region = Rect2(170, 150, 170, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uwa4c"]
+atlas = ExtResource("24_mxt5e")
+region = Rect2(0, 300, 170, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qp72g"]
+atlas = ExtResource("24_mxt5e")
+region = Rect2(170, 300, 170, 150)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3sex6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0f7gc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7hbtt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ttrsc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kpe6t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uwa4c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qp72g")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_vk55w"]
 blend_mode = 1
@@ -388,10 +439,6 @@ sprite_frames = SubResource("SpriteFrames_3sex6")
 autoplay = "default"
 frame_progress = 0.670711
 
-[node name="Objetos_Garrafa#detecçãoGarraf" parent="." instance=ExtResource("7_pfkn0")]
-
-[node name="Objetos_Garrafa#detecçãoGarraf" parent="." instance=ExtResource("7_pfkn0")]
-
 [node name="Light" type="Node2D" parent="."]
 
 [node name="Luz_Lunar" type="PointLight2D" parent="Light"]
@@ -427,7 +474,6 @@ occluder = SubResource("OccluderPolygon2D_wqqrl")
 
 [node name="luz_Lampada_01" type="PointLight2D" parent="Light"]
 unique_name_in_owner = true
-
 position = Vector2(350, 258)
 color = Color(0.784314, 0.541176, 0, 1)
 energy = 8.5
@@ -494,14 +540,12 @@ unique_name_in_owner = true
 modulate = Color(0.0687983, 0.0687983, 0.0687983, 1)
 position = Vector2(879, 335)
 
-
 [node name="PointLight2D2" type="PointLight2D" parent="Player"]
 position = Vector2(-0.166666, -0.833334)
 scale = Vector2(0.698148, 1.31204)
 energy = 3.0
 texture = ExtResource("9_nh0yn")
 texture_scale = 0.1
-
 
 [node name="Camera2D2" type="Camera2D" parent="Player"]
 unique_name_in_owner = true
