@@ -1,6 +1,6 @@
 extends Node
 
-var dialogfinishe: bool = true
+var dialogFinished: bool = true
 var moviement_click: bool = true
 var speed = 250.0
 var TileMapWitdh = 950

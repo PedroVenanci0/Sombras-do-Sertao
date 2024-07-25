@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://banflfah6bj43"
-path="res://.godot/imported/garrafamap.png-d8decc27299ab606eedb13c248d91c7f.ctex"
+uid="uid://d4cajcepdaton"
+path="res://.godot/imported/sunsetMAP.png-9a57a560f1cc9d52ae6833d8497b31aa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/house/garrafamap.png"
-dest_files=["res://.godot/imported/garrafamap.png-d8decc27299ab606eedb13c248d91c7f.ctex"]
+source_file="res://assets/HouseMaps/sunsetMAP.png"
+dest_files=["res://.godot/imported/sunsetMAP.png-9a57a560f1cc9d52ae6833d8497b31aa.ctex"]
 
 [params]
 

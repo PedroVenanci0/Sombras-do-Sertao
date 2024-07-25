@@ -47,51 +47,48 @@ func _ready():
 
 func _process(delta):
 	
-	print(get_node("Label").visible_characters)
-	print(get_node("Label").text.length())
-	
-	if Input.is_action_just_pressed("Click_Button") and Global.dialogfinishe:
+	if Input.is_action_just_pressed("Click_Button") and Global.dialogFinished:
 		match get_parent().name:
 			
 			"Garrafa":
-				Global.dialogfinishe = false
-				print(Global.dialogfinishe)
+				Global.dialogFinished = false
+				print(Global.dialogFinished)
 				player.onTitle = true
 				_msg = msgShow[0]
 				show_message(_msg)
 				texture_rect.queue_free()
-				await get_tree().create_timer(8).timeout
+				await get_tree().create_timer(10).timeout
 				player.onTitle = false
-				Global.dialogfinishe = true
+				Global.dialogFinished = true
 				var tween = get_tree().create_tween()
 				tween.tween_property(ponto_luz_3,"modulate",Color(1,1,1,0),0.5)
 				
 			"Lua":
-				Global.dialogfinishe = false
+				Global.dialogFinished = false
 				player.onTitle = true
 				_msg = msgShow[1]
 				show_message(_msg)
 				texture_rect.queue_free()
 				await get_tree().create_timer(10).timeout
 				player.onTitle = false
-				Global.dialogfinishe = true
+				Global.dialogFinished = true
 				var tween = get_tree().create_tween()
 				tween.tween_property(ponto_luz_6,"modulate",Color(1,1,1,0),0.5)
 				
 			"Quadro":
-				Global.dialogfinishe = false
+				Global.dialogFinished = false
 				player.onTitle = true
 				_msg = msgShow[2]
 				show_message(_msg)
 				texture_rect.queue_free()
 				await get_tree().create_timer(14).timeout
 				player.onTitle = false
-				Global.dialogfinishe = true
+				Global.dialogFinished = true
 				var tween = get_tree().create_tween()
 				tween.tween_property(ponto_luz,"modulate",Color(1,1,1,0),0.5)
 				
 			"Monster":
-				Global.dialogfinishe = false
+				Global.dialogFinished = false
 				player.onTitle = true
 				camera_2d_2.shakeCamera()
 				texture_rect.queue_free()
@@ -111,41 +108,41 @@ func _process(delta):
 				animated_sprite_2d.play("walk")
 				set_physics_process(true)
 				player.onTitle = false
-				Global.dialogfinishe = true
+				Global.dialogFinished = true
 				
 			"Espelho":
-				Global.dialogfinishe = false
+				Global.dialogFinished = false
 				player.onTitle = true
 				_msg = msgShow[5]
 				show_message(_msg)
 				texture_rect.queue_free()
 				await get_tree().create_timer(6).timeout
 				player.onTitle = false
-				Global.dialogfinishe = true
+				Global.dialogFinished = true
 				var tween = get_tree().create_tween()
 				tween.tween_property(ponto_luz_5,"modulate",Color(1,1,1,0),0.5)
 
 			"Pitu":
-				Global.dialogfinishe = false
+				Global.dialogFinished = false
 				player.onTitle = true
 				_msg = msgShow[6]
 				show_message(_msg)
 				texture_rect.queue_free()
 				await get_tree().create_timer(5).timeout
 				player.onTitle = false
-				Global.dialogfinishe = true
+				Global.dialogFinished = true
 				var tween = get_tree().create_tween()
 				tween.tween_property(ponto_luz_2,"modulate",Color(1,1,1,0),0.5)
 				
 			"Itens_do_cangaço":
-				Global.dialogfinishe = false
+				Global.dialogFinished = false
 				player.onTitle = true
 				_msg = msgShow[7]
 				show_message(_msg)
 				texture_rect.queue_free()
 				await get_tree().create_timer(13).timeout
 				player.onTitle = false
-				Global.dialogfinishe = true
+				Global.dialogFinished = true
 				var tween = get_tree().create_tween()
 				tween.tween_property(ponto_luz_4,"modulate",Color(1,1,1,0),0.5)
 	
@@ -166,7 +163,6 @@ func show_message(_msg):
 	if msgShow.size() == 0:
 		hide()
 		return
-	
 	label.visible_characters = 0
 	label.text = _msg
 	timer.start()

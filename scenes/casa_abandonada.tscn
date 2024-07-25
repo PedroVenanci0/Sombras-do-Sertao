@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://5w67ml2ebeeo"]
+[gd_scene load_steps=62 format=3 uid="uid://5w67ml2ebeeo"]
 
 [ext_resource type="Script" path="res://scripts/casa_abandonada.gd" id="1_0jpda"]
 [ext_resource type="Texture2D" uid="uid://qy28di24w8go" path="res://assets/house/Parede.png" id="1_1kkgk"]
@@ -8,26 +8,63 @@
 [ext_resource type="Texture2D" uid="uid://elimib5l120e" path="res://assets/house/GARRAFA.png" id="5_6oeve"]
 [ext_resource type="Texture2D" uid="uid://80w7ufelexa1" path="res://assets/house/forno-1.png.png" id="6_c4g5g"]
 [ext_resource type="Texture2D" uid="uid://oojxksimsh7x" path="res://assets/house/mesa-1.png.png" id="6_wkam8"]
+[ext_resource type="Texture2D" uid="uid://673akufm7j26" path="res://assets/HouseMaps/quadroMap.png" id="7_6t8be"]
 [ext_resource type="Texture2D" uid="uid://be0tfjgstwsor" path="res://assets/Luz/Luz ambiente/4433d48964593f4c0326f095d731e65a.jpg" id="7_7822j"]
 [ext_resource type="PackedScene" uid="uid://fucxrmmbu670" path="res://scenes/Area_de_detecção.tscn" id="7_pfkn0"]
 [ext_resource type="PackedScene" uid="uid://ub6dovylitej" path="res://scenes/player.tscn" id="9_hhqie"]
 [ext_resource type="Texture2D" uid="uid://dripaua6wcm0y" path="res://assets/Luz/Luz ambiente/download.jpeg" id="9_nh0yn"]
+[ext_resource type="Texture2D" uid="uid://bm52vn43qr4ff" path="res://assets/HouseMaps/espelhoMap.png" id="10_dc66b"]
 [ext_resource type="Shader" path="res://SelectedShader.gdshader" id="11_31e3l"]
+[ext_resource type="Texture2D" uid="uid://ccw5gdpufxfne" path="res://assets/HouseMaps/pituMap.png" id="12_32avs"]
 [ext_resource type="Script" path="res://scripts/Camera_CasaAbandonada.gd" id="13_f3w6m"]
+[ext_resource type="Texture2D" uid="uid://c6s7mkot66ic7" path="res://assets/HouseMaps/garrafaMap.png" id="13_hnwrs"]
 [ext_resource type="PackedScene" uid="uid://bf7atnfi168ga" path="res://scenes/monster.tscn" id="14_m3kq1"]
+[ext_resource type="Texture2D" uid="uid://br3ckq4o37014" path="res://assets/HouseMaps/caipirinhaMap.png" id="14_qii1d"]
 [ext_resource type="Texture2D" uid="uid://dqslbn2tacxt3" path="res://assets/house/BrCultureJamAssets/Espelho_3x.png" id="15_phbf7"]
 [ext_resource type="Texture2D" uid="uid://bps6jnrbjtred" path="res://assets/house/BrCultureJamAssets/Caipirinha_1x.png" id="16_j4gtq"]
+[ext_resource type="Texture2D" uid="uid://jj0gb2v04na7" path="res://assets/HouseMaps/cangançoMap.png" id="17_6t3pm"]
+[ext_resource type="Texture2D" uid="uid://ubr8toqtlnmu" path="res://assets/HouseMaps/fornoMap.png" id="17_ejv7t"]
 [ext_resource type="Texture2D" uid="uid://c8j01g7caufxi" path="res://assets/house/BrCultureJamAssets/Galinha_1x.png" id="17_vuixg"]
 [ext_resource type="Texture2D" uid="uid://cjd1s0nkwg4u0" path="res://assets/house/image-1.png.png" id="18_l064a"]
+[ext_resource type="Texture2D" uid="uid://3n22cg3ro3yy" path="res://assets/HouseMaps/chapeuMap.png" id="18_ou7n8"]
 [ext_resource type="Texture2D" uid="uid://1o772ydgs81i" path="res://assets/house/Pitu.png" id="19_ikojr"]
 [ext_resource type="Texture2D" uid="uid://x5ul5bpn1kps" path="res://assets/image-1.png.png" id="20_c1cqr"]
 [ext_resource type="Texture2D" uid="uid://c4a8ru5ahdyjh" path="res://assets/house/parede_porta.png" id="21_4dusk"]
 [ext_resource type="Texture2D" uid="uid://d2uqycboumv4f" path="res://assets/house/porta.png" id="22_4k3qd"]
 [ext_resource type="Texture2D" uid="uid://cd6qvdhqjpslf" path="res://assets/Menus/itensCangaço.png" id="22_chsc6"]
+[ext_resource type="Texture2D" uid="uid://bm645fdmf41ul" path="res://assets/HouseMaps/filtroMap.png" id="22_iamsm"]
+[ext_resource type="Texture2D" uid="uid://es1vbhqbcqi0" path="res://assets/HouseMaps/galinhaMap.png" id="23_ab30o"]
 [ext_resource type="Texture2D" uid="uid://b5lg3dqqbn1um" path="res://assets/Luz/ponro de luz/imagem_2024-07-24_170634171-removebg-preview (2).png" id="24_mxt5e"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_xsj6f"]
 polygon = PackedVector2Array(-95.1099, -185.668, -91.0627, 164.169, 60.708, 187.622, 66.7788, -207.166)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_vj5em"]
+diffuse_texture = ExtResource("3_ynxyk")
+normal_texture = ExtResource("7_6t8be")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4kfsy"]
+shader = ExtResource("11_31e3l")
+shader_parameter/line_color = Color(1, 0, 1, 1)
+shader_parameter/base_color = Color(0.507972, 0.507972, 0.507972, 1)
+shader_parameter/line_thickness = 1.0
+shader_parameter/hovered = false
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_pqi1c"]
+diffuse_texture = ExtResource("3_ynxyk")
+normal_texture = ExtResource("7_6t8be")
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_tdxbd"]
+diffuse_texture = ExtResource("15_phbf7")
+normal_texture = ExtResource("10_dc66b")
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_u3tiw"]
+diffuse_texture = ExtResource("19_ikojr")
+normal_texture = ExtResource("12_32avs")
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_kea8l"]
+diffuse_texture = ExtResource("16_j4gtq")
+normal_texture = ExtResource("14_qii1d")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_vhsne"]
 shader = ExtResource("11_31e3l")
@@ -36,12 +73,40 @@ shader_parameter/base_color = Color(0.356863, 0.337255, 0.298039, 1)
 shader_parameter/line_thickness = 0.5
 shader_parameter/hovered = false
 
+[sub_resource type="CanvasTexture" id="CanvasTexture_y48sa"]
+diffuse_texture = ExtResource("5_6oeve")
+normal_texture = ExtResource("13_hnwrs")
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_xhf17"]
 shader = ExtResource("11_31e3l")
 shader_parameter/line_color = Color(1, 1, 1, 1)
 shader_parameter/base_color = Color(0.356863, 0.337255, 0.298039, 1)
 shader_parameter/line_thickness = 1.0
 shader_parameter/hovered = false
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_ljytf"]
+diffuse_texture = ExtResource("22_chsc6")
+normal_texture = ExtResource("17_6t3pm")
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_tx2l8"]
+diffuse_texture = ExtResource("22_chsc6")
+normal_texture = ExtResource("17_6t3pm")
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_ek6qy"]
+diffuse_texture = ExtResource("22_chsc6")
+normal_texture = ExtResource("18_ou7n8")
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_qt2bu"]
+diffuse_texture = ExtResource("20_c1cqr")
+normal_texture = ExtResource("22_iamsm")
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_iwxou"]
+diffuse_texture = ExtResource("6_c4g5g")
+normal_texture = ExtResource("17_ejv7t")
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_bbydb"]
+diffuse_texture = ExtResource("17_vuixg")
+normal_texture = ExtResource("23_ab30o")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0f7gc"]
 atlas = ExtResource("24_mxt5e")
@@ -105,6 +170,7 @@ size = Vector2(82, 365.5)
 [node name="Casa_Abandonada" type="Node2D"]
 position = Vector2(25, -5)
 script = ExtResource("1_0jpda")
+metadata/_edit_horizontal_guides_ = [4.0]
 
 [node name="Construções" type="Node2D" parent="."]
 
@@ -146,21 +212,22 @@ offset_left = 67.0
 offset_top = -219.0
 offset_right = 107.0
 offset_bottom = 178.0
-color = Color(0.112467, 0.00586382, 0.00584435, 1)
+color = Color(0.194623, 0.0152499, 0.0152108, 1)
 
 [node name="Objetos" type="Node2D" parent="."]
 
 [node name="Quadro2" type="Sprite2D" parent="Objetos"]
-modulate = Color(0.111197, 0.111197, 0.111197, 1)
+modulate = Color(0.145266, 0.145266, 0.145266, 1)
 position = Vector2(643, 196)
 scale = Vector2(0.105, 0.105)
-texture = ExtResource("3_ynxyk")
+texture = SubResource("CanvasTexture_vj5em")
 
 [node name="Quadro" type="Sprite2D" parent="Objetos"]
-self_modulate = Color(0.0646965, 0.0646965, 0.0646965, 1)
+self_modulate = Color(0.150075, 0.150075, 0.150075, 1)
+material = SubResource("ShaderMaterial_4kfsy")
 position = Vector2(-174, 189)
 scale = Vector2(0.105, 0.105)
-texture = ExtResource("3_ynxyk")
+texture = SubResource("CanvasTexture_pqi1c")
 
 [node name="detecção" parent="Objetos/Quadro" instance=ExtResource("7_pfkn0")]
 
@@ -205,10 +272,10 @@ theme_override_font_sizes/font_size = 100
 wait_time = 0.1
 
 [node name="Espelho" type="Sprite2D" parent="Objetos"]
-self_modulate = Color(0.0923971, 0.0923971, 0.0923971, 1)
+self_modulate = Color(0.245984, 0.245984, 0.245984, 1)
 position = Vector2(444, 246)
 scale = Vector2(0.340278, 0.304688)
-texture = ExtResource("15_phbf7")
+texture = SubResource("CanvasTexture_tdxbd")
 
 [node name="detecção" parent="Objetos/Espelho" instance=ExtResource("7_pfkn0")]
 
@@ -230,10 +297,10 @@ theme_override_font_sizes/font_size = 100
 wait_time = 0.1
 
 [node name="Pitu" type="Sprite2D" parent="Objetos"]
-self_modulate = Color(0.18359, 0.18359, 0.18359, 1)
+self_modulate = Color(0.571649, 0.571649, 0.571649, 1)
 position = Vector2(-280, 285)
 scale = Vector2(0.0563725, 0.0549242)
-texture = ExtResource("19_ikojr")
+texture = SubResource("CanvasTexture_u3tiw")
 
 [node name="detecção" parent="Objetos/Pitu" instance=ExtResource("7_pfkn0")]
 
@@ -255,16 +322,15 @@ theme_override_font_sizes/font_size = 100
 wait_time = 0.1
 
 [node name="Caipirinha1x" type="Sprite2D" parent="Objetos/Pitu"]
-modulate = Color(0.165656, 0.165656, 0.165656, 1)
+modulate = Color(0.314316, 0.314316, 0.314316, 1)
 position = Vector2(-283.826, 72.8276)
 scale = Vector2(5.2663, 5.68966)
-texture = ExtResource("16_j4gtq")
+texture = SubResource("CanvasTexture_kea8l")
 
 [node name="Garrafa" type="Sprite2D" parent="Objetos"]
-self_modulate = Color(0.226707, 0.226707, 0.226707, 1)
 material = SubResource("ShaderMaterial_vhsne")
 position = Vector2(337, 277)
-texture = ExtResource("5_6oeve")
+texture = SubResource("CanvasTexture_y48sa")
 
 [node name="detecção" parent="Objetos/Garrafa" instance=ExtResource("7_pfkn0")]
 
@@ -288,12 +354,11 @@ wait_time = 0.1
 [node name="Itens_do_cangaço" type="Node2D" parent="Objetos"]
 
 [node name="Facao" type="Sprite2D" parent="Objetos/Itens_do_cangaço"]
-self_modulate = Color(0.187176, 0.187176, 0.187176, 1)
 material = SubResource("ShaderMaterial_xhf17")
 position = Vector2(309.651, 205.875)
 rotation = -0.540452
 scale = Vector2(0.269076, 0.252495)
-texture = ExtResource("22_chsc6")
+texture = SubResource("CanvasTexture_ljytf")
 region_enabled = true
 region_rect = Rect2(97.4356, 292.641, 274.592, 93.8928)
 
@@ -302,15 +367,15 @@ self_modulate = Color(0.194349, 0.194349, 0.194349, 1)
 position = Vector2(383.249, 201.697)
 rotation = 0.604038
 scale = Vector2(0.200023, 0.239682)
-texture = ExtResource("22_chsc6")
+texture = SubResource("CanvasTexture_tx2l8")
 region_enabled = true
 region_rect = Rect2(71.8438, 53.8566, 340.14, 85.0349)
 
 [node name="Espingarda" type="Sprite2D" parent="Objetos/Itens_do_cangaço"]
-self_modulate = Color(0.169245, 0.169245, 0.169245, 1)
+self_modulate = Color(0.550293, 0.550293, 0.550293, 1)
 position = Vector2(344.651, 206.875)
 scale = Vector2(0.2125, 0.25)
-texture = ExtResource("22_chsc6")
+texture = SubResource("CanvasTexture_ek6qy")
 region_enabled = true
 region_rect = Rect2(126.762, 126.491, 200.186, 92.1212)
 
@@ -334,10 +399,10 @@ theme_override_font_sizes/font_size = 100
 wait_time = 0.1
 
 [node name="Filtro_de_barro" type="Sprite2D" parent="Objetos"]
-self_modulate = Color(0.111197, 0.111197, 0.111197, 1)
+self_modulate = Color(0.582376, 0.582376, 0.582376, 1)
 position = Vector2(-245, 283)
 scale = Vector2(0.392241, 0.37)
-texture = ExtResource("20_c1cqr")
+texture = SubResource("CanvasTexture_qt2bu")
 
 [node name="PoteDeBarro" type="Sprite2D" parent="Objetos"]
 modulate = Color(0.111197, 0.111197, 0.111197, 1)
@@ -366,7 +431,7 @@ texture = ExtResource("4_q0kpr")
 [node name="Forno-1_png" type="Sprite2D" parent="Objetos"]
 modulate = Color(0.111197, 0.111197, 0.111197, 1)
 position = Vector2(-517, 243)
-texture = ExtResource("6_c4g5g")
+texture = SubResource("CanvasTexture_iwxou")
 
 [node name="Mesa-1_png" type="Sprite2D" parent="Objetos"]
 modulate = Color(0.111197, 0.111197, 0.111197, 1)
@@ -381,10 +446,10 @@ scale = Vector2(0.44, 0.328889)
 texture = ExtResource("6_wkam8")
 
 [node name="Galinha1x" type="Sprite2D" parent="Objetos"]
-modulate = Color(0.0646965, 0.0646965, 0.0646965, 1)
+modulate = Color(0.202723, 0.202723, 0.202723, 1)
 position = Vector2(378, 288)
 scale = Vector2(0.539063, 0.46875)
-texture = ExtResource("17_vuixg")
+texture = SubResource("CanvasTexture_bbydb")
 
 [node name="Armario" type="Sprite2D" parent="Objetos"]
 modulate = Color(0.885708, 0.565782, 0.0564325, 1)
@@ -476,12 +541,12 @@ position = Vector2(1380, 200)
 rotation = -0.727394
 scale = Vector2(0.556824, 0.744416)
 color = Color(0.498039, 0, 0, 1)
-energy = 2.52
+energy = 5.52
 shadow_enabled = true
 shadow_filter = 1
 shadow_filter_smooth = 3.0
 texture = ExtResource("7_7822j")
-texture_scale = 1.95
+texture_scale = 1.99
 
 [node name="Collisao_Sombras" type="LightOccluder2D" parent="Light"]
 texture_filter = 1
@@ -554,21 +619,16 @@ shape = SubResource("RectangleShape2D_g4fxg")
 
 [node name="Player" parent="." instance=ExtResource("9_hhqie")]
 unique_name_in_owner = true
-modulate = Color(0.0687983, 0.0687983, 0.0687983, 1)
-position = Vector2(879, 335)
-
-[node name="PointLight2D2" type="PointLight2D" parent="Player"]
-position = Vector2(-0.166666, -0.833334)
-scale = Vector2(0.698148, 1.31204)
-energy = 3.0
-texture = ExtResource("9_nh0yn")
-texture_scale = 0.1
+modulate = Color(0.518503, 0.518503, 0.518503, 1)
+position = Vector2(1406, 233)
+scale = Vector2(5, 5)
 
 [node name="Camera2D2" type="Camera2D" parent="Player"]
 unique_name_in_owner = true
 position = Vector2(-3.5, -10.6667)
 zoom = Vector2(1.54, 1.54)
 limit_left = -1109
+limit_top = 5
 limit_right = 1444
 script = ExtResource("13_f3w6m")
 
