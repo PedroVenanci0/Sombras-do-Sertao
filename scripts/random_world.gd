@@ -1,26 +1,27 @@
 extends Node2D
 
-const SPEED: float = 1000.0
-const TILEMAP_WIDTH: float = 900.0  # Substitua pelo tamanho correto do seu tilemap
-
 @export var camera: Camera2D
 var tilemap_instances: Array[Node2D] = []
 var dictionary: Dictionary
 
 func _ready() -> void:
+	Global.TileMapWitdh = 950.0
+	Global.speed = 250.0
 	dictionary = {
 		"1": preload("res://scenes/map_1.tscn"),
-		"2": preload("res://scenes/map_2.tscn")
+		"2": preload("res://scenes/map_2.tscn"),
+		"3" : preload("res://scenes/map_3.tscn"),
+		"4" : preload("res://scenes/map_4.tscn")
 	}
 	_add_random_tilemap()
 
 func _process(delta: float) -> void:
 	# Move todos os tilemaps para a esquerda
 	for tilemap in tilemap_instances:
-		tilemap.position.x -= SPEED * delta
+		tilemap.position.x -= Global.speed * delta
 		
 		# Se o tilemap sair da tela, remove-o
-		if tilemap.position.x < -TILEMAP_WIDTH:
+		if tilemap.position.x < -Global.TileMapWitdh:
 			tilemap.queue_free()
 			tilemap_instances.erase(tilemap)
 
@@ -39,8 +40,16 @@ func _add_random_tilemap() -> void:
 	# Define a posição do novo tilemap
 	if tilemap_instances.size() > 0:
 		var last_tilemap = tilemap_instances[-1]
-		scene.position = Vector2(last_tilemap.position.x + TILEMAP_WIDTH, 0)
+		scene.position = Vector2(last_tilemap.position.x + Global.TileMapWitdh, 0)
 	else:
 		scene.position = Vector2(0, 0)
 	
 	tilemap_instances.append(scene)
+
+
+func _on_timer_timeout():
+	if Global.speed <= 650:
+		Global.speed += 10
+		
+	if Global.TileMapWitdh <= 1150:
+		Global.TileMapWitdh += 10

@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://dg2efy3xmcg58"]
+[gd_scene load_steps=21 format=3 uid="uid://dg2efy3xmcg58"]
 
 [ext_resource type="Script" path="res://scripts/titlescreen.gd" id="1_6mo47"]
 [ext_resource type="Texture2D" uid="uid://b3cwjhhjmifv2" path="res://assets/Menus/A_cursed_men_cangaceiro.jpg" id="1_8rcj2"]
@@ -11,7 +11,6 @@
 [ext_resource type="Texture2D" uid="uid://bndmdjctitiaf" path="res://assets/Ambiente/sunset.jpg" id="9_eeuji"]
 [ext_resource type="Texture2D" uid="uid://doku62j1up4b3" path="res://assets/Ambiente/2/5.png" id="9_gn7jf"]
 [ext_resource type="Texture2D" uid="uid://dripaua6wcm0y" path="res://assets/Luz/Luz ambiente/download.jpeg" id="9_pbylb"]
-[ext_resource type="Texture2D" uid="uid://b1bwfm28g4god" path="res://assets/house/house.png" id="11_82lv5"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_xo33x"]
 polygon = PackedVector2Array(-546, -365, -548, 172, 925, 174, 923, -357)
@@ -278,7 +277,6 @@ modulate = Color(0.279967, 0.279967, 0.279967, 1)
 self_modulate = Color(1, 0.0784314, 0.227451, 1)
 position = Vector2(-570, -40)
 scale = Vector2(-2.35231, 2.92489)
-texture = ExtResource("11_82lv5")
 
 [node name="PointLight2D" type="PointLight2D" parent="House"]
 position = Vector2(-6.67572e-06, -31.4541)

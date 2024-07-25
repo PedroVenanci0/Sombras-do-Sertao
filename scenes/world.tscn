@@ -1,10 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://7shxu5g8xor0"]
+[gd_scene load_steps=4 format=3 uid="uid://7shxu5g8xor0"]
 
-[ext_resource type="Texture2D" uid="uid://bsawtbacqmrfb" path="res://icon.svg" id="1_wjcj4"]
 [ext_resource type="PackedScene" uid="uid://ub6dovylitej" path="res://scenes/player.tscn" id="1_wto1c"]
 [ext_resource type="PackedScene" uid="uid://dc80tgsf7vpmj" path="res://scenes/window.tscn" id="3_2541u"]
-[ext_resource type="Texture2D" uid="uid://dripaua6wcm0y" path="res://assets/Luz/Luz ambiente/download.jpeg" id="4_dtl8i"]
-[ext_resource type="Texture2D" uid="uid://be0tfjgstwsor" path="res://assets/Luz/Luz ambiente/4433d48964593f4c0326f095d731e65a.jpg" id="4_iumbb"]
 
 [sub_resource type="Environment" id="Environment_arept"]
 background_mode = 3
@@ -17,7 +14,6 @@ volumetric_fog_density = 0.9868
 [node name="Icon" type="Sprite2D" parent="."]
 position = Vector2(654.5, 372)
 scale = Vector2(10.1484, 5.71875)
-texture = ExtResource("1_wjcj4")
 
 [node name="Window" parent="." instance=ExtResource("3_2541u")]
 position = Vector2(550, 156)
@@ -32,7 +28,6 @@ texture_filter = 1
 position = Vector2(16.9808, 136.002)
 scale = Vector2(0.234645, 1.05983)
 energy = 0.88
-texture = ExtResource("4_iumbb")
 texture_scale = 2.55
 
 [node name="Shadow" type="PointLight2D" parent="Node2D"]
@@ -43,7 +38,6 @@ energy = 0.45
 shadow_enabled = true
 shadow_filter = 1
 shadow_filter_smooth = 2.0
-texture = ExtResource("4_iumbb")
 texture_scale = 1.29
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
@@ -65,5 +59,4 @@ zoom = Vector2(2, 2)
 visible = false
 position = Vector2(2, 0)
 energy = 0.45
-texture = ExtResource("4_dtl8i")
 texture_scale = 0.36

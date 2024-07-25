@@ -1,3 +1,4 @@
+
 [gd_scene load_steps=16 format=3 uid="uid://ub6dovylitej"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_n5omt"]
@@ -126,6 +127,7 @@ _data = {
 "run": SubResource("Animation_t5lno"),
 "walk": SubResource("Animation_5e3to")
 }
+
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_1l4yt"]
 diffuse_texture = ExtResource("2_578qg")
