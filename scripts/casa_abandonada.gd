@@ -5,7 +5,7 @@ extends Node2D
 @onready var area_2d = $Area2D
 
 func _ready():
-	pass
+	%Player.Destination = Vector2(1300,227)
 
 func _process(delta):
 	pass
