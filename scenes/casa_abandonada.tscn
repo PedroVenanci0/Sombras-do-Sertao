@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://5w67ml2ebeeo"]
+[gd_scene load_steps=39 format=3 uid="uid://5w67ml2ebeeo"]
 
 [ext_resource type="Script" path="res://scripts/casa_abandonada.gd" id="1_0jpda"]
 [ext_resource type="Texture2D" uid="uid://qy28di24w8go" path="res://assets/house/Parede.png" id="1_1kkgk"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://fucxrmmbu670" path="res://scenes/Area_de_detecção.tscn" id="7_pfkn0"]
 [ext_resource type="PackedScene" uid="uid://ub6dovylitej" path="res://scenes/player.tscn" id="9_hhqie"]
 [ext_resource type="Texture2D" uid="uid://dripaua6wcm0y" path="res://assets/Luz/Luz ambiente/download.jpeg" id="9_nh0yn"]
+[ext_resource type="Shader" path="res://SelectedShader.gdshader" id="11_31e3l"]
 [ext_resource type="Script" path="res://scripts/Camera_CasaAbandonada.gd" id="13_f3w6m"]
 [ext_resource type="PackedScene" uid="uid://bf7atnfi168ga" path="res://scenes/monster.tscn" id="14_m3kq1"]
 [ext_resource type="Texture2D" uid="uid://dqslbn2tacxt3" path="res://assets/house/BrCultureJamAssets/Espelho_3x.png" id="15_phbf7"]
@@ -27,6 +28,20 @@
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_xsj6f"]
 polygon = PackedVector2Array(-95.1099, -185.668, -91.0627, 164.169, 60.708, 187.622, 66.7788, -207.166)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vhsne"]
+shader = ExtResource("11_31e3l")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/base_color = Color(0.356863, 0.337255, 0.298039, 1)
+shader_parameter/line_thickness = 0.5
+shader_parameter/hovered = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xhf17"]
+shader = ExtResource("11_31e3l")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/base_color = Color(0.356863, 0.337255, 0.298039, 1)
+shader_parameter/line_thickness = 1.0
+shader_parameter/hovered = false
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0f7gc"]
 atlas = ExtResource("24_mxt5e")
@@ -247,6 +262,7 @@ texture = ExtResource("16_j4gtq")
 
 [node name="Garrafa" type="Sprite2D" parent="Objetos"]
 self_modulate = Color(0.226707, 0.226707, 0.226707, 1)
+material = SubResource("ShaderMaterial_vhsne")
 position = Vector2(337, 277)
 texture = ExtResource("5_6oeve")
 
@@ -273,6 +289,7 @@ wait_time = 0.1
 
 [node name="Facao" type="Sprite2D" parent="Objetos/Itens_do_cangaço"]
 self_modulate = Color(0.187176, 0.187176, 0.187176, 1)
+material = SubResource("ShaderMaterial_xhf17")
 position = Vector2(309.651, 205.875)
 rotation = -0.540452
 scale = Vector2(0.269076, 0.252495)
