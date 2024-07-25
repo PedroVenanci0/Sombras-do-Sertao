@@ -12,8 +12,8 @@ func _ready():
 func _process(delta):
 	var decresser = (_duration - (Time.get_ticks_msec() - _start_time)) / _duration
 	
-	var ran_x = _rng.randf_range(-1,2) * _intensity * decresser
-	var ran_y = _rng.randf_range(-1,2) * _intensity * decresser
+	var ran_x = _rng.randf_range(-1,3) * _intensity * decresser
+	var ran_y = _rng.randf_range(-1,3) * _intensity * decresser
 	
 	offset = Vector2(ran_x,ran_y)
 	

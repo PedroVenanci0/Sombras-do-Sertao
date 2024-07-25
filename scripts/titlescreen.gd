@@ -5,8 +5,15 @@ extends Control
 
 
 func _ready():
+	var _tween = get_tree().create_tween()
 	player.onTitle = true
 	player.SPEED = 100
+	await _tween.tween_property(transitionCam,"position",Vector2(-66,-170),3).set_trans(Tween.TRANS_CUBIC).finished
+	$GameName/Buttons/StartButton.set_mouse_filter(Control.MOUSE_FILTER_STOP)
+	$GameName/Buttons/ExitButton.set_mouse_filter(Control.MOUSE_FILTER_STOP)
+	player.visible = true
+	
+
 
 func _process(delta):
 	if player.position.x <= -178:
@@ -16,6 +23,8 @@ func _process(delta):
 		Global.fadeTransition("casa")
 
 func startPressed():
+	$GameName/Buttons/StartButton.set_mouse_filter(Control.MOUSE_FILTER_IGNORE)
+	$GameName/Buttons/ExitButton.set_mouse_filter(Control.MOUSE_FILTER_IGNORE)
 	Songs.impactPlay()
 	transitionCam.shakeCamera()
 	var _tween = get_tree().create_tween()
@@ -26,7 +35,7 @@ func startPressed():
 	_tween.tween_property(transitionCam,"position",Vector2(9,-55),3)
 	_zommTween.tween_property(transitionCam,"zoom",Vector2(2.5,2.5),3)
 	_modulateTween.tween_property($Clique,"modulate",Color(1,1,1,1),2).set_delay(4)
-	_modulateTween.tween_property($Clique,"modulate",Color(1,1,1,0),2).set_delay(4)
+	_modulateTween.tween_property($Clique,"modulate",Color(1,1,1,0),2).set_delay(2)
 	await _modulateTween2.tween_property($GameName,"modulate",Color(1,1,1,0),3).finished
 	player.Destination = Vector2(217,57)
 	player.onTitle = false
