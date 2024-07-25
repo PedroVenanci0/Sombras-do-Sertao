@@ -26,6 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://cd6qvdhqjpslf" path="res://assets/Menus/itensCangaço.png" id="22_chsc6"]
 [ext_resource type="Texture2D" uid="uid://b5lg3dqqbn1um" path="res://assets/Luz/ponro de luz/imagem_2024-07-24_170634171-removebg-preview (2).png" id="24_mxt5e"]
 
+
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_vk55w"]
 blend_mode = 1
 
@@ -389,6 +390,8 @@ frame_progress = 0.670711
 
 [node name="Objetos_Garrafa#detecçãoGarraf" parent="." instance=ExtResource("7_pfkn0")]
 
+[node name="Objetos_Garrafa#detecçãoGarraf" parent="." instance=ExtResource("7_pfkn0")]
+
 [node name="Light" type="Node2D" parent="."]
 
 [node name="Luz_Lunar" type="PointLight2D" parent="Light"]
@@ -429,7 +432,6 @@ position = Vector2(350, 258)
 color = Color(0.784314, 0.541176, 0, 1)
 energy = 8.5
 texture = ExtResource("7_7822j")
-
 
 [node name="luz_Lampada_02" type="PointLight2D" parent="Light"]
 unique_name_in_owner = true
@@ -499,6 +501,7 @@ scale = Vector2(0.698148, 1.31204)
 energy = 3.0
 texture = ExtResource("9_nh0yn")
 texture_scale = 0.1
+
 
 [node name="Camera2D2" type="Camera2D" parent="Player"]
 unique_name_in_owner = true

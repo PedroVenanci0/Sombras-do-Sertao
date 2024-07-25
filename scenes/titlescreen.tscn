@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://dripaua6wcm0y" path="res://assets/Luz/Luz ambiente/download.jpeg" id="9_pbylb"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_xo33x"]
-polygon = PackedVector2Array(-545, -338, -548, 172, 290, 173, 286, -326)
+polygon = PackedVector2Array(-546, -365, -548, 172, 925, 174, 923, -357)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_l0mcw"]
 polygon = PackedVector2Array(-436.364, -181.818, -419.835, -183.471, -414.876, -190.083, -414.876, -200, -428.099, -198.347, -419.835, -204.959, -419.835, -211.57, -428.099, -216.529, -434.711, -214.876, -436.364, -214.876, -436.364, -204.959, -438.017, -193.388)
@@ -58,7 +58,7 @@ region_rect = Rect2(0, 86.5995, 1024, 579.183)
 visible = false
 
 [node name="TransitionCam" type="Camera2D" parent="."]
-position = Vector2(-66, -131)
+position = Vector2(612, -162)
 zoom = Vector2(2, 2)
 limit_left = -515
 script = ExtResource("6_wiyo6")
@@ -102,14 +102,24 @@ position = Vector2(-101, -151)
 scale = Vector2(0.421875, 0.457)
 texture = ExtResource("9_eeuji")
 
+[node name="Sunset2" type="Sprite2D" parent="."]
+modulate = Color(0.174028, 0.174028, 0.174028, 1)
+z_index = -1
+position = Vector2(618, -169)
+scale = Vector2(0.937208, 0.544051)
+texture = ExtResource("9_eeuji")
+region_enabled = true
+region_rect = Rect2(-8.42749, -8.645, 672.158, 1101.28)
+
 [node name="Player" parent="." instance=ExtResource("8_84gvt")]
-modulate = Color(0.534361, 0.534361, 0.534361, 1)
+visible = false
+modulate = Color(0.466181, 0.466181, 0.466181, 1)
 z_index = 1
-position = Vector2(324, 37)
+position = Vector2(318, 26)
 scale = Vector2(2.5, 2.5)
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
-position = Vector2(25, -37)
+position = Vector2(29, -45)
 occluder = SubResource("OccluderPolygon2D_xo33x")
 
 [node name="GameName" type="RichTextLabel" parent="."]
@@ -156,6 +166,7 @@ scale = Vector2(0.605, 0.605)
 
 [node name="StartButton" type="Button" parent="GameName/Buttons"]
 layout_mode = 2
+mouse_filter = 2
 theme = ExtResource("2_k0g3k")
 theme_override_font_sizes/font_size = 41
 text = "START"
@@ -166,6 +177,7 @@ layout_mode = 2
 
 [node name="ExitButton" type="Button" parent="GameName/Buttons"]
 layout_mode = 2
+mouse_filter = 2
 theme = ExtResource("2_k0g3k")
 theme_override_font_sizes/font_size = 44
 text = "EXIT"
@@ -201,6 +213,7 @@ region_enabled = true
 region_rect = Rect2(96.0258, 298.244, 276.718, 85.7436)
 
 [node name="NameLights" type="Node2D" parent="GameName"]
+modulate = Color(1, 1, 1, 0)
 position = Vector2(227, 191)
 
 [node name="LightOccluder2D7" type="LightOccluder2D" parent="GameName/NameLights"]
