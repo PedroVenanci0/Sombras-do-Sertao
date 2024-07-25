@@ -2,7 +2,8 @@ extends Node
 
 
 var moviement_click: bool = true
-
+var speed = 250.0
+var TileMapWitdh = 950.0
 ## Database de cenas em preload
 var scenesDatabae : Dictionary = {
 	"titlescreen" : preload("res://scenes/titlescreen.tscn"),
@@ -11,10 +12,10 @@ var scenesDatabae : Dictionary = {
 }
 
 func fadeTransition(sceneCalled):
-	
 	## Cena instanciada do fade
 	var _fade = preload("res://scenes/fadeInLayer.tscn").instantiate()
 	
 	## Atribuição da proxima cena e adição do fade ao fluxo atual
 	_fade.nextScene = scenesDatabae.get(sceneCalled)
 	get_parent().add_child(_fade)
+	

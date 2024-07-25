@@ -1,16 +1,14 @@
-[gd_scene load_steps=29 format=3 uid="uid://5w67ml2ebeeo"]
+[gd_scene load_steps=26 format=3 uid="uid://5w67ml2ebeeo"]
 
 [ext_resource type="Script" path="res://scripts/casa_abandonada.gd" id="1_0jpda"]
 [ext_resource type="Texture2D" uid="uid://qy28di24w8go" path="res://assets/house/Parede.png" id="1_1kkgk"]
 [ext_resource type="Texture2D" uid="uid://c88wjs5hcbdll" path="res://assets/house/Parede-com janela.png" id="2_of24i"]
 [ext_resource type="Texture2D" uid="uid://si4wfcp6nso" path="res://assets/house/quadro_nordestino-1.png.png" id="3_ynxyk"]
 [ext_resource type="Texture2D" uid="uid://cmb1tutdb80e7" path="res://assets/house/pote de barro.png" id="4_q0kpr"]
-[ext_resource type="Texture2D" uid="uid://elimib5l120e" path="res://assets/house/GARRAFA.png" id="5_6oeve"]
 [ext_resource type="Texture2D" uid="uid://80w7ufelexa1" path="res://assets/house/forno-1.png.png" id="6_c4g5g"]
 [ext_resource type="Texture2D" uid="uid://oojxksimsh7x" path="res://assets/house/mesa-1.png.png" id="6_wkam8"]
 [ext_resource type="Texture2D" uid="uid://be0tfjgstwsor" path="res://assets/Luz/Luz ambiente/4433d48964593f4c0326f095d731e65a.jpg" id="7_7822j"]
 [ext_resource type="PackedScene" uid="uid://fucxrmmbu670" path="res://scenes/Area_de_detecção.tscn" id="7_pfkn0"]
-[ext_resource type="Texture2D" uid="uid://banflfah6bj43" path="res://assets/house/garrafamap.png" id="8_qq1xi"]
 [ext_resource type="PackedScene" uid="uid://ub6dovylitej" path="res://scenes/player.tscn" id="9_hhqie"]
 [ext_resource type="Texture2D" uid="uid://dripaua6wcm0y" path="res://assets/Luz/Luz ambiente/download.jpeg" id="9_nh0yn"]
 [ext_resource type="Script" path="res://scripts/Camera_CasaAbandonada.gd" id="13_f3w6m"]
@@ -23,10 +21,6 @@
 [ext_resource type="Texture2D" uid="uid://x5ul5bpn1kps" path="res://assets/image-1.png.png" id="20_c1cqr"]
 [ext_resource type="Texture2D" uid="uid://c4a8ru5ahdyjh" path="res://assets/house/parede_porta.png" id="21_4dusk"]
 [ext_resource type="Texture2D" uid="uid://d2uqycboumv4f" path="res://assets/house/porta.png" id="22_4k3qd"]
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_s70sn"]
-diffuse_texture = ExtResource("5_6oeve")
-normal_texture = ExtResource("8_qq1xi")
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_vk55w"]
 blend_mode = 1
@@ -100,31 +94,6 @@ scale = Vector2(2.5, 2.5)
 theme_override_font_sizes/font_size = 100
 
 [node name="Timer" parent="Objetos/Quadro/detecção" index="2"]
-wait_time = 0.1
-
-
-modulate = Color(0.299547, 0.299547, 0.299547, 1)
-position = Vector2(345, 278)
-texture = ExtResource("5_6oeve")
-
-
-[node name="detecçãoGarraf" parent="Objetos/Garrafa" instance=ExtResource("7_pfkn0")]
-
-[node name="TextureRect" parent="Objetos/Garrafa/detecçãoGarraf" index="0"]
-offset_left = -82.0
-offset_top = -29.0
-offset_right = -9.0
-offset_bottom = 23.0
-
-[node name="Label" parent="Objetos/Garrafa/detecçãoGarraf" index="1"]
-offset_left = -252.0
-offset_top = 166.0
-offset_right = -189.0
-offset_bottom = 266.0
-scale = Vector2(0.245, 0.245)
-theme_override_font_sizes/font_size = 100
-
-[node name="Timer" parent="Objetos/Garrafa/detecçãoGarraf" index="2"]
 wait_time = 0.1
 
 [node name="Lua" type="Node2D" parent="Objetos"]
@@ -285,6 +254,8 @@ text = "
 [node name="Timer" parent="Objetos/Filtro_de_barro/detecção" index="2"]
 wait_time = 0.1
 
+[node name="Objetos_Garrafa#detecçãoGarraf" parent="." instance=ExtResource("7_pfkn0")]
+
 [node name="Light" type="Node2D" parent="."]
 
 [node name="Luz_Lunar" type="PointLight2D" parent="Light"]
@@ -319,10 +290,8 @@ position = Vector2(-1333, 7)
 occluder = SubResource("OccluderPolygon2D_wqqrl")
 
 [node name="luz_Lampada_01" type="PointLight2D" parent="Light"]
-
 unique_name_in_owner = true
 position = Vector2(362, 262)
-
 
 [node name="luz_Lampada_02" type="PointLight2D" parent="Light"]
 unique_name_in_owner = true
@@ -340,9 +309,7 @@ energy = 9.08
 texture = ExtResource("7_7822j")
 
 [node name="PointLight2D3" type="PointLight2D" parent="Light"]
-
 position = Vector2(815.231, 416.196)
-
 rotation = 0.675746
 scale = Vector2(1.62156, 1.23657)
 color = Color(0.77844, 0.162554, 0, 1)
@@ -382,12 +349,9 @@ position = Vector2(-710, 191)
 shape = SubResource("RectangleShape2D_g4fxg")
 
 [node name="Player" parent="." instance=ExtResource("9_hhqie")]
-
 unique_name_in_owner = true
 modulate = Color(0.0687983, 0.0687983, 0.0687983, 1)
-
 position = Vector2(556, 301)
-
 
 [node name="PointLight2D2" type="PointLight2D" parent="Player"]
 position = Vector2(-0.166666, -0.833334)
@@ -424,7 +388,6 @@ color = Color(0.112467, 0.00586382, 0.00584435, 1)
 [connection signal="body_entered" from="PicanhaDoLulinha" to="." method="_on_area_2d_body_entered"]
 
 [editable path="Objetos/Quadro/detecção"]
-[editable path="Objetos/Garrafa/detecçãoGarraf"]
 [editable path="Objetos/Lua/detecção"]
 [editable path="Objetos/Espelho/detecção"]
 [editable path="Objetos/Pitu/detecção"]
