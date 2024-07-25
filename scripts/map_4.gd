@@ -1,6 +1,6 @@
 extends TileMap
-const SPEED = 50
-
+const SPEED = 25
+var colliding : bool = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -8,8 +8,12 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	if colliding:
+		position.y += SPEED * delta
+	else:
+		pass
 
-
-func _on_area_2d_area_entered(area):
-	self.position.y -= SPEED
+func _on_area_2d_body_entered(body):
+	$Area2D/CollisionShape2D.set_deferred("disabled", true)
+	colliding = true
+	
