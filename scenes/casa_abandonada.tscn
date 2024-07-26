@@ -610,10 +610,10 @@ script = ExtResource("13_f3w6m")
 
 [node name="PlayerLabel" type="Label" parent="Player"]
 unique_name_in_owner = true
-offset_left = -44.25
-offset_top = 32.75
-offset_right = 1351.75
-offset_bottom = 413.75
+offset_left = -52.25
+offset_top = 31.0
+offset_right = 2500.75
+offset_bottom = 377.0
 scale = Vector2(0.065, 0.065)
 theme_override_fonts/font = ExtResource("36_lrnw4")
 theme_override_font_sizes/font_size = 100
