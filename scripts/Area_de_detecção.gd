@@ -28,14 +28,14 @@ var openDor = false
 
 var msgShow: Array = [
 	
-	"& Armaria, café bom danado desse jogado\naqui e ainda deixaram xica suja!! &",
-	"& Lua bonita da peste desse meu sertão!!!\nDeus estava inspirada quando desenhou essa\nbelezura. &",
-	"& Já esse Quadro poderia ser melhor,\n mas pelo menos representa\n o velho nordeste. &",
+	"& Armaria, café bom danado desse jogado\naqui e ainda deixaram a xica suja!! &",
+	"& Lua bonita da peste desse meu sertão!!!\nDeus estava inspirado quando desenhou essa\nbelezura. &",
+	"& Já esse quadro poderia ser melhor,\n mas pelo menos representa\n o velho nordeste. &",
 	"& Picanha do lula?? Faz o L!!. &",
-	"& DIABO!!! FI DO CABRUNCO\nRAI DE PERTO DE MIM PESTEE!!! &",
+	"& DIABO!!! FI DO CABRUNCO\nRAI DE PERTO DE MIM BATORÈ!!! &",
 	"& Éguaa!!! mas eu tõ Emperiquitado\nde bunito nesse espei fi &",
 	"& Armaria, Cana arretada da peste!! Toma até uma dose. &",
-	"& Mãinha dizia que Lampião era bicho bruto,\n há de nascer homi mai corajoso que lampião,\nse olhasse pra ele ficava sem os zoi.\nDês de miudo quero ser um, tenho é medo de nada!! &"
+	"& Mãinha dizia que Lampião era bicho bruto,\n há de nascer homi mai corajoso que lampião.\nDês de miudo quero ser um, tenho medo nem do duacho!! &"
 	
 ]
 
@@ -51,14 +51,11 @@ func _process(delta):
 			
 			"Garrafa":
 				Global.dialogFinished = false
-				print(Global.dialogFinished)
 				player.onTitle = true
 				_msg = msgShow[0]
 				show_message(_msg)
 				texture_rect.queue_free()
 				await get_tree().create_timer(10).timeout
-				player.onTitle = false
-				Global.dialogFinished = true
 				var tween = get_tree().create_tween()
 				tween.tween_property(ponto_luz_3,"modulate",Color(1,1,1,0),0.5)
 				
@@ -69,8 +66,6 @@ func _process(delta):
 				show_message(_msg)
 				texture_rect.queue_free()
 				await get_tree().create_timer(10).timeout
-				player.onTitle = false
-				Global.dialogFinished = true
 				var tween = get_tree().create_tween()
 				tween.tween_property(ponto_luz_6,"modulate",Color(1,1,1,0),0.5)
 				
@@ -81,8 +76,6 @@ func _process(delta):
 				show_message(_msg)
 				texture_rect.queue_free()
 				await get_tree().create_timer(14).timeout
-				player.onTitle = false
-				Global.dialogFinished = true
 				var tween = get_tree().create_tween()
 				tween.tween_property(ponto_luz,"modulate",Color(1,1,1,0),0.5)
 				
@@ -109,8 +102,6 @@ func _process(delta):
 				set_physics_process(true)
 				Global.isRun = true
 				player.SPEED += 100
-				player.onTitle = false
-				Global.dialogFinished = true
 				openDor = true
 				
 			"Espelho":
@@ -120,8 +111,6 @@ func _process(delta):
 				show_message(_msg)
 				texture_rect.queue_free()
 				await get_tree().create_timer(6).timeout
-				player.onTitle = false
-				Global.dialogFinished = true
 				var tween = get_tree().create_tween()
 				tween.tween_property(ponto_luz_5,"modulate",Color(1,1,1,0),0.5)
 
@@ -132,8 +121,6 @@ func _process(delta):
 				show_message(_msg)
 				texture_rect.queue_free()
 				await get_tree().create_timer(5).timeout
-				player.onTitle = false
-				Global.dialogFinished = true
 				var tween = get_tree().create_tween()
 				tween.tween_property(ponto_luz_2,"modulate",Color(1,1,1,0),0.5)
 				
@@ -144,8 +131,6 @@ func _process(delta):
 				show_message(_msg)
 				texture_rect.queue_free()
 				await get_tree().create_timer(13).timeout
-				player.onTitle = false
-				Global.dialogFinished = true
 				var tween = get_tree().create_tween()
 				tween.tween_property(ponto_luz_4,"modulate",Color(1,1,1,0),0.5)
 	
@@ -180,6 +165,8 @@ func _on_timer_timeout():
 		timer.stop()
 		await get_tree().create_timer(3).timeout
 		label.text = ""
+		player.onTitle = false
+		Global.dialogFinished = true
 	else:
 		label.visible_characters += 1	
 
