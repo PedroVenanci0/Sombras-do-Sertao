@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://drnarthh87w77"
+path="res://.godot/imported/Terror (Heavy Metal_Rock Instrumental).mp3-ff699c21178aee35401685d0d5ae7572.mp3str"
+
+[deps]
+
+source_file="res://assets/songs/Terror (Heavy Metal_Rock Instrumental).mp3"
+dest_files=["res://.godot/imported/Terror (Heavy Metal_Rock Instrumental).mp3-ff699c21178aee35401685d0d5ae7572.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

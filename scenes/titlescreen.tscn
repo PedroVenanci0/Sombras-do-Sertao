@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://dg2efy3xmcg58"]
+[gd_scene load_steps=25 format=3 uid="uid://dg2efy3xmcg58"]
 
 [ext_resource type="Script" path="res://scripts/titlescreen.gd" id="1_6mo47"]
 [ext_resource type="Texture2D" uid="uid://b3cwjhhjmifv2" path="res://assets/Menus/A_cursed_men_cangaceiro.jpg" id="1_8rcj2"]
@@ -8,14 +8,18 @@
 [ext_resource type="Texture2D" uid="uid://c2soyneqhvafe" path="res://assets/house/BrCultureJamAssets/CaramelDog_3x.png" id="5_ksdr3"]
 [ext_resource type="Script" path="res://scripts/TransitionCam.gd" id="6_wiyo6"]
 [ext_resource type="PackedScene" uid="uid://ub6dovylitej" path="res://scenes/player.tscn" id="8_84gvt"]
-[ext_resource type="Texture2D" uid="uid://be0tfjgstwsor" path="res://assets/Luz/Luz ambiente/4433d48964593f4c0326f095d731e65a.jpg" id="8_x8yqe"]
 [ext_resource type="Texture2D" uid="uid://bndmdjctitiaf" path="res://assets/Ambiente/sunset.jpg" id="9_eeuji"]
 [ext_resource type="Texture2D" uid="uid://doku62j1up4b3" path="res://assets/Ambiente/2/5.png" id="9_gn7jf"]
 [ext_resource type="Texture2D" uid="uid://dripaua6wcm0y" path="res://assets/Luz/Luz ambiente/download.jpeg" id="9_pbylb"]
 [ext_resource type="Texture2D" uid="uid://b1bwfm28g4god" path="res://assets/house/house.png" id="12_ncfql"]
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_4smex"]
+blend_mode = 1
+
 [sub_resource type="CanvasTexture" id="CanvasTexture_4oa20"]
 diffuse_texture = ExtResource("9_eeuji")
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_po5r4"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_xo33x"]
 polygon = PackedVector2Array(-546, -365, -548, 172, 925, 174, 923, -357)
@@ -85,23 +89,15 @@ region_rect = Rect2(0, 984, 1920, 96)
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 z_index = 1
-position = Vector2(-68, -118)
+material = SubResource("CanvasItemMaterial_4smex")
+position = Vector2(-47, -88)
 scale = Vector2(1.06784, 0.706578)
 energy = 2.75
 shadow_enabled = true
 shadow_filter = 1
+shadow_filter_smooth = 0.9
 texture = ExtResource("9_pbylb")
 texture_scale = 2.64
-
-[node name="PointLight2D2" type="PointLight2D" parent="."]
-z_index = 1
-position = Vector2(-74, -186.5)
-scale = Vector2(2.76397, 1.47076)
-energy = 0.96
-shadow_enabled = true
-shadow_filter = 1
-texture = ExtResource("8_x8yqe")
-texture_scale = 0.66
 
 [node name="Sunset" type="Sprite2D" parent="."]
 modulate = Color(0.174028, 0.174028, 0.174028, 1)
@@ -127,6 +123,7 @@ position = Vector2(325, -4)
 scale = Vector2(2.5, 2.5)
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+material = SubResource("CanvasItemMaterial_po5r4")
 position = Vector2(29, -45)
 occluder = SubResource("OccluderPolygon2D_xo33x")
 
@@ -138,9 +135,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -240.0
-offset_top = -193.0
+offset_top = -234.0
 offset_right = 185.42
-offset_bottom = 67.785
+offset_bottom = 26.785
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_k0g3k")
@@ -225,58 +222,71 @@ modulate = Color(1, 1, 1, 0)
 position = Vector2(227, 191)
 
 [node name="LightOccluder2D7" type="LightOccluder2D" parent="GameName/NameLights"]
+modulate = Color(1, 1, 1, 0)
 position = Vector2(110, -52)
 scale = Vector2(0.605, 0.605)
 occluder = SubResource("OccluderPolygon2D_l0mcw")
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="GameName/NameLights"]
+modulate = Color(1, 1, 1, 0)
 material = SubResource("CanvasItemMaterial_j3i0k")
 position = Vector2(-14, -46)
 occluder = SubResource("OccluderPolygon2D_xvp2i")
 
 [node name="LightOccluder2D2" type="LightOccluder2D" parent="GameName/NameLights"]
+modulate = Color(1, 1, 1, 0)
 material = SubResource("CanvasItemMaterial_j3i0k")
 position = Vector2(196, -44)
 occluder = SubResource("OccluderPolygon2D_xvp2i")
 
 [node name="LightOccluder2D12" type="LightOccluder2D" parent="GameName/NameLights"]
+modulate = Color(1, 1, 1, 0)
 material = SubResource("CanvasItemMaterial_j3i0k")
 position = Vector2(118, -44)
 occluder = SubResource("OccluderPolygon2D_xvp2i")
 
 [node name="LightOccluder2D3" type="LightOccluder2D" parent="GameName/NameLights"]
+modulate = Color(1, 1, 1, 0)
 position = Vector2(-227, -191)
 occluder = SubResource("OccluderPolygon2D_7bxst")
 
 [node name="LightOccluder2D5" type="LightOccluder2D" parent="GameName/NameLights"]
+modulate = Color(1, 1, 1, 0)
 position = Vector2(-69, -192)
 occluder = SubResource("OccluderPolygon2D_7bxst")
 
 [node name="LightOccluder2D4" type="LightOccluder2D" parent="GameName/NameLights"]
+modulate = Color(1, 1, 1, 0)
 position = Vector2(58, -192)
 occluder = SubResource("OccluderPolygon2D_7bxst")
 
 [node name="LightOccluder2D6" type="LightOccluder2D" parent="GameName/NameLights"]
+modulate = Color(1, 1, 1, 0)
 position = Vector2(-227, -191)
 occluder = SubResource("OccluderPolygon2D_lh0s5")
 
 [node name="LightOccluder2D8" type="LightOccluder2D" parent="GameName/NameLights"]
+modulate = Color(1, 1, 1, 0)
 position = Vector2(-227, -191)
 occluder = SubResource("OccluderPolygon2D_giovr")
 
 [node name="LightOccluder2D9" type="LightOccluder2D" parent="GameName/NameLights"]
+modulate = Color(1, 1, 1, 0)
 position = Vector2(-70, -191)
 occluder = SubResource("OccluderPolygon2D_giovr")
 
 [node name="LightOccluder2D10" type="LightOccluder2D" parent="GameName/NameLights"]
+modulate = Color(1, 1, 1, 0)
 position = Vector2(-227, -191)
 occluder = SubResource("OccluderPolygon2D_ueyih")
 
 [node name="LightOccluder2D11" type="LightOccluder2D" parent="GameName/NameLights"]
+modulate = Color(1, 1, 1, 0)
 position = Vector2(-50, -190)
 occluder = SubResource("OccluderPolygon2D_ueyih")
 
 [node name="LightOccluder2D13" type="LightOccluder2D" parent="GameName/NameLights"]
+modulate = Color(1, 1, 1, 0)
 position = Vector2(-227, -191)
 occluder = SubResource("OccluderPolygon2D_ggycq")
 
