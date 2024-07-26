@@ -49,12 +49,15 @@ func _physics_process(delta):
 		animationManager.play("idle")
 	else:
 		animationManager.active = true
-		animationManager.play("walk")
+		
+		if Global.isRun:
+			animationManager.play("run")
+		else:
+			animationManager.play("walk")
 		
 func _input(event):
 	if Input.is_action_just_pressed("Click_Button") and not onTitle and Global.moviement_click:
 		Destination = get_global_mouse_position()
-
 
 func _on_animation_manager_animation_finished(anim_name):
 	animationManager.active = false

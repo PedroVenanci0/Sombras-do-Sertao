@@ -21,8 +21,9 @@ func playMusic() -> void:
 
 
 	
-func impactPlay() -> void:
-	$ImpactSFX.play()
+func playSFX(song) -> void:
+	$SFX.stream = song
+	$SFX.play()
 
 
 func backMusicFinished():

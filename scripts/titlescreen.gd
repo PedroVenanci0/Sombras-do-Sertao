@@ -20,12 +20,13 @@ func _process(delta):
 		var _tween = get_tree().create_tween()
 		_tween.tween_property(transitionCam,"position",Vector2(-210,-55),2)
 	if player.position.x <= -400:
+		Songs.playSFX(preload("res://assets/songs/SOM DE PORTA ABRINDO.mp3"))
 		Global.fadeTransition("casa")
 
 func startPressed():
 	$GameName/Buttons/StartButton.set_mouse_filter(Control.MOUSE_FILTER_IGNORE)
 	$GameName/Buttons/ExitButton.set_mouse_filter(Control.MOUSE_FILTER_IGNORE)
-	Songs.impactPlay()
+	Songs.playSFX(preload("res://assets/songs/impact/06 - Impact.mp3"))
 	transitionCam.shakeCamera()
 	var _tween = get_tree().create_tween()
 	var _tweenScale = get_tree().create_tween()

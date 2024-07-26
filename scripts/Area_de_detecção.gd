@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var label = $Label
+@onready var label = %PlayerLabel
 @onready var timer = $Timer
 @onready var texture_rect = $TextureRect
 
@@ -24,6 +24,7 @@ var speed_monster = 75
 @onready var ponto_luz_7 = %PontoLuz7
 
 var _msg: String = ""
+var openDor = false
 
 var msgShow: Array = [
 	
@@ -41,7 +42,7 @@ var msgShow: Array = [
 func _ready():
 	set_process(false)
 	set_physics_process(false)
-	player.SPEED = 250
+	player.SPEED = 200
 
 func _process(delta):
 	
@@ -106,8 +107,11 @@ func _process(delta):
 				await get_tree().create_timer(1).timeout
 				animated_sprite_2d.play("walk")
 				set_physics_process(true)
+				Global.isRun = true
+				player.SPEED += 100
 				player.onTitle = false
 				Global.dialogFinished = true
+				openDor = true
 				
 			"Espelho":
 				Global.dialogFinished = false
@@ -148,6 +152,10 @@ func _process(delta):
 
 func _physics_process(delta):
 	monster.position.x += 3
+	
+	if player.position >= Vector2(1330,260) and openDor:
+		Songs.playSFX(preload("res://assets/songs/SOM DE PORTA ABRINDO.mp3"))
+		Global.fadeTransition("run")
 
 func _on_texture_rect_mouse_entered():
 	Global.moviement_click = false
@@ -170,8 +178,8 @@ func _on_timer_timeout():
 	
 	if label.visible_characters == label.text.length():
 		timer.stop()
-		await get_tree().create_timer(5).timeout
-		label.visible = false
+		await get_tree().create_timer(3).timeout
+		label.text = ""
 	else:
 		label.visible_characters += 1	
 

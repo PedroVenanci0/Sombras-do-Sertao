@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=3 uid="uid://5w67ml2ebeeo"]
+[gd_scene load_steps=63 format=3 uid="uid://5w67ml2ebeeo"]
 
 [ext_resource type="Script" path="res://scripts/casa_abandonada.gd" id="1_0jpda"]
 [ext_resource type="Texture2D" uid="uid://qy28di24w8go" path="res://assets/house/Parede.png" id="1_1kkgk"]
@@ -35,6 +35,7 @@
 [ext_resource type="Texture2D" uid="uid://bm645fdmf41ul" path="res://assets/HouseMaps/filtroMap.png" id="22_iamsm"]
 [ext_resource type="Texture2D" uid="uid://es1vbhqbcqi0" path="res://assets/HouseMaps/galinhaMap.png" id="23_ab30o"]
 [ext_resource type="Texture2D" uid="uid://b5lg3dqqbn1um" path="res://assets/Luz/ponro de luz/imagem_2024-07-24_170634171-removebg-preview (2).png" id="24_mxt5e"]
+[ext_resource type="FontFile" uid="uid://btva2fapcwfpp" path="res://assets/fontes/xilosa_.ttf" id="36_lrnw4"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_xsj6f"]
 polygon = PackedVector2Array(-95.1099, -185.668, -91.0627, 164.169, 60.708, 187.622, 66.7788, -207.166)
@@ -237,16 +238,7 @@ offset_top = -171.0
 offset_right = 438.0
 offset_bottom = 400.0
 
-[node name="Label" parent="Objetos/Quadro/detecção" index="1"]
-modulate = Color(0.960351, 0.960351, 0.960351, 1)
-offset_left = -1580.95
-offset_top = 2000.0
-offset_right = -1382.95
-offset_bottom = 2100.0
-scale = Vector2(2.5, 2.5)
-theme_override_font_sizes/font_size = 100
-
-[node name="Timer" parent="Objetos/Quadro/detecção" index="2"]
+[node name="Timer" parent="Objetos/Quadro/detecção" index="1"]
 wait_time = 0.1
 
 [node name="Lua" type="Node2D" parent="Objetos"]
@@ -260,15 +252,7 @@ offset_top = 145.0
 offset_right = 1029.0
 offset_bottom = 243.0
 
-[node name="Label" parent="Objetos/Lua/detecção" index="1"]
-offset_left = 759.0
-offset_top = 391.0
-offset_right = 813.0
-offset_bottom = 491.0
-scale = Vector2(0.26, 0.26)
-theme_override_font_sizes/font_size = 100
-
-[node name="Timer" parent="Objetos/Lua/detecção" index="2"]
+[node name="Timer" parent="Objetos/Lua/detecção" index="1"]
 wait_time = 0.1
 
 [node name="Espelho" type="Sprite2D" parent="Objetos"]
@@ -285,15 +269,7 @@ offset_top = -66.0
 offset_right = 47.0
 offset_bottom = 69.0
 
-[node name="Label" parent="Objetos/Espelho/detecção" index="1"]
-offset_left = -258.612
-offset_top = 469.333
-offset_right = -51.6121
-offset_bottom = 569.333
-scale = Vector2(0.69, 0.69)
-theme_override_font_sizes/font_size = 100
-
-[node name="Timer" parent="Objetos/Espelho/detecção" index="2"]
+[node name="Timer" parent="Objetos/Espelho/detecção" index="1"]
 wait_time = 0.1
 
 [node name="Pitu" type="Sprite2D" parent="Objetos"]
@@ -310,15 +286,7 @@ offset_top = -255.0
 offset_right = -71.0
 offset_bottom = 237.0
 
-[node name="Label" parent="Objetos/Pitu/detecção" index="1"]
-offset_left = -2412.52
-offset_top = 1893.52
-offset_right = -2372.52
-offset_bottom = 1993.52
-scale = Vector2(4.55, 4.55)
-theme_override_font_sizes/font_size = 100
-
-[node name="Timer" parent="Objetos/Pitu/detecção" index="2"]
+[node name="Timer" parent="Objetos/Pitu/detecção" index="1"]
 wait_time = 0.1
 
 [node name="Caipirinha1x" type="Sprite2D" parent="Objetos/Pitu"]
@@ -340,15 +308,7 @@ offset_top = -28.0
 offset_right = -7.0
 offset_bottom = 22.0
 
-[node name="Label" parent="Objetos/Garrafa/detecção" index="1"]
-offset_left = -137.0
-offset_top = 114.0
-offset_right = 186.0
-offset_bottom = 214.0
-scale = Vector2(0.245, 0.245)
-theme_override_font_sizes/font_size = 100
-
-[node name="Timer" parent="Objetos/Garrafa/detecção" index="2"]
+[node name="Timer" parent="Objetos/Garrafa/detecção" index="1"]
 wait_time = 0.1
 
 [node name="Itens_do_cangaço" type="Node2D" parent="Objetos"]
@@ -387,15 +347,7 @@ offset_top = 177.0
 offset_right = 414.0
 offset_bottom = 230.0
 
-[node name="Label" parent="Objetos/Itens_do_cangaço/detecção" index="1"]
-offset_left = 216.0
-offset_top = 390.0
-offset_right = 256.0
-offset_bottom = 413.0
-scale = Vector2(0.265, 0.265)
-theme_override_font_sizes/font_size = 100
-
-[node name="Timer" parent="Objetos/Itens_do_cangaço/detecção" index="2"]
+[node name="Timer" parent="Objetos/Itens_do_cangaço/detecção" index="1"]
 wait_time = 0.1
 
 [node name="Filtro_de_barro" type="Sprite2D" parent="Objetos"]
@@ -631,16 +583,7 @@ offset_top = 18.0
 offset_right = 33.0
 offset_bottom = 78.0
 
-[node name="Label" parent="Monster/detecção2" index="1"]
-offset_left = -107.0
-offset_top = 262.0
-offset_right = 310.0
-offset_bottom = 362.0
-scale = Vector2(0.23, 0.23)
-theme_override_colors/font_color = Color(1, 0, 0, 1)
-theme_override_font_sizes/font_size = 100
-
-[node name="Timer" parent="Monster/detecção2" index="2"]
+[node name="Timer" parent="Monster/detecção2" index="1"]
 wait_time = 0.02
 
 [node name="PicanhaDoLulinha" type="Area2D" parent="."]
@@ -664,6 +607,16 @@ limit_left = -1109
 limit_top = 5
 limit_right = 1444
 script = ExtResource("13_f3w6m")
+
+[node name="PlayerLabel" type="Label" parent="Player"]
+unique_name_in_owner = true
+offset_left = -44.25
+offset_top = 32.75
+offset_right = 1351.75
+offset_bottom = 413.75
+scale = Vector2(0.065, 0.065)
+theme_override_fonts/font = ExtResource("36_lrnw4")
+theme_override_font_sizes/font_size = 100
 
 [connection signal="body_entered" from="PicanhaDoLulinha" to="." method="_on_area_2d_body_entered"]
 

@@ -1,5 +1,6 @@
 extends Node
 
+var isRun = false
 var dialogFinished: bool = true
 var moviement_click: bool = true
 var speed = 250.0
@@ -9,7 +10,8 @@ var cameraShake : bool = false
 var scenesDatabae : Dictionary = {
 	"titlescreen" : preload("res://scenes/titlescreen.tscn"),
 	"world" : preload("res://scenes/world.tscn"),
-	"casa" : preload("res://scenes/casa_abandonada.tscn")
+	"casa" : preload("res://scenes/casa_abandonada.tscn"),
+	"run" : preload("res://scenes/random_world.tscn")
 }
 
 func fadeTransition(sceneCalled):
