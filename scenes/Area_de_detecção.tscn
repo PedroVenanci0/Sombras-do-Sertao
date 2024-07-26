@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://fucxrmmbu670"]
+[gd_scene load_steps=2 format=3 uid="uid://fucxrmmbu670"]
 
 [ext_resource type="Script" path="res://scripts/Area_de_detecção.gd" id="1_yux7x"]
-[ext_resource type="FontFile" uid="uid://btva2fapcwfpp" path="res://assets/fontes/xilosa_.ttf" id="2_ok61l"]
 
 [node name="detecção" type="Node2D"]
 script = ExtResource("1_yux7x")
@@ -9,12 +8,6 @@ script = ExtResource("1_yux7x")
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 40.0
 offset_bottom = 40.0
-
-[node name="Label" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
-theme_override_fonts/font = ExtResource("2_ok61l")
-theme_override_font_sizes/font_size = 10
 
 [node name="Timer" type="Timer" parent="."]
 
