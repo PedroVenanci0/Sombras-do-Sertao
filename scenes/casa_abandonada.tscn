@@ -559,7 +559,39 @@ unique_name_in_owner = true
 position = Vector2(350, 258)
 color = Color(0.784314, 0.541176, 0, 1)
 energy = 8.5
+shadow_filter = 2
+shadow_filter_smooth = 2.6
 texture = ExtResource("7_7822j")
+
+[node name="luz_Lampada_04" type="PointLight2D" parent="Light"]
+unique_name_in_owner = true
+position = Vector2(353, 109)
+scale = Vector2(1, 1.625)
+color = Color(0.784314, 0.541176, 0, 1)
+energy = 3.65
+range_z_max = 4096
+range_layer_min = -512
+range_layer_max = 512
+shadow_enabled = true
+shadow_filter = 2
+shadow_filter_smooth = 2.6
+texture = ExtResource("7_7822j")
+texture_scale = 0.95
+
+[node name="luz_Lampada_05" type="PointLight2D" parent="Light"]
+unique_name_in_owner = true
+position = Vector2(-166, 109)
+scale = Vector2(1, 1.625)
+color = Color(0.784314, 0.541176, 0, 1)
+energy = 3.65
+range_z_max = 4096
+range_layer_min = -512
+range_layer_max = 512
+shadow_enabled = true
+shadow_filter = 2
+shadow_filter_smooth = 2.6
+texture = ExtResource("7_7822j")
+texture_scale = 0.95
 
 [node name="luz_Lampada_02" type="PointLight2D" parent="Light"]
 unique_name_in_owner = true
@@ -577,11 +609,12 @@ energy = 9.08
 texture = ExtResource("7_7822j")
 
 [node name="PointLight2D3" type="PointLight2D" parent="Light"]
-position = Vector2(815.231, 416.196)
+position = Vector2(815, 421)
 rotation = 0.675746
 scale = Vector2(1.62156, 1.23657)
 color = Color(0.77844, 0.162554, 0, 1)
 energy = 5.47
+shadow_filter = 1
 texture = ExtResource("7_7822j")
 texture_scale = 1.05
 
@@ -620,8 +653,8 @@ shape = SubResource("RectangleShape2D_g4fxg")
 [node name="Player" parent="." instance=ExtResource("9_hhqie")]
 unique_name_in_owner = true
 modulate = Color(0.518503, 0.518503, 0.518503, 1)
-position = Vector2(1406, 233)
-scale = Vector2(5, 5)
+position = Vector2(1406, 260)
+scale = Vector2(4, 4)
 
 [node name="Camera2D2" type="Camera2D" parent="Player"]
 unique_name_in_owner = true

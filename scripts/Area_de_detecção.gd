@@ -11,8 +11,6 @@ var speed_monster = 75
 
 @onready var camera_2d_2 = %Camera2D2
 
-@onready var animated_sprite_2d: AnimatedSprite2D = get_parent().get_node("AnimatedSprite2D")
-
 @onready var luz_lampada_01 = %luz_Lampada_01
 @onready var luz_lampada_02 = %luz_Lampada_02
 @onready var luz_lampada_03 = %luz_Lampada_03
@@ -88,6 +86,7 @@ func _process(delta):
 				tween.tween_property(ponto_luz,"modulate",Color(1,1,1,0),0.5)
 				
 			"Monster":
+				var animated_sprite_2d: AnimatedSprite2D = get_parent().get_node("AnimatedSprite2D")
 				Global.dialogFinished = false
 				player.onTitle = true
 				camera_2d_2.shakeCamera()

@@ -3,7 +3,7 @@ extends CharacterBody2D
 class_name Player
 
 @onready var animationManager = $AnimationManager
-@onready var light_occluder_2d = $Animations/LightOccluder2D
+
 
 var SPEED = 150
 const JUMP_VELOCITY = -400.0
