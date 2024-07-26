@@ -80,6 +80,7 @@ func _process(delta):
 				tween.tween_property(ponto_luz,"modulate",Color(1,1,1,0),0.5)
 				
 			"Monster":
+				label.add_theme_color_override("font_color",Color(255,0,0,1))
 				var animated_sprite_2d: AnimatedSprite2D = get_parent().get_node("AnimatedSprite2D")
 				Global.dialogFinished = false
 				player.onTitle = true
@@ -98,10 +99,11 @@ func _process(delta):
 				_msg = msgShow[4]
 				show_message(_msg)
 				await get_tree().create_timer(1).timeout
+				player.onTitle = false
 				animated_sprite_2d.play("walk")
 				set_physics_process(true)
 				Global.isRun = true
-				player.SPEED += 100
+				player.SPEED += 50
 				openDor = true
 				
 			"Espelho":
