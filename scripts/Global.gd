@@ -1,6 +1,7 @@
 extends Node
 
-var isRun = false
+var inEscape: bool = false
+var isRun: bool = false
 var dialogFinished: bool = true
 var moviement_click: bool = true
 var speed = 250.0
