@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dcu46akhr4o75"]
+[gd_scene load_steps=5 format=3 uid="uid://dcu46akhr4o75"]
 
 [ext_resource type="Script" path="res://scripts/random_world.gd" id="1_tmael"]
 [ext_resource type="Script" path="res://scripts/cameraGame.gd" id="2_cgkh4"]
+[ext_resource type="PackedScene" uid="uid://ub6dovylitej" path="res://scenes/player.tscn" id="3_pu6mo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vpvq3"]
 size = Vector2(84, 389.5)
@@ -31,5 +32,8 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(32, -184.75)
 shape = SubResource("RectangleShape2D_vpvq3")
+
+[node name="Player" parent="." instance=ExtResource("3_pu6mo")]
+position = Vector2(229.5, -357)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

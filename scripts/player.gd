@@ -14,36 +14,36 @@ var Velocity = Vector2()
 var SnapPosition = Vector2()
 var onTitle = false
 
-# Get the gravity from the project settings to be synced with RigidBody nodes.
-#var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+ ## Get the gravity from the project settings to be synced with RigidBody nodes.
+var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 var margin = 1
 
 func _ready():
-	
 	Destination = position
 
 func _physics_process(delta):
-	# Add the gravity.
+	 ## Add the gravity.
 	#if not is_on_floor():
-		#velocity.y += gravity * delta
+		#position.y += gravity * delta
 
 	# Handle jump.
 	if Input.is_action_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
-
-	if position != Destination:
-		distance = Vector2(Destination - position)
-		velocity.x = distance.normalized().x * SPEED
-		velocity.y = distance.normalized().x * 0
-		move_and_slide()
-		
-	if (Destination.x > position.x):
-		get_node("Animations").flip_h = false
-		get_node("LightOccluder2D").scale.x = 1
-	if (Destination.x < position.x):
-		get_node("Animations").flip_h = true
-		get_node("LightOccluder2D").scale.x = -1
+	
+	if not Global.inEscape:
+		if position != Destination:
+			distance = Vector2(Destination - position)
+			velocity.x = distance.normalized().x * SPEED
+			velocity.y = distance.normalized().x * 0
+			move_and_slide()
+			
+		if (Destination.x > position.x):
+			get_node("Animations").flip_h = false
+			get_node("LightOccluder2D").scale.x = 1
+		if (Destination.x < position.x):
+			get_node("Animations").flip_h = true
+			get_node("LightOccluder2D").scale.x = -1
 		
 	if abs(velocity.x) <= 20:
 		animationManager.play("idle")

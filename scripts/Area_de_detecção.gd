@@ -80,6 +80,7 @@ func _process(delta):
 				tween.tween_property(ponto_luz,"modulate",Color(1,1,1,0),0.5)
 				
 			"Monster":
+				Songs.playSFX(preload("res://assets/songs/impact/05 - Impact.mp3"))
 				label.add_theme_color_override("font_color",Color(255,0,0,1))
 				var animated_sprite_2d: AnimatedSprite2D = get_parent().get_node("AnimatedSprite2D")
 				Global.dialogFinished = false
@@ -92,6 +93,8 @@ func _process(delta):
 				tween.tween_property(ponto_luz_7,"modulate",Color(1,1,1,0),0.5)
 				animated_sprite_2d.position.y = 125
 				animated_sprite_2d.play("Spawn")
+				AudioServer.set_bus_volume_db(1,3)
+				Songs.playSFX(preload("res://assets/songs/Monster Growl.mp3"))
 				await animated_sprite_2d.animation_finished
 				luz_lampada_02.enabled = true
 				luz_lampada_03.enabled = true
