@@ -91,6 +91,7 @@ func _process(delta):
 				await get_tree().create_timer(2).timeout
 				var tween = get_tree().create_tween()
 				tween.tween_property(ponto_luz_7,"modulate",Color(1,1,1,0),0.5)
+				animated_sprite_2d.get_parent().get_node("Deathzone").position.y = 125
 				animated_sprite_2d.position.y = 125
 				animated_sprite_2d.play("Spawn")
 				AudioServer.set_bus_volume_db(1,3)

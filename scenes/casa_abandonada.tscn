@@ -11,10 +11,10 @@
 [ext_resource type="Texture2D" uid="uid://673akufm7j26" path="res://assets/HouseMaps/quadroMap.png" id="7_6t8be"]
 [ext_resource type="Texture2D" uid="uid://be0tfjgstwsor" path="res://assets/Luz/Luz ambiente/4433d48964593f4c0326f095d731e65a.jpg" id="7_7822j"]
 [ext_resource type="PackedScene" uid="uid://fucxrmmbu670" path="res://scenes/Area_de_detecção.tscn" id="7_pfkn0"]
+[ext_resource type="Shader" path="res://shaders/SelectedShader.gdshader" id="8_x0nwl"]
 [ext_resource type="PackedScene" uid="uid://ub6dovylitej" path="res://scenes/player.tscn" id="9_hhqie"]
 [ext_resource type="Texture2D" uid="uid://dripaua6wcm0y" path="res://assets/Luz/Luz ambiente/download.jpeg" id="9_nh0yn"]
 [ext_resource type="Texture2D" uid="uid://bm52vn43qr4ff" path="res://assets/HouseMaps/espelhoMap.png" id="10_dc66b"]
-[ext_resource type="Shader" path="res://SelectedShader.gdshader" id="11_31e3l"]
 [ext_resource type="Texture2D" uid="uid://ccw5gdpufxfne" path="res://assets/HouseMaps/pituMap.png" id="12_32avs"]
 [ext_resource type="Script" path="res://scripts/Camera_CasaAbandonada.gd" id="13_f3w6m"]
 [ext_resource type="Texture2D" uid="uid://c6s7mkot66ic7" path="res://assets/HouseMaps/garrafaMap.png" id="13_hnwrs"]
@@ -45,7 +45,7 @@ diffuse_texture = ExtResource("3_ynxyk")
 normal_texture = ExtResource("7_6t8be")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_4kfsy"]
-shader = ExtResource("11_31e3l")
+shader = ExtResource("8_x0nwl")
 shader_parameter/line_color = Color(1, 0, 1, 1)
 shader_parameter/base_color = Color(0.507972, 0.507972, 0.507972, 1)
 shader_parameter/line_thickness = 1.0
@@ -68,7 +68,7 @@ diffuse_texture = ExtResource("16_j4gtq")
 normal_texture = ExtResource("14_qii1d")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_vhsne"]
-shader = ExtResource("11_31e3l")
+shader = ExtResource("8_x0nwl")
 shader_parameter/line_color = Color(1, 1, 1, 1)
 shader_parameter/base_color = Color(0.356863, 0.337255, 0.298039, 1)
 shader_parameter/line_thickness = 0.5
@@ -79,7 +79,7 @@ diffuse_texture = ExtResource("5_6oeve")
 normal_texture = ExtResource("13_hnwrs")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_xhf17"]
-shader = ExtResource("11_31e3l")
+shader = ExtResource("8_x0nwl")
 shader_parameter/line_color = Color(1, 1, 1, 1)
 shader_parameter/base_color = Color(0.356863, 0.337255, 0.298039, 1)
 shader_parameter/line_thickness = 1.0
@@ -573,6 +573,7 @@ texture_scale = 1.05
 [node name="Monster" parent="." instance=ExtResource("14_m3kq1")]
 unique_name_in_owner = true
 modulate = Color(0.136826, 0.136826, 0.136826, 1)
+z_index = 2
 position = Vector2(-996, 136)
 
 [node name="detecção2" parent="Monster" instance=ExtResource("7_pfkn0")]

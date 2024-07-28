@@ -138,7 +138,6 @@ tracks/2/keys = {
 [sub_resource type="Animation" id="Animation_aw55w"]
 resource_name = "jump"
 length = 0.60001
-loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -275,6 +274,7 @@ diffuse_texture = ExtResource("2_578qg")
 normal_texture = ExtResource("4_xs5hf")
 
 [node name="Player" type="CharacterBody2D"]
+collision_layer = 4
 script = ExtResource("1_n5omt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

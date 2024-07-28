@@ -7,14 +7,10 @@ func _unhandled_input(event):
 		pressed += 1
 		visible = true
 		get_tree().paused = true
-		resumeButton.grab_focus()
 		if pressed == 2:
 			pressed = 0
 			get_tree().paused = false
 			visible = false
-
-func _ready():
-	resumeButton.grab_focus()
 
 func resumePressed():
 	get_tree().paused = false
