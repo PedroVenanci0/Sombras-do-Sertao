@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dcu46akhr4o75"]
+[gd_scene load_steps=6 format=3 uid="uid://dcu46akhr4o75"]
 
 [ext_resource type="Script" path="res://scripts/random_world.gd" id="1_tmael"]
+[ext_resource type="Texture2D" uid="uid://d3tl18lcnkvg2" path="res://assets/Ambiente/Noturno/_dc4dcd20-d01c-45d2-8256-ed8e5d968961.jpg" id="2_6cpj4"]
 [ext_resource type="Script" path="res://scripts/cameraGame.gd" id="2_cgkh4"]
 [ext_resource type="PackedScene" uid="uid://ub6dovylitej" path="res://scenes/player.tscn" id="3_pu6mo"]
 
@@ -11,14 +12,14 @@ size = Vector2(84, 389.5)
 scale = Vector2(2, 2)
 script = ExtResource("1_tmael")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_top = -365.0
-offset_right = 646.0
-offset_bottom = -3.0
-color = Color(0.352572, 4.42201e-07, 1.44392e-07, 1)
+[node name="Dc4Dcd20-d01c-45d2-8256-ed8e5d968961" type="Sprite2D" parent="."]
+self_modulate = Color(0.847059, 0, 0, 1)
+position = Vector2(217.5, -187)
+scale = Vector2(0.630859, 0.356568)
+texture = ExtResource("2_6cpj4")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(319.5, -185.5)
+position = Vector2(215.5, -190)
 script = ExtResource("2_cgkh4")
 
 [node name="Timer" type="Timer" parent="."]
@@ -34,6 +35,6 @@ position = Vector2(32, -184.75)
 shape = SubResource("RectangleShape2D_vpvq3")
 
 [node name="Player" parent="." instance=ExtResource("3_pu6mo")]
-position = Vector2(229.5, -357)
+position = Vector2(34, -216)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

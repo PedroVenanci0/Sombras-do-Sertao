@@ -4,9 +4,8 @@ class_name Player
 
 @onready var animationManager = $AnimationManager
 
-
 var SPEED = 150
-const JUMP_VELOCITY = -400.0
+const JUMP_VELOCITY = -600
 
 var Destination = Vector2()
 var distance = Vector2()
@@ -23,12 +22,14 @@ func _ready():
 	Destination = position
 
 func _physics_process(delta):
-	 ## Add the gravity.
-	#if not is_on_floor():
-		#position.y += gravity * delta
+	print(velocity)
+	
+	 # Add the gravity.
+	if not is_on_floor() and Global.inEscape:
+		velocity.y += gravity * delta
 
 	# Handle jump.
-	if Input.is_action_pressed("ui_accept") and is_on_floor():
+	if Input.is_action_pressed("Click_Button") and is_on_floor() and Global.inEscape:
 		velocity.y = JUMP_VELOCITY
 	
 	if not Global.inEscape:
@@ -44,6 +45,9 @@ func _physics_process(delta):
 		if (Destination.x < position.x):
 			get_node("Animations").flip_h = true
 			get_node("LightOccluder2D").scale.x = -1
+	else:
+		velocity.x = SPEED
+		move_and_slide()
 		
 	if abs(velocity.x) <= 20:
 		animationManager.play("idle")
