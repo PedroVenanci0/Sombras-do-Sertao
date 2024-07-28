@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cg66jg3w250o"
-path="res://.godot/imported/_559562c3-930f-40aa-9012-36a5ea85d847.jpg-7c6b487f952546aa68a1cf3856a059be.ctex"
+uid="uid://dvgrfuis836xm"
+path="res://.godot/imported/redMoon2.jpg-836867b9e82eea6446d022f3799f72eb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Ambiente/Noturno/_559562c3-930f-40aa-9012-36a5ea85d847.jpg"
-dest_files=["res://.godot/imported/_559562c3-930f-40aa-9012-36a5ea85d847.jpg-7c6b487f952546aa68a1cf3856a059be.ctex"]
+source_file="res://assets/Ambiente/Noturno/redMoon2.jpg"
+dest_files=["res://.godot/imported/redMoon2.jpg-836867b9e82eea6446d022f3799f72eb.ctex"]
 
 [params]
 

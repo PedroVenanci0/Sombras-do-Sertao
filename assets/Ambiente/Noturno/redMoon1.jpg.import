@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b17pdkblt1nm4"
-path="res://.godot/imported/_a8dc458b-0808-426c-964e-92e33a4a6662.jpg-bfb63224731cbd6111a032b691c785c7.ctex"
+path="res://.godot/imported/redMoon1.jpg-e8ffff4f6dc2e95cc70d0fd17ca7ed35.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Ambiente/Noturno/_a8dc458b-0808-426c-964e-92e33a4a6662.jpg"
-dest_files=["res://.godot/imported/_a8dc458b-0808-426c-964e-92e33a4a6662.jpg-bfb63224731cbd6111a032b691c785c7.ctex"]
+source_file="res://assets/Ambiente/Noturno/redMoon1.jpg"
+dest_files=["res://.godot/imported/redMoon1.jpg-e8ffff4f6dc2e95cc70d0fd17ca7ed35.ctex"]
 
 [params]
 

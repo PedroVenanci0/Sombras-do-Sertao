@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3tl18lcnkvg2"
-path="res://.godot/imported/_dc4dcd20-d01c-45d2-8256-ed8e5d968961.jpg-a97db0cae03bd510ddeeac9f99cc923d.ctex"
+uid="uid://bhkw10qs4rulu"
+path="res://.godot/imported/purple.jpg-67574e9856ce89bbd4048f482d4d80dd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Ambiente/Noturno/_dc4dcd20-d01c-45d2-8256-ed8e5d968961.jpg"
-dest_files=["res://.godot/imported/_dc4dcd20-d01c-45d2-8256-ed8e5d968961.jpg-a97db0cae03bd510ddeeac9f99cc923d.ctex"]
+source_file="res://assets/Ambiente/Noturno/purple.jpg"
+dest_files=["res://.godot/imported/purple.jpg-67574e9856ce89bbd4048f482d4d80dd.ctex"]
 
 [params]
 

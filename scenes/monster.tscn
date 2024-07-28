@@ -1,9 +1,10 @@
-[gd_scene load_steps=44 format=3 uid="uid://bf7atnfi168ga"]
+[gd_scene load_steps=46 format=3 uid="uid://bf7atnfi168ga"]
 
 [ext_resource type="Texture2D" uid="uid://dr820no4uklnb" path="res://assets/monster/Caulo.png" id="1_nvto1"]
 [ext_resource type="Texture2D" uid="uid://colwc8x4dmawl" path="res://assets/monster/death.png" id="2_lnfn4"]
 [ext_resource type="Texture2D" uid="uid://n1owm7so0var" path="res://assets/monster/Idle (2).png" id="3_4ibhm"]
 [ext_resource type="Texture2D" uid="uid://dl22glp2v67cj" path="res://assets/monster/Monster_Walk.png" id="4_42wba"]
+[ext_resource type="PackedScene" uid="uid://o7enow6v8lge" path="res://scenes/deathzone.tscn" id="5_oea5a"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g43q5"]
 atlas = ExtResource("1_nvto1")
@@ -294,6 +295,9 @@ animations = [{
 "speed": 8.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gd586"]
+size = Vector2(78, 183)
+
 [node name="Monster" type="Node2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -303,3 +307,11 @@ animation = &"walk"
 autoplay = "Casulo"
 frame_progress = 0.460645
 flip_h = true
+
+[node name="Deathzone" parent="." instance=ExtResource("5_oea5a")]
+collision_layer = 2
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deathzone"]
+position = Vector2(4, 15.5)
+shape = SubResource("RectangleShape2D_gd586")

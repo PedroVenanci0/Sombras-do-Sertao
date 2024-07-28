@@ -1,25 +1,29 @@
-[gd_scene load_steps=6 format=3 uid="uid://dcu46akhr4o75"]
+[gd_scene load_steps=13 format=3 uid="uid://dcu46akhr4o75"]
 
 [ext_resource type="Script" path="res://scripts/random_world.gd" id="1_tmael"]
-[ext_resource type="Texture2D" uid="uid://d3tl18lcnkvg2" path="res://assets/Ambiente/Noturno/_dc4dcd20-d01c-45d2-8256-ed8e5d968961.jpg" id="2_6cpj4"]
 [ext_resource type="Script" path="res://scripts/cameraGame.gd" id="2_cgkh4"]
 [ext_resource type="PackedScene" uid="uid://ub6dovylitej" path="res://scenes/player.tscn" id="3_pu6mo"]
+[ext_resource type="Shader" path="res://shaders/backgroud.gdshader" id="4_wkunv"]
+[ext_resource type="PackedScene" uid="uid://o7enow6v8lge" path="res://scenes/deathzone.tscn" id="6_emulr"]
+[ext_resource type="Texture2D" uid="uid://bmfxvdyjdhfob" path="res://assets/Ambiente/4/5.png" id="6_y14md"]
+[ext_resource type="Texture2D" uid="uid://dyn6pn7w7bbmh" path="res://assets/Ambiente/2/3.png" id="8_i8w7y"]
+[ext_resource type="Texture2D" uid="uid://dihye87nkcp7n" path="res://assets/Ambiente/2/4.png" id="9_4gav5"]
+[ext_resource type="Texture2D" uid="uid://8odho2bw3646" path="res://assets/Ambiente/4/2.png" id="9_g2q6b"]
+[ext_resource type="Texture2D" uid="uid://cd8an6rdrwlrw" path="res://assets/Ambiente/4/1.png" id="10_4m5al"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vpvq3"]
 size = Vector2(84, 389.5)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gbjuj"]
+shader = ExtResource("4_wkunv")
+shader_parameter/speed = 0.5
 
 [node name="RandomWorld" type="Node2D"]
 scale = Vector2(2, 2)
 script = ExtResource("1_tmael")
 
-[node name="Dc4Dcd20-d01c-45d2-8256-ed8e5d968961" type="Sprite2D" parent="."]
-self_modulate = Color(0.847059, 0, 0, 1)
-position = Vector2(217.5, -187)
-scale = Vector2(0.630859, 0.356568)
-texture = ExtResource("2_6cpj4")
-
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(215.5, -190)
+position = Vector2(329, -183.5)
 script = ExtResource("2_cgkh4")
 
 [node name="Timer" type="Timer" parent="."]
@@ -35,6 +39,73 @@ position = Vector2(32, -184.75)
 shape = SubResource("RectangleShape2D_vpvq3")
 
 [node name="Player" parent="." instance=ExtResource("3_pu6mo")]
-position = Vector2(34, -216)
+position = Vector2(35, -175)
+
+[node name="Deathzone" parent="." instance=ExtResource("6_emulr")]
+position = Vector2(289, -106.5)
+collision_mask = 4
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Deathzone"]
+polygon = PackedVector2Array(416.5, 122, -303.5, 126, -303.5, -314, -391.5, -314, -383.5, 182, 410.5, 196)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(0.37, 0.157, 0.254, 1)
+z_index = -6
+material = SubResource("ShaderMaterial_gbjuj")
+offset_left = 9.5
+offset_top = -361.5
+offset_right = 1929.5
+offset_bottom = 718.5
+scale = Vector2(0.355, 0.355)
+texture = ExtResource("10_4m5al")
+stretch_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+modulate = Color(0.37, 0.157, 0.254, 1)
+z_index = -6
+material = SubResource("ShaderMaterial_gbjuj")
+offset_left = 9.5
+offset_top = -361.5
+offset_right = 1929.5
+offset_bottom = 718.5
+scale = Vector2(0.355, 0.355)
+texture = ExtResource("9_g2q6b")
+stretch_mode = 1
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+modulate = Color(0.37, 0.157, 0.254, 1)
+z_index = -6
+material = SubResource("ShaderMaterial_gbjuj")
+offset_left = 9.5
+offset_top = -361.5
+offset_right = 1929.5
+offset_bottom = 718.5
+scale = Vector2(0.355, 0.355)
+texture = ExtResource("8_i8w7y")
+stretch_mode = 1
+
+[node name="TextureRect4" type="TextureRect" parent="."]
+modulate = Color(0.37, 0.157, 0.254, 1)
+z_index = -6
+material = SubResource("ShaderMaterial_gbjuj")
+offset_left = 9.5
+offset_top = -361.5
+offset_right = 1929.5
+offset_bottom = 718.5
+scale = Vector2(0.355, 0.355)
+texture = ExtResource("9_4gav5")
+stretch_mode = 1
+
+[node name="TextureRect5" type="TextureRect" parent="."]
+modulate = Color(0.37, 0.157, 0.254, 1)
+z_index = -6
+material = SubResource("ShaderMaterial_gbjuj")
+offset_left = 10.0
+offset_top = -361.0
+offset_right = 1930.0
+offset_bottom = 719.0
+scale = Vector2(0.355, 0.355)
+texture = ExtResource("6_y14md")
+stretch_mode = 1
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
