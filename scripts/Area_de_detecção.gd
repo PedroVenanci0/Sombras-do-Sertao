@@ -30,12 +30,12 @@ var msgShow: Array = [
 	
 	"& Armaria, café bom danado desse jogado\naqui e ainda deixaram a xica suja!! &",
 	"& Lua bonita da peste desse meu sertão!!!\nDeus estava inspirado quando desenhou essa\nbelezura. &",
-	"& Já esse quadro poderia ser melhor,\n mas pelo menos representa\n o velho nordeste. &",
+	"& Já esse quadro poderia ser melhor,\n mas pelo menos representa o velho nordeste. &",
 	"& Picanha do lula?? Faz o L!!. &",
 	"& DIABO!!! FI DO CABRUNCO\nRAI DE PERTO DE MIM BATORÈ!!! &",
-	"& Éguaa!!! mas eu tõ Emperiquitado\nde bunito nesse espei fi &",
-	"& Armaria, Cana arretada da peste!! Toma até uma dose. &",
-	"& Mãinha dizia que Lampião era bicho bruto,\n há de nascer homi mai corajoso que lampião.\nDês de miudo quero ser um, tenho medo nem do duacho!! &"
+	"& Éguaa!!! Mas eu tõ emperiquitado\nde bunito nesse espei fi &",
+	"& Armaria, Cana arretada da peste!! \nToma até uma dose. &",
+	"& Mãinha dizia que Lampião era bicho bruto,\n há de nascer homi mai corajoso que lampião.\nDês de miudo quero ser um,tenho medo nem do cão!! &"
 	
 ]
 
@@ -106,7 +106,7 @@ func _process(delta):
 				animated_sprite_2d.play("walk")
 				set_physics_process(true)
 				Global.isRun = true
-				player.SPEED += 50
+				player.SPEED += 75
 				openDor = true
 				
 			"Espelho":

@@ -5,8 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://7ju2dqf17chy" path="res://assets/player2/normalMap.png" id="4_xs5hf"]
 [ext_resource type="Texture2D" uid="uid://dripaua6wcm0y" path="res://assets/Luz/Luz ambiente/download.jpeg" id="5_wklmn"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_abkfc"]
-size = Vector2(14.5, 27.5)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e1moe"]
+radius = 6.08333
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_oj1t3"]
 blend_mode = 1
@@ -278,8 +278,8 @@ normal_texture = ExtResource("4_xs5hf")
 script = ExtResource("1_n5omt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.916666, 14.0833)
-shape = SubResource("RectangleShape2D_abkfc")
+position = Vector2(-1, 13)
+shape = SubResource("CapsuleShape2D_e1moe")
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
 texture_filter = 1

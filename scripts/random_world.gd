@@ -5,6 +5,8 @@ var tilemap_instances: Array[Node2D] = []
 var dictionary: Dictionary
 
 func _ready() -> void:
+	Songs.musicNum = 2
+	Songs.playMusic()
 	Global.isRun = true
 	Global.inEscape = true
 	Global.TileMapWitdh = 950.0
