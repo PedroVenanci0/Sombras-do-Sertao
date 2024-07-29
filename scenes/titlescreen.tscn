@@ -332,5 +332,6 @@ do mouse para se mover &"
 [node name="PauseMenu" parent="." instance=ExtResource("13_j1ata")]
 
 [connection signal="mouse_entered" from="CaramelDog3x" to="." method="caramelMouseEntered"]
+[connection signal="mouse_exited" from="CaramelDog3x" to="." method="caramelMouseExited"]
 [connection signal="pressed" from="GameName/Buttons/StartButton" to="." method="startPressed"]
 [connection signal="pressed" from="GameName/Buttons/ExitButton" to="." method="exitPressed"]

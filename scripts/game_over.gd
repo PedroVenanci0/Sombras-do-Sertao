@@ -17,4 +17,6 @@ func tryAgainPressed():
 
 
 func exitPressed():
-	get_tree().quit()
+	get_tree().paused = false
+	Global.reloadGlobal()
+	Global.fadeTransition("titlescreen")
