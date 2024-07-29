@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dcu46akhr4o75"]
+[gd_scene load_steps=9 format=3 uid="uid://dcu46akhr4o75"]
 
 [ext_resource type="Script" path="res://scripts/random_world.gd" id="1_tmael"]
 [ext_resource type="Script" path="res://scripts/cameraGame.gd" id="2_cgkh4"]
@@ -6,9 +6,6 @@
 [ext_resource type="Shader" path="res://shaders/backgroud.gdshader" id="4_wkunv"]
 [ext_resource type="PackedScene" uid="uid://o7enow6v8lge" path="res://scenes/deathzone.tscn" id="6_emulr"]
 [ext_resource type="Texture2D" uid="uid://qy28di24w8go" path="res://assets/house/Parede.png" id="11_bvvco"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_vpvq3"]
-size = Vector2(84, 389.5)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_gbjuj"]
 shader = ExtResource("4_wkunv")
@@ -31,16 +28,11 @@ script = ExtResource("2_cgkh4")
 wait_time = 2.0
 autostart = true
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-collision_layer = 2
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(32, -184.75)
-shape = SubResource("RectangleShape2D_vpvq3")
-
 [node name="Player" parent="." instance=ExtResource("3_pu6mo")]
+collision_layer = 6
+collision_mask = 3
 position = Vector2(107.5, -113)
+
 
 [node name="Deathzone" parent="." instance=ExtResource("6_emulr")]
 position = Vector2(289, -106.5)
