@@ -12,6 +12,7 @@ func _ready():
 
 func tryAgainPressed():
 	Songs.musicPlayer.play()
+	Global.reloadGlobal()
 	get_tree().reload_current_scene()
 
 

@@ -45,3 +45,9 @@ func startPressed():
 
 func exitPressed():
 	get_tree().quit()
+
+
+func caramelMouseEntered():
+	pass
+	#if Input.is_action_just_pressed("Click_Button")
+		#Songs.playSFX()

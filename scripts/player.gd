@@ -48,7 +48,7 @@ func _physics_process(delta):
 			get_node("Animations").flip_h = true
 			get_node("LightOccluder2D").scale.x = -1
 	else:
-		velocity.x = SPEED/2
+		velocity.x = 0
 		move_and_slide()
 		
 	if not isDead:
