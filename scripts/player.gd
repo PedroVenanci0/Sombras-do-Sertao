@@ -48,11 +48,11 @@ func _physics_process(delta):
 			get_node("Animations").flip_h = true
 			get_node("LightOccluder2D").scale.x = -1
 	else:
-		velocity.x = SPEED/2
+		velocity.x = 10
 		move_and_slide()
 		
 	if not isDead:
-		if abs(velocity.x) <= 20:
+		if abs(velocity.x) <= 20 and !Global.isRun:
 			animationManager.play("idle")
 		else:
 			animationManager.active = true

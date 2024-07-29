@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://biuwij1uunrkv"]
+
+[ext_resource type="Script" path="res://scripts/FireBall.gd" id="1_unuhw"]
+[ext_resource type="Texture2D" uid="uid://bvvv6r1gsl0d" path="res://assets/Bola de fogo.png" id="2_koouk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ds6ch"]
+size = Vector2(69, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rw580"]
+atlas = ExtResource("2_koouk")
+region = Rect2(157, 47, 151, 44)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x08gd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rw580")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="FireBall" type="Node2D"]
+script = ExtResource("1_unuhw")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-31.5, 2.5)
+shape = SubResource("RectangleShape2D_ds6ch")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_x08gd")
+frame_progress = 0.211228
+flip_h = true
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
