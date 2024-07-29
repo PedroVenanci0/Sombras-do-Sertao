@@ -7,6 +7,7 @@ var moviement_click: bool = true
 var speed = 250.0
 var TileMapWitdh = 950
 var cameraShake : bool = false
+
 ## Database de cenas em preload
 var scenesDatabae : Dictionary = {
 	"titlescreen" : preload("res://scenes/titlescreen.tscn"),
@@ -22,4 +23,17 @@ func fadeTransition(sceneCalled):
 	## Atribuição da proxima cena e adição do fade ao fluxo atual
 	_fade.nextScene = scenesDatabae.get(sceneCalled)
 	get_parent().add_child(_fade)
+	
+func reloadGlobal():
+	AudioServer.set_bus_volume_db(0,0)
+	AudioServer.set_bus_volume_db(1,-1.5)
+	AudioServer.set_bus_volume_db(2,5.8)
+	Songs.playMusic(Songs.musicNum)
+	inEscape = false
+	isRun = false
+	dialogFinished = true
+	moviement_click = true
+	speed = 250.0
+	TileMapWitdh = 950
+	cameraShake = false
 	

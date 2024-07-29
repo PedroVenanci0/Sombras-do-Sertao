@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://dg2efy3xmcg58"]
+[gd_scene load_steps=26 format=3 uid="uid://dg2efy3xmcg58"]
 
 [ext_resource type="Script" path="res://scripts/titlescreen.gd" id="1_6mo47"]
 [ext_resource type="Texture2D" uid="uid://b3cwjhhjmifv2" path="res://assets/Menus/A_cursed_men_cangaceiro.jpg" id="1_8rcj2"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://doku62j1up4b3" path="res://assets/Ambiente/2/5.png" id="9_gn7jf"]
 [ext_resource type="Texture2D" uid="uid://dripaua6wcm0y" path="res://assets/Luz/Luz ambiente/download.jpeg" id="9_pbylb"]
 [ext_resource type="Texture2D" uid="uid://b1bwfm28g4god" path="res://assets/house/house.png" id="12_ncfql"]
+[ext_resource type="PackedScene" uid="uid://b8n5vnmdrkvys" path="res://scenes/pauseMenu.tscn" id="13_j1ata"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_4smex"]
 blend_mode = 1
@@ -72,9 +73,13 @@ zoom = Vector2(2, 2)
 limit_left = -515
 script = ExtResource("6_wiyo6")
 
-[node name="CaramelDog3x" type="Sprite2D" parent="."]
+[node name="CaramelDog3x" type="TextureRect" parent="."]
 modulate = Color(0.451087, 0.230391, 0.341186, 1)
-position = Vector2(-391, 53)
+layout_mode = 0
+offset_left = -402.0
+offset_top = 40.0
+offset_right = -210.0
+offset_bottom = 232.0
 scale = Vector2(0.166146, 0.166146)
 texture = ExtResource("5_ksdr3")
 
@@ -324,5 +329,9 @@ theme = ExtResource("2_k0g3k")
 text = " & Use o botão esquerdo 
 do mouse para se mover &"
 
+[node name="PauseMenu" parent="." instance=ExtResource("13_j1ata")]
+
+[connection signal="mouse_entered" from="CaramelDog3x" to="." method="caramelMouseEntered"]
+[connection signal="mouse_exited" from="CaramelDog3x" to="." method="caramelMouseExited"]
 [connection signal="pressed" from="GameName/Buttons/StartButton" to="." method="startPressed"]
 [connection signal="pressed" from="GameName/Buttons/ExitButton" to="." method="exitPressed"]

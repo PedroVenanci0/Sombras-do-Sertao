@@ -12,8 +12,11 @@ func _ready():
 
 func tryAgainPressed():
 	Songs.musicPlayer.play()
+	Global.reloadGlobal()
 	get_tree().reload_current_scene()
 
 
 func exitPressed():
-	get_tree().quit()
+	get_tree().paused = false
+	Global.reloadGlobal()
+	Global.fadeTransition("titlescreen")

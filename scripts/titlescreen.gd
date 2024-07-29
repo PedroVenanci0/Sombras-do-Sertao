@@ -2,6 +2,7 @@ extends Control
 
 @onready var player = $Player
 @onready var transitionCam = $TransitionCam
+var onCaramelo = false
 
 
 func _ready():
@@ -22,6 +23,10 @@ func _process(delta):
 	if player.position.x <= -400:
 		Songs.playSFX(preload("res://assets/songs/SOM DE PORTA ABRINDO.mp3"))
 		Global.fadeTransition("casa")
+		
+	if Input.is_action_just_pressed("Click_Button") and onCaramelo:
+		Songs.playSFX(preload("res://assets/songs/Latido.mp3"))
+		
 
 func startPressed():
 	$GameName/Buttons/StartButton.set_mouse_filter(Control.MOUSE_FILTER_IGNORE)
@@ -45,3 +50,12 @@ func startPressed():
 
 func exitPressed():
 	get_tree().quit()
+
+
+func caramelMouseEntered():
+	onCaramelo = true
+	Global.moviement_click = false
+
+func caramelMouseExited():
+	onCaramelo = false
+	Global.moviement_click = true

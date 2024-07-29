@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=3 uid="uid://5w67ml2ebeeo"]
+[gd_scene load_steps=64 format=3 uid="uid://5w67ml2ebeeo"]
 
 [ext_resource type="Script" path="res://scripts/casa_abandonada.gd" id="1_0jpda"]
 [ext_resource type="Texture2D" uid="uid://qy28di24w8go" path="res://assets/house/Parede.png" id="1_1kkgk"]
@@ -36,6 +36,7 @@
 [ext_resource type="Texture2D" uid="uid://es1vbhqbcqi0" path="res://assets/HouseMaps/galinhaMap.png" id="23_ab30o"]
 [ext_resource type="Texture2D" uid="uid://b5lg3dqqbn1um" path="res://assets/Luz/ponro de luz/imagem_2024-07-24_170634171-removebg-preview (2).png" id="24_mxt5e"]
 [ext_resource type="FontFile" uid="uid://btva2fapcwfpp" path="res://assets/fontes/xilosa_.ttf" id="36_lrnw4"]
+[ext_resource type="PackedScene" uid="uid://b8n5vnmdrkvys" path="res://scenes/pauseMenu.tscn" id="37_fhbl7"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_xsj6f"]
 polygon = PackedVector2Array(-95.1099, -185.668, -91.0627, 164.169, 60.708, 187.622, 66.7788, -207.166)
@@ -618,6 +619,8 @@ offset_bottom = 377.0
 scale = Vector2(0.065, 0.065)
 theme_override_fonts/font = ExtResource("36_lrnw4")
 theme_override_font_sizes/font_size = 100
+
+[node name="PauseMenu" parent="." instance=ExtResource("37_fhbl7")]
 
 [connection signal="body_entered" from="PicanhaDoLulinha" to="." method="_on_area_2d_body_entered"]
 

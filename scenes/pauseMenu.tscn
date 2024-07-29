@@ -1,42 +1,49 @@
-[gd_scene load_steps=4 format=3 uid="uid://b8n5vnmdrkvys"]
+[gd_scene load_steps=6 format=3 uid="uid://b8n5vnmdrkvys"]
 
 [ext_resource type="Texture2D" uid="uid://cd6qvdhqjpslf" path="res://assets/Menus/itensCangaço.png" id="1_362qj"]
 [ext_resource type="Script" path="res://scripts/pauseMenu.gd" id="1_ov0eu"]
 [ext_resource type="Theme" uid="uid://c2qfsxntflbef" path="res://assets/Menus/Fonts/terrorTherme.tres" id="2_ctftk"]
+[ext_resource type="Texture2D" uid="uid://c3fei1fgnnbbq" path="res://assets/Menus/cenrio_nordestino_brasilei_3.jpg" id="3_q8x0h"]
+[ext_resource type="Texture2D" uid="uid://fdm1f44gyk87" path="res://assets/Menus/pause.png" id="4_lqrjd"]
 
-[node name="PauseMenu" type="Control"]
+[node name="PauseMenu" type="CanvasLayer"]
 process_mode = 3
-layout_mode = 3
-anchors_preset = 0
 script = ExtResource("1_ov0eu")
 
-[node name="Blur" type="ColorRect" parent="."]
+[node name="All" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Blur" type="ColorRect" parent="All"]
 z_index = -1
 layout_mode = 0
 offset_left = -6.0
 offset_top = -5.0
 offset_right = 1289.0
 offset_bottom = 727.0
-color = Color(0, 0, 0, 0.643137)
+color = Color(0, 0, 0, 0.701961)
 
-[node name="Background" type="ColorRect" parent="."]
+[node name="Background" type="ColorRect" parent="All"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 489.0
-offset_top = 139.0
-offset_right = 529.0
-offset_bottom = 179.0
+offset_left = 469.0
+offset_top = 119.0
+offset_right = 509.0
+offset_bottom = 159.0
 grow_horizontal = 2
 grow_vertical = 2
 rotation = 0.00186068
 scale = Vector2(8, 10)
-color = Color(0.07, 0, 0, 0.937)
+color = Color(0.128467, 8.08446e-08, 2.70735e-08, 0.937)
 
-[node name="Espingarda" type="Sprite2D" parent="Background"]
+[node name="Espingarda" type="Sprite2D" parent="All/Background"]
 position = Vector2(10.259, 3.88473)
 rotation = -0.458122
 scale = Vector2(0.118643, 0.107465)
@@ -45,7 +52,7 @@ texture = ExtResource("1_362qj")
 region_enabled = true
 region_rect = Rect2(102, 302, 269, 78)
 
-[node name="Pexeira" type="Sprite2D" parent="Background"]
+[node name="Pexeira" type="Sprite2D" parent="All/Background"]
 position = Vector2(29.7073, 35.3558)
 rotation = -0.458122
 scale = Vector2(0.099, 0.089)
@@ -54,35 +61,59 @@ texture = ExtResource("1_362qj")
 region_enabled = true
 region_rect = Rect2(72, 80, 330, 39)
 
-[node name="Buttons" type="VBoxContainer" parent="."]
+[node name="CenrioNordestinoBrasilei3" type="Sprite2D" parent="All/Background"]
+z_index = -1
+position = Vector2(19.9839, 19.9148)
+rotation = -0.00148854
+scale = Vector2(0.0386963, 0.0685956)
+skew = -0.000837326
+texture = ExtResource("3_q8x0h")
+
+[node name="Buttons" type="VBoxContainer" parent="All"]
 process_mode = 3
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
 offset_left = 578.0
-offset_top = 286.0
+offset_top = 266.0
 offset_right = 725.0
-offset_bottom = 390.0
+offset_bottom = 370.0
 grow_vertical = 2
 
-[node name="ResumeButton" type="Button" parent="Buttons"]
+[node name="ResumeButton" type="Button" parent="All/Buttons"]
 process_mode = 3
 layout_mode = 2
 theme = ExtResource("2_ctftk")
 theme_override_font_sizes/font_size = 41
 text = "RESUME"
 
-[node name="HSeparator" type="HSeparator" parent="Buttons"]
+[node name="HSeparator" type="HSeparator" parent="All/Buttons"]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 
-[node name="ExitButton" type="Button" parent="Buttons"]
+[node name="ExitButton" type="Button" parent="All/Buttons"]
 process_mode = 3
 layout_mode = 2
 theme = ExtResource("2_ctftk")
 theme_override_font_sizes/font_size = 41
 text = "EXIT"
 
-[connection signal="pressed" from="Buttons/ResumeButton" to="." method="resumePressed"]
-[connection signal="pressed" from="Buttons/ExitButton" to="." method="exitPressed"]
+[node name="AcessButton" type="TextureButton" parent="."]
+process_mode = 3
+process_thread_group = 1
+process_thread_group_order = 0
+process_thread_messages = 0
+self_modulate = Color(0.1855, 0.196983, 0.53, 0.588235)
+offset_left = 25.0
+offset_top = 19.0
+offset_right = 537.0
+offset_bottom = 531.0
+scale = Vector2(0.075, 0.075)
+texture_normal = ExtResource("4_lqrjd")
+
+[connection signal="pressed" from="All/Buttons/ResumeButton" to="." method="resumePressed"]
+[connection signal="pressed" from="All/Buttons/ExitButton" to="." method="exitPressed"]
+[connection signal="mouse_entered" from="AcessButton" to="." method="_on_acess_button_mouse_entered"]
+[connection signal="mouse_exited" from="AcessButton" to="." method="acessButtonMouseExited"]
+[connection signal="pressed" from="AcessButton" to="." method="acessButtonpressed"]

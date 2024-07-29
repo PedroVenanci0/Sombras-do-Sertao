@@ -18,13 +18,10 @@ func _ready() -> void:
 func playMusic(index) -> void:
 	musicPlayer.stream = musicDatabase.get(index) # Seleciona a musica da playlist com base no índice
 	musicPlayer.play()
-
-
 	
 func playSFX(song) -> void:
 	$SFX.stream = song
 	$SFX.play()
-
 
 func backMusicFinished():
 	print("musica acabou")
