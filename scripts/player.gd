@@ -12,6 +12,7 @@ var Velocity = Vector2()
 var SnapPosition = Vector2()
 var onTitle = false
 var isJump = false
+var isDead = false
 
  ## Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -50,17 +51,22 @@ func _physics_process(delta):
 		velocity.x = SPEED/2
 		move_and_slide()
 		
-	if abs(velocity.x) <= 20:
-		animationManager.play("idle")
-	else:
-		animationManager.active = true
-		
-		if Global.isRun and not isJump:
-			animationManager.play("run")
-		elif not Global.isRun and not isJump:
-			animationManager.play("walk")
+	if not isDead:
+		if abs(velocity.x) <= 20:
+			animationManager.play("idle")
 		else:
-			animationManager.play("jump")
+			animationManager.active = true
+			
+			if Global.isRun and not isJump:
+				animationManager.play("run")
+			elif not Global.isRun and not isJump:
+				animationManager.play("walk")
+			else:
+				animationManager.play("jump")
+	else:
+		set_physics_process(false)
+		animationManager.active = true
+		animationManager.play("death")
 		
 func _input(event):
 	if Input.is_action_just_pressed("Click_Button") and not onTitle and Global.moviement_click:

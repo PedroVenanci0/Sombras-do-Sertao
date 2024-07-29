@@ -11,13 +11,12 @@ var musicDatabase : Dictionary = {
 
 ## Inicia a musica de fundo com o indice inicial
 func _ready() -> void:
-	musicPlayer.stream = musicDatabase.get(musicNum) # Seleciona a musica da playlist com base no índice
-	playMusic()
+	playMusic(musicNum)
 	print(musicPlayer.stream)
 
 ## Função de controle e legibilidade para o play da musica atual
-func playMusic() -> void:
-	musicPlayer.stream = musicDatabase.get(musicNum)
+func playMusic(index) -> void:
+	musicPlayer.stream = musicDatabase.get(index) # Seleciona a musica da playlist com base no índice
 	musicPlayer.play()
 
 
@@ -36,6 +35,5 @@ func backMusicFinished():
 		musicNum += 1
 	
 	## Atribuição do indice atual e inicio da musica selecionada
-	musicPlayer.stream = musicDatabase.get(musicNum)
-	playMusic()
+	playMusic(musicNum)
 	print(musicNum >= musicDatabase.size())

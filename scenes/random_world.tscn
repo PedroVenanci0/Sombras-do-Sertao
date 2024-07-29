@@ -1,15 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://dcu46akhr4o75"]
+[gd_scene load_steps=10 format=3 uid="uid://dcu46akhr4o75"]
 
 [ext_resource type="Script" path="res://scripts/random_world.gd" id="1_tmael"]
 [ext_resource type="Script" path="res://scripts/cameraGame.gd" id="2_cgkh4"]
 [ext_resource type="PackedScene" uid="uid://ub6dovylitej" path="res://scenes/player.tscn" id="3_pu6mo"]
 [ext_resource type="Shader" path="res://shaders/backgroud.gdshader" id="4_wkunv"]
 [ext_resource type="PackedScene" uid="uid://o7enow6v8lge" path="res://scenes/deathzone.tscn" id="6_emulr"]
-[ext_resource type="Texture2D" uid="uid://bmfxvdyjdhfob" path="res://assets/Ambiente/4/5.png" id="6_y14md"]
-[ext_resource type="Texture2D" uid="uid://dyn6pn7w7bbmh" path="res://assets/Ambiente/2/3.png" id="8_i8w7y"]
-[ext_resource type="Texture2D" uid="uid://dihye87nkcp7n" path="res://assets/Ambiente/2/4.png" id="9_4gav5"]
-[ext_resource type="Texture2D" uid="uid://8odho2bw3646" path="res://assets/Ambiente/4/2.png" id="9_g2q6b"]
-[ext_resource type="Texture2D" uid="uid://cd8an6rdrwlrw" path="res://assets/Ambiente/4/1.png" id="10_4m5al"]
+[ext_resource type="Texture2D" uid="uid://qy28di24w8go" path="res://assets/house/Parede.png" id="11_bvvco"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vpvq3"]
 size = Vector2(84, 389.5)
@@ -18,12 +14,17 @@ size = Vector2(84, 389.5)
 shader = ExtResource("4_wkunv")
 shader_parameter/speed = 0.5
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ipymi"]
+shader = ExtResource("4_wkunv")
+shader_parameter/speed = 1.0
+
 [node name="RandomWorld" type="Node2D"]
 scale = Vector2(2, 2)
 script = ExtResource("1_tmael")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(329, -183.5)
+position = Vector2(223, -150)
+zoom = Vector2(1.54, 1.54)
 script = ExtResource("2_cgkh4")
 
 [node name="Timer" type="Timer" parent="."]
@@ -57,7 +58,6 @@ offset_top = -361.5
 offset_right = 1929.5
 offset_bottom = 718.5
 scale = Vector2(0.355, 0.355)
-texture = ExtResource("10_4m5al")
 stretch_mode = 1
 
 [node name="TextureRect2" type="TextureRect" parent="."]
@@ -69,7 +69,6 @@ offset_top = -361.5
 offset_right = 1929.5
 offset_bottom = 718.5
 scale = Vector2(0.355, 0.355)
-texture = ExtResource("9_g2q6b")
 stretch_mode = 1
 
 [node name="TextureRect3" type="TextureRect" parent="."]
@@ -81,7 +80,6 @@ offset_top = -361.5
 offset_right = 1929.5
 offset_bottom = 718.5
 scale = Vector2(0.355, 0.355)
-texture = ExtResource("8_i8w7y")
 stretch_mode = 1
 
 [node name="TextureRect4" type="TextureRect" parent="."]
@@ -93,7 +91,6 @@ offset_top = -361.5
 offset_right = 1929.5
 offset_bottom = 718.5
 scale = Vector2(0.355, 0.355)
-texture = ExtResource("9_4gav5")
 stretch_mode = 1
 
 [node name="TextureRect5" type="TextureRect" parent="."]
@@ -105,7 +102,18 @@ offset_top = -361.0
 offset_right = 1930.0
 offset_bottom = 719.0
 scale = Vector2(0.355, 0.355)
-texture = ExtResource("6_y14md")
+stretch_mode = 1
+
+[node name="Parede" type="TextureRect" parent="."]
+visible = false
+z_index = -1
+material = SubResource("ShaderMaterial_ipymi")
+offset_left = 14.0
+offset_top = -333.0
+offset_right = 814.0
+offset_bottom = 167.0
+scale = Vector2(0.7975, 0.8725)
+texture = ExtResource("11_bvvco")
 stretch_mode = 1
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
