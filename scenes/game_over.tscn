@@ -9,6 +9,7 @@ process_mode = 3
 script = ExtResource("1_i2gmq")
 
 [node name="ColorRect" type="ColorRect" parent="."]
+modulate = Color(1, 1, 1, 0)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -39,6 +40,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="TryAgain" type="Button" parent="ColorRect"]
 process_mode = 3
+layout_mode = 0
 offset_left = 397.0
 offset_top = 381.5
 offset_right = 922.98
@@ -52,6 +54,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Exit" type="Button" parent="ColorRect"]
 process_mode = 3
+layout_mode = 0
 offset_left = 601.0
 offset_top = 446.0
 offset_right = 723.0
@@ -62,6 +65,5 @@ theme_override_font_sizes/font_size = 51
 text = "SAIR"
 metadata/_edit_use_anchors_ = true
 
-[connection signal="mouse_entered" from="ColorRect/TryAgain" to="." method="tryAgainMouseEntered"]
 [connection signal="pressed" from="ColorRect/TryAgain" to="." method="tryAgainPressed"]
 [connection signal="pressed" from="ColorRect/Exit" to="." method="exitPressed"]
