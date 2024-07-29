@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://djogx47qgwq45"]
+
+[ext_resource type="Script" path="res://scripts/jumpscare.gd" id="1_s2jls"]
+[ext_resource type="Texture2D" uid="uid://dl22glp2v67cj" path="res://assets/monster/Monster_Walk.png" id="2_ydfb8"]
+
+[node name="Jumpscare" type="CanvasLayer"]
+script = ExtResource("1_s2jls")
+
+[node name="MonsterWalk" type="Sprite2D" parent="."]
+position = Vector2(655, 340)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_ydfb8")
+hframes = 2
+vframes = 2

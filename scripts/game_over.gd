@@ -1,5 +1,7 @@
 extends CanvasLayer
 
+var moveTryAgain = false
+
 func _ready():
 	Songs.musicPlayer.stop()
 	visible = true
@@ -15,10 +17,3 @@ func tryAgainPressed():
 
 func exitPressed():
 	get_tree().quit()
-
-
-func tryAgainMouseEntered():
-	var _tween = get_tree().create_tween()
-	
-	_tween.tween_property($ColorRect/TryAgain,"rotation",0.02,0.5)
-
