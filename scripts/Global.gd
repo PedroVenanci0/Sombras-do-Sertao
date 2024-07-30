@@ -28,7 +28,6 @@ func reloadGlobal():
 	AudioServer.set_bus_volume_db(0,0)
 	AudioServer.set_bus_volume_db(1,-1.5)
 	AudioServer.set_bus_volume_db(2,5.8)
-	Songs.playMusic(Songs.musicNum)
 	inEscape = false
 	isRun = false
 	dialogFinished = true

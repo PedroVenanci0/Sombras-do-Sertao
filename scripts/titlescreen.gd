@@ -6,6 +6,7 @@ var onCaramelo = false
 
 
 func _ready():
+	Songs.musicNum = 1
 	var _tween = get_tree().create_tween()
 	player.onTitle = true
 	player.SPEED = 100

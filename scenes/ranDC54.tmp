@@ -21,7 +21,6 @@ script = ExtResource("1_tmael")
 position = Vector2(223, -150)
 zoom = Vector2(1.54, 1.54)
 limit_left = 20
-limit_top = -535
 limit_bottom = -72
 script = ExtResource("2_cgkh4")
 
