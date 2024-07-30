@@ -1,9 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://fqtmn10g737e"]
+[gd_scene load_steps=10 format=3 uid="uid://fqtmn10g737e"]
 
 [ext_resource type="Texture2D" uid="uid://dlwtw3oqd27ob" path="res://assets/Ambiente/Chaozinho.png" id="1_yj310"]
 [ext_resource type="Texture2D" uid="uid://bqbp0y5bdmdm" path="res://assets/Ambiente/ChaozinhoEstranho2.png" id="2_hmew0"]
 [ext_resource type="Script" path="res://scripts/map_4.gd" id="2_mqo0r"]
-[ext_resource type="PackedScene" uid="uid://dwedhhkpywtqp" path="res://scenes/cacto.tscn" id="4_s25oc"]
 [ext_resource type="PackedScene" uid="uid://ii4bco1q33hr" path="res://scenes/cacto_2.tscn" id="5_a76dl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1q7v5"]
@@ -1124,15 +1123,10 @@ collision_mask = 2
 position = Vector2(432.5, -231)
 shape = SubResource("RectangleShape2D_ve45g")
 
-[node name="Cacto" parent="." instance=ExtResource("4_s25oc")]
-modulate = Color(0.533333, 0.0509804, 0.133333, 1)
-z_index = -1
-position = Vector2(719, -153)
-
 [node name="Cacto2" parent="." instance=ExtResource("5_a76dl")]
-modulate = Color(0.533333, 0.0509804, 0.133333, 1)
+modulate = Color(0, 0.211765, 0.227451, 1)
 z_index = -1
-position = Vector2(253, -148)
+position = Vector2(260, -147)
 
 [connection signal="area_entered" from="CollisionFall" to="." method="_on_area_2d_area_entered"]
 [connection signal="body_entered" from="CollisionFall" to="." method="_on_area_2d_body_entered"]

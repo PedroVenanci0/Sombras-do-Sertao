@@ -3,7 +3,6 @@ extends CanvasLayer
 var moveTryAgain = false
 
 func _ready():
-	print(get_parent().get_parent().name)
 	Songs.musicPlayer.stop()
 	visible = true
 	
@@ -14,7 +13,7 @@ func _ready():
 func tryAgainPressed():
 	if get_parent().get_parent().get_parent().name == "Casa_Abandonada":
 		Songs.playMusic(1)
-	elif get_parent().get_parent().name == "RandomWorld":
+	elif get_parent().get_parent().name == "RandomWorld" or get_parent().get_parent().get_parent().get_parent().name == "RandomWorld":
 		Songs.playMusic(2)
 		
 	Global.reloadGlobal()

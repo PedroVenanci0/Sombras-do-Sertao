@@ -23,14 +23,14 @@ func playSFX(song) -> void:
 	$SFX.stream = song
 	$SFX.play()
 
-func backMusicFinished():
-	print("musica acabou")
-	## Verifica se há proxima musica e itera o índice, caso não volta ao indice inicial
-	if musicNum >= musicDatabase.size():
-		musicNum = 1
-	else:
-		musicNum += 1
-	
-	## Atribuição do indice atual e inicio da musica selecionada
-	playMusic(musicNum)
-	print(musicNum >= musicDatabase.size())
+#func backMusicFinished():
+	#print("musica acabou")
+	### Verifica se há proxima musica e itera o índice, caso não volta ao indice inicial
+	#if musicNum >= musicDatabase.size():
+		#musicNum = 1
+	#else:
+		#musicNum += 1
+	#
+	### Atribuição do indice atual e inicio da musica selecionada
+	#playMusic(musicNum)
+	#print(musicNum >= musicDatabase.size())
