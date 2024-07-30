@@ -47,9 +47,9 @@ normal_texture = ExtResource("7_6t8be")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_4kfsy"]
 shader = ExtResource("8_x0nwl")
-shader_parameter/line_color = Color(1, 0, 1, 1)
-shader_parameter/base_color = Color(0.507972, 0.507972, 0.507972, 1)
-shader_parameter/line_thickness = 1.0
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/base_color = Color(0.419813, 0.419813, 0.419813, 1)
+shader_parameter/line_thickness = 10.0
 shader_parameter/hovered = false
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_pqi1c"]
@@ -399,7 +399,8 @@ scale = Vector2(0.44, 0.328889)
 texture = ExtResource("6_wkam8")
 
 [node name="Galinha1x" type="Sprite2D" parent="Objetos"]
-modulate = Color(0.202723, 0.202723, 0.202723, 1)
+modulate = Color(0.339095, 0.339095, 0.339095, 1)
+light_mask = 0
 position = Vector2(378, 288)
 scale = Vector2(0.539063, 0.46875)
 texture = SubResource("CanvasTexture_bbydb")
@@ -589,7 +590,8 @@ offset_bottom = 78.0
 wait_time = 0.02
 
 [node name="PicanhaDoLulinha" type="Area2D" parent="."]
-visible = false
+collision_layer = 0
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PicanhaDoLulinha"]
 position = Vector2(-710, 191)
@@ -622,7 +624,9 @@ theme_override_font_sizes/font_size = 100
 
 [node name="PauseMenu" parent="." instance=ExtResource("37_fhbl7")]
 
-[connection signal="body_entered" from="PicanhaDoLulinha" to="." method="_on_area_2d_body_entered"]
+[node name="detecção" parent="." instance=ExtResource("7_pfkn0")]
+
+[connection signal="body_entered" from="PicanhaDoLulinha" to="." method="_on_picanha_do_lulinha_body_entered"]
 
 [editable path="Objetos/Quadro/detecção"]
 [editable path="Objetos/Lua/detecção"]

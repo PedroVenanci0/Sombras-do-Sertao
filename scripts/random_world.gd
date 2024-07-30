@@ -8,7 +8,9 @@ var firstMap : bool = true
 var cameraSpeed = 200
 
 func _ready() -> void:
-	Songs.musicNum = 2
+	var _tween = get_tree().create_tween()
+	
+	_tween.tween_property($Label,"modulate", Color(1,1,1,0),3).set_trans(Tween.TRANS_BACK).set_delay(1)
 	Global.isRun = true
 	Global.inEscape = true
 	Global.TileMapWitdh = 950.0
@@ -42,6 +44,9 @@ func _physics_process(delta):
 	var new_position = $Camera2D.global_position + direction * cameraSpeed * delta
 	# Atualiza a posição da câmera
 	$Camera2D.global_position = new_position
+	
+	if $Player.get_node("AnimationManager").current_animation == "death":
+		Global.speed = 0
 
 func _add_random_tilemap() -> void:
 	var keys = dictionary.keys()

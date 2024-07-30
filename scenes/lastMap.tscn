@@ -657,6 +657,7 @@ size = Vector2(20, 611)
 size = Vector2(57, 100)
 
 [node name="lastMap" type="TileMap"]
+position = Vector2(41, 0)
 tile_set = SubResource("TileSet_ayh7t")
 format = 2
 layer_0/name = "Fance"
@@ -669,8 +670,8 @@ script = ExtResource("3_o7xbo")
 modulate = Color(0.279967, 0.279967, 0.279967, 1)
 self_modulate = Color(1, 0.0784314, 0.227451, 1)
 z_index = -1
-position = Vector2(629, -145)
-scale = Vector2(2.352, 2.925)
+position = Vector2(617.832, -119.837)
+scale = Vector2(1.82817, 2.41148)
 texture = ExtResource("4_n5a4r")
 
 [node name="PointLight2D" type="PointLight2D" parent="House"]
@@ -680,6 +681,7 @@ texture = ExtResource("5_p8u13")
 texture_scale = 0.7
 
 [node name="AreaFinal" type="Area2D" parent="."]
+position = Vector2(31, 0)
 collision_layer = 0
 collision_mask = 4
 
@@ -689,7 +691,7 @@ shape = SubResource("RectangleShape2D_pm2e2")
 debug_color = Color(0.896747, 0.0829206, 0.741557, 0.42)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(523, -372)
+position = Vector2(554, -372)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(0, 111.5)

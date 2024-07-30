@@ -65,6 +65,7 @@ func _physics_process(delta):
 			else:
 				animationManager.play("jump")
 	else:
+		$CollisionShape2D.queue_free()
 		set_physics_process(false)
 		animationManager.active = true
 		animationManager.play("death")
