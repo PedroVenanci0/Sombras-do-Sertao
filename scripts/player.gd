@@ -6,6 +6,7 @@ class_name Player
 var SPEED = 150
 const JUMP_VELOCITY = -600
 
+var speedEscape : int = 10
 var Destination = Vector2()
 var distance = Vector2()
 var Velocity = Vector2()
@@ -48,7 +49,7 @@ func _physics_process(delta):
 			get_node("Animations").flip_h = true
 			get_node("LightOccluder2D").scale.x = -1
 	else:
-		velocity.x = 10
+		velocity.x = speedEscape
 		move_and_slide()
 		
 	if not isDead:

@@ -17,6 +17,7 @@ func tryAgainPressed():
 
 
 func exitPressed():
+	Songs.playMusic(1)
 	get_tree().paused = false
 	Global.reloadGlobal()
 	Global.fadeTransition("titlescreen")

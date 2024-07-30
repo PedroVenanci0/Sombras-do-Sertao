@@ -1,0 +1,99 @@
+[gd_scene load_steps=7 format=3 uid="uid://dcu46akhr4o75"]
+
+[ext_resource type="Script" path="res://scripts/random_world.gd" id="1_tmael"]
+[ext_resource type="Script" path="res://scripts/cameraGame.gd" id="2_cgkh4"]
+[ext_resource type="PackedScene" uid="uid://ub6dovylitej" path="res://scenes/player.tscn" id="3_pu6mo"]
+[ext_resource type="Shader" path="res://shaders/backgroud.gdshader" id="4_wkunv"]
+[ext_resource type="PackedScene" uid="uid://o7enow6v8lge" path="res://scenes/deathzone.tscn" id="6_emulr"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gbjuj"]
+shader = ExtResource("4_wkunv")
+shader_parameter/speed = 0.5
+
+[node name="RandomWorld" type="Node2D"]
+scale = Vector2(2, 2)
+script = ExtResource("1_tmael")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(223, -150)
+zoom = Vector2(1.54, 1.54)
+script = ExtResource("2_cgkh4")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[node name="Player" parent="." instance=ExtResource("3_pu6mo")]
+position = Vector2(107.5, -124)
+collision_layer = 6
+collision_mask = 3
+
+[node name="Deathzone" parent="." instance=ExtResource("6_emulr")]
+position = Vector2(289, -106.5)
+collision_mask = 4
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Deathzone"]
+polygon = PackedVector2Array(416.5, 122, -303.5, 126, -303.5, -314, -391.5, -314, -383.5, 182, 410.5, 196)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(0.37, 0.157, 0.254, 1)
+z_index = -6
+material = SubResource("ShaderMaterial_gbjuj")
+offset_left = 9.5
+offset_top = -361.5
+offset_right = 1929.5
+offset_bottom = 718.5
+scale = Vector2(0.355, 0.355)
+stretch_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+modulate = Color(0.37, 0.157, 0.254, 1)
+z_index = -6
+material = SubResource("ShaderMaterial_gbjuj")
+offset_left = 9.5
+offset_top = -361.5
+offset_right = 1929.5
+offset_bottom = 718.5
+scale = Vector2(0.355, 0.355)
+stretch_mode = 1
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+modulate = Color(0.37, 0.157, 0.254, 1)
+z_index = -6
+material = SubResource("ShaderMaterial_gbjuj")
+offset_left = 9.5
+offset_top = -361.5
+offset_right = 1929.5
+offset_bottom = 718.5
+scale = Vector2(0.355, 0.355)
+stretch_mode = 1
+
+[node name="TextureRect4" type="TextureRect" parent="."]
+modulate = Color(0.37, 0.157, 0.254, 1)
+z_index = -6
+material = SubResource("ShaderMaterial_gbjuj")
+offset_left = 9.5
+offset_top = -361.5
+offset_right = 1929.5
+offset_bottom = 718.5
+scale = Vector2(0.355, 0.355)
+stretch_mode = 1
+
+[node name="TextureRect5" type="TextureRect" parent="."]
+modulate = Color(0.37, 0.157, 0.254, 1)
+z_index = -6
+material = SubResource("ShaderMaterial_gbjuj")
+offset_left = 10.0
+offset_top = -361.0
+offset_right = 1930.0
+offset_bottom = 719.0
+scale = Vector2(0.355, 0.355)
+stretch_mode = 1
+
+[node name="FinalTimer" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="FinalTimer" to="." method="_on_final_timer_timeout"]
