@@ -55,7 +55,7 @@ position = Vector2(293.5, -139)
 collision_mask = 4
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Deathzone"]
-polygon = PackedVector2Array(416.5, 122, -303.5, 126, -303.5, -314, -391.5, -314, -383.5, 182, 410.5, 196)
+polygon = PackedVector2Array(423.5, 176, -308, 174, -297, -313, -391.5, -314, -382.5, 249.5, 422, 236)
 
 [node name="FinalTimer" type="Timer" parent="."]
 wait_time = 30.0

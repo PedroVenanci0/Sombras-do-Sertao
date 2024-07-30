@@ -663,6 +663,6 @@ texture = ExtResource("4_87c87")
 texture_scale = 0.7
 
 [node name="Cacto" parent="." instance=ExtResource("5_s0m2i")]
-modulate = Color(0.533333, 0.0509804, 0.133333, 1)
+modulate = Color(2.16588e-07, 0.277806, 0.297376, 1)
 z_index = -1
 position = Vector2(842, -66)
