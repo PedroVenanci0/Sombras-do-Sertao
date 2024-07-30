@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://crurggsvpp63u"]
+[gd_scene load_steps=9 format=3 uid="uid://crurggsvpp63u"]
 
 [ext_resource type="Texture2D" uid="uid://dlwtw3oqd27ob" path="res://assets/Ambiente/Chaozinho.png" id="1_rvlid"]
 [ext_resource type="Texture2D" uid="uid://bqbp0y5bdmdm" path="res://assets/Ambiente/ChaozinhoEstranho2.png" id="2_lbe0r"]
 [ext_resource type="Texture2D" uid="uid://b1bwfm28g4god" path="res://assets/house/house.png" id="3_mw5nr"]
 [ext_resource type="Texture2D" uid="uid://dripaua6wcm0y" path="res://assets/Luz/Luz ambiente/download.jpeg" id="4_87c87"]
+[ext_resource type="PackedScene" uid="uid://deoegt5b8no05" path="res://scenes/cacto3.tscn" id="5_s0m2i"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bauu6"]
 texture = ExtResource("1_rvlid")
@@ -660,3 +661,8 @@ position = Vector2(-6.67572e-06, -31.4541)
 energy = 1.9
 texture = ExtResource("4_87c87")
 texture_scale = 0.7
+
+[node name="Cacto" parent="." instance=ExtResource("5_s0m2i")]
+modulate = Color(0.533333, 0.0509804, 0.133333, 1)
+z_index = -1
+position = Vector2(842, -66)

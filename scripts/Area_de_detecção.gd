@@ -80,6 +80,7 @@ func _process(delta):
 				tween.tween_property(ponto_luz,"modulate",Color(1,1,1,0),0.5)
 				
 			"Monster":
+				Songs.musicPlayer.stop()
 				AudioServer.set_bus_volume_db(1,10)
 				Songs.playSFX(preload("res://assets/songs/impact/05 - Impact.mp3"))
 				label.add_theme_color_override("font_color",Color(255,0,0,1))

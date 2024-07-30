@@ -10,7 +10,7 @@ func _on_area_2d_body_entered(body):
 			shader_material.set_shader_parameter("speed", 0.0)
 		get_parent().set_process(false)
 		var _tween = get_tree().create_tween()
-		_tween.tween_property(camera,"zoom", Vector2(2,2),1).set_trans(Tween.TRANS_CUBIC)
+		_tween.tween_property(camera,"zoom", Vector2(2.5,2.5),1).set_trans(Tween.TRANS_CUBIC)
 		get_parent().get_node("Player").speedEscape = 200
 
 
