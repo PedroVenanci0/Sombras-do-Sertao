@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dw24e2x0p6n47"
+path="res://.godot/imported/Lampião.mp3-26bf5c3b8a8015e503dda35c78754526.mp3str"
+
+[deps]
+
+source_file="res://assets/songs/Falas Sombras do Sertão/Lampião.mp3"
+dest_files=["res://.godot/imported/Lampião.mp3-26bf5c3b8a8015e503dda35c78754526.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
