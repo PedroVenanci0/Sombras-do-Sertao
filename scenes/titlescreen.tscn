@@ -1,24 +1,18 @@
-[gd_scene load_steps=26 format=3 uid="uid://dg2efy3xmcg58"]
+[gd_scene load_steps=22 format=3 uid="uid://dg2efy3xmcg58"]
 
 [ext_resource type="Script" path="res://scripts/titlescreen.gd" id="1_6mo47"]
-[ext_resource type="Texture2D" uid="uid://b3cwjhhjmifv2" path="res://assets/Menus/A_cursed_men_cangaceiro.jpg" id="1_8rcj2"]
 [ext_resource type="Theme" uid="uid://c2qfsxntflbef" path="res://assets/Menus/Fonts/terrorTherme.tres" id="2_k0g3k"]
-[ext_resource type="Texture2D" uid="uid://cd6qvdhqjpslf" path="res://assets/Menus/itensCangaço.png" id="2_odcw7"]
 [ext_resource type="PackedScene" uid="uid://duxy814uemjbn" path="res://scenes/FadeOutLayer.tscn" id="4_3bt83"]
-[ext_resource type="Texture2D" uid="uid://c2soyneqhvafe" path="res://assets/house/BrCultureJamAssets/CaramelDog_3x.png" id="5_ksdr3"]
+[ext_resource type="Texture2D" uid="uid://c2soyneqhvafe" path="res://assets/house/BrCultureJamAssets/CaramelDog_3x.png" id="4_aoyrd"]
+[ext_resource type="Texture2D" uid="uid://bndmdjctitiaf" path="res://assets/Ambiente/sunset.jpg" id="4_gbbbr"]
+[ext_resource type="Texture2D" uid="uid://dripaua6wcm0y" path="res://assets/Luz/Luz ambiente/download.jpeg" id="4_wopqs"]
 [ext_resource type="Script" path="res://scripts/TransitionCam.gd" id="6_wiyo6"]
 [ext_resource type="PackedScene" uid="uid://ub6dovylitej" path="res://scenes/player.tscn" id="8_84gvt"]
-[ext_resource type="Texture2D" uid="uid://bndmdjctitiaf" path="res://assets/Ambiente/sunset.jpg" id="9_eeuji"]
-[ext_resource type="Texture2D" uid="uid://doku62j1up4b3" path="res://assets/Ambiente/2/5.png" id="9_gn7jf"]
-[ext_resource type="Texture2D" uid="uid://dripaua6wcm0y" path="res://assets/Luz/Luz ambiente/download.jpeg" id="9_pbylb"]
-[ext_resource type="Texture2D" uid="uid://b1bwfm28g4god" path="res://assets/house/house.png" id="12_ncfql"]
+[ext_resource type="Texture2D" uid="uid://b1bwfm28g4god" path="res://assets/house/house.png" id="9_dcwl7"]
 [ext_resource type="PackedScene" uid="uid://b8n5vnmdrkvys" path="res://scenes/pauseMenu.tscn" id="13_j1ata"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_4smex"]
 blend_mode = 1
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_4oa20"]
-diffuse_texture = ExtResource("9_eeuji")
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_po5r4"]
 
@@ -55,12 +49,10 @@ anchors_preset = 0
 script = ExtResource("1_6mo47")
 
 [node name="Background" type="Sprite2D" parent="."]
-visible = false
 modulate = Color(1, 0.317647, 0.321569, 1)
 self_modulate = Color(0.670588, 0.670588, 0.670588, 1)
 position = Vector2(-1, 223)
 scale = Vector2(1.25586, 1.25)
-texture = ExtResource("1_8rcj2")
 region_enabled = true
 region_rect = Rect2(0, 86.5995, 1024, 579.183)
 
@@ -81,14 +73,13 @@ offset_top = 40.0
 offset_right = -210.0
 offset_bottom = 232.0
 scale = Vector2(0.166146, 0.166146)
-texture = ExtResource("5_ksdr3")
+texture = ExtResource("4_aoyrd")
 
 [node name="5" type="Sprite2D" parent="."]
 modulate = Color(0.172549, 0.172549, 0.172549, 1)
 z_index = 1
 position = Vector2(-35.7001, 84)
 scale = Vector2(0.489896, 0.489583)
-texture = ExtResource("9_gn7jf")
 region_enabled = true
 region_rect = Rect2(0, 984, 1920, 96)
 
@@ -101,7 +92,7 @@ energy = 2.75
 shadow_enabled = true
 shadow_filter = 1
 shadow_filter_smooth = 0.9
-texture = ExtResource("9_pbylb")
+texture = ExtResource("4_wopqs")
 texture_scale = 2.64
 
 [node name="Sunset" type="Sprite2D" parent="."]
@@ -109,14 +100,14 @@ modulate = Color(0.174028, 0.174028, 0.174028, 1)
 z_index = -1
 position = Vector2(-101, -151)
 scale = Vector2(0.421875, 0.457)
-texture = SubResource("CanvasTexture_4oa20")
+texture = ExtResource("4_gbbbr")
 
 [node name="Sunset2" type="Sprite2D" parent="."]
 modulate = Color(0.174028, 0.174028, 0.174028, 1)
 z_index = -1
 position = Vector2(618, -169)
 scale = Vector2(0.937208, 0.544051)
-texture = ExtResource("9_eeuji")
+texture = ExtResource("4_gbbbr")
 region_enabled = true
 region_rect = Rect2(-8.42749, -8.645, 672.158, 1101.28)
 
@@ -199,7 +190,6 @@ position = Vector2(9.00003, 17)
 rotation = -1.19963
 scale = Vector2(0.155, 0.155)
 skew = -0.0046773
-texture = ExtResource("2_odcw7")
 region_enabled = true
 region_rect = Rect2(68.7438, 74.1412, 339.077, 46.7692)
 
@@ -207,7 +197,6 @@ region_rect = Rect2(68.7438, 74.1412, 339.077, 46.7692)
 show_behind_parent = true
 position = Vector2(177.5, 10.6875)
 scale = Vector2(0.204762, 0.153788)
-texture = ExtResource("2_odcw7")
 region_enabled = true
 region_rect = Rect2(121.359, 128.705, 210.462, 165.641)
 
@@ -218,7 +207,6 @@ position = Vector2(310, 19)
 rotation = 0.783059
 scale = Vector2(0.196, 0.196)
 skew = 0.00467694
-texture = ExtResource("2_odcw7")
 region_enabled = true
 region_rect = Rect2(96.0258, 298.244, 276.718, 85.7436)
 
@@ -300,12 +288,11 @@ modulate = Color(0.279967, 0.279967, 0.279967, 1)
 self_modulate = Color(1, 0.0784314, 0.227451, 1)
 position = Vector2(-570, -40)
 scale = Vector2(-2.35231, 2.92489)
-texture = ExtResource("12_ncfql")
+texture = ExtResource("9_dcwl7")
 
 [node name="PointLight2D" type="PointLight2D" parent="House"]
 position = Vector2(-6.67572e-06, -31.4541)
 energy = 1.9
-texture = ExtResource("9_pbylb")
 texture_scale = 0.7
 
 [node name="ColorRect" type="ColorRect" parent="."]
