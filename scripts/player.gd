@@ -73,7 +73,6 @@ func _physics_process(delta):
 func _input(event):
 	if Input.is_action_just_pressed("Click_Button") and not onTitle and Global.moviement_click:
 		Destination = get_global_mouse_position()
-		print(Destination,"ddestino")
 		_play_click_animation(Destination)
 
 func _play_click_animation(position: Vector2):
@@ -81,7 +80,6 @@ func _play_click_animation(position: Vector2):
 	var click_animation = preload("res://scenes/click_animation.tscn").instantiate()
 	
 	click_animation.global_position = position
-	print(click_animation.position)
 	get_parent().add_child(click_animation)
 	
 

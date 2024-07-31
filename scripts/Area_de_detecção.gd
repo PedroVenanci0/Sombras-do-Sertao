@@ -51,6 +51,7 @@ func _process(delta):
 		match get_parent().name:
 			
 			"Garrafa":
+				Songs.playSFX(preload("res://assets/songs/Falas Sombras do Sertão/café.mp3"))
 				Global.dialogFinished = false
 				player.onTitle = true
 				_msg = msgShow[0]
@@ -61,6 +62,7 @@ func _process(delta):
 				tween.tween_property(ponto_luz_3,"modulate",Color(1,1,1,0),0.5)
 				
 			"Lua":
+				Songs.playSFX(preload("res://assets/songs/Falas Sombras do Sertão/Lua.mp3"))
 				Global.dialogFinished = false
 				player.onTitle = true
 				_msg = msgShow[1]
@@ -71,6 +73,7 @@ func _process(delta):
 				tween.tween_property(ponto_luz_6,"modulate",Color(1,1,1,0),0.5)
 				
 			"Quadro":
+				Songs.playSFX(preload("res://assets/songs/Falas Sombras do Sertão/Quadro.mp3"))
 				Global.dialogFinished = false
 				player.onTitle = true
 				_msg = msgShow[2]
@@ -105,6 +108,7 @@ func _process(delta):
 				animated_sprite_2d.play("idle")
 				_msg = msgShow[4]
 				show_message(_msg)
+				Songs.playSFX(preload("res://assets/songs/Falas Sombras do Sertão/Monstro.mp3"))
 				await get_tree().create_timer(1).timeout
 				Songs.playMusic(2)
 				AudioServer.set_bus_volume_db(1,2)
@@ -116,6 +120,7 @@ func _process(delta):
 				openDor = true
 				
 			"Espelho":
+				Songs.playSFX(preload("res://assets/songs/Falas Sombras do Sertão/Espei.mp3"))
 				Global.dialogFinished = false
 				player.onTitle = true
 				_msg = msgShow[5]
@@ -126,6 +131,7 @@ func _process(delta):
 				tween.tween_property(ponto_luz_5,"modulate",Color(1,1,1,0),0.5)
 
 			"Pitu":
+				Songs.playSFX(preload("res://assets/songs/Falas Sombras do Sertão/Pinga.mp3"))
 				Global.dialogFinished = false
 				player.onTitle = true
 				_msg = msgShow[6]
@@ -136,6 +142,7 @@ func _process(delta):
 				tween.tween_property(ponto_luz_2,"modulate",Color(1,1,1,0),0.5)
 				
 			"Itens_do_cangaço":
+				Songs.playSFX(preload("res://assets/songs/Falas Sombras do Sertão/Lampião.mp3"))
 				Global.dialogFinished = false
 				player.onTitle = true
 				_msg = msgShow[7]

@@ -15,10 +15,12 @@ func _on_area_2d_body_entered(body):
 
 
 func _on_picanha_do_lulinha_body_entered(body):
+	Global.dialogFinished = false
 	$Player.onTitle = true
 	$Player.SPEED = 0
-	Songs.playSFX(preload("res://assets/songs/Latido.mp3"))
-	await get_tree().create_timer(2).timeout
+	Songs.playSFX(preload("res://assets/songs/Falas Sombras do Sertão/Picanha do Lula.mp3"))
+	await get_tree().create_timer(5.5).timeout
+	Global.dialogFinished = true
 	$Player.onTitle = false
 	%Player.SPEED = 200
 	$PicanhaDoLulinha.queue_free()
