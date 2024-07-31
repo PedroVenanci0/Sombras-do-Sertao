@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dhxslsc4siqvy"
+path="res://.godot/imported/Picanha do Lula.mp3-24fcaf86bb98cf2ce32041abcb007f2b.mp3str"
+
+[deps]
+
+source_file="res://assets/songs/Falas Sombras do Sertão/Picanha do Lula.mp3"
+dest_files=["res://.godot/imported/Picanha do Lula.mp3-24fcaf86bb98cf2ce32041abcb007f2b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

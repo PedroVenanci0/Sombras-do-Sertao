@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bts7b1l6b1q1r"
+path="res://.godot/imported/Espei.mp3-884923c75d652b81b113541778c8d951.mp3str"
+
+[deps]
+
+source_file="res://assets/songs/Falas Sombras do Sertão/Espei.mp3"
+dest_files=["res://.godot/imported/Espei.mp3-884923c75d652b81b113541778c8d951.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

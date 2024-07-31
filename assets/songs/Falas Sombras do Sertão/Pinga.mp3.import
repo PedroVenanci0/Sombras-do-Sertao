@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ttv57jha78f1"
+path="res://.godot/imported/Pinga.mp3-83459e1ac23e52502e9c6bb026e56e52.mp3str"
+
+[deps]
+
+source_file="res://assets/songs/Falas Sombras do Sertão/Pinga.mp3"
+dest_files=["res://.godot/imported/Pinga.mp3-83459e1ac23e52502e9c6bb026e56e52.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://606oelnrokdy"
+path="res://.godot/imported/Monstro.mp3-8f0e34c501086a698f4873767b8d5752.mp3str"
+
+[deps]
+
+source_file="res://assets/songs/Falas Sombras do Sertão/Monstro.mp3"
+dest_files=["res://.godot/imported/Monstro.mp3-8f0e34c501086a698f4873767b8d5752.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
