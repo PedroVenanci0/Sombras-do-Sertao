@@ -170,7 +170,6 @@ polygon = PackedVector2Array(17, 5, 15, 498, 2776, 503, 2774, 0)
 size = Vector2(82, 365.5)
 
 [node name="Casa_Abandonada" type="Node2D"]
-position = Vector2(25, -5)
 script = ExtResource("1_0jpda")
 metadata/_edit_horizontal_guides_ = [4.0]
 
@@ -382,9 +381,12 @@ scale = Vector2(0.326063, 0.338476)
 texture = ExtResource("4_q0kpr")
 
 [node name="Forno-1_png" type="Sprite2D" parent="Objetos"]
-modulate = Color(0.111197, 0.111197, 0.111197, 1)
-position = Vector2(-517, 243)
+modulate = Color(0.230315, 0.230315, 0.230315, 1)
+position = Vector2(-524, 243)
+scale = Vector2(0.85, 0.906667)
 texture = SubResource("CanvasTexture_iwxou")
+region_enabled = true
+region_rect = Rect2(0, 0, 300, 273.139)
 
 [node name="Mesa-1_png" type="Sprite2D" parent="Objetos"]
 modulate = Color(0.111197, 0.111197, 0.111197, 1)
@@ -423,8 +425,8 @@ frame_progress = 0.314581
 [node name="PontoLuz7" type="AnimatedSprite2D" parent="Objetos"]
 unique_name_in_owner = true
 modulate = Color(0.775063, 0.775063, 0.775063, 1)
-z_index = 1
-position = Vector2(-975, 163)
+z_index = 5
+position = Vector2(-974, 165)
 scale = Vector2(0.141176, 0.13)
 sprite_frames = SubResource("SpriteFrames_3sex6")
 autoplay = "default"
@@ -532,9 +534,18 @@ shadow_filter_smooth = 2.6
 texture = ExtResource("7_7822j")
 texture_scale = 0.95
 
-[node name="luz_Lampada_05" type="PointLight2D" parent="Light"]
+[node name="luz_Lampada_06" type="PointLight2D" parent="Light"]
 unique_name_in_owner = true
-position = Vector2(-166, 109)
+position = Vector2(-209, 258)
+color = Color(0.784314, 0.541176, 0, 1)
+energy = 8.5
+shadow_filter = 2
+shadow_filter_smooth = 2.6
+texture = ExtResource("7_7822j")
+
+[node name="luz_Lampada_07" type="PointLight2D" parent="Light"]
+unique_name_in_owner = true
+position = Vector2(-206, 109)
 scale = Vector2(1, 1.625)
 color = Color(0.784314, 0.541176, 0, 1)
 energy = 3.65
@@ -547,19 +558,49 @@ shadow_filter_smooth = 2.6
 texture = ExtResource("7_7822j")
 texture_scale = 0.95
 
-[node name="luz_Lampada_02" type="PointLight2D" parent="Light"]
+[node name="luz_Lampada_05" type="PointLight2D" parent="Light"]
 unique_name_in_owner = true
-position = Vector2(-988, 142)
-color = Color(0.78373, 0.539526, 0, 1)
-energy = 9.1
+position = Vector2(-589, 127)
+scale = Vector2(1, 1.625)
+color = Color(0.441575, 0.297724, 4.81308e-08, 1)
+energy = 3.65
+range_z_max = 4096
+range_layer_min = -512
+range_layer_max = 512
 shadow_enabled = true
+shadow_filter = 2
+shadow_filter_smooth = 2.6
 texture = ExtResource("7_7822j")
+texture_scale = 0.95
 
 [node name="luz_Lampada_03" type="PointLight2D" parent="Light"]
 unique_name_in_owner = true
-position = Vector2(-177, 259)
-color = Color(0.78373, 0.539526, 0, 1)
+position = Vector2(-600, 259)
+color = Color(0.725701, 0.499543, 3.85046e-07, 1)
 energy = 9.08
+texture = ExtResource("7_7822j")
+
+[node name="luz_Lampada_08" type="PointLight2D" parent="Light"]
+unique_name_in_owner = true
+position = Vector2(-989, 127)
+scale = Vector2(1, 1.625)
+color = Color(0.197642, 0.124455, 2.40654e-08, 1)
+energy = 3.65
+range_z_max = 4096
+range_layer_min = -512
+range_layer_max = 512
+shadow_enabled = true
+shadow_filter = 2
+shadow_filter_smooth = 2.6
+texture = ExtResource("7_7822j")
+texture_scale = 0.95
+
+[node name="luz_Lampada_02" type="PointLight2D" parent="Light"]
+unique_name_in_owner = true
+position = Vector2(-988, 260)
+color = Color(0.78373, 0.539526, 0, 1)
+energy = 9.1
+shadow_enabled = true
 texture = ExtResource("7_7822j")
 
 [node name="PointLight2D3" type="PointLight2D" parent="Light"]
@@ -603,15 +644,6 @@ modulate = Color(0.518503, 0.518503, 0.518503, 1)
 position = Vector2(1406, 257)
 scale = Vector2(4, 4)
 
-[node name="Camera2D2" type="Camera2D" parent="Player"]
-unique_name_in_owner = true
-position = Vector2(-3.5, -10.6667)
-zoom = Vector2(1.54, 1.54)
-limit_left = -1109
-limit_top = 5
-limit_right = 1444
-script = ExtResource("13_f3w6m")
-
 [node name="PlayerLabel" type="Label" parent="Player"]
 unique_name_in_owner = true
 offset_left = -52.25
@@ -621,6 +653,15 @@ offset_bottom = 377.0
 scale = Vector2(0.065, 0.065)
 theme_override_fonts/font = ExtResource("36_lrnw4")
 theme_override_font_sizes/font_size = 100
+
+[node name="Camera2D2" type="Camera2D" parent="Player"]
+unique_name_in_owner = true
+position = Vector2(-3.5, -10.6667)
+zoom = Vector2(1.54, 1.54)
+limit_left = -1109
+limit_top = 5
+limit_right = 1444
+script = ExtResource("13_f3w6m")
 
 [node name="PauseMenu" parent="." instance=ExtResource("37_fhbl7")]
 

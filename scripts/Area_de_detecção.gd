@@ -25,6 +25,7 @@ var speed_monster = 75
 
 var _msg: String = ""
 var openDor = false
+var monsterclick: bool = false
 
 var msgShow: Array = [
 	
@@ -80,6 +81,7 @@ func _process(delta):
 				tween.tween_property(ponto_luz,"modulate",Color(1,1,1,0),0.5)
 				
 			"Monster":
+				monsterclick = true
 				Songs.musicPlayer.stop()
 				AudioServer.set_bus_volume_db(1,10)
 				Songs.playSFX(preload("res://assets/songs/impact/05 - Impact.mp3"))
@@ -175,7 +177,10 @@ func _on_timer_timeout():
 		await get_tree().create_timer(3).timeout
 		label.text = ""
 		player.onTitle = false
-		Global.dialogFinished = true
+		if monsterclick:
+			Global.dialogFinished = false
+		else:
+			Global.dialogFinished = true
 	else:
 		label.visible_characters += 1	
 

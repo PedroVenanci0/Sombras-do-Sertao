@@ -1,0 +1,64 @@
+[gd_scene load_steps=10 format=3 uid="uid://c508nklta47ux"]
+
+[ext_resource type="Texture2D" uid="uid://civoj1vp0l6vr" path="res://assets/UI/click.png" id="1_k4m0b"]
+[ext_resource type="Script" path="res://scripts/click_animation.gd" id="2_4f02p"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8313e"]
+atlas = ExtResource("1_k4m0b")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c1uf4"]
+atlas = ExtResource("1_k4m0b")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mnlwi"]
+atlas = ExtResource("1_k4m0b")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_62abk"]
+atlas = ExtResource("1_k4m0b")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xddgl"]
+atlas = ExtResource("1_k4m0b")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a7clb"]
+atlas = ExtResource("1_k4m0b")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tc82y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8313e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c1uf4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mnlwi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_62abk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xddgl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a7clb")
+}],
+"loop": false,
+"name": &"click",
+"speed": 33.0
+}]
+
+[node name="click_animation" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_tc82y")
+animation = &"click"
+autoplay = "click"
+frame = 5
+frame_progress = 1.0
+script = ExtResource("2_4f02p")
+
+[connection signal="animation_finished" from="." to="." method="_on_animation_finished"]

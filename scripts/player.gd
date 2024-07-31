@@ -4,7 +4,7 @@ class_name Player
 @onready var animationManager = $AnimationManager
 
 var SPEED = 150
-const JUMP_VELOCITY = -600
+const JUMP_VELOCITY = -550
 
 var speedEscape : int = 10
 var Destination = Vector2()
@@ -53,7 +53,7 @@ func _physics_process(delta):
 		move_and_slide()
 		
 	if not isDead:
-		if abs(velocity.x) <= 20 and !Global.isRun:
+		if abs(velocity.x) <= 20:
 			animationManager.play("idle")
 		else:
 			animationManager.active = true
@@ -73,6 +73,17 @@ func _physics_process(delta):
 func _input(event):
 	if Input.is_action_just_pressed("Click_Button") and not onTitle and Global.moviement_click:
 		Destination = get_global_mouse_position()
+		print(Destination,"ddestino")
+		_play_click_animation(Destination)
+
+func _play_click_animation(position: Vector2):
+	
+	var click_animation = preload("res://scenes/click_animation.tscn").instantiate()
+	
+	click_animation.global_position = position
+	print(click_animation.position)
+	get_parent().add_child(click_animation)
+	
 
 func _on_animation_manager_animation_finished(anim_name):
 	animationManager.active = false
