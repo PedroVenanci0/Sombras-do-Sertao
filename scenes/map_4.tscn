@@ -1123,7 +1123,7 @@ collision_mask = 2
 position = Vector2(432.5, -231)
 shape = SubResource("RectangleShape2D_ve45g")
 
-[node name="Cacto2" parent="." instance=ExtResource("5_a76dl")]
+[node name="Cacto" parent="." instance=ExtResource("5_a76dl")]
 modulate = Color(0, 0.392157, 0.419608, 1)
 z_index = -1
 position = Vector2(260, -147)

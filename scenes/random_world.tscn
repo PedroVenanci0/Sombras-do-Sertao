@@ -51,11 +51,11 @@ position = Vector2(107.5, -98.5)
 collision_layer = 6
 collision_mask = 3
 
-[node name="Deathzone" parent="." instance=ExtResource("6_emulr")]
+[node name="LimiteMapa" parent="." instance=ExtResource("6_emulr")]
 position = Vector2(293.5, -139)
 collision_mask = 4
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Deathzone"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LimiteMapa"]
 polygon = PackedVector2Array(423.5, 176, -308, 174, -297, -313, -391.5, -314, -382.5, 249.5, 422, 236)
 
 [node name="FinalTimer" type="Timer" parent="."]
