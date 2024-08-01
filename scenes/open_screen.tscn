@@ -36,7 +36,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("4_wssx5")
 theme_override_font_sizes/font_size = 46
-text = "A game make for LABIRAS game Jam"
+text = "A game made for LABIRAS Game Jam"
 horizontal_alignment = 1
 vertical_alignment = 1
 
