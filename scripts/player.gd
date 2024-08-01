@@ -53,7 +53,7 @@ func _physics_process(delta):
 		move_and_slide()
 		
 	if not isDead:
-		if abs(velocity.x) <= 20:
+		if abs(velocity.x) <= 20 and not Global.inEscape:
 			animationManager.play("idle")
 		else:
 			animationManager.active = true

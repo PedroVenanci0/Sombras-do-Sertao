@@ -164,7 +164,7 @@ animations = [{
 blend_mode = 1
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_wqqrl"]
-polygon = PackedVector2Array(17, 5, 15, 498, 2776, 503, 2774, 0)
+polygon = PackedVector2Array(27, -12, 15, 498, 2776, 503, 2781, -9)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4fxg"]
 size = Vector2(82, 365.5)
@@ -658,9 +658,9 @@ theme_override_font_sizes/font_size = 100
 unique_name_in_owner = true
 position = Vector2(-3.5, -10.6667)
 zoom = Vector2(1.54, 1.54)
-limit_left = -1109
-limit_top = 5
-limit_right = 1444
+limit_left = -1134
+limit_top = 25
+limit_right = 1434
 script = ExtResource("13_f3w6m")
 
 [node name="PauseMenu" parent="." instance=ExtResource("37_fhbl7")]

@@ -33,13 +33,14 @@ wait_time = 2.0
 autostart = true
 
 [node name="Label" type="Label" parent="."]
-offset_left = 164.5
-offset_top = -109.0
-offset_right = 259.5
-offset_bottom = -82.0
+offset_left = 145.5
+offset_top = -126.5
+offset_right = 734.5
+offset_bottom = -39.5
+scale = Vector2(0.37, 0.37)
 theme = ExtResource("4_jv1yu")
 theme_override_fonts/font = ExtResource("4_apks2")
-theme_override_font_sizes/font_size = 11
+theme_override_font_sizes/font_size = 41
 text = "& Use o botão esquerdo
 para pular e desviar dos cactos &"
 horizontal_alignment = 1
@@ -58,7 +59,7 @@ collision_mask = 4
 polygon = PackedVector2Array(423.5, 176, -308, 174, -297, -313, -391.5, -314, -382.5, 249.5, 422, 236)
 
 [node name="FinalTimer" type="Timer" parent="."]
-wait_time = 30.0
+wait_time = 20.0
 one_shot = true
 autostart = true
 

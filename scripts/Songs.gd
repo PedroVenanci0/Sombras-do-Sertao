@@ -6,7 +6,7 @@ var musicNum : int = 1 ## Índice referente a cada musica da playlist
 ## Banco de dados das musicas(Playlist)
 var musicDatabase : Dictionary = {
 	1: preload("res://assets/songs/Maker.mp3"),
-	2: preload("res://assets/songs/Disturbed- Decadence(Instrumental).mp3")
+	2: preload("res://assets/songs/Disturbed- Decadence(Instrumental).mp3"),
 }
 
 ## Inicia a musica de fundo com o indice inicial

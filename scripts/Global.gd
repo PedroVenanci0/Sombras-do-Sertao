@@ -13,7 +13,8 @@ var scenesDatabae : Dictionary = {
 	"titlescreen" : preload("res://scenes/titlescreen.tscn"),
 	"world" : preload("res://scenes/world.tscn"),
 	"casa" : preload("res://scenes/casa_abandonada.tscn"),
-	"run" : preload("res://scenes/random_world.tscn")
+	"run" : preload("res://scenes/random_world.tscn"),
+	"final" : preload("res://scenes/final_screen.tscn")
 }
 
 func fadeTransition(sceneCalled):
@@ -25,9 +26,9 @@ func fadeTransition(sceneCalled):
 	get_parent().add_child(_fade)
 	
 func reloadGlobal():
-	AudioServer.set_bus_volume_db(0,0)
-	AudioServer.set_bus_volume_db(1,-1.5)
-	AudioServer.set_bus_volume_db(2,5.8)
+	AudioServer.set_bus_volume_db(0,-0.3)
+	AudioServer.set_bus_volume_db(1,2.1)
+	AudioServer.set_bus_volume_db(2,-4.1)
 	inEscape = false
 	isRun = false
 	dialogFinished = true
