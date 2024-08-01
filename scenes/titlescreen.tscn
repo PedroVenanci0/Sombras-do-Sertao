@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://dg2efy3xmcg58"]
+[gd_scene load_steps=24 format=3 uid="uid://dg2efy3xmcg58"]
 
 [ext_resource type="Script" path="res://scripts/titlescreen.gd" id="1_6mo47"]
 [ext_resource type="Theme" uid="uid://c2qfsxntflbef" path="res://assets/Menus/Fonts/terrorTherme.tres" id="2_k0g3k"]
@@ -6,9 +6,11 @@
 [ext_resource type="Texture2D" uid="uid://c2soyneqhvafe" path="res://assets/house/BrCultureJamAssets/CaramelDog_3x.png" id="4_aoyrd"]
 [ext_resource type="Texture2D" uid="uid://bndmdjctitiaf" path="res://assets/Ambiente/sunset.jpg" id="4_gbbbr"]
 [ext_resource type="Texture2D" uid="uid://dripaua6wcm0y" path="res://assets/Luz/Luz ambiente/download.jpeg" id="4_wopqs"]
+[ext_resource type="Texture2D" uid="uid://doku62j1up4b3" path="res://assets/Ambiente/2/5.png" id="5_pada0"]
 [ext_resource type="Script" path="res://scripts/TransitionCam.gd" id="6_wiyo6"]
 [ext_resource type="PackedScene" uid="uid://ub6dovylitej" path="res://scenes/player.tscn" id="8_84gvt"]
 [ext_resource type="Texture2D" uid="uid://b1bwfm28g4god" path="res://assets/house/house.png" id="9_dcwl7"]
+[ext_resource type="Texture2D" uid="uid://cd6qvdhqjpslf" path="res://assets/Menus/itensCangaço.png" id="10_i5j6l"]
 [ext_resource type="PackedScene" uid="uid://b8n5vnmdrkvys" path="res://scenes/pauseMenu.tscn" id="13_j1ata"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_4smex"]
@@ -77,9 +79,9 @@ texture = ExtResource("4_aoyrd")
 
 [node name="5" type="Sprite2D" parent="."]
 modulate = Color(0.172549, 0.172549, 0.172549, 1)
-z_index = 1
 position = Vector2(-35.7001, 84)
 scale = Vector2(0.489896, 0.489583)
+texture = ExtResource("5_pada0")
 region_enabled = true
 region_rect = Rect2(0, 984, 1920, 96)
 
@@ -190,6 +192,7 @@ position = Vector2(9.00003, 17)
 rotation = -1.19963
 scale = Vector2(0.155, 0.155)
 skew = -0.0046773
+texture = ExtResource("10_i5j6l")
 region_enabled = true
 region_rect = Rect2(68.7438, 74.1412, 339.077, 46.7692)
 
@@ -197,6 +200,7 @@ region_rect = Rect2(68.7438, 74.1412, 339.077, 46.7692)
 show_behind_parent = true
 position = Vector2(177.5, 10.6875)
 scale = Vector2(0.204762, 0.153788)
+texture = ExtResource("10_i5j6l")
 region_enabled = true
 region_rect = Rect2(121.359, 128.705, 210.462, 165.641)
 
@@ -207,10 +211,12 @@ position = Vector2(310, 19)
 rotation = 0.783059
 scale = Vector2(0.196, 0.196)
 skew = 0.00467694
+texture = ExtResource("10_i5j6l")
 region_enabled = true
 region_rect = Rect2(96.0258, 298.244, 276.718, 85.7436)
 
 [node name="NameLights" type="Node2D" parent="GameName"]
+visible = false
 modulate = Color(1, 1, 1, 0)
 position = Vector2(227, 191)
 
@@ -286,6 +292,7 @@ occluder = SubResource("OccluderPolygon2D_ggycq")
 [node name="House" type="Sprite2D" parent="."]
 modulate = Color(0.279967, 0.279967, 0.279967, 1)
 self_modulate = Color(1, 0.0784314, 0.227451, 1)
+z_index = -1
 position = Vector2(-570, -40)
 scale = Vector2(-2.35231, 2.92489)
 texture = ExtResource("9_dcwl7")
@@ -310,9 +317,11 @@ modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = 4.0
 offset_top = -46.0
-offset_right = 240.0
-offset_bottom = 29.0
+offset_right = 193.0
+offset_bottom = -6.0
+scale = Vector2(0.615, 0.615)
 theme = ExtResource("2_k0g3k")
+theme_override_font_sizes/font_size = 26
 text = " & Use o botão esquerdo 
 do mouse para se mover &"
 

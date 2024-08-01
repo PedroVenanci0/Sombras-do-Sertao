@@ -16,4 +16,5 @@ func _on_area_2d_body_entered(body):
 
 func _on_door_body_entered(body):
 	if body is Player:
-		Global.fadeTransition("titlescreen")
+		Songs.musicPlayer.stop()
+		Global.fadeTransition("final")

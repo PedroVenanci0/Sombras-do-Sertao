@@ -1,0 +1,164 @@
+[gd_scene load_steps=8 format=3 uid="uid://dfkhjdvqs2pyb"]
+
+[ext_resource type="Script" path="res://scenes/final_screen.gd" id="1_0nljw"]
+[ext_resource type="Theme" uid="uid://c2qfsxntflbef" path="res://assets/Menus/Fonts/terrorTherme.tres" id="1_xixx5"]
+[ext_resource type="FontFile" uid="uid://btva2fapcwfpp" path="res://assets/fontes/xilosa_.ttf" id="2_07j5o"]
+[ext_resource type="PackedScene" uid="uid://duxy814uemjbn" path="res://scenes/FadeOutLayer.tscn" id="3_k3enp"]
+[ext_resource type="Texture2D" uid="uid://b3cwjhhjmifv2" path="res://assets/Menus/A_cursed_men_cangaceiro.jpg" id="4_dfyhe"]
+[ext_resource type="Texture2D" uid="uid://cd6qvdhqjpslf" path="res://assets/Menus/itensCangaço.png" id="5_0gg73"]
+[ext_resource type="Texture2D" uid="uid://bbcaqgj1qj8ny" path="res://assets/logo N.A.V/removebg-preview.png" id="7_abkya"]
+
+[node name="FinalScreen" type="Node2D"]
+script = ExtResource("1_0nljw")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(32.032, 17.969)
+color = Color(0, 0, 0, 0.6)
+
+[node name="Credits" type="RichTextLabel" parent="."]
+offset_left = 249.0
+offset_top = -132.0
+offset_right = 1023.0
+offset_bottom = 1266.0
+theme = ExtResource("1_xixx5")
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("2_07j5o")
+theme_override_font_sizes/normal_font_size = 41
+bbcode_enabled = true
+text = "
+
+
+
+
+
+
+
+
+
+
+			  Você chegou ao final, parabens!
+			   Parece seguro,por enquanto...
+
+                            
+
+                             Versão Beta
+
+
+
+
+
+
+
+                       DESENVOLVEDROES
+
+                  Arthur Vieira Melo Silva
+                 Nícolas Rafael Silva Alves
+           Pedro Victor Venâncio dos  Santos
+
+                             DUBLAGEM
+
+            Felipe Gabriel Freitas Marques
+"
+scroll_active = false
+
+[node name="GameName" type="RichTextLabel" parent="Credits"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -274.0
+offset_top = -471.0
+offset_right = 66.0
+offset_bottom = -434.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.725, 1.725)
+theme = ExtResource("1_xixx5")
+theme_override_font_sizes/normal_font_size = 35
+bbcode_enabled = true
+text = "SOMBRAS DO SERTÃO"
+fit_content = true
+scroll_active = false
+
+[node name="Label" type="Label" parent="Credits/GameName"]
+layout_mode = 0
+offset_left = 292.0
+offset_top = -10.0
+offset_right = 301.0
+offset_bottom = 12.0
+theme = ExtResource("1_xixx5")
+theme_override_font_sizes/font_size = 15
+text = "~"
+
+[node name="Pexeira" type="Sprite2D" parent="Credits/GameName"]
+modulate = Color(0.803922, 0.129412, 0.117647, 1)
+show_behind_parent = true
+position = Vector2(9.00003, 17)
+rotation = -1.19963
+scale = Vector2(0.155, 0.155)
+skew = -0.0046773
+texture = ExtResource("5_0gg73")
+region_enabled = true
+region_rect = Rect2(68.7438, 74.1412, 339.077, 46.7692)
+
+[node name="ChapéuCangaceiro" type="Sprite2D" parent="Credits/GameName"]
+show_behind_parent = true
+position = Vector2(177.5, 10.6875)
+scale = Vector2(0.204762, 0.153788)
+texture = ExtResource("5_0gg73")
+region_enabled = true
+region_rect = Rect2(121.359, 128.705, 210.462, 165.641)
+
+[node name="Espingarda" type="Sprite2D" parent="Credits/GameName"]
+modulate = Color(0.8, 0.0784314, 0.25098, 1)
+show_behind_parent = true
+position = Vector2(310, 19)
+rotation = 0.783059
+scale = Vector2(0.196, 0.196)
+skew = 0.00467694
+texture = ExtResource("5_0gg73")
+region_enabled = true
+region_rect = Rect2(96.0258, 298.244, 276.718, 85.7436)
+
+[node name="FadeOutLayer" parent="." instance=ExtResource("3_k3enp")]
+visible = false
+
+[node name="ACursedMenCangaceiro" type="Sprite2D" parent="."]
+modulate = Color(0.638886, 0, 0.0822796, 1)
+z_index = -1
+position = Vector2(646, 360.5)
+scale = Vector2(1.25391, 0.938802)
+texture = ExtResource("4_dfyhe")
+
+[node name="Thx" type="Label" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = 396.0
+offset_top = 315.0
+offset_right = 928.0
+offset_bottom = 382.0
+theme = ExtResource("1_xixx5")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 66
+text = "Obrigado por jogar!"
+
+[node name="Button" type="Button" parent="Thx"]
+layout_mode = 0
+offset_left = 95.0
+offset_top = 114.0
+offset_right = 467.0
+offset_bottom = 178.0
+theme_override_colors/font_color = Color(0.262918, 0.0638796, 0, 1)
+theme_override_fonts/font = ExtResource("2_07j5o")
+theme_override_font_sizes/font_size = 64
+text = "Menu Principal"
+
+[node name="Abd1906c-ac2d-4Fe4-bfd3-20Cb7De74e87" type="Sprite2D" parent="Thx"]
+position = Vector2(274, 328)
+scale = Vector2(0.385, 0.385)
+texture = ExtResource("7_abkya")
+
+[connection signal="pressed" from="Thx/Button" to="." method="_on_button_pressed"]

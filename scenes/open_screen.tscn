@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=3 uid="uid://bxndqujabf72"]
+
+[ext_resource type="Texture2D" uid="uid://bbcaqgj1qj8ny" path="res://assets/logo N.A.V/removebg-preview.png" id="1_jiucb"]
+[ext_resource type="Script" path="res://scenes/open_screen.gd" id="1_ld7wx"]
+[ext_resource type="Texture2D" uid="uid://b1umuw0cyubuf" path="res://assets/UI/Labiras_Logo.png" id="2_agatk"]
+[ext_resource type="FontFile" uid="uid://btva2fapcwfpp" path="res://assets/fontes/xilosa_.ttf" id="4_wssx5"]
+[ext_resource type="PackedScene" uid="uid://duxy814uemjbn" path="res://scenes/FadeOutLayer.tscn" id="5_lj1am"]
+
+[node name="OpenScreen" type="CanvasLayer"]
+script = ExtResource("1_ld7wx")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Removebg-preview" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(241, 158)
+texture = ExtResource("1_jiucb")
+centered = false
+
+[node name="LabirasLogo" type="Sprite2D" parent="Removebg-preview"]
+position = Vector2(605, 204)
+texture = ExtResource("2_agatk")
+
+[node name="Label" type="Label" parent="."]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_wssx5")
+theme_override_font_sizes/font_size = 46
+text = "A game make for LABIRAS game Jam"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FadeOutLayer" parent="." instance=ExtResource("5_lj1am")]
+visible = false
