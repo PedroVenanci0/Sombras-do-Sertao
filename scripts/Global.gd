@@ -4,7 +4,7 @@ var inEscape: bool = false
 var isRun: bool = false
 var dialogFinished: bool = true
 var moviement_click: bool = true
-var speed = 250.0
+var speed = 200.0
 var TileMapWitdh = 950
 var cameraShake : bool = false
 
