@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://bxndqujabf72"]
+[gd_scene load_steps=8 format=3 uid="uid://bxndqujabf72"]
 
 [ext_resource type="Texture2D" uid="uid://bbcaqgj1qj8ny" path="res://assets/logo N.A.V/removebg-preview.png" id="1_jiucb"]
-[ext_resource type="Script" path="res://scenes/open_screen.gd" id="1_ld7wx"]
+[ext_resource type="Script" path="res://scripts/open_screen.gd" id="1_ld7wx"]
 [ext_resource type="Texture2D" uid="uid://b1umuw0cyubuf" path="res://assets/UI/Labiras_Logo.png" id="2_agatk"]
 [ext_resource type="FontFile" uid="uid://btva2fapcwfpp" path="res://assets/fontes/xilosa_.ttf" id="4_wssx5"]
 [ext_resource type="PackedScene" uid="uid://duxy814uemjbn" path="res://scenes/FadeOutLayer.tscn" id="5_lj1am"]
+[ext_resource type="Texture2D" uid="uid://bvfvpix2tk0bp" path="res://assets/UI/headphone.png" id="6_eaue6"]
+[ext_resource type="Theme" uid="uid://c2qfsxntflbef" path="res://assets/Menus/Fonts/terrorTherme.tres" id="7_r7e0g"]
 
 [node name="OpenScreen" type="CanvasLayer"]
 script = ExtResource("1_ld7wx")
@@ -42,3 +44,21 @@ vertical_alignment = 1
 
 [node name="FadeOutLayer" parent="." instance=ExtResource("5_lj1am")]
 visible = false
+
+[node name="Headphone" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(625, 261)
+scale = Vector2(0.74, 0.74)
+texture = ExtResource("6_eaue6")
+
+[node name="Label2" type="Label" parent="Headphone"]
+offset_left = -459.459
+offset_top = 204.054
+offset_right = 250.541
+offset_bottom = 251.054
+theme = ExtResource("7_r7e0g")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_wssx5")
+theme_override_font_sizes/font_size = 63
+text = "Use fone para uma melhor experiecnia"
