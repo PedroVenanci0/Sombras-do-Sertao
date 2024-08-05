@@ -8,7 +8,7 @@ var firstMap : bool = true
 var cameraSpeed = 200
 
 func _ready() -> void:
-	AudioServer.set_bus_volume_db(2,-7)
+	AudioServer.set_bus_volume_db(2,-4)
 	var _tween = get_tree().create_tween()
 	
 	_tween.tween_property($Label,"modulate", Color(1,1,1,0),3).set_trans(Tween.TRANS_BACK).set_delay(2)
