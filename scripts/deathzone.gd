@@ -1,6 +1,5 @@
 extends Node2D
-
-
+	
 func _on_body_entered(body):
 	var gameOver = preload("res://scenes/game_over.tscn").instantiate()
 	var jumpscare = preload("res://scenes/jumpscare.tscn").instantiate()
@@ -20,7 +19,8 @@ func _on_body_entered(body):
 			await _tween.tween_property(_camera,"zoom",Vector2(3.0,3.0),1.0).set_trans(Tween.TRANS_CUBIC).finished
 			add_child(jumpscare)
 			
+		get_tree().root.get_child(2).add_child(gameOver)
 		body.isDead = true
 		await get_tree().create_timer(1).timeout
-		add_child(gameOver)
+	
 		

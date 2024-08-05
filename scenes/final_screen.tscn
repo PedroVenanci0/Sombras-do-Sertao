@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://dfkhjdvqs2pyb"]
 
-[ext_resource type="Script" path="res://scenes/final_screen.gd" id="1_0nljw"]
+[ext_resource type="Script" path="res://scripts/final_screen.gd" id="1_0nljw"]
 [ext_resource type="Theme" uid="uid://c2qfsxntflbef" path="res://assets/Menus/Fonts/terrorTherme.tres" id="1_xixx5"]
 [ext_resource type="FontFile" uid="uid://btva2fapcwfpp" path="res://assets/fontes/xilosa_.ttf" id="2_07j5o"]
 [ext_resource type="PackedScene" uid="uid://duxy814uemjbn" path="res://scenes/FadeOutLayer.tscn" id="3_k3enp"]

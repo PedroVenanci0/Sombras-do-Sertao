@@ -7,13 +7,13 @@ func _ready():
 	visible = true
 	
 	var _tween = get_tree().create_tween()
-	await _tween.tween_property($ColorRect,"modulate",Color(255,255,255,1),1).set_trans(Tween.TRANS_SINE)
+	await _tween.tween_property($ColorRect,"modulate",Color(255,255,255,1),1)
 
 
 func tryAgainPressed():
-	if get_parent().get_parent().get_parent().name == "Casa_Abandonada":
+	if get_tree().root.get_child(2).name == "Casa_Abandonada":
 		Songs.playMusic(1)
-	elif get_parent().get_parent().name == "RandomWorld" or get_parent().get_parent().get_parent().get_parent().name == "RandomWorld":
+	elif get_tree().root.get_child(2).name == "RandomWorld":
 		Songs.playMusic(2)
 		
 	Global.reloadGlobal()
