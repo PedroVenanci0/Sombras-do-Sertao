@@ -1,14 +1,13 @@
-[gd_scene load_steps=12 format=3 uid="uid://dcu46akhr4o75"]
+[gd_scene load_steps=11 format=3 uid="uid://dcu46akhr4o75"]
 
 [ext_resource type="Script" path="res://scripts/random_world.gd" id="1_tmael"]
 [ext_resource type="Script" path="res://scripts/cameraGame.gd" id="2_cgkh4"]
 [ext_resource type="PackedScene" uid="uid://ub6dovylitej" path="res://scenes/player.tscn" id="3_pu6mo"]
-[ext_resource type="FontFile" uid="uid://btva2fapcwfpp" path="res://assets/fontes/xilosa_.ttf" id="4_apks2"]
 [ext_resource type="Theme" uid="uid://c2qfsxntflbef" path="res://assets/Menus/Fonts/terrorTherme.tres" id="4_jv1yu"]
 [ext_resource type="Shader" path="res://shaders/backgroud.gdshader" id="4_wkunv"]
 [ext_resource type="PackedScene" uid="uid://o7enow6v8lge" path="res://scenes/deathzone.tscn" id="6_emulr"]
-[ext_resource type="Texture2D" uid="uid://bj38gp5rc4wbi" path="res://assets/Ambiente/cactosSunset.png" id="6_k0au6"]
-[ext_resource type="Texture2D" uid="uid://bdteh66rekds" path="res://assets/Ambiente/sunsetNoCactos.png" id="7_p475f"]
+[ext_resource type="Texture2D" uid="uid://bj38gp5rc4wbi" path="res://assets/Ambiente/cactosSunset.png" id="7_41k4f"]
+[ext_resource type="Texture2D" uid="uid://bdteh66rekds" path="res://assets/Ambiente/sunsetNoCactos.png" id="8_ldfct"]
 [ext_resource type="PackedScene" uid="uid://b8n5vnmdrkvys" path="res://scenes/pauseMenu.tscn" id="10_kiiyh"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_i7706"]
@@ -19,6 +18,13 @@ shader_parameter/speed = 0.5
 modulate = Color(0.866111, 0.866111, 0.866111, 1)
 scale = Vector2(2, 2)
 script = ExtResource("1_tmael")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = 1
+offset_left = -4.0
+offset_top = -273.0
+offset_right = 434.0
+color = Color(0, 0, 0, 0)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(223, -150)
@@ -39,7 +45,6 @@ offset_right = 734.5
 offset_bottom = -39.5
 scale = Vector2(0.37, 0.37)
 theme = ExtResource("4_jv1yu")
-theme_override_fonts/font = ExtResource("4_apks2")
 theme_override_font_sizes/font_size = 41
 text = "& Use o botão esquerdo
 para pular e desviar dos cactos &"
@@ -59,7 +64,7 @@ collision_mask = 4
 polygon = PackedVector2Array(423.5, 176, -308, 174, -297, -313, -391.5, -314, -382.5, 249.5, 422, 236)
 
 [node name="FinalTimer" type="Timer" parent="."]
-wait_time = 20.0
+wait_time = 25.0
 one_shot = true
 autostart = true
 
@@ -73,7 +78,7 @@ offset_right = 401.0
 offset_bottom = 76.0
 scale = Vector2(0.795, 0.72)
 pivot_offset = Vector2(857, -3)
-texture = ExtResource("6_k0au6")
+texture = ExtResource("7_41k4f")
 expand_mode = 1
 stretch_mode = 1
 
@@ -82,14 +87,14 @@ modulate = Color(0.197937, 0.197937, 0.197937, 1)
 z_index = -2
 position = Vector2(220.5, -151.5)
 scale = Vector2(0.708709, 0.706667)
-texture = ExtResource("7_p475f")
+texture = ExtResource("8_ldfct")
 
 [node name="SunsetNoCactos2" type="Sprite2D" parent="."]
 modulate = Color(0.197937, 0.197937, 0.197937, 1)
 z_index = -2
 position = Vector2(692.5, -153.125)
 scale = Vector2(0.708709, 0.698)
-texture = ExtResource("7_p475f")
+texture = ExtResource("8_ldfct")
 
 [node name="PauseMenu" parent="." instance=ExtResource("10_kiiyh")]
 
@@ -97,7 +102,7 @@ texture = ExtResource("7_p475f")
 modulate = Color(0.196078, 0.196078, 0.196078, 1)
 position = Vector2(691.75, -158.25)
 scale = Vector2(0.707958, 0.692)
-texture = ExtResource("6_k0au6")
+texture = ExtResource("7_41k4f")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="FinalTimer" to="." method="_on_final_timer_timeout"]

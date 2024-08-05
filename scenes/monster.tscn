@@ -303,8 +303,10 @@ size = Vector2(78, 183)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.314453, 0.283691)
 sprite_frames = SubResource("SpriteFrames_6icy0")
-animation = &"Casulo"
+animation = &"Spawn"
 autoplay = "Casulo"
+frame = 19
+frame_progress = 1.0
 flip_h = true
 
 [node name="Deathzone" parent="." instance=ExtResource("5_oea5a")]
