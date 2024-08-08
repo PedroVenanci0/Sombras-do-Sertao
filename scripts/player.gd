@@ -4,7 +4,7 @@ class_name Player
 @onready var animationManager = $AnimationManager
 
 var SPEED = 150
-const JUMP_VELOCITY = -450
+var jumpVelocity = -450
 const MAX_JUMP_HOLD_TIME = 0.3  # Tempo máximo de segurar o botão para aumentar o pulo
 
 var speedEscape: int = 0
@@ -25,8 +25,8 @@ var margin = 1
 var jump_hold_time = 0.0
 
 func _ready():
+	jumpVelocity = -450
 	Global.playerRef = self;
-	Destination = position
 
 func _physics_process(delta):
 	
@@ -39,8 +39,8 @@ func _physics_process(delta):
 	if not is_on_floor() and Global.inEscape:
 		velocity.y += gravity * delta
 
-	if Input.is_action_just_pressed("Click_Button") and is_on_floor() and Global.inEscape:
-		velocity.y = JUMP_VELOCITY
+	if Input.is_action_just_pressed("Click_Button") and is_on_floor() and Global.inEscape and jumpVelocity != 0:
+		velocity.y = jumpVelocity
 		isJump = true
 		jump_hold_time = 0.0
 	
@@ -60,9 +60,6 @@ func _physics_process(delta):
 				print("Percorrendo distancia ", distance)
 				velocity.x = distance.normalized().x * SPEED
 				velocity.y = distance.normalized().x * 0
-		if abs(distance.x) < 2:
-			moveOrder = false
-			
 		if (Destination.x > position.x):
 			get_node("Animations").flip_h = false
 			get_node("LightOccluder2D").scale.x = 1

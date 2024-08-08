@@ -1,3 +1,10 @@
-[gd_scene format=3 uid="uid://i3ugocdavcy1"]
+[gd_scene load_steps=2 format=3 uid="uid://i3ugocdavcy1"]
+
+[ext_resource type="Script" path="res://scripts/bar.gd" id="1_ah1me"]
 
 [node name="Bar" type="Node2D"]
+script = ExtResource("1_ah1me")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(414, 237)
+zoom = Vector2(1.54, 1.54)

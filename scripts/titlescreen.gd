@@ -44,7 +44,9 @@ func startPressed():
 	_modulateTween.tween_property($Clique,"modulate",Color(1,1,1,1),2).set_delay(4)
 	_modulateTween.tween_property($Clique,"modulate",Color(1,1,1,0),2).set_delay(2)
 	await _modulateTween2.tween_property($GameName,"modulate",Color(1,1,1,0),3).finished
+	player.moveOrder = true
 	player.Destination = Vector2(217,57)
+	print(player.Destination )
 	player.onTitle = false
 	$GameName.visible = false
 	
