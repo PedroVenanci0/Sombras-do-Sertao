@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://b1bwfm28g4god" path="res://assets/house/house.png" id="9_dcwl7"]
 [ext_resource type="Texture2D" uid="uid://cd6qvdhqjpslf" path="res://assets/Menus/itensCangaço.png" id="10_i5j6l"]
 [ext_resource type="PackedScene" uid="uid://b8n5vnmdrkvys" path="res://scenes/pauseMenu.tscn" id="13_j1ata"]
+[ext_resource type="PackedScene" uid="uid://cgua471vwfdxt" path="res://scenes/TimeCicle.tscn" id="13_osuo2"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_4smex"]
 blend_mode = 1
@@ -88,7 +89,7 @@ region_rect = Rect2(0, 984, 1920, 96)
 [node name="PointLight2D" type="PointLight2D" parent="."]
 z_index = 1
 material = SubResource("CanvasItemMaterial_4smex")
-position = Vector2(-47, -88)
+position = Vector2(-50, -89)
 scale = Vector2(1.06784, 0.706578)
 energy = 2.75
 shadow_enabled = true
@@ -326,6 +327,8 @@ text = " & Use o botão esquerdo
 do mouse para se mover &"
 
 [node name="PauseMenu" parent="." instance=ExtResource("13_j1ata")]
+
+[node name="TimeCicle" parent="." instance=ExtResource("13_osuo2")]
 
 [connection signal="mouse_entered" from="CaramelDog3x" to="." method="caramelMouseEntered"]
 [connection signal="mouse_exited" from="CaramelDog3x" to="." method="caramelMouseExited"]
