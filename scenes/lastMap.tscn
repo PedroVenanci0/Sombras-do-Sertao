@@ -689,23 +689,29 @@ position = Vector2(-18.5978, 3.31747)
 scale = Vector2(0.144813, 0.103448)
 texture = ExtResource("5_l8cy6")
 
-[node name="Label" type="Label" parent="House"]
-offset_left = -16.4099
-offset_top = 8.29366
-offset_right = 503.59
-offset_bottom = 300.294
-scale = Vector2(0.02, 0.02)
-theme_override_colors/font_color = Color(0.999969, 0.151448, 0.108416, 1)
-theme_override_fonts/font = ExtResource("7_5q4hh")
-theme_override_font_sizes/font_size = 292
-text = "3,99"
-
 [node name="PointLight2D" type="PointLight2D" parent="House"]
 position = Vector2(-11.4869, -17.0557)
 scale = Vector2(1, 0.810254)
 energy = 1.9
 texture = ExtResource("5_p8u13")
 texture_scale = 0.7
+
+[node name="Label" type="Label" parent="House"]
+anchors_preset = -1
+anchor_left = 0.00275627
+anchor_top = 0.00317858
+anchor_right = 0.00275644
+anchor_bottom = 0.00317881
+offset_left = -25.0585
+offset_top = 7.377
+offset_right = 883.941
+offset_bottom = 519.377
+scale = Vector2(0.02, 0.02)
+theme_override_colors/font_color = Color(0.999969, 0.151448, 0.108416, 1)
+theme_override_fonts/font = ExtResource("7_5q4hh")
+theme_override_font_sizes/font_size = 512
+text = "3,99"
+metadata/_edit_use_anchors_ = true
 
 [node name="AreaFinal" type="Area2D" parent="."]
 position = Vector2(31, 0)
