@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dripaua6wcm0y" path="res://assets/Luz/Luz ambiente/download.jpeg" id="3_vouxu"]
 
 [node name="Cacto" type="Node2D"]
+z_index = 2
 
 [node name="Cacto3" type="Sprite2D" parent="."]
 texture = ExtResource("1_0l15v")

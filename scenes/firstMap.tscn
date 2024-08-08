@@ -644,6 +644,7 @@ sources/0 = SubResource("TileSetAtlasSource_bauu6")
 sources/1 = SubResource("TileSetAtlasSource_vmerq")
 
 [node name="TileMap" type="TileMap"]
+z_index = 3
 position = Vector2(6, 0)
 tile_set = SubResource("TileSet_0xc0f")
 format = 2
