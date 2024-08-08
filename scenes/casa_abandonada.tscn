@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=3 uid="uid://5w67ml2ebeeo"]
+[gd_scene load_steps=62 format=3 uid="uid://5w67ml2ebeeo"]
 
 [ext_resource type="Script" path="res://scripts/casa_abandonada.gd" id="1_0jpda"]
 [ext_resource type="Texture2D" uid="uid://qy28di24w8go" path="res://assets/house/Parede.png" id="1_1kkgk"]
@@ -15,7 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://ub6dovylitej" path="res://scenes/player.tscn" id="9_hhqie"]
 [ext_resource type="Texture2D" uid="uid://dripaua6wcm0y" path="res://assets/Luz/Luz ambiente/download.jpeg" id="9_nh0yn"]
 [ext_resource type="Texture2D" uid="uid://bm52vn43qr4ff" path="res://assets/HouseMaps/espelhoMap.png" id="10_dc66b"]
-[ext_resource type="Texture2D" uid="uid://ccw5gdpufxfne" path="res://assets/HouseMaps/pituMap.png" id="12_32avs"]
+[ext_resource type="Texture2D" uid="uid://cej7uaxhxkcjj" path="res://assets/bar/GarrafaPitu.png" id="12_jhy88"]
 [ext_resource type="Script" path="res://scripts/Camera_CasaAbandonada.gd" id="13_f3w6m"]
 [ext_resource type="Texture2D" uid="uid://c6s7mkot66ic7" path="res://assets/HouseMaps/garrafaMap.png" id="13_hnwrs"]
 [ext_resource type="PackedScene" uid="uid://bf7atnfi168ga" path="res://scenes/monster.tscn" id="14_m3kq1"]
@@ -27,7 +27,6 @@
 [ext_resource type="Texture2D" uid="uid://c8j01g7caufxi" path="res://assets/house/BrCultureJamAssets/Galinha_1x.png" id="17_vuixg"]
 [ext_resource type="Texture2D" uid="uid://cjd1s0nkwg4u0" path="res://assets/house/image-1.png.png" id="18_l064a"]
 [ext_resource type="Texture2D" uid="uid://3n22cg3ro3yy" path="res://assets/HouseMaps/chapeuMap.png" id="18_ou7n8"]
-[ext_resource type="Texture2D" uid="uid://1o772ydgs81i" path="res://assets/house/Pitu.png" id="19_ikojr"]
 [ext_resource type="Texture2D" uid="uid://x5ul5bpn1kps" path="res://assets/image-1.png.png" id="20_c1cqr"]
 [ext_resource type="Texture2D" uid="uid://c4a8ru5ahdyjh" path="res://assets/house/parede_porta.png" id="21_4dusk"]
 [ext_resource type="Texture2D" uid="uid://d2uqycboumv4f" path="res://assets/house/porta.png" id="22_4k3qd"]
@@ -59,10 +58,6 @@ normal_texture = ExtResource("7_6t8be")
 [sub_resource type="CanvasTexture" id="CanvasTexture_tdxbd"]
 diffuse_texture = ExtResource("15_phbf7")
 normal_texture = ExtResource("10_dc66b")
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_u3tiw"]
-diffuse_texture = ExtResource("19_ikojr")
-normal_texture = ExtResource("12_32avs")
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_kea8l"]
 diffuse_texture = ExtResource("16_j4gtq")
@@ -273,26 +268,25 @@ offset_bottom = 69.0
 wait_time = 0.1
 
 [node name="Pitu" type="Sprite2D" parent="Objetos"]
+modulate = Color(0.325441, 0.325441, 0.325441, 1)
 self_modulate = Color(0.571649, 0.571649, 0.571649, 1)
-position = Vector2(-280, 285)
-scale = Vector2(0.0563725, 0.0549242)
-texture = SubResource("CanvasTexture_u3tiw")
+position = Vector2(-284, 282)
+texture = ExtResource("12_jhy88")
 
 [node name="detecção" parent="Objetos/Pitu" instance=ExtResource("7_pfkn0")]
 
 [node name="TextureRect" parent="Objetos/Pitu/detecção" index="0"]
-offset_left = -373.0
-offset_top = -255.0
-offset_right = -71.0
-offset_bottom = 237.0
+offset_left = -20.0
+offset_top = -25.0
+offset_right = 8.0
+offset_bottom = 17.0
 
 [node name="Timer" parent="Objetos/Pitu/detecção" index="1"]
 wait_time = 0.1
 
 [node name="Caipirinha1x" type="Sprite2D" parent="Objetos/Pitu"]
-modulate = Color(0.314316, 0.314316, 0.314316, 1)
-position = Vector2(-283.826, 72.8276)
-scale = Vector2(5.2663, 5.68966)
+position = Vector2(-14, 11)
+scale = Vector2(0.19, 0.19)
 texture = SubResource("CanvasTexture_kea8l")
 
 [node name="Garrafa" type="Sprite2D" parent="Objetos"]
