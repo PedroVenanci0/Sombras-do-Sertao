@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dripaua6wcm0y" path="res://assets/Luz/Luz ambiente/download.jpeg" id="3_joug5"]
 
 [node name="Cacto" type="Node2D"]
+z_index = 2
 
 [node name="Cacto2" type="Sprite2D" parent="."]
 position = Vector2(0, -1)

@@ -4,9 +4,10 @@ class_name Player
 @onready var animationManager = $AnimationManager
 
 var SPEED = 150
-const JUMP_VELOCITY = -550
+const JUMP_VELOCITY = -450
+const MAX_JUMP_HOLD_TIME = 0.3  # Tempo máximo de segurar o botão para aumentar o pulo
 
-var speedEscape : int = 10
+var speedEscape: int = 0
 var Destination = Vector2()
 var distance = Vector2()
 var Velocity = Vector2()
@@ -14,33 +15,53 @@ var SnapPosition = Vector2()
 var onTitle = false
 var isJump = false
 var isDead = false
+var moveOrder : bool = false;
 
- ## Get the gravity from the project settings to be synced with RigidBody nodes.
-var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+# Get the gravity from the project settings to be synced with RigidBody nodes.
+var gravity = 1050
 
 var margin = 1
 
+var jump_hold_time = 0.0
+
 func _ready():
+	Global.playerRef = self;
 	Destination = position
 
 func _physics_process(delta):
-	  ## Add the gravity.
+	
+	#if Global.inEscape:
+		#escapeBehaviour(delta);
+	#else:
+		#normalBehaviour(delta);
+		
+		
 	if not is_on_floor() and Global.inEscape:
 		velocity.y += gravity * delta
-		
 
-	# Handle jump.
-	if Input.is_action_pressed("Click_Button") and is_on_floor() and Global.inEscape:
+	if Input.is_action_just_pressed("Click_Button") and is_on_floor() and Global.inEscape:
 		velocity.y = JUMP_VELOCITY
 		isJump = true
-		
+		jump_hold_time = 0.0
+	
+	if Input.is_action_pressed("Click_Button") and isJump and Global.inEscape:
+		if jump_hold_time < MAX_JUMP_HOLD_TIME:
+			jump_hold_time += delta
+			velocity.y -= gravity * delta * 0.5
+
+	# Handle the jump button release.
+	if Input.is_action_just_released("Click_Button") and isJump:
+		isJump = false
 		
 	if not Global.inEscape:
+		distance = Vector2(Destination - position)
 		if position != Destination:
-			distance = Vector2(Destination - position)
-			velocity.x = distance.normalized().x * SPEED
-			velocity.y = distance.normalized().x * 0
-			move_and_slide()
+			if moveOrder:
+				print("Percorrendo distancia ", distance)
+				velocity.x = distance.normalized().x * SPEED
+				velocity.y = distance.normalized().x * 0
+		if abs(distance.x) < 2:
+			moveOrder = false
 			
 		if (Destination.x > position.x):
 			get_node("Animations").flip_h = false
@@ -48,10 +69,12 @@ func _physics_process(delta):
 		if (Destination.x < position.x):
 			get_node("Animations").flip_h = true
 			get_node("LightOccluder2D").scale.x = -1
-	else:
+	elif Global.inEscape:
 		velocity.x = speedEscape
-		move_and_slide()
 		
+	# Apply the calculated velocity.
+	move_and_slide()
+	
 	if not isDead:
 		if abs(velocity.x) <= 20 and not Global.inEscape:
 			animationManager.play("idle")
@@ -70,10 +93,16 @@ func _physics_process(delta):
 		animationManager.active = true
 		animationManager.play("death")
 		
+		
 func _input(event):
 	if Input.is_action_just_pressed("Click_Button") and not onTitle and Global.moviement_click:
 		Destination = get_global_mouse_position()
+		moveOrder = true;
 		_play_click_animation(Destination)
+	
+	# DEBUG - Proteger jogador. TODO: Remover
+	if Input.is_key_pressed(KEY_1):
+		global_position.y = -784;
 
 func _play_click_animation(position: Vector2):
 	

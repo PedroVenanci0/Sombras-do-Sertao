@@ -1,12 +1,16 @@
 extends Node
-
+## Variavel para definir se player esta fugindo
 var inEscape: bool = false
+## Variavel para definir se o player esta correndo
 var isRun: bool = false
 var dialogFinished: bool = true
 var moviement_click: bool = true
 var speed = 200.0
 var TileMapWitdh = 950
 var cameraShake : bool = false
+
+## Referência do nó do Player
+var playerRef: Player = null;
 
 ## Database de cenas em preload
 var scenesDatabae : Dictionary = {
