@@ -18,6 +18,7 @@ func _ready():
 
 
 func _process(delta):
+	
 	if player.position.x <= -178:
 		var _tween = get_tree().create_tween()
 		_tween.tween_property(transitionCam,"position",Vector2(-210,-55),2)
