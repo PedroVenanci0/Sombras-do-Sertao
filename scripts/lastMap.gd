@@ -15,7 +15,7 @@ func _on_area_2d_body_entered(body):
 		_tween.set_trans(Tween.TRANS_CUBIC);
 		_tween.tween_property(camera,"zoom", Vector2(2.5,2.5),1);
 		get_parent().get_node("Player").speedEscape = 125
-		
+		body.jumpVelocity = 0
 		print("Player colidiu com o chão.")
 
 
@@ -26,7 +26,8 @@ func _on_door_body_entered(body):
 		Global.fadeTransition("final")
 		Global.inEscape = false
 		Global.isRun = false
-		body.Destination = body.position;
+		body.set_physics_process(false)
+		body.animationManager.play("idle")
 		body.speedEscape = 0
 		body.velocity = Vector2.ZERO;
 		

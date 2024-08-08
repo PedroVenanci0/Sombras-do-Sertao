@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=3 uid="uid://5w67ml2ebeeo"]
+[gd_scene load_steps=64 format=3 uid="uid://5w67ml2ebeeo"]
 
 [ext_resource type="Script" path="res://scripts/casa_abandonada.gd" id="1_0jpda"]
 [ext_resource type="Texture2D" uid="uid://qy28di24w8go" path="res://assets/house/Parede.png" id="1_1kkgk"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://dripaua6wcm0y" path="res://assets/Luz/Luz ambiente/download.jpeg" id="9_nh0yn"]
 [ext_resource type="Texture2D" uid="uid://bm52vn43qr4ff" path="res://assets/HouseMaps/espelhoMap.png" id="10_dc66b"]
 [ext_resource type="Texture2D" uid="uid://cej7uaxhxkcjj" path="res://assets/bar/GarrafaPitu.png" id="12_jhy88"]
+[ext_resource type="Texture2D" uid="uid://ccw5gdpufxfne" path="res://assets/HouseMaps/pituMap.png" id="13_0bp56"]
 [ext_resource type="Script" path="res://scripts/Camera_CasaAbandonada.gd" id="13_f3w6m"]
 [ext_resource type="Texture2D" uid="uid://c6s7mkot66ic7" path="res://assets/HouseMaps/garrafaMap.png" id="13_hnwrs"]
 [ext_resource type="PackedScene" uid="uid://bf7atnfi168ga" path="res://scenes/monster.tscn" id="14_m3kq1"]
@@ -58,6 +59,10 @@ normal_texture = ExtResource("7_6t8be")
 [sub_resource type="CanvasTexture" id="CanvasTexture_tdxbd"]
 diffuse_texture = ExtResource("15_phbf7")
 normal_texture = ExtResource("10_dc66b")
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_fc42b"]
+diffuse_texture = ExtResource("12_jhy88")
+normal_texture = ExtResource("13_0bp56")
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_kea8l"]
 diffuse_texture = ExtResource("16_j4gtq")
@@ -268,10 +273,9 @@ offset_bottom = 69.0
 wait_time = 0.1
 
 [node name="Pitu" type="Sprite2D" parent="Objetos"]
-modulate = Color(0.325441, 0.325441, 0.325441, 1)
-self_modulate = Color(0.571649, 0.571649, 0.571649, 1)
+self_modulate = Color(0.577008, 0.577008, 0.577008, 1)
 position = Vector2(-284, 282)
-texture = ExtResource("12_jhy88")
+texture = SubResource("CanvasTexture_fc42b")
 
 [node name="detecção" parent="Objetos/Pitu" instance=ExtResource("7_pfkn0")]
 
@@ -285,6 +289,7 @@ offset_bottom = 17.0
 wait_time = 0.1
 
 [node name="Caipirinha1x" type="Sprite2D" parent="Objetos/Pitu"]
+modulate = Color(0.556953, 0.556953, 0.556953, 1)
 position = Vector2(-14, 11)
 scale = Vector2(0.19, 0.19)
 texture = SubResource("CanvasTexture_kea8l")
