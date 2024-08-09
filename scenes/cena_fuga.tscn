@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://xxco6ecx8wk4"]
+
+[ext_resource type="Script" path="res://cutsceneFuga.gd" id="1_u7ixv"]
+[ext_resource type="PackedScene" uid="uid://crurggsvpp63u" path="res://scenes/firstMap.tscn" id="2_8mmd1"]
+[ext_resource type="PackedScene" uid="uid://d1802apfkt11u" path="res://scenes/cutscene_player.tscn" id="3_dkrvk"]
+[ext_resource type="PackedScene" uid="uid://jx2wclfsu0v1" path="res://scenes/cutscene_monster.tscn" id="4_5j5qg"]
+[ext_resource type="Script" path="res://scripts/cameraGame.gd" id="5_etsib"]
+
+[node name="cenaFuga" type="Node2D"]
+scale = Vector2(2, 2)
+script = ExtResource("1_u7ixv")
+
+[node name="TileMap" parent="." instance=ExtResource("2_8mmd1")]
+position = Vector2(2, -17.5)
+
+[node name="CutscenePlayer" parent="." instance=ExtResource("3_dkrvk")]
+position = Vector2(279.5, -117)
+
+[node name="CutsceneMonster" parent="." instance=ExtResource("4_5j5qg")]
+position = Vector2(186.5, -132)
+scale = Vector2(0.4, 0.4)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(306.5, -123)
+zoom = Vector2(1.54, 1.54)
+limit_left = 20
+limit_top = -535
+limit_bottom = -72
+script = ExtResource("5_etsib")
