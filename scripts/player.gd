@@ -1,6 +1,5 @@
 extends CharacterBody2D
 class_name Player
-
 @onready var animationManager = $AnimationManager
 
 var SPEED = 150
@@ -25,8 +24,8 @@ var margin = 1
 var jump_hold_time = 0.0
 
 func _ready():
+	Global.playerRef = self
 	jumpVelocity = -450
-	Global.playerRef = self;
 
 func _physics_process(delta):
 	
@@ -95,7 +94,9 @@ func _input(event):
 	if Input.is_action_just_pressed("Click_Button") and not onTitle and Global.moviement_click:
 		Destination = get_global_mouse_position()
 		moveOrder = true;
-		_play_click_animation(Destination)
+		
+		if not Global.inEscape:
+			_play_click_animation(Destination)
 	
 	# DEBUG - Proteger jogador. TODO: Remover
 	if Input.is_key_pressed(KEY_1):
