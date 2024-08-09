@@ -62,3 +62,13 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_wssx5")
 theme_override_font_sizes/font_size = 63
 text = "Use fone para uma melhor experiecnia"
+
+[node name="Skip" type="Label" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = 936.0
+offset_top = 666.0
+offset_right = 1253.0
+offset_bottom = 697.0
+theme_override_fonts/font = ExtResource("4_wssx5")
+theme_override_font_sizes/font_size = 30
+text = "& Clique Para Pular &"

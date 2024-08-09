@@ -57,7 +57,6 @@ func _physics_process(delta):
 		distance = Vector2(Destination - position)
 		if position != Destination:
 			if moveOrder:
-				print("Percorrendo distancia ", distance)
 				velocity.x = distance.normalized().x * SPEED
 				velocity.y = distance.normalized().x * 0
 		if (Destination.x > position.x):

@@ -35,7 +35,7 @@ limit_bottom = -72
 script = ExtResource("2_cgkh4")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 2.0
+wait_time = 10.0
 autostart = true
 
 [node name="Label" type="Label" parent="."]

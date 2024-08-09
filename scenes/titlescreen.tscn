@@ -12,7 +12,6 @@
 [ext_resource type="Texture2D" uid="uid://b1bwfm28g4god" path="res://assets/house/house.png" id="9_dcwl7"]
 [ext_resource type="Texture2D" uid="uid://cd6qvdhqjpslf" path="res://assets/Menus/itensCangaço.png" id="10_i5j6l"]
 [ext_resource type="PackedScene" uid="uid://b8n5vnmdrkvys" path="res://scenes/pauseMenu.tscn" id="13_j1ata"]
-[ext_resource type="PackedScene" uid="uid://cgua471vwfdxt" path="res://scenes/TimeCicle.tscn" id="13_osuo2"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_4smex"]
 blend_mode = 1
@@ -217,7 +216,6 @@ region_enabled = true
 region_rect = Rect2(96.0258, 298.244, 276.718, 85.7436)
 
 [node name="NameLights" type="Node2D" parent="GameName"]
-visible = false
 modulate = Color(1, 1, 1, 0)
 position = Vector2(227, 191)
 
@@ -327,8 +325,6 @@ text = " & Use o botão esquerdo
 do mouse para se mover &"
 
 [node name="PauseMenu" parent="." instance=ExtResource("13_j1ata")]
-
-[node name="TimeCicle" parent="." instance=ExtResource("13_osuo2")]
 
 [connection signal="mouse_entered" from="CaramelDog3x" to="." method="caramelMouseEntered"]
 [connection signal="mouse_exited" from="CaramelDog3x" to="." method="caramelMouseExited"]
