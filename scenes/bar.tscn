@@ -1,6 +1,22 @@
-[gd_scene load_steps=2 format=3 uid="uid://i3ugocdavcy1"]
+[gd_scene load_steps=18 format=3 uid="uid://i3ugocdavcy1"]
 
 [ext_resource type="Script" path="res://scripts/bar.gd" id="1_ah1me"]
+[ext_resource type="Texture2D" uid="uid://d4fttt2py5gwf" path="res://assets/bar/Parede-1.png-1.png(1).png" id="2_0hj2t"]
+[ext_resource type="Texture2D" uid="uid://pusw458t2ufa" path="res://assets/bar/PosterAntipatica.png" id="3_3fhne"]
+[ext_resource type="Texture2D" uid="uid://cv0vhe4yk8ohf" path="res://assets/bar/PosterBrehma.png" id="4_hswaw"]
+[ext_resource type="Texture2D" uid="uid://fevcnr5xnryp" path="res://assets/bar/Posteritaipu.png" id="5_nsqvc"]
+[ext_resource type="Texture2D" uid="uid://djfrm0m5je2we" path="res://assets/bar/MesaSinuca-1.png.png" id="6_41q27"]
+[ext_resource type="Texture2D" uid="uid://ctootu8bpv37" path="res://assets/bar/Parede-1.png-1.png(1)-1.png.png" id="7_wkshu"]
+[ext_resource type="Texture2D" uid="uid://cecum1qqos56k" path="res://assets/bar/Propaganda Pitu.png" id="8_0c0kv"]
+[ext_resource type="Texture2D" uid="uid://br6ssdobg4ixr" path="res://assets/bar/cadeiraMadeira.png" id="9_b2pqw"]
+[ext_resource type="Texture2D" uid="uid://bbc0spgl3nq2g" path="res://assets/bar/vasco_2000_big(1).jpg" id="10_y5nva"]
+[ext_resource type="Texture2D" uid="uid://blg8tkf5lvrvy" path="res://assets/bar/c1829ece4cc5736.png" id="11_10whq"]
+[ext_resource type="Texture2D" uid="uid://b0wa276dw14q" path="res://assets/bar/image-1.png(2).png" id="12_xdahq"]
+[ext_resource type="Texture2D" uid="uid://c5noapcho5hw4" path="res://assets/bar/D_NQ_NP_972487-MLB32600912486_10-1.png.png" id="13_jq5yi"]
+[ext_resource type="Texture2D" uid="uid://cej7uaxhxkcjj" path="res://assets/bar/GarrafaPitu.png" id="14_ddbs6"]
+[ext_resource type="Texture2D" uid="uid://cjkxqmthnisho" path="res://assets/bar/frezer.png" id="15_2hl08"]
+[ext_resource type="Texture2D" uid="uid://x8o66t7f3lal" path="res://assets/bar/image-1.png(3).png" id="16_4qsjj"]
+[ext_resource type="Texture2D" uid="uid://b2vy726x01l1m" path="res://assets/bar/tv.png" id="17_c3ytl"]
 
 [node name="Bar" type="Node2D"]
 script = ExtResource("1_ah1me")
@@ -8,3 +24,104 @@ script = ExtResource("1_ah1me")
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(414, 237)
 zoom = Vector2(1.54, 1.54)
+
+[node name="Parede-1_png-1_png(1)" type="Sprite2D" parent="."]
+position = Vector2(355, 235)
+scale = Vector2(0.88375, 0.942)
+texture = ExtResource("2_0hj2t")
+
+[node name="PosterAntipatica" type="Sprite2D" parent="."]
+position = Vector2(85, 146)
+texture = ExtResource("3_3fhne")
+
+[node name="PosterBrehma" type="Sprite2D" parent="."]
+position = Vector2(239, 148)
+texture = ExtResource("4_hswaw")
+
+[node name="Posteritaipu" type="Sprite2D" parent="."]
+position = Vector2(400, 148)
+texture = ExtResource("5_nsqvc")
+
+[node name="MesaSinuca-1_png" type="Sprite2D" parent="."]
+position = Vector2(331, 245)
+scale = Vector2(3.83594, 2.79167)
+texture = ExtResource("6_41q27")
+
+[node name="Parede-1_png-1_png(1)-1_png" type="Sprite2D" parent="."]
+position = Vector2(1108, 235)
+scale = Vector2(1, 0.942)
+texture = ExtResource("7_wkshu")
+
+[node name="PropagandaPitu" type="Sprite2D" parent="."]
+position = Vector2(611, 139)
+texture = ExtResource("8_0c0kv")
+
+[node name="CadeiraMadeira" type="Sprite2D" parent="."]
+position = Vector2(135, 307)
+scale = Vector2(2.15625, 1.70312)
+texture = ExtResource("9_b2pqw")
+
+[node name="CadeiraMadeira2" type="Sprite2D" parent="."]
+position = Vector2(548, 307)
+scale = Vector2(2.15625, 1.70312)
+texture = ExtResource("9_b2pqw")
+flip_h = true
+
+[node name="Vasco2000Big(1)" type="Sprite2D" parent="."]
+position = Vector2(756.125, 149.5)
+scale = Vector2(0.190761, 0.166667)
+texture = ExtResource("10_y5nva")
+
+[node name="C1829Ece4Cc5736" type="Sprite2D" parent="."]
+position = Vector2(756.5, 150)
+scale = Vector2(0.0863486, 0.0493421)
+texture = ExtResource("11_10whq")
+
+[node name="Image-1_png(2)" type="Sprite2D" parent="."]
+position = Vector2(1350, 234.125)
+scale = Vector2(6.90625, 7.40686)
+texture = ExtResource("12_xdahq")
+
+[node name="DNqNp972487-mlb3260091248610-1_png" type="Sprite2D" parent="."]
+position = Vector2(994, 123)
+scale = Vector2(2.16406, 1.80294)
+texture = ExtResource("13_jq5yi")
+
+[node name="GarrafaPitu3" type="Sprite2D" parent="."]
+position = Vector2(734, 324)
+texture = ExtResource("14_ddbs6")
+
+[node name="GarrafaPitu" type="Sprite2D" parent="."]
+position = Vector2(729, 327)
+scale = Vector2(0.828125, 0.833333)
+texture = ExtResource("14_ddbs6")
+
+[node name="GarrafaPitu4" type="Sprite2D" parent="."]
+position = Vector2(756, 224)
+scale = Vector2(0.828125, 0.833333)
+texture = ExtResource("14_ddbs6")
+
+[node name="GarrafaPitu5" type="Sprite2D" parent="."]
+position = Vector2(761.75, 225)
+scale = Vector2(0.726562, 0.750001)
+texture = ExtResource("14_ddbs6")
+
+[node name="GarrafaPitu2" type="Sprite2D" parent="."]
+position = Vector2(739, 324)
+texture = ExtResource("14_ddbs6")
+
+[node name="Frezer" type="Sprite2D" parent="."]
+position = Vector2(851, 288)
+scale = Vector2(1.82812, 1.51562)
+texture = ExtResource("15_2hl08")
+
+[node name="Image-1_png(3)" type="Sprite2D" parent="."]
+position = Vector2(1353, 119)
+scale = Vector2(2.42187, 2.08989)
+texture = ExtResource("16_4qsjj")
+
+[node name="Tv" type="Sprite2D" parent="."]
+position = Vector2(1206, 199)
+scale = Vector2(0.285185, 0.355263)
+texture = ExtResource("17_c3ytl")
+flip_h = true
