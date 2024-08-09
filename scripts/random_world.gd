@@ -24,6 +24,7 @@ func _ready() -> void:
 	}
 	_add_random_tilemap()
 
+
 func _process(delta: float) -> void:
 	
 	# Move todos os tilemaps para a esquerda
