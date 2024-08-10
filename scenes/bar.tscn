@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://i3ugocdavcy1"]
+[gd_scene load_steps=27 format=3 uid="uid://i3ugocdavcy1"]
 
 [ext_resource type="Script" path="res://scripts/bar.gd" id="1_ah1me"]
 [ext_resource type="Texture2D" uid="uid://d4fttt2py5gwf" path="res://assets/bar/Parede-1.png-1.png(1).png" id="2_0hj2t"]
@@ -15,8 +15,17 @@
 [ext_resource type="Texture2D" uid="uid://c5noapcho5hw4" path="res://assets/bar/D_NQ_NP_972487-MLB32600912486_10-1.png.png" id="13_jq5yi"]
 [ext_resource type="Texture2D" uid="uid://cej7uaxhxkcjj" path="res://assets/bar/GarrafaPitu.png" id="14_ddbs6"]
 [ext_resource type="Texture2D" uid="uid://cjkxqmthnisho" path="res://assets/bar/frezer.png" id="15_2hl08"]
-[ext_resource type="Texture2D" uid="uid://x8o66t7f3lal" path="res://assets/bar/image-1.png(3).png" id="16_4qsjj"]
+[ext_resource type="Texture2D" uid="uid://dfqp1kai37a0f" path="res://assets/bar/Porta.png" id="15_78cj2"]
+[ext_resource type="FontFile" uid="uid://btva2fapcwfpp" path="res://assets/fontes/xilosa_.ttf" id="16_434de"]
 [ext_resource type="Texture2D" uid="uid://b2vy726x01l1m" path="res://assets/bar/tv.png" id="17_c3ytl"]
+[ext_resource type="Texture2D" uid="uid://bdr5lcrjuxn75" path="res://assets/Ambiente/Cacto1.png" id="18_tpoa8"]
+[ext_resource type="Texture2D" uid="uid://bce5cprofbae3" path="res://assets/Ambiente/Cacto2.png" id="19_74c18"]
+[ext_resource type="Texture2D" uid="uid://uodvhvwwqgwa" path="res://assets/bar/caricatura-banner-eu-fui-cangaceiro-lampiao-maria-bonita-marido-transformed.png" id="20_p17vo"]
+[ext_resource type="Texture2D" uid="uid://dc0fmn5xc3rjd" path="res://assets/bar/pia_.png" id="22_txjby"]
+[ext_resource type="Texture2D" uid="uid://b5bb55ourpxqx" path="res://assets/bar/caixadeBebidas.png" id="23_awrtw"]
+[ext_resource type="Texture2D" uid="uid://d31leer2g1tom" path="res://assets/bar/GradedeBebidas.png" id="24_t5062"]
+[ext_resource type="Texture2D" uid="uid://it6e8k5l6grc" path="res://assets/bar/mesa.png" id="25_07yc4"]
+[ext_resource type="Texture2D" uid="uid://qajyd17lr6k8" path="res://assets/bar/BEBIDAS.png" id="26_25wa3"]
 
 [node name="Bar" type="Node2D"]
 script = ExtResource("1_ah1me")
@@ -25,103 +34,258 @@ script = ExtResource("1_ah1me")
 position = Vector2(414, 237)
 zoom = Vector2(1.54, 1.54)
 
+[node name="Parede-1_png-1_png(1)-1_png" type="Sprite2D" parent="."]
+position = Vector2(1908, 234.312)
+scale = Vector2(1, 0.94925)
+texture = ExtResource("7_wkshu")
+
+[node name="Tv" type="Sprite2D" parent="Parede-1_png-1_png(1)-1_png"]
+z_index = 1
+position = Vector2(-1017, -3.48959)
+scale = Vector2(0.285185, 0.377137)
+texture = ExtResource("17_c3ytl")
+flip_h = true
+
+[node name="Bancada" type="Sprite2D" parent="Parede-1_png-1_png(1)-1_png"]
+position = Vector2(242, -0.928864)
+scale = Vector2(6.90625, 7.86291)
+texture = ExtResource("12_xdahq")
+
+[node name="BandeiraVasco" type="Sprite2D" parent="Parede-1_png-1_png(1)-1_png"]
+position = Vector2(-114, -118.896)
+scale = Vector2(2.16406, 1.91395)
+texture = ExtResource("13_jq5yi")
+
+[node name="GarrafaPitu3" type="Sprite2D" parent="Parede-1_png-1_png(1)-1_png"]
+position = Vector2(-374, 94.4798)
+scale = Vector2(1, 1.06157)
+texture = ExtResource("14_ddbs6")
+
+[node name="GarrafaPitu" type="Sprite2D" parent="Parede-1_png-1_png(1)-1_png"]
+position = Vector2(-379, 97.6646)
+scale = Vector2(0.828125, 0.884642)
+texture = ExtResource("14_ddbs6")
+
+[node name="GarrafaPitu4" type="Sprite2D" parent="Parede-1_png-1_png(1)-1_png"]
+position = Vector2(-352, -11.6773)
+scale = Vector2(0.828125, 0.884642)
+texture = ExtResource("14_ddbs6")
+
+[node name="GarrafaPitu5" type="Sprite2D" parent="Parede-1_png-1_png(1)-1_png"]
+position = Vector2(-346.25, -10.6157)
+scale = Vector2(0.726562, 0.796179)
+texture = ExtResource("14_ddbs6")
+
+[node name="GarrafaPitu6" type="Sprite2D" parent="Parede-1_png-1_png(1)-1_png"]
+z_index = 1
+position = Vector2(-967, 28.1143)
+scale = Vector2(0.726562, 0.796179)
+texture = ExtResource("14_ddbs6")
+
+[node name="GarrafaPitu7" type="Sprite2D" parent="Parede-1_png-1_png(1)-1_png"]
+z_index = 1
+position = Vector2(-960, 29.1678)
+scale = Vector2(0.726562, 0.796179)
+texture = ExtResource("14_ddbs6")
+
+[node name="GarrafaPitu2" type="Sprite2D" parent="Parede-1_png-1_png(1)-1_png"]
+position = Vector2(-369, 94.4798)
+scale = Vector2(1, 1.06157)
+texture = ExtResource("14_ddbs6")
+
+[node name="Frezer" type="Sprite2D" parent="Parede-1_png-1_png(1)-1_png"]
+position = Vector2(-257, 56.2633)
+scale = Vector2(1.82812, 1.60894)
+texture = ExtResource("15_2hl08")
+
 [node name="Parede-1_png-1_png(1)" type="Sprite2D" parent="."]
-position = Vector2(355, 235)
-scale = Vector2(0.88375, 0.942)
+position = Vector2(354.75, 235.25)
+scale = Vector2(0.883125, 0.941)
 texture = ExtResource("2_0hj2t")
 
-[node name="PosterAntipatica" type="Sprite2D" parent="."]
-position = Vector2(85, 146)
+[node name="PosterAntipatica" type="Sprite2D" parent="Parede-1_png-1_png(1)"]
+position = Vector2(-305.449, -94.8459)
+scale = Vector2(1.13234, 1.0627)
 texture = ExtResource("3_3fhne")
 
-[node name="PosterBrehma" type="Sprite2D" parent="."]
-position = Vector2(239, 148)
+[node name="PosterBrehma" type="Sprite2D" parent="Parede-1_png-1_png(1)"]
+position = Vector2(-131.069, -92.7205)
+scale = Vector2(1.13234, 1.0627)
 texture = ExtResource("4_hswaw")
 
-[node name="Posteritaipu" type="Sprite2D" parent="."]
-position = Vector2(400, 148)
+[node name="Posteritaipu" type="Sprite2D" parent="Parede-1_png-1_png(1)"]
+position = Vector2(51.2385, -92.7205)
+scale = Vector2(1.13234, 1.0627)
 texture = ExtResource("5_nsqvc")
 
-[node name="MesaSinuca-1_png" type="Sprite2D" parent="."]
-position = Vector2(331, 245)
-scale = Vector2(3.83594, 2.79167)
+[node name="MesaSinuca-1_png" type="Sprite2D" parent="Parede-1_png-1_png(1)"]
+position = Vector2(-26.8931, 10.3613)
+scale = Vector2(4.3436, 2.96671)
 texture = ExtResource("6_41q27")
 
-[node name="Parede-1_png-1_png(1)-1_png" type="Sprite2D" parent="."]
+[node name="CadeiraMadeira" type="Sprite2D" parent="Parede-1_png-1_png(1)"]
+position = Vector2(-248.832, 76.2487)
+scale = Vector2(2.44161, 1.8099)
+texture = ExtResource("9_b2pqw")
+
+[node name="CadeiraMadeira2" type="Sprite2D" parent="Parede-1_png-1_png(1)"]
+position = Vector2(218.825, 76.2487)
+scale = Vector2(2.44161, 1.8099)
+texture = ExtResource("9_b2pqw")
+flip_h = true
+
+[node name="PropagandaPitu" type="Sprite2D" parent="Parede-1_png-1_png(1)"]
+position = Vector2(290.163, -102.285)
+scale = Vector2(1.13234, 1.0627)
+texture = ExtResource("8_0c0kv")
+
+[node name="Parede-1_png-1_png(1)-1_png2" type="Sprite2D" parent="."]
 position = Vector2(1108, 235)
 scale = Vector2(1, 0.942)
 texture = ExtResource("7_wkshu")
 
-[node name="PropagandaPitu" type="Sprite2D" parent="."]
-position = Vector2(611, 139)
-texture = ExtResource("8_0c0kv")
+[node name="Porta" type="Sprite2D" parent="Parede-1_png-1_png(1)-1_png2"]
+position = Vector2(154, 16.9851)
+scale = Vector2(0.495, 0.536093)
+texture = ExtResource("15_78cj2")
 
-[node name="CadeiraMadeira" type="Sprite2D" parent="."]
-position = Vector2(135, 307)
-scale = Vector2(2.15625, 1.70312)
-texture = ExtResource("9_b2pqw")
+[node name="ColorRect" type="ColorRect" parent="Parede-1_png-1_png(1)-1_png2/Porta"]
+offset_left = -120.939
+offset_top = -100.01
+offset_right = 6.06061
+offset_bottom = -40.0099
+color = Color(0.184547, 0.0456406, 3.00817e-08, 1)
 
-[node name="CadeiraMadeira2" type="Sprite2D" parent="."]
-position = Vector2(548, 307)
-scale = Vector2(2.15625, 1.70312)
-texture = ExtResource("9_b2pqw")
-flip_h = true
+[node name="Label" type="Label" parent="Parede-1_png-1_png(1)-1_png2/Porta"]
+offset_left = -90.9092
+offset_top = -88.1187
+offset_right = 267.091
+offset_bottom = 114.881
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(0.65834, 0.65834, 0.65834, 1)
+theme_override_colors/font_shadow_color = Color(0.714815, 0.205468, 0, 1)
+theme_override_colors/font_outline_color = Color(0.589371, 0.127095, 0, 1)
+theme_override_fonts/font = ExtResource("16_434de")
+theme_override_font_sizes/font_size = 100
+text = "    &
+Banheiro"
 
-[node name="Vasco2000Big(1)" type="Sprite2D" parent="."]
-position = Vector2(756.125, 149.5)
-scale = Vector2(0.190761, 0.166667)
-texture = ExtResource("10_y5nva")
-
-[node name="C1829Ece4Cc5736" type="Sprite2D" parent="."]
-position = Vector2(756.5, 150)
-scale = Vector2(0.0863486, 0.0493421)
+[node name="C1829Ece4Cc5736" type="Sprite2D" parent="Parede-1_png-1_png(1)-1_png2/Porta"]
+position = Vector2(-56.5656, -70.297)
+scale = Vector2(0.116294, 0.050482)
 texture = ExtResource("11_10whq")
 
-[node name="Image-1_png(2)" type="Sprite2D" parent="."]
-position = Vector2(1350, 234.125)
-scale = Vector2(6.90625, 7.40686)
-texture = ExtResource("12_xdahq")
+[node name="Cacto1" type="Sprite2D" parent="Parede-1_png-1_png(1)-1_png2/Porta"]
+position = Vector2(-10.1009, -70.297)
+scale = Vector2(0.741796, 0.587871)
+texture = ExtResource("18_tpoa8")
 
-[node name="DNqNp972487-mlb3260091248610-1_png" type="Sprite2D" parent="."]
-position = Vector2(994, 123)
-scale = Vector2(2.16406, 1.80294)
-texture = ExtResource("13_jq5yi")
+[node name="Cacto2" type="Sprite2D" parent="Parede-1_png-1_png(1)-1_png2/Porta"]
+position = Vector2(-98.9898, -70.297)
+scale = Vector2(0.773359, 0.587872)
+texture = ExtResource("19_74c18")
 
-[node name="GarrafaPitu3" type="Sprite2D" parent="."]
-position = Vector2(734, 324)
-texture = ExtResource("14_ddbs6")
+[node name="Caricatura-banner-eu-fui-cangaceiro-lampiao-maria-bonita-marido-transformed" type="Sprite2D" parent="Parede-1_png-1_png(1)-1_png2"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(125, -93.4183)
+scale = Vector2(0.0499999, 0.0465069)
+texture = ExtResource("20_p17vo")
 
-[node name="GarrafaPitu" type="Sprite2D" parent="."]
-position = Vector2(729, 327)
-scale = Vector2(0.828125, 0.833333)
-texture = ExtResource("14_ddbs6")
+[node name="ColorRect" type="ColorRect" parent="Parede-1_png-1_png(1)-1_png2/Caricatura-banner-eu-fui-cangaceiro-lampiao-maria-bonita-marido-transformed"]
+visible = false
+offset_left = 145.0
+offset_top = -363.0
+offset_right = 248.0
+offset_bottom = -302.0
 
-[node name="GarrafaPitu4" type="Sprite2D" parent="."]
-position = Vector2(756, 224)
-scale = Vector2(0.828125, 0.833333)
-texture = ExtResource("14_ddbs6")
+[node name="ColorRect4" type="ColorRect" parent="Parede-1_png-1_png(1)-1_png2/Caricatura-banner-eu-fui-cangaceiro-lampiao-maria-bonita-marido-transformed"]
+visible = false
+offset_left = -227.586
+offset_top = -403.846
+offset_right = -124.586
+offset_bottom = -342.846
 
-[node name="GarrafaPitu5" type="Sprite2D" parent="."]
-position = Vector2(761.75, 225)
-scale = Vector2(0.726562, 0.750001)
-texture = ExtResource("14_ddbs6")
+[node name="ColorRect2" type="ColorRect" parent="Parede-1_png-1_png(1)-1_png2/Caricatura-banner-eu-fui-cangaceiro-lampiao-maria-bonita-marido-transformed"]
+visible = false
+offset_left = 145.0
+offset_top = -323.0
+offset_right = 228.0
+offset_bottom = -283.0
 
-[node name="GarrafaPitu2" type="Sprite2D" parent="."]
-position = Vector2(739, 324)
-texture = ExtResource("14_ddbs6")
+[node name="ColorRect5" type="ColorRect" parent="Parede-1_png-1_png(1)-1_png2/Caricatura-banner-eu-fui-cangaceiro-lampiao-maria-bonita-marido-transformed"]
+visible = false
+offset_left = -227.586
+offset_top = -343.269
+offset_right = -144.586
+offset_bottom = -303.269
 
-[node name="Frezer" type="Sprite2D" parent="."]
-position = Vector2(851, 288)
-scale = Vector2(1.82812, 1.51562)
-texture = ExtResource("15_2hl08")
+[node name="ColorRect3" type="ColorRect" parent="Parede-1_png-1_png(1)-1_png2/Caricatura-banner-eu-fui-cangaceiro-lampiao-maria-bonita-marido-transformed"]
+visible = false
+offset_left = 165.518
+offset_top = -282.692
+offset_right = 227.518
+offset_bottom = -262.692
 
-[node name="Image-1_png(3)" type="Sprite2D" parent="."]
-position = Vector2(1353, 119)
-scale = Vector2(2.42187, 2.08989)
-texture = ExtResource("16_4qsjj")
+[node name="C1829Ece4Cc5736" type="Sprite2D" parent="Parede-1_png-1_png(1)-1_png2"]
+position = Vector2(355, -112.527)
+scale = Vector2(0.0863486, 0.0527833)
+texture = ExtResource("11_10whq")
 
-[node name="Tv" type="Sprite2D" parent="."]
-position = Vector2(1206, 199)
-scale = Vector2(0.285185, 0.355263)
-texture = ExtResource("17_c3ytl")
-flip_h = true
+[node name="Vasco2000Big(1)" type="Sprite2D" parent="Parede-1_png-1_png(1)-1_png2/C1829Ece4Cc5736"]
+position = Vector2(-4.34375, -10.1335)
+scale = Vector2(2.2092, 3.37778)
+texture = ExtResource("10_y5nva")
+
+[node name="Pia" type="Sprite2D" parent="Parede-1_png-1_png(1)-1_png2"]
+position = Vector2(42, 39.2781)
+scale = Vector2(1, 1.06157)
+texture = ExtResource("22_txjby")
+
+[node name="CaixadeBebidas" type="Sprite2D" parent="Parede-1_png-1_png(1)-1_png2"]
+position = Vector2(-436, 85.9873)
+scale = Vector2(1, 1.06157)
+texture = ExtResource("23_awrtw")
+
+[node name="CaixadeBebidas2" type="Sprite2D" parent="Parede-1_png-1_png(1)-1_png2"]
+position = Vector2(-436, 54.1401)
+scale = Vector2(1, 1.06157)
+texture = ExtResource("23_awrtw")
+
+[node name="CaixadeBebidas3" type="Sprite2D" parent="Parede-1_png-1_png(1)-1_png2"]
+position = Vector2(-436, 22.293)
+scale = Vector2(1, 1.06157)
+texture = ExtResource("23_awrtw")
+
+[node name="GradedeBebidas" type="Sprite2D" parent="Parede-1_png-1_png(1)-1_png2"]
+position = Vector2(-356, 87.0488)
+scale = Vector2(1.48437, 1.49221)
+texture = ExtResource("24_t5062")
+
+[node name="GradedeBebidas2" type="Sprite2D" parent="Parede-1_png-1_png(1)-1_png2"]
+position = Vector2(-356, 49.8938)
+scale = Vector2(1.48437, 1.49221)
+texture = ExtResource("24_t5062")
+
+[node name="Mesa" type="Sprite2D" parent="Parede-1_png-1_png(1)-1_png2"]
+position = Vector2(-195.25, 95.276)
+scale = Vector2(2.57031, 2.57929)
+texture = ExtResource("25_07yc4")
+
+[node name="Bebidas" type="Sprite2D" parent="."]
+position = Vector2(2163.62, 125)
+scale = Vector2(2.20898, 2.04494)
+texture = ExtResource("26_25wa3")
+
+[node name="Bebidas2" type="Sprite2D" parent="."]
+position = Vector2(1030.3, 132.719)
+scale = Vector2(2.20898, 2.04494)
+texture = ExtResource("26_25wa3")
+region_enabled = true
+region_rect = Rect2(0.963287, 1.12615, 48.964, 32.3856)
+
+[node name="Bebidas3" type="Sprite2D" parent="."]
+position = Vector2(1031.15, 200.719)
+scale = Vector2(2.95743, 2.04494)
+texture = ExtResource("26_25wa3")
+region_enabled = true
+region_rect = Rect2(87.422, 7.69538, 40.8676, 26.988)
