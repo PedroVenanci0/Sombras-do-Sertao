@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dcu46akhr4o75"]
+[gd_scene load_steps=12 format=3 uid="uid://dcu46akhr4o75"]
 
 [ext_resource type="Script" path="res://scripts/random_world.gd" id="1_tmael"]
 [ext_resource type="Script" path="res://scripts/cameraGame.gd" id="2_cgkh4"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bj38gp5rc4wbi" path="res://assets/Ambiente/cactosSunset.png" id="7_41k4f"]
 [ext_resource type="Texture2D" uid="uid://bdteh66rekds" path="res://assets/Ambiente/sunsetNoCactos.png" id="8_ldfct"]
 [ext_resource type="PackedScene" uid="uid://b8n5vnmdrkvys" path="res://scenes/pauseMenu.tscn" id="10_kiiyh"]
+[ext_resource type="PackedScene" uid="uid://duxy814uemjbn" path="res://scenes/FadeOutLayer.tscn" id="10_otifh"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_i7706"]
 shader = ExtResource("4_wkunv")
@@ -101,6 +102,8 @@ modulate = Color(0.196078, 0.196078, 0.196078, 1)
 position = Vector2(691.75, -158.25)
 scale = Vector2(0.707958, 0.692)
 texture = ExtResource("7_41k4f")
+
+[node name="FadeOutLayer" parent="." instance=ExtResource("10_otifh")]
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="FinalTimer" to="." method="_on_final_timer_timeout"]

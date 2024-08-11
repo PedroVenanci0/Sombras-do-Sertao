@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 var firstCutscene = false
-const SPEED = 200
+var Speed = 200
 var direction : Vector2 = Vector2.ZERO
 var is_moving
 var escape = true
@@ -12,7 +12,7 @@ func _process(delta):
 	velocity.y += gravity * delta
 	if firstCutscene:
 		direction.x = 1
-		velocity.x = SPEED * direction.x
+		velocity.x = Speed * direction.x
 		is_moving = true
 		await get_tree().create_timer(1).timeout
 		is_moving = false
@@ -24,20 +24,24 @@ func _process(delta):
 		await get_tree().create_timer(1).timeout
 		direction.x = -1
 		Global.cameraShake = false
-		velocity.x = direction.x * SPEED
+		velocity.x = direction.x * Speed
 		is_moving = true
 		
-		await get_tree().create_timer(1).timeout
+		await get_tree().create_timer(0.5).timeout
 		is_moving = false
 		velocity.x = 0
 		animation.play("idle")
 		Global.cameraShake = true
 		
 		await  get_tree().create_timer(1).timeout
+		get_parent().moveCamera = true
 		direction.x = 1
 		Global.cameraShake = false
 		is_moving = true
-		velocity.x = direction.x * SPEED
+		Speed = 300
+		velocity.x = direction.x * Speed
+		await get_tree().create_timer(2).timeout
+		get_parent().changeScene = true
 
 func _physics_process(delta):
 	if is_moving:
