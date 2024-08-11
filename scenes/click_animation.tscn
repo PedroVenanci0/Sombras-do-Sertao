@@ -1,30 +1,23 @@
-[gd_scene load_steps=10 format=3 uid="uid://c508nklta47ux"]
+[gd_scene load_steps=9 format=3 uid="uid://c508nklta47ux"]
 
-[ext_resource type="Texture2D" uid="uid://civoj1vp0l6vr" path="res://assets/UI/click.png" id="1_k4m0b"]
 [ext_resource type="Script" path="res://scripts/click_animation.gd" id="2_4f02p"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8313e"]
-atlas = ExtResource("1_k4m0b")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c1uf4"]
-atlas = ExtResource("1_k4m0b")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mnlwi"]
-atlas = ExtResource("1_k4m0b")
 region = Rect2(0, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_62abk"]
-atlas = ExtResource("1_k4m0b")
 region = Rect2(32, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xddgl"]
-atlas = ExtResource("1_k4m0b")
 region = Rect2(0, 64, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_a7clb"]
-atlas = ExtResource("1_k4m0b")
 region = Rect2(32, 64, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tc82y"]
