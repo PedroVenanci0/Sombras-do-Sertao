@@ -56,7 +56,7 @@ func _add_random_tilemap() -> void:
 	var scene = null
 	# Instancia a cena correspondente
 	if firstMap:
-		scene =  preload("res://scenes/firstMap.tscn").instantiate() 
+		scene =  preload("res://scenes/map_1.tscn").instantiate() 
 		firstMap = false
 	elif finalMap:
 		scene =  preload("res://scenes/lastMap.tscn").instantiate() 

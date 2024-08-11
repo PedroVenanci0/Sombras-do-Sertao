@@ -653,8 +653,8 @@ layer_0/tile_data = PackedInt32Array(-262130, 589824, 14, -262121, 589824, 15, -
 [node name="House" type="Sprite2D" parent="."]
 modulate = Color(0.279967, 0.279967, 0.279967, 1)
 self_modulate = Color(1, 0.0784314, 0.227451, 1)
-position = Vector2(-7, -159)
-scale = Vector2(-2.35231, 2.92489)
+position = Vector2(-7, -138)
+scale = Vector2(-2.35231, 2.37944)
 texture = ExtResource("3_mw5nr")
 
 [node name="PointLight2D" type="PointLight2D" parent="House"]
