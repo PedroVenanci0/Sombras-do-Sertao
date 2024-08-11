@@ -5,6 +5,7 @@ var moveCamera = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	get_node("CutscenePlayer").firstCutscene = true
+	get_node("CutsceneMonster").firstCutscene = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
