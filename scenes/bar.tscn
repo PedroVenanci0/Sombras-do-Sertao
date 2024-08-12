@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://i3ugocdavcy1"]
+[gd_scene load_steps=29 format=3 uid="uid://i3ugocdavcy1"]
 
 [ext_resource type="Script" path="res://scripts/bar.gd" id="1_ah1me"]
 [ext_resource type="Texture2D" uid="uid://d4fttt2py5gwf" path="res://assets/bar/Parede-1.png-1.png(1).png" id="2_0hj2t"]
@@ -26,13 +26,11 @@
 [ext_resource type="Texture2D" uid="uid://d31leer2g1tom" path="res://assets/bar/GradedeBebidas.png" id="24_t5062"]
 [ext_resource type="Texture2D" uid="uid://it6e8k5l6grc" path="res://assets/bar/mesa.png" id="25_07yc4"]
 [ext_resource type="Texture2D" uid="uid://qajyd17lr6k8" path="res://assets/bar/BEBIDAS.png" id="26_25wa3"]
+[ext_resource type="PackedScene" uid="uid://ub6dovylitej" path="res://scenes/player.tscn" id="27_cwocc"]
+[ext_resource type="PackedScene" uid="uid://bm1tabwtq8mjc" path="res://scenes/area_de_detecão_bar.tscn" id="28_6bwcg"]
 
 [node name="Bar" type="Node2D"]
 script = ExtResource("1_ah1me")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(414, 237)
-zoom = Vector2(1.54, 1.54)
 
 [node name="Parede-1_png-1_png(1)-1_png" type="Sprite2D" parent="."]
 position = Vector2(1908, 234.312)
@@ -271,21 +269,36 @@ position = Vector2(-195.25, 95.276)
 scale = Vector2(2.57031, 2.57929)
 texture = ExtResource("25_07yc4")
 
-[node name="Bebidas" type="Sprite2D" parent="."]
-position = Vector2(2163.62, 125)
-scale = Vector2(2.20898, 2.04494)
+[node name="Bebidas" type="Sprite2D" parent="Parede-1_png-1_png(1)-1_png2"]
+position = Vector2(1055.62, -116.773)
+scale = Vector2(2.20898, 2.17085)
 texture = ExtResource("26_25wa3")
 
-[node name="Bebidas2" type="Sprite2D" parent="."]
-position = Vector2(1030.3, 132.719)
-scale = Vector2(2.20898, 2.04494)
+[node name="Bebidas2" type="Sprite2D" parent="Parede-1_png-1_png(1)-1_png2"]
+position = Vector2(-77.7, -108.579)
+scale = Vector2(2.20898, 2.17085)
 texture = ExtResource("26_25wa3")
 region_enabled = true
 region_rect = Rect2(0.963287, 1.12615, 48.964, 32.3856)
 
-[node name="Bebidas3" type="Sprite2D" parent="."]
-position = Vector2(1031.15, 200.719)
-scale = Vector2(2.95743, 2.04494)
+[node name="Bebidas3" type="Sprite2D" parent="Parede-1_png-1_png(1)-1_png2"]
+position = Vector2(-76.85, -36.3917)
+scale = Vector2(2.95743, 2.17085)
 texture = ExtResource("26_25wa3")
 region_enabled = true
 region_rect = Rect2(87.422, 7.69538, 40.8676, 26.988)
+
+[node name="Player" parent="." instance=ExtResource("27_cwocc")]
+z_index = 5
+position = Vector2(39, 233)
+scale = Vector2(4, 4)
+
+[node name="PlayerLabel" type="Label" parent="Player"]
+offset_right = 40.0
+offset_bottom = 23.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(1.6, 1.6)
+
+[node name="Area_de_detecão_bar" parent="." instance=ExtResource("28_6bwcg")]
