@@ -141,7 +141,7 @@ func _process(delta):
 				var tween = get_tree().create_tween()
 				tween.tween_property(ponto_luz_2,"modulate",Color(1,1,1,0),0.5)
 				
-			"Itens_do_cangaço":
+			"CangaçoParede":
 				Songs.playSFX(preload("res://assets/songs/Falas Sombras do Sertão/Lampião.mp3"))
 				Global.dialogFinished = false
 				player.onTitle = true
