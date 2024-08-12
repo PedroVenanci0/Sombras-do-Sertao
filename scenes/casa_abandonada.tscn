@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=3 uid="uid://5w67ml2ebeeo"]
+[gd_scene load_steps=72 format=3 uid="uid://5w67ml2ebeeo"]
 
 [ext_resource type="Script" path="res://scripts/casa_abandonada.gd" id="1_0jpda"]
 [ext_resource type="Texture2D" uid="uid://qy28di24w8go" path="res://assets/house/Parede.png" id="1_1kkgk"]
@@ -11,12 +11,12 @@
 [ext_resource type="Texture2D" uid="uid://673akufm7j26" path="res://assets/HouseMaps/quadroMap.png" id="7_6t8be"]
 [ext_resource type="Texture2D" uid="uid://be0tfjgstwsor" path="res://assets/Luz/Luz ambiente/4433d48964593f4c0326f095d731e65a.jpg" id="7_7822j"]
 [ext_resource type="PackedScene" uid="uid://fucxrmmbu670" path="res://scenes/Area_de_detecção.tscn" id="7_pfkn0"]
+[ext_resource type="Texture2D" uid="uid://dtjyps3no4ixs" path="res://assets/house/janela.png" id="7_u46qs"]
 [ext_resource type="Shader" path="res://shaders/SelectedShader.gdshader" id="8_x0nwl"]
 [ext_resource type="PackedScene" uid="uid://ub6dovylitej" path="res://scenes/player.tscn" id="9_hhqie"]
 [ext_resource type="Texture2D" uid="uid://dripaua6wcm0y" path="res://assets/Luz/Luz ambiente/download.jpeg" id="9_nh0yn"]
 [ext_resource type="Texture2D" uid="uid://bm52vn43qr4ff" path="res://assets/HouseMaps/espelhoMap.png" id="10_dc66b"]
-[ext_resource type="Texture2D" uid="uid://cej7uaxhxkcjj" path="res://assets/bar/GarrafaPitu.png" id="12_jhy88"]
-[ext_resource type="Texture2D" uid="uid://ccw5gdpufxfne" path="res://assets/HouseMaps/pituMap.png" id="13_0bp56"]
+[ext_resource type="Texture2D" uid="uid://ccw5gdpufxfne" path="res://assets/HouseMaps/pituMap.png" id="12_32avs"]
 [ext_resource type="Script" path="res://scripts/Camera_CasaAbandonada.gd" id="13_f3w6m"]
 [ext_resource type="Texture2D" uid="uid://c6s7mkot66ic7" path="res://assets/HouseMaps/garrafaMap.png" id="13_hnwrs"]
 [ext_resource type="PackedScene" uid="uid://bf7atnfi168ga" path="res://scenes/monster.tscn" id="14_m3kq1"]
@@ -28,6 +28,7 @@
 [ext_resource type="Texture2D" uid="uid://c8j01g7caufxi" path="res://assets/house/BrCultureJamAssets/Galinha_1x.png" id="17_vuixg"]
 [ext_resource type="Texture2D" uid="uid://cjd1s0nkwg4u0" path="res://assets/house/image-1.png.png" id="18_l064a"]
 [ext_resource type="Texture2D" uid="uid://3n22cg3ro3yy" path="res://assets/HouseMaps/chapeuMap.png" id="18_ou7n8"]
+[ext_resource type="Texture2D" uid="uid://1o772ydgs81i" path="res://assets/house/Pitu.png" id="19_ikojr"]
 [ext_resource type="Texture2D" uid="uid://x5ul5bpn1kps" path="res://assets/image-1.png.png" id="20_c1cqr"]
 [ext_resource type="Texture2D" uid="uid://c4a8ru5ahdyjh" path="res://assets/house/parede_porta.png" id="21_4dusk"]
 [ext_resource type="Texture2D" uid="uid://d2uqycboumv4f" path="res://assets/house/porta.png" id="22_4k3qd"]
@@ -37,9 +38,17 @@
 [ext_resource type="Texture2D" uid="uid://b5lg3dqqbn1um" path="res://assets/Luz/ponro de luz/imagem_2024-07-24_170634171-removebg-preview (2).png" id="24_mxt5e"]
 [ext_resource type="FontFile" uid="uid://btva2fapcwfpp" path="res://assets/fontes/xilosa_.ttf" id="36_lrnw4"]
 [ext_resource type="PackedScene" uid="uid://b8n5vnmdrkvys" path="res://scenes/pauseMenu.tscn" id="37_fhbl7"]
+[ext_resource type="Texture2D" uid="uid://bqacnfrch3d4s" path="res://assets/house/cangaçoParede.png" id="38_7e6ks"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_xsj6f"]
 polygon = PackedVector2Array(-95.1099, -185.668, -91.0627, 164.169, 60.708, 187.622, 66.7788, -207.166)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pp68m"]
+shader = ExtResource("8_x0nwl")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/base_color = Color(1, 1, 1, 0)
+shader_parameter/line_thickness = 0.7
+shader_parameter/hovered = false
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_vj5em"]
 diffuse_texture = ExtResource("3_ynxyk")
@@ -47,8 +56,8 @@ normal_texture = ExtResource("7_6t8be")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_4kfsy"]
 shader = ExtResource("8_x0nwl")
-shader_parameter/line_color = Color(0.988222, 0.988222, 0.988222, 1)
-shader_parameter/base_color = Color(0.507972, 0.507972, 0.507971, 1)
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/base_color = Color(0.419813, 0.419813, 0.419813, 1)
 shader_parameter/line_thickness = 10.0
 shader_parameter/hovered = false
 
@@ -56,27 +65,27 @@ shader_parameter/hovered = false
 diffuse_texture = ExtResource("3_ynxyk")
 normal_texture = ExtResource("7_6t8be")
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_eqchv"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_afvqt"]
 shader = ExtResource("8_x0nwl")
 shader_parameter/line_color = Color(1, 1, 1, 1)
-shader_parameter/base_color = Color(0.369107, 0.369107, 0.369107, 1)
-shader_parameter/line_thickness = 3.325
+shader_parameter/base_color = Color(0.223103, 0.223103, 0.223103, 1)
+shader_parameter/line_thickness = 3.14
 shader_parameter/hovered = false
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_tdxbd"]
 diffuse_texture = ExtResource("15_phbf7")
 normal_texture = ExtResource("10_dc66b")
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_512tk"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ex7je"]
 shader = ExtResource("8_x0nwl")
 shader_parameter/line_color = Color(1, 1, 1, 1)
-shader_parameter/base_color = Color(0.566298, 0.566298, 0.566298, 1)
-shader_parameter/line_thickness = 1.0
+shader_parameter/base_color = Color(0.564962, 0.564962, 0.564962, 1)
+shader_parameter/line_thickness = 10.0
 shader_parameter/hovered = false
 
-[sub_resource type="CanvasTexture" id="CanvasTexture_fc42b"]
-diffuse_texture = ExtResource("12_jhy88")
-normal_texture = ExtResource("13_0bp56")
+[sub_resource type="CanvasTexture" id="CanvasTexture_u3tiw"]
+diffuse_texture = ExtResource("19_ikojr")
+normal_texture = ExtResource("12_32avs")
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_kea8l"]
 diffuse_texture = ExtResource("16_j4gtq")
@@ -85,46 +94,13 @@ normal_texture = ExtResource("14_qii1d")
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_vhsne"]
 shader = ExtResource("8_x0nwl")
 shader_parameter/line_color = Color(1, 1, 1, 1)
-shader_parameter/base_color = Color(0.514592, 0.490116, 0.441171, 1)
+shader_parameter/base_color = Color(0.356863, 0.337255, 0.298039, 1)
 shader_parameter/line_thickness = 1.0
 shader_parameter/hovered = false
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_y48sa"]
 diffuse_texture = ExtResource("5_6oeve")
 normal_texture = ExtResource("13_hnwrs")
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_xhf17"]
-shader = ExtResource("8_x0nwl")
-shader_parameter/line_color = Color(1, 1, 1, 1)
-shader_parameter/base_color = Color(0.356863, 0.337255, 0.298039, 1)
-shader_parameter/line_thickness = 4.485
-shader_parameter/hovered = false
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_ljytf"]
-diffuse_texture = ExtResource("22_chsc6")
-normal_texture = ExtResource("17_6t3pm")
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_8h3q8"]
-shader = ExtResource("8_x0nwl")
-shader_parameter/line_color = Color(1, 1, 1, 1)
-shader_parameter/base_color = Color(0.221902, 0.221902, 0.221902, 1)
-shader_parameter/line_thickness = 4.485
-shader_parameter/hovered = false
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_tx2l8"]
-diffuse_texture = ExtResource("22_chsc6")
-normal_texture = ExtResource("17_6t3pm")
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_47bwy"]
-shader = ExtResource("8_x0nwl")
-shader_parameter/line_color = Color(1, 1, 1, 1)
-shader_parameter/base_color = Color(0.409603, 0.409603, 0.409603, 1)
-shader_parameter/line_thickness = 4.485
-shader_parameter/hovered = false
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_ek6qy"]
-diffuse_texture = ExtResource("22_chsc6")
-normal_texture = ExtResource("18_ou7n8")
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_qt2bu"]
 diffuse_texture = ExtResource("20_c1cqr")
@@ -188,11 +164,47 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yuk70"]
+shader = ExtResource("8_x0nwl")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/base_color = Color(1, 1, 1, 0)
+shader_parameter/line_thickness = 4.0
+shader_parameter/hovered = false
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_25tex"]
+diffuse_texture = ExtResource("38_7e6ks")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xhf17"]
+shader = ExtResource("8_x0nwl")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/base_color = Color(0.356863, 0.337255, 0.298039, 1)
+shader_parameter/line_thickness = 1.0
+shader_parameter/hovered = false
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_ljytf"]
+diffuse_texture = ExtResource("22_chsc6")
+normal_texture = ExtResource("17_6t3pm")
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_tx2l8"]
+diffuse_texture = ExtResource("22_chsc6")
+normal_texture = ExtResource("17_6t3pm")
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_ek6qy"]
+diffuse_texture = ExtResource("22_chsc6")
+normal_texture = ExtResource("18_ou7n8")
+
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_vk55w"]
 blend_mode = 1
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_wqqrl"]
 polygon = PackedVector2Array(27, -12, 15, 498, 2776, 503, 2781, -9)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_f1ltf"]
+shader = ExtResource("8_x0nwl")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/base_color = Color(0.154876, 0.154876, 0.154876, 1)
+shader_parameter/line_thickness = 2.236
+shader_parameter/hovered = false
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4fxg"]
 size = Vector2(82, 365.5)
@@ -245,6 +257,25 @@ color = Color(0.194623, 0.0152499, 0.0152108, 1)
 
 [node name="Objetos" type="Node2D" parent="."]
 
+[node name="Lua" type="Sprite2D" parent="Objetos"]
+material = SubResource("ShaderMaterial_pp68m")
+position = Vector2(969, 180)
+texture = ExtResource("7_u46qs")
+
+[node name="detecção" parent="Objetos/Lua" instance=ExtResource("7_pfkn0")]
+z_index = 1
+
+[node name="TextureRect" parent="Objetos/Lua/detecção" index="0"]
+offset_left = -53.0
+offset_top = -40.0
+offset_right = 59.0
+offset_bottom = 58.0
+scale = Vector2(1.18, 1.18)
+metadata/_edit_use_anchors_ = true
+
+[node name="Timer" parent="Objetos/Lua/detecção" index="1"]
+wait_time = 0.1
+
 [node name="Quadro2" type="Sprite2D" parent="Objetos"]
 modulate = Color(0.145266, 0.145266, 0.145266, 1)
 position = Vector2(643, 196)
@@ -269,23 +300,9 @@ offset_bottom = 400.0
 [node name="Timer" parent="Objetos/Quadro/detecção" index="1"]
 wait_time = 0.1
 
-[node name="Lua" type="Node2D" parent="Objetos"]
-
-[node name="detecção" parent="Objetos/Lua" instance=ExtResource("7_pfkn0")]
-z_index = 1
-
-[node name="TextureRect" parent="Objetos/Lua/detecção" index="0"]
-offset_left = 917.0
-offset_top = 145.0
-offset_right = 1029.0
-offset_bottom = 243.0
-
-[node name="Timer" parent="Objetos/Lua/detecção" index="1"]
-wait_time = 0.1
-
 [node name="Espelho" type="Sprite2D" parent="Objetos"]
 self_modulate = Color(0.245984, 0.245984, 0.245984, 1)
-material = SubResource("ShaderMaterial_eqchv")
+material = SubResource("ShaderMaterial_afvqt")
 position = Vector2(444, 246)
 scale = Vector2(0.340278, 0.304688)
 texture = SubResource("CanvasTexture_tdxbd")
@@ -302,26 +319,27 @@ offset_bottom = 69.0
 wait_time = 0.1
 
 [node name="Pitu" type="Sprite2D" parent="Objetos"]
-self_modulate = Color(0.577008, 0.577008, 0.577008, 1)
-material = SubResource("ShaderMaterial_512tk")
-position = Vector2(-284, 282)
-texture = SubResource("CanvasTexture_fc42b")
+self_modulate = Color(0.571649, 0.571649, 0.571649, 1)
+material = SubResource("ShaderMaterial_ex7je")
+position = Vector2(-280, 285)
+scale = Vector2(0.0563725, 0.0549242)
+texture = SubResource("CanvasTexture_u3tiw")
 
 [node name="detecção" parent="Objetos/Pitu" instance=ExtResource("7_pfkn0")]
 
 [node name="TextureRect" parent="Objetos/Pitu/detecção" index="0"]
-offset_left = -20.0
-offset_top = -25.0
-offset_right = 8.0
-offset_bottom = 17.0
+offset_left = -373.0
+offset_top = -255.0
+offset_right = -71.0
+offset_bottom = 237.0
 
 [node name="Timer" parent="Objetos/Pitu/detecção" index="1"]
 wait_time = 0.1
 
 [node name="Caipirinha1x" type="Sprite2D" parent="Objetos/Pitu"]
-modulate = Color(0.556953, 0.556953, 0.556953, 1)
-position = Vector2(-14, 11)
-scale = Vector2(0.19, 0.19)
+modulate = Color(0.314316, 0.314316, 0.314316, 1)
+position = Vector2(-283.826, 72.8276)
+scale = Vector2(5.2663, 5.68966)
 texture = SubResource("CanvasTexture_kea8l")
 
 [node name="Garrafa" type="Sprite2D" parent="Objetos"]
@@ -338,47 +356,6 @@ offset_right = -7.0
 offset_bottom = 22.0
 
 [node name="Timer" parent="Objetos/Garrafa/detecção" index="1"]
-wait_time = 0.1
-
-[node name="Itens_do_cangaço" type="Node2D" parent="Objetos"]
-
-[node name="Facao" type="Sprite2D" parent="Objetos/Itens_do_cangaço"]
-material = SubResource("ShaderMaterial_xhf17")
-position = Vector2(309.651, 205.875)
-rotation = -0.540452
-scale = Vector2(0.269076, 0.252495)
-texture = SubResource("CanvasTexture_ljytf")
-region_enabled = true
-region_rect = Rect2(97.4356, 292.641, 274.592, 93.8928)
-
-[node name="Chapeu_de_Lampiao" type="Sprite2D" parent="Objetos/Itens_do_cangaço"]
-self_modulate = Color(0.194349, 0.194349, 0.194349, 1)
-material = SubResource("ShaderMaterial_8h3q8")
-position = Vector2(383.249, 201.697)
-rotation = 0.604038
-scale = Vector2(0.200023, 0.239682)
-texture = SubResource("CanvasTexture_tx2l8")
-region_enabled = true
-region_rect = Rect2(71.8438, 53.8566, 340.14, 85.0349)
-
-[node name="Espingarda" type="Sprite2D" parent="Objetos/Itens_do_cangaço"]
-self_modulate = Color(0.550293, 0.550293, 0.550293, 1)
-material = SubResource("ShaderMaterial_47bwy")
-position = Vector2(344.651, 206.875)
-scale = Vector2(0.2125, 0.25)
-texture = SubResource("CanvasTexture_ek6qy")
-region_enabled = true
-region_rect = Rect2(126.762, 126.491, 200.186, 92.1212)
-
-[node name="detecção" parent="Objetos/Itens_do_cangaço" instance=ExtResource("7_pfkn0")]
-
-[node name="TextureRect" parent="Objetos/Itens_do_cangaço/detecção" index="0"]
-offset_left = 277.0
-offset_top = 177.0
-offset_right = 414.0
-offset_bottom = 230.0
-
-[node name="Timer" parent="Objetos/Itens_do_cangaço/detecção" index="1"]
 wait_time = 0.1
 
 [node name="Filtro_de_barro" type="Sprite2D" parent="Objetos"]
@@ -484,6 +461,7 @@ frame_progress = 0.670711
 [node name="PontoLuz4" type="AnimatedSprite2D" parent="Objetos"]
 unique_name_in_owner = true
 modulate = Color(0.775063, 0.775063, 0.775063, 1)
+z_index = 1
 position = Vector2(358, 205)
 scale = Vector2(0.150736, 0.140625)
 sprite_frames = SubResource("SpriteFrames_3sex6")
@@ -507,6 +485,54 @@ scale = Vector2(0.150736, 0.140625)
 sprite_frames = SubResource("SpriteFrames_3sex6")
 autoplay = "default"
 frame_progress = 0.670711
+
+[node name="CangaçoParede" type="Sprite2D" parent="Objetos"]
+modulate = Color(0.533037, 0.533037, 0.533037, 1)
+material = SubResource("ShaderMaterial_yuk70")
+position = Vector2(344, 206.51)
+scale = Vector2(0.267606, 0.267034)
+texture = SubResource("CanvasTexture_25tex")
+
+[node name="detecção" parent="Objetos/CangaçoParede" instance=ExtResource("7_pfkn0")]
+
+[node name="TextureRect" parent="Objetos/CangaçoParede/detecção" index="0"]
+offset_left = -284.0
+offset_top = -121.745
+offset_right = -147.0
+offset_bottom = -68.7448
+scale = Vector2(4.23, 4.23)
+metadata/_edit_use_anchors_ = true
+
+[node name="Timer" parent="Objetos/CangaçoParede/detecção" index="1"]
+wait_time = 0.1
+
+[node name="Facao" type="Sprite2D" parent="Objetos/CangaçoParede"]
+material = SubResource("ShaderMaterial_xhf17")
+position = Vector2(-128.357, -2.37799)
+rotation = -0.541396
+scale = Vector2(1.00606, 0.94502)
+skew = 0.0018872
+texture = SubResource("CanvasTexture_ljytf")
+region_enabled = true
+region_rect = Rect2(97.4356, 292.641, 274.592, 93.8928)
+
+[node name="Chapeu_de_Lampiao" type="Sprite2D" parent="Objetos/CangaçoParede"]
+self_modulate = Color(0.325441, 0.325441, 0.325441, 1)
+position = Vector2(146.667, -18.0239)
+rotation = 0.605038
+scale = Vector2(0.747971, 0.896953)
+skew = -0.00199962
+texture = SubResource("CanvasTexture_tx2l8")
+region_enabled = true
+region_rect = Rect2(71.8438, 53.8566, 340.14, 85.0349)
+
+[node name="Espingarda" type="Sprite2D" parent="Objetos/CangaçoParede"]
+self_modulate = Color(0.724643, 0.724643, 0.724642, 1)
+position = Vector2(2.43274, 1.36688)
+scale = Vector2(0.794079, 0.936211)
+texture = SubResource("CanvasTexture_ek6qy")
+region_enabled = true
+region_rect = Rect2(126.762, 126.491, 200.186, 92.1212)
 
 [node name="Light" type="Node2D" parent="."]
 
@@ -552,7 +578,7 @@ texture = ExtResource("7_7822j")
 
 [node name="luz_Lampada_04" type="PointLight2D" parent="Light"]
 unique_name_in_owner = true
-position = Vector2(353, 109)
+position = Vector2(350, 112)
 scale = Vector2(1, 1.625)
 color = Color(0.784314, 0.541176, 0, 1)
 energy = 3.65
@@ -648,7 +674,11 @@ texture_scale = 1.05
 unique_name_in_owner = true
 modulate = Color(0.136826, 0.136826, 0.136826, 1)
 z_index = 2
+material = SubResource("ShaderMaterial_f1ltf")
 position = Vector2(-996, 136)
+
+[node name="AnimatedSprite2D" parent="Monster" index="0"]
+use_parent_material = true
 
 [node name="detecção2" parent="Monster" instance=ExtResource("7_pfkn0")]
 
@@ -700,11 +730,11 @@ script = ExtResource("13_f3w6m")
 
 [connection signal="body_entered" from="PicanhaDoLulinha" to="." method="_on_picanha_do_lulinha_body_entered"]
 
-[editable path="Objetos/Quadro/detecção"]
 [editable path="Objetos/Lua/detecção"]
+[editable path="Objetos/Quadro/detecção"]
 [editable path="Objetos/Espelho/detecção"]
 [editable path="Objetos/Pitu/detecção"]
 [editable path="Objetos/Garrafa/detecção"]
-[editable path="Objetos/Itens_do_cangaço/detecção"]
+[editable path="Objetos/CangaçoParede/detecção"]
 [editable path="Monster"]
 [editable path="Monster/detecção2"]

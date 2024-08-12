@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://c2y3tsupxtib"]
+[gd_scene load_steps=7 format=3 uid="uid://7dyt57im0mye"]
 
 [ext_resource type="Script" path="res://scripts/TimeCicle.gd" id="1_1gbeb"]
 [ext_resource type="Texture2D" uid="uid://b4rl6bhsggvhl" path="res://assets/Ambiente/sun.png" id="2_ofump"]
@@ -9,8 +9,11 @@
 
 [node name="TimeCicle" type="CanvasModulate"]
 scale = Vector2(0.525, 0.51)
-color = Color(0.110175, 0.486073, 0.999974, 1)
 script = ExtResource("1_1gbeb")
+setHours = 20
+setMinutes = 60
+setSeconds = 60
+debugHour = true
 
 [node name="Sun" type="Sprite2D" parent="."]
 modulate = Color(0.455817, 0.455817, 0.455817, 1)
@@ -37,7 +40,7 @@ texture_scale = 2.5
 [node name="Sunset" type="Sprite2D" parent="."]
 modulate = Color(0.455817, 0.455817, 0.455817, 1)
 z_index = -3
-position = Vector2(639, 361)
+position = Vector2(638.095, 360.784)
 scale = Vector2(0.669271, 0.668518)
 texture = ExtResource("3_efqtu")
 
