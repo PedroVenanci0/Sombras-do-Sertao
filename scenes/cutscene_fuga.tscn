@@ -1,13 +1,13 @@
-[gd_scene load_steps=11 format=3 uid="uid://xxco6ecx8wk4"]
+[gd_scene load_steps=11 format=3 uid="uid://cwx8nxys5b5wo"]
 
 [ext_resource type="Script" path="res://cutsceneFuga.gd" id="1_67cus"]
 [ext_resource type="PackedScene" uid="uid://crurggsvpp63u" path="res://scenes/firstMap.tscn" id="2_66ovu"]
-[ext_resource type="PackedScene" uid="uid://d1802apfkt11u" path="res://scenes/cutscene_player.tscn" id="3_0uehu"]
+[ext_resource type="PackedScene" path="res://scenes/cutscene_player.tscn" id="3_0uehu"]
 [ext_resource type="Texture2D" uid="uid://bdteh66rekds" path="res://assets/Ambiente/sunsetNoCactos.png" id="4_yjlmt"]
 [ext_resource type="PackedScene" uid="uid://b8n5vnmdrkvys" path="res://scenes/pauseMenu.tscn" id="5_1sse7"]
 [ext_resource type="Texture2D" uid="uid://bj38gp5rc4wbi" path="res://assets/Ambiente/cactosSunset.png" id="6_ffg1j"]
 [ext_resource type="Script" path="res://scripts/cameraGame.gd" id="7_76g5u"]
-[ext_resource type="PackedScene" uid="uid://jx2wclfsu0v1" path="res://scenes/cutscene_monster.tscn" id="8_ef1u6"]
+[ext_resource type="PackedScene" path="res://scenes/cutscene_monster.tscn" id="8_ef1u6"]
 [ext_resource type="Shader" path="res://scenes/fog.gdshader" id="9_77j5k"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_xx5yy"]

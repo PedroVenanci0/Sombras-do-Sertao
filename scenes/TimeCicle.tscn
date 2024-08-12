@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://cgua471vwfdxt"]
+[gd_scene load_steps=5 format=3 uid="uid://c2y3tsupxtib"]
 
 [ext_resource type="Script" path="res://scripts/TimeCicle.gd" id="1_1gbeb"]
 [ext_resource type="Texture2D" uid="uid://b4rl6bhsggvhl" path="res://assets/Ambiente/sun.png" id="2_ofump"]
@@ -9,18 +9,21 @@
 script = ExtResource("1_1gbeb")
 
 [node name="Sun" type="Sprite2D" parent="."]
+modulate = Color(0.455817, 0.455817, 0.455817, 1)
 z_index = 3
 position = Vector2(652.5, 353)
 scale = Vector2(0.65, 0.65)
 texture = ExtResource("2_ofump")
 
 [node name="Moon" type="Sprite2D" parent="."]
+modulate = Color(0.455817, 0.455817, 0.455817, 1)
 z_index = 3
 position = Vector2(652.5, 353)
 scale = Vector2(0.34, 0.34)
 texture = ExtResource("3_l5u6n")
 
 [node name="Sunset" type="Sprite2D" parent="."]
+modulate = Color(0.455817, 0.455817, 0.455817, 1)
 z_index = -3
 position = Vector2(639, 361)
 scale = Vector2(0.669271, 0.668518)
