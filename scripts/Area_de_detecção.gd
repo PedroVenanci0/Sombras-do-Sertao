@@ -161,6 +161,13 @@ func _physics_process(delta):
 		Global.fadeTransition("run")
 
 func _on_texture_rect_mouse_entered():
+	var material = get_parent().material
+	if material is ShaderMaterial:
+		# Define o valor de um parâmetro do shader
+		material.set_shader_parameter("hovered", true)
+	else:
+		print("O material não é um ShaderMaterial")
+		
 	Global.moviement_click = false
 	set_process(true)
 
@@ -192,6 +199,13 @@ func _on_timer_timeout():
 		label.visible_characters += 1	
 
 func _on_texture_rect_mouse_exited():
+	var material = get_parent().material
+	if material is ShaderMaterial:
+		# Define o valor de um parâmetro do shader
+		material.set_shader_parameter("hovered", false)
+	else:
+		print("O material não é um ShaderMaterial")
+	
 	set_process(false)
 	Global.moviement_click = true
 

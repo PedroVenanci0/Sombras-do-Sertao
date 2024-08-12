@@ -22,7 +22,7 @@ void fragment() {
     vec4 color = texture(TEXTURE, UV);
     
     if (hovered) {
-        COLOR = mix(color, line_color, outline - color.a);
+        COLOR = mix(base_color * color, line_color, outline - color.a);
     } else {
         // Use base_color for the object when not hovered
         vec4 albedo = base_color * color;
