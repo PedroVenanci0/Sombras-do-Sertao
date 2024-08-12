@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=3 uid="uid://5w67ml2ebeeo"]
+[gd_scene load_steps=68 format=3 uid="uid://5w67ml2ebeeo"]
 
 [ext_resource type="Script" path="res://scripts/casa_abandonada.gd" id="1_0jpda"]
 [ext_resource type="Texture2D" uid="uid://qy28di24w8go" path="res://assets/house/Parede.png" id="1_1kkgk"]
@@ -47,8 +47,8 @@ normal_texture = ExtResource("7_6t8be")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_4kfsy"]
 shader = ExtResource("8_x0nwl")
-shader_parameter/line_color = Color(1, 1, 1, 1)
-shader_parameter/base_color = Color(0.419813, 0.419813, 0.419813, 1)
+shader_parameter/line_color = Color(0.988222, 0.988222, 0.988222, 1)
+shader_parameter/base_color = Color(0.507972, 0.507972, 0.507971, 1)
 shader_parameter/line_thickness = 10.0
 shader_parameter/hovered = false
 
@@ -56,9 +56,23 @@ shader_parameter/hovered = false
 diffuse_texture = ExtResource("3_ynxyk")
 normal_texture = ExtResource("7_6t8be")
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_eqchv"]
+shader = ExtResource("8_x0nwl")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/base_color = Color(0.369107, 0.369107, 0.369107, 1)
+shader_parameter/line_thickness = 3.325
+shader_parameter/hovered = false
+
 [sub_resource type="CanvasTexture" id="CanvasTexture_tdxbd"]
 diffuse_texture = ExtResource("15_phbf7")
 normal_texture = ExtResource("10_dc66b")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_512tk"]
+shader = ExtResource("8_x0nwl")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/base_color = Color(0.566298, 0.566298, 0.566298, 1)
+shader_parameter/line_thickness = 1.0
+shader_parameter/hovered = false
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_fc42b"]
 diffuse_texture = ExtResource("12_jhy88")
@@ -71,8 +85,8 @@ normal_texture = ExtResource("14_qii1d")
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_vhsne"]
 shader = ExtResource("8_x0nwl")
 shader_parameter/line_color = Color(1, 1, 1, 1)
-shader_parameter/base_color = Color(0.356863, 0.337255, 0.298039, 1)
-shader_parameter/line_thickness = 0.5
+shader_parameter/base_color = Color(0.514592, 0.490116, 0.441171, 1)
+shader_parameter/line_thickness = 1.0
 shader_parameter/hovered = false
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_y48sa"]
@@ -83,16 +97,30 @@ normal_texture = ExtResource("13_hnwrs")
 shader = ExtResource("8_x0nwl")
 shader_parameter/line_color = Color(1, 1, 1, 1)
 shader_parameter/base_color = Color(0.356863, 0.337255, 0.298039, 1)
-shader_parameter/line_thickness = 1.0
+shader_parameter/line_thickness = 4.485
 shader_parameter/hovered = false
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_ljytf"]
 diffuse_texture = ExtResource("22_chsc6")
 normal_texture = ExtResource("17_6t3pm")
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8h3q8"]
+shader = ExtResource("8_x0nwl")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/base_color = Color(0.221902, 0.221902, 0.221902, 1)
+shader_parameter/line_thickness = 4.485
+shader_parameter/hovered = false
+
 [sub_resource type="CanvasTexture" id="CanvasTexture_tx2l8"]
 diffuse_texture = ExtResource("22_chsc6")
 normal_texture = ExtResource("17_6t3pm")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_47bwy"]
+shader = ExtResource("8_x0nwl")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/base_color = Color(0.409603, 0.409603, 0.409603, 1)
+shader_parameter/line_thickness = 4.485
+shader_parameter/hovered = false
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_ek6qy"]
 diffuse_texture = ExtResource("22_chsc6")
@@ -257,6 +285,7 @@ wait_time = 0.1
 
 [node name="Espelho" type="Sprite2D" parent="Objetos"]
 self_modulate = Color(0.245984, 0.245984, 0.245984, 1)
+material = SubResource("ShaderMaterial_eqchv")
 position = Vector2(444, 246)
 scale = Vector2(0.340278, 0.304688)
 texture = SubResource("CanvasTexture_tdxbd")
@@ -274,6 +303,7 @@ wait_time = 0.1
 
 [node name="Pitu" type="Sprite2D" parent="Objetos"]
 self_modulate = Color(0.577008, 0.577008, 0.577008, 1)
+material = SubResource("ShaderMaterial_512tk")
 position = Vector2(-284, 282)
 texture = SubResource("CanvasTexture_fc42b")
 
@@ -323,6 +353,7 @@ region_rect = Rect2(97.4356, 292.641, 274.592, 93.8928)
 
 [node name="Chapeu_de_Lampiao" type="Sprite2D" parent="Objetos/Itens_do_cangaço"]
 self_modulate = Color(0.194349, 0.194349, 0.194349, 1)
+material = SubResource("ShaderMaterial_8h3q8")
 position = Vector2(383.249, 201.697)
 rotation = 0.604038
 scale = Vector2(0.200023, 0.239682)
@@ -332,6 +363,7 @@ region_rect = Rect2(71.8438, 53.8566, 340.14, 85.0349)
 
 [node name="Espingarda" type="Sprite2D" parent="Objetos/Itens_do_cangaço"]
 self_modulate = Color(0.550293, 0.550293, 0.550293, 1)
+material = SubResource("ShaderMaterial_47bwy")
 position = Vector2(344.651, 206.875)
 scale = Vector2(0.2125, 0.25)
 texture = SubResource("CanvasTexture_ek6qy")

@@ -89,7 +89,7 @@ region_rect = Rect2(0, 984, 1920, 96)
 [node name="PointLight2D" type="PointLight2D" parent="."]
 z_index = 1
 material = SubResource("CanvasItemMaterial_4smex")
-position = Vector2(-50, -89)
+position = Vector2(-405, -475)
 scale = Vector2(1.06784, 0.706578)
 energy = 2.75
 shadow_enabled = true
@@ -101,7 +101,7 @@ texture_scale = 2.64
 [node name="Sunset" type="Sprite2D" parent="."]
 modulate = Color(0.174028, 0.174028, 0.174028, 1)
 z_index = -1
-position = Vector2(-1229, -446)
+position = Vector2(-101, -150)
 scale = Vector2(0.421875, 0.457)
 texture = ExtResource("4_gbbbr")
 
@@ -328,8 +328,10 @@ do mouse para se mover &"
 [node name="PauseMenu" parent="." instance=ExtResource("13_j1ata")]
 
 [node name="TimeCicle" parent="." instance=ExtResource("13_5qs56")]
+visible = false
 position = Vector2(-498, -382)
 scale = Vector2(0.625, 0.635)
+color = Color(1, 1, 1, 1)
 
 [connection signal="mouse_entered" from="CaramelDog3x" to="." method="caramelMouseEntered"]
 [connection signal="mouse_exited" from="CaramelDog3x" to="." method="caramelMouseExited"]
