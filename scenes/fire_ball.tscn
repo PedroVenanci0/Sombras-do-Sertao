@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://biuwij1uunrkv"]
 
 [ext_resource type="Script" path="res://scripts/FireBall.gd" id="1_unuhw"]
-[ext_resource type="Texture2D" uid="uid://bvvv6r1gsl0d" path="res://assets/Bola de fogo.png" id="2_koouk"]
+[ext_resource type="Texture2D" uid="uid://bvvv6r1gsl0d" path="res://assets/Ambiente/Bola de fogo.png" id="2_koouk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ds6ch"]
 size = Vector2(69, 35)

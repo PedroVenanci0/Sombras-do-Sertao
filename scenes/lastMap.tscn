@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://21v63hhxm574" path="res://assets/bar/pitu.png" id="5_l8cy6"]
 [ext_resource type="Texture2D" uid="uid://dripaua6wcm0y" path="res://assets/Luz/Luz ambiente/download.jpeg" id="5_p8u13"]
 [ext_resource type="FontFile" uid="uid://btva2fapcwfpp" path="res://assets/fontes/xilosa_.ttf" id="7_5q4hh"]
-[ext_resource type="FontFile" uid="uid://dj53lch6m3vff" path="res://assets/Cordel Encarnado II.woff" id="8_q8yl8"]
+[ext_resource type="FontFile" uid="uid://dj53lch6m3vff" path="res://assets/fontes/Cordel Encarnado II.woff" id="8_q8yl8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_in7di"]
 texture = ExtResource("1_qy6x2")

@@ -7,7 +7,7 @@ var hours : int
 var minutes : int 
 var seconds : int
 
-@export_category("Horario Degub")
+@export_category("Horario Debug")
 @export_range(0, 23) var setHours: int = 12
 @export_range(0, 60) var setMinutes: int = 0
 @export_range(0, 60) var setSeconds: int = 0

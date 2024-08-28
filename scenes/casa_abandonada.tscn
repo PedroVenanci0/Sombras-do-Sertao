@@ -16,9 +16,10 @@
 [ext_resource type="PackedScene" uid="uid://ub6dovylitej" path="res://scenes/player.tscn" id="9_hhqie"]
 [ext_resource type="Texture2D" uid="uid://dripaua6wcm0y" path="res://assets/Luz/Luz ambiente/download.jpeg" id="9_nh0yn"]
 [ext_resource type="Texture2D" uid="uid://bm52vn43qr4ff" path="res://assets/HouseMaps/espelhoMap.png" id="10_dc66b"]
-[ext_resource type="Texture2D" uid="uid://ccw5gdpufxfne" path="res://assets/HouseMaps/pituMap.png" id="12_32avs"]
+[ext_resource type="Texture2D" uid="uid://cej7uaxhxkcjj" path="res://assets/bar/GarrafaPitu.png" id="13_0uej4"]
 [ext_resource type="Script" path="res://scripts/Camera_CasaAbandonada.gd" id="13_f3w6m"]
 [ext_resource type="Texture2D" uid="uid://c6s7mkot66ic7" path="res://assets/HouseMaps/garrafaMap.png" id="13_hnwrs"]
+[ext_resource type="Texture2D" uid="uid://bekwiy0uqvm0i" path="res://assets/barMaps/PituMap.png" id="14_bmj1r"]
 [ext_resource type="PackedScene" uid="uid://bf7atnfi168ga" path="res://scenes/monster.tscn" id="14_m3kq1"]
 [ext_resource type="Texture2D" uid="uid://br3ckq4o37014" path="res://assets/HouseMaps/caipirinhaMap.png" id="14_qii1d"]
 [ext_resource type="Texture2D" uid="uid://dqslbn2tacxt3" path="res://assets/house/BrCultureJamAssets/Espelho_3x.png" id="15_phbf7"]
@@ -28,7 +29,6 @@
 [ext_resource type="Texture2D" uid="uid://c8j01g7caufxi" path="res://assets/house/BrCultureJamAssets/Galinha_1x.png" id="17_vuixg"]
 [ext_resource type="Texture2D" uid="uid://cjd1s0nkwg4u0" path="res://assets/house/image-1.png.png" id="18_l064a"]
 [ext_resource type="Texture2D" uid="uid://3n22cg3ro3yy" path="res://assets/HouseMaps/chapeuMap.png" id="18_ou7n8"]
-[ext_resource type="Texture2D" uid="uid://1o772ydgs81i" path="res://assets/house/Pitu.png" id="19_ikojr"]
 [ext_resource type="Texture2D" uid="uid://x5ul5bpn1kps" path="res://assets/image-1.png.png" id="20_c1cqr"]
 [ext_resource type="Texture2D" uid="uid://c4a8ru5ahdyjh" path="res://assets/house/parede_porta.png" id="21_4dusk"]
 [ext_resource type="Texture2D" uid="uid://d2uqycboumv4f" path="res://assets/house/porta.png" id="22_4k3qd"]
@@ -79,13 +79,13 @@ normal_texture = ExtResource("10_dc66b")
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ex7je"]
 shader = ExtResource("8_x0nwl")
 shader_parameter/line_color = Color(1, 1, 1, 1)
-shader_parameter/base_color = Color(0.564962, 0.564962, 0.564962, 1)
-shader_parameter/line_thickness = 10.0
+shader_parameter/base_color = Color(0.310617, 0.310617, 0.310617, 1)
+shader_parameter/line_thickness = 0.875
 shader_parameter/hovered = false
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_u3tiw"]
-diffuse_texture = ExtResource("19_ikojr")
-normal_texture = ExtResource("12_32avs")
+diffuse_texture = ExtResource("13_0uej4")
+normal_texture = ExtResource("14_bmj1r")
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_kea8l"]
 diffuse_texture = ExtResource("16_j4gtq")
@@ -319,10 +319,11 @@ offset_bottom = 69.0
 wait_time = 0.1
 
 [node name="Pitu" type="Sprite2D" parent="Objetos"]
-self_modulate = Color(0.571649, 0.571649, 0.571649, 1)
+modulate = Color(0.74558, 0.74558, 0.74558, 1)
+self_modulate = Color(0.712129, 0.712129, 0.712129, 1)
 material = SubResource("ShaderMaterial_ex7je")
 position = Vector2(-280, 285)
-scale = Vector2(0.0563725, 0.0549242)
+scale = Vector2(0.851, 0.837)
 texture = SubResource("CanvasTexture_u3tiw")
 
 [node name="detecção" parent="Objetos/Pitu" instance=ExtResource("7_pfkn0")]
@@ -338,8 +339,8 @@ wait_time = 0.1
 
 [node name="Caipirinha1x" type="Sprite2D" parent="Objetos/Pitu"]
 modulate = Color(0.314316, 0.314316, 0.314316, 1)
-position = Vector2(-283.826, 72.8276)
-scale = Vector2(5.2663, 5.68966)
+position = Vector2(-10.5758, 8.3632)
+scale = Vector2(0.231, 0.25)
 texture = SubResource("CanvasTexture_kea8l")
 
 [node name="Garrafa" type="Sprite2D" parent="Objetos"]
