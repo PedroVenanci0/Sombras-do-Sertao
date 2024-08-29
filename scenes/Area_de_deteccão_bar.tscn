@@ -1,9 +1,9 @@
 [gd_scene load_steps=2 format=3 uid="uid://bm1tabwtq8mjc"]
 
-[ext_resource type="Script" path="res://scripts/area_de_detecão_bar.gd" id="1_0om0u"]
+[ext_resource type="Script" path="res://scripts/area_de_detecão_bar.gd" id="1_cntne"]
 
 [node name="Area_de_detecão_bar" type="Node2D"]
-script = ExtResource("1_0om0u")
+script = ExtResource("1_cntne")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 40.0

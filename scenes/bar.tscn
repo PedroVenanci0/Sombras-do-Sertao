@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://i3ugocdavcy1"]
+[gd_scene load_steps=62 format=3 uid="uid://i3ugocdavcy1"]
 
 [ext_resource type="Script" path="res://scripts/bar.gd" id="1_ah1me"]
 [ext_resource type="Texture2D" uid="uid://d4fttt2py5gwf" path="res://assets/bar/Parede-1.png-1.png(1).png" id="2_0hj2t"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://b0wa276dw14q" path="res://assets/bar/image-1.png(2).png" id="12_xdahq"]
 [ext_resource type="Texture2D" uid="uid://c5noapcho5hw4" path="res://assets/bar/D_NQ_NP_972487-MLB32600912486_10-1.png.png" id="13_jq5yi"]
 [ext_resource type="Texture2D" uid="uid://cej7uaxhxkcjj" path="res://assets/bar/GarrafaPitu.png" id="14_ddbs6"]
+[ext_resource type="Shader" path="res://shaders/SelectedShader.gdshader" id="14_ksxnj"]
 [ext_resource type="Texture2D" uid="uid://cjkxqmthnisho" path="res://assets/bar/frezer.png" id="15_2hl08"]
 [ext_resource type="Texture2D" uid="uid://dfqp1kai37a0f" path="res://assets/bar/Porta.png" id="15_78cj2"]
 [ext_resource type="FontFile" uid="uid://btva2fapcwfpp" path="res://assets/fontes/xilosa_.ttf" id="16_434de"]
@@ -24,6 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://bdr5lcrjuxn75" path="res://assets/Ambiente/Cacto1.png" id="18_tpoa8"]
 [ext_resource type="Texture2D" uid="uid://bce5cprofbae3" path="res://assets/Ambiente/Cacto2.png" id="19_74c18"]
 [ext_resource type="Texture2D" uid="uid://uodvhvwwqgwa" path="res://assets/bar/caricatura-banner-eu-fui-cangaceiro-lampiao-maria-bonita-marido-transformed.png" id="20_p17vo"]
+[ext_resource type="Texture2D" uid="uid://b5lg3dqqbn1um" path="res://assets/Luz/ponro de luz/imagem_2024-07-24_170634171-removebg-preview (2).png" id="21_so4k2"]
 [ext_resource type="Texture2D" uid="uid://dc0fmn5xc3rjd" path="res://assets/bar/pia_.png" id="22_txjby"]
 [ext_resource type="Texture2D" uid="uid://b5bb55ourpxqx" path="res://assets/bar/caixadeBebidas.png" id="23_awrtw"]
 [ext_resource type="Texture2D" uid="uid://d31leer2g1tom" path="res://assets/bar/GradedeBebidas.png" id="24_t5062"]
@@ -33,6 +35,15 @@
 [ext_resource type="Texture2D" uid="uid://d25u5pens3w1g" path="res://assets/barMaps/piaMap.png" id="28_vf8hu"]
 [ext_resource type="Texture2D" uid="uid://dripaua6wcm0y" path="res://assets/Luz/Luz ambiente/download.jpeg" id="29_rle6y"]
 [ext_resource type="Texture2D" uid="uid://jno027elydyl" path="res://assets/barMaps/tvMap.png" id="31_se34g"]
+[ext_resource type="PackedScene" uid="uid://bm1tabwtq8mjc" path="res://scenes/Area_de_deteccão_bar.tscn" id="32_7fq14"]
+[ext_resource type="Texture2D" uid="uid://cqlau7hi8lf2t" path="res://assets/free-villagers-sprite-sheets-pixel-art/1 Old_man/Old_man.png" id="37_jwsp2"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_h5m5m"]
+shader = ExtResource("14_ksxnj")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/base_color = Color(1, 1, 1, 1)
+shader_parameter/line_thickness = 1.0
+shader_parameter/hovered = false
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_yknkj"]
 diffuse_texture = ExtResource("14_ddbs6")
@@ -45,6 +56,13 @@ normal_texture = ExtResource("7_sfgbu")
 [sub_resource type="CanvasTexture" id="CanvasTexture_1jsiw"]
 diffuse_texture = ExtResource("26_25wa3")
 normal_texture = ExtResource("9_ueoid")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8ytri"]
+shader = ExtResource("14_ksxnj")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/base_color = Color(0.646029, 0.646029, 0.646029, 1)
+shader_parameter/line_thickness = 1.581
+shader_parameter/hovered = false
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_xcwn0"]
 diffuse_texture = ExtResource("23_awrtw")
@@ -66,6 +84,56 @@ normal_texture = ExtResource("18_jxi0n")
 diffuse_texture = ExtResource("24_t5062")
 normal_texture = ExtResource("18_jxi0n")
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_0f7gc"]
+atlas = ExtResource("21_so4k2")
+region = Rect2(0, 0, 170, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7hbtt"]
+atlas = ExtResource("21_so4k2")
+region = Rect2(170, 0, 170, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ttrsc"]
+atlas = ExtResource("21_so4k2")
+region = Rect2(0, 150, 170, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kpe6t"]
+atlas = ExtResource("21_so4k2")
+region = Rect2(170, 150, 170, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uwa4c"]
+atlas = ExtResource("21_so4k2")
+region = Rect2(0, 300, 170, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qp72g"]
+atlas = ExtResource("21_so4k2")
+region = Rect2(170, 300, 170, 150)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ol8v3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0f7gc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7hbtt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ttrsc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kpe6t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uwa4c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qp72g")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [sub_resource type="CanvasTexture" id="CanvasTexture_6u8wi"]
 diffuse_texture = ExtResource("22_txjby")
 normal_texture = ExtResource("28_vf8hu")
@@ -82,9 +150,19 @@ normal_texture = ExtResource("9_ueoid")
 diffuse_texture = ExtResource("14_ddbs6")
 normal_texture = ExtResource("7_sfgbu")
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ym8o5"]
+shader = ExtResource("14_ksxnj")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/base_color = Color(1, 1, 1, 1)
+shader_parameter/line_thickness = 4.483
+shader_parameter/hovered = false
+
 [sub_resource type="CanvasTexture" id="CanvasTexture_732t7"]
 diffuse_texture = ExtResource("17_c3ytl")
 normal_texture = ExtResource("31_se34g")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_groc2"]
+size = Vector2(110.106, 99.5)
 
 [node name="Bar" type="Node2D"]
 modulate = Color(0.552956, 0.552956, 0.552956, 1)
@@ -96,14 +174,25 @@ scale = Vector2(1, 0.94925)
 texture = ExtResource("7_wkshu")
 
 [node name="Bancada" type="Sprite2D" parent="ParedeBalcão"]
+z_index = 1
 position = Vector2(242, -0.928864)
 scale = Vector2(6.90625, 7.86291)
 texture = ExtResource("12_xdahq")
 
 [node name="BandeiraVasco" type="Sprite2D" parent="ParedeBalcão"]
+z_index = 1
+material = SubResource("ShaderMaterial_h5m5m")
 position = Vector2(-114, -118.896)
 scale = Vector2(2.16406, 1.91395)
 texture = ExtResource("13_jq5yi")
+
+[node name="Area_de_detecão_bar" parent="ParedeBalcão/BandeiraVasco" instance=ExtResource("32_7fq14")]
+
+[node name="TextureRect" parent="ParedeBalcão/BandeiraVasco/Area_de_detecão_bar" index="0"]
+offset_left = -58.0
+offset_top = -39.0
+offset_right = 59.0
+offset_bottom = 42.0
 
 [node name="Frezer" type="Sprite2D" parent="ParedeBalcão"]
 position = Vector2(-257, 56.2633)
@@ -165,10 +254,16 @@ position = Vector2(51.2385, -92.7205)
 scale = Vector2(1.13234, 1.0627)
 texture = ExtResource("5_nsqvc")
 
-[node name="MesaSinuca-1_png" type="Sprite2D" parent="ParedeEntrada"]
+[node name="MesaSinuca" type="Sprite2D" parent="ParedeEntrada"]
 position = Vector2(-26.8931, 10.3613)
 scale = Vector2(4.3436, 2.96671)
 texture = ExtResource("6_41q27")
+
+[node name="Area_de_detecão_bar" parent="ParedeEntrada/MesaSinuca" instance=ExtResource("32_7fq14")]
+
+[node name="TextureRect" parent="ParedeEntrada/MesaSinuca/Area_de_detecão_bar" index="0"]
+offset_left = -39.0
+offset_bottom = 19.0
 
 [node name="CadeiraMadeira" type="Sprite2D" parent="ParedeEntrada"]
 position = Vector2(-248.832, 76.2487)
@@ -182,9 +277,17 @@ texture = ExtResource("9_b2pqw")
 flip_h = true
 
 [node name="PropagandaPitu" type="Sprite2D" parent="ParedeEntrada"]
+material = SubResource("ShaderMaterial_8ytri")
 position = Vector2(290.163, -102.285)
 scale = Vector2(1.13234, 1.0627)
 texture = ExtResource("8_0c0kv")
+
+[node name="Area_de_detecão_bar" parent="ParedeEntrada/PropagandaPitu" instance=ExtResource("32_7fq14")]
+
+[node name="TextureRect" parent="ParedeEntrada/PropagandaPitu/Area_de_detecão_bar" index="0"]
+offset_left = -30.0
+offset_top = -27.0
+offset_right = 30.0
 
 [node name="Engradados" type="Node2D" parent="ParedeEntrada"]
 
@@ -217,6 +320,15 @@ z_index = 1
 position = Vector2(449.823, 49.6812)
 scale = Vector2(1.68082, 1.4938)
 texture = SubResource("CanvasTexture_ngqwm")
+
+[node name="PontoLuz" type="AnimatedSprite2D" parent="ParedeEntrada"]
+unique_name_in_owner = true
+modulate = Color(0.775063, 0.775063, 0.775063, 1)
+position = Vector2(128.238, 24.1764)
+scale = Vector2(0.235228, 0.226175)
+sprite_frames = SubResource("SpriteFrames_ol8v3")
+autoplay = "default"
+frame_progress = 0.247816
 
 [node name="ParedeBanheiro" type="Sprite2D" parent="."]
 position = Vector2(1108, 235)
@@ -263,6 +375,14 @@ texture = ExtResource("18_tpoa8")
 position = Vector2(-98.9898, -70.297)
 scale = Vector2(0.773359, 0.587872)
 texture = ExtResource("19_74c18")
+
+[node name="Area_de_detecão_bar" parent="ParedeBanheiro/Porta" instance=ExtResource("32_7fq14")]
+
+[node name="TextureRect" parent="ParedeBanheiro/Porta/Area_de_detecão_bar" index="0"]
+offset_left = -143.0
+offset_top = -141.0
+offset_right = 34.0
+offset_bottom = 174.0
 
 [node name="SimboloBanheiro" type="Sprite2D" parent="ParedeBanheiro"]
 modulate = Color(0, 0, 0, 1)
@@ -325,25 +445,62 @@ texture = SubResource("CanvasTexture_fgfvn")
 
 [node name="Tv" type="Sprite2D" parent="ParedeBanheiro"]
 z_index = 1
+material = SubResource("ShaderMaterial_ym8o5")
 position = Vector2(-217, -4.24681)
 scale = Vector2(0.285185, 0.38004)
 texture = SubResource("CanvasTexture_732t7")
 flip_h = true
 
+[node name="Area_de_detecão_bar" parent="ParedeBanheiro/Tv" instance=ExtResource("32_7fq14")]
+
+[node name="TextureRect" parent="ParedeBanheiro/Tv/Area_de_detecão_bar" index="0"]
+offset_left = -84.0
+offset_top = -22.0
+offset_right = 109.0
+offset_bottom = 115.0
+
 [node name="Player" parent="." instance=ExtResource("27_cwocc")]
 z_index = 5
-position = Vector2(39, 233)
+position = Vector2(1859, 228)
 scale = Vector2(4, 4)
 
 [node name="PlayerLabel" type="Label" parent="Player"]
-offset_right = 40.0
-offset_bottom = 23.0
-metadata/_edit_use_anchors_ = true
+texture_filter = 1
+offset_left = -50.25
+offset_top = 32.25
+offset_right = -10.25
+offset_bottom = 55.25
+scale = Vector2(0.035, 0.035)
+theme_override_fonts/font = ExtResource("16_434de")
+theme_override_font_sizes/font_size = 273
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(1.6, 1.6)
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(573, 170)
+position = Vector2(806, 81)
 texture = ExtResource("29_rle6y")
 texture_scale = 0.85
+
+[node name="OldMan" type="Sprite2D" parent="."]
+position = Vector2(2001, 192)
+scale = Vector2(4.94791, 4.19271)
+texture = ExtResource("37_jwsp2")
+flip_h = true
+
+[node name="Area2D" type="StaticBody2D" parent="."]
+collision_layer = 5
+collision_mask = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(2044, 291)
+rotation = 4.76211
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_groc2")
+one_way_collision = true
+
+[editable path="ParedeBalcão/BandeiraVasco/Area_de_detecão_bar"]
+[editable path="ParedeEntrada/MesaSinuca/Area_de_detecão_bar"]
+[editable path="ParedeEntrada/PropagandaPitu/Area_de_detecão_bar"]
+[editable path="ParedeBanheiro/Porta/Area_de_detecão_bar"]
+[editable path="ParedeBanheiro/Tv/Area_de_detecão_bar"]
