@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bsipw6x2kd6wj"]
+
+[ext_resource type="Shader" path="res://shaders/SelectedShader.gdshader" id="1_msd0h"]
+[ext_resource type="Texture2D" uid="uid://ch633eeds1sx0" path="res://assets/house/BrCultureJamAssets/Azulejo_1x.png" id="2_n4qr6"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_y3cuu"]
+shader = ExtResource("1_msd0h")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/base_color = Color(1, 1, 1, 0)
+shader_parameter/line_thickness = 1.0
+shader_parameter/hovered = true
+
+[node name="MolduraShader" type="Node2D"]
+
+[node name="Azulejo1x" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_y3cuu")
+position = Vector2(-1221, 191)
+texture = ExtResource("2_n4qr6")

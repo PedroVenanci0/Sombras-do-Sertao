@@ -481,7 +481,7 @@ frame_progress = 0.670711
 [node name="PontoLuz6" type="AnimatedSprite2D" parent="Objetos"]
 unique_name_in_owner = true
 modulate = Color(0.775063, 0.775063, 0.775063, 1)
-position = Vector2(997, 158)
+position = Vector2(1034, 250)
 scale = Vector2(0.150736, 0.140625)
 sprite_frames = SubResource("SpriteFrames_3sex6")
 autoplay = "default"
